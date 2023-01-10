@@ -59,12 +59,16 @@ jobs:
           SITE_URL: "${{ secrets.STAGE_SITE_URL }}"
           DEPLOY_PREFIX: "/${{env.DESTINATION_FOLDER}}/"
 
+      - name: Write AWS_REGION to env context
+        run: |
+          echo "AWS_REGION=$(echo $AWS_REGION)" >> $GITHUB_ENV
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-2
+          aws-region: ${{ env.AWS_REGION }}
 
       - name: Deploy to AWS
         run: aws s3 sync ./public/ s3://$AWS_BUCKET_NAME/${{env.DESTINATION_FOLDER}} --acl public-read --delete
@@ -72,10 +76,6 @@ jobs:
       - name: Write AWS_BUCKET_NAME to env context
         run: |
           echo "AWS_BUCKET_NAME=$(echo $AWS_BUCKET_NAME)" >> $GITHUB_ENV
-
-      - name: Write AWS_REGION to env context
-        run: |
-          echo "AWS_REGION=$(echo $AWS_REGION)" >> $GITHUB_ENV
       
       - name: Update PR with production URL
         uses: mshick/add-pr-comment@v1
