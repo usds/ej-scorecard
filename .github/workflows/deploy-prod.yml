@@ -6,6 +6,8 @@ on:
 
 env:
   PR_NUMBER: ${{ github.event.number }}
+  AWS_BUCKET_NAME: ej-scorecard
+  AWS_REGION: us-east-2
 
 jobs:
   run-ci:
