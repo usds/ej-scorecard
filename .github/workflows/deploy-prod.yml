@@ -73,7 +73,7 @@ jobs:
           # Deploy to S3 for the staging URL
           message: |
             **🚢  Here is the frontend staging link: 🚢**   
-            Find it here: https://ej-scorecard.s3.us-east-2.amazonaws.com/${{env.DESTINATION_FOLDER}} !
+            Find it here: http://ej-scorecard.s3-website.us-east-2.amazonaws.com/${{env.DESTINATION_FOLDER}} !
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: "github-actions[bot]" # The user.login for temporary GitHub tokens
           allow-repeats: false # This is the default
