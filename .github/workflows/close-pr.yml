@@ -20,4 +20,4 @@ jobs:
           aws-region: us-west-1
 
       - name: Remove staging build folder
-        run: aws s3 rm s3://gatsby-uswds-ts-starter/ --exclude "*" --include "$(echo $PR_NUMBER)-*" --recursive
+        run: aws s3 rm s3://ej-scorecard/ --exclude "*" --include "$(echo $PR_NUMBER)-*" --recursive

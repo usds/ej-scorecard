@@ -65,7 +65,7 @@ jobs:
           aws-region: us-west-1
 
       - name: Deploy to AWS
-        run: aws s3 sync ./public/ s3://gatsby-uswds-ts-starter/${{env.DESTINATION_FOLDER}} --acl public-read --delete
+        run: aws s3 sync ./public/ s3://ej-scorecard/${{env.DESTINATION_FOLDER}} --acl public-read --delete
       
       - name: Update PR with staging URL
         uses: mshick/add-pr-comment@v1
@@ -73,7 +73,7 @@ jobs:
           # Deploy to S3 for the staging URL
           message: |
             **🚢  Here is the frontend staging link: 🚢**   
-            Find it here: http://gatsby-uswds-ts-starter.s3-website-us-west-1.amazonaws.com/${{env.DESTINATION_FOLDER}} !
+            Find it here: http://ej-scorecard.s3-website-us-west-1.amazonaws.com/${{env.DESTINATION_FOLDER}} !
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: "github-actions[bot]" # The user.login for temporary GitHub tokens
           allow-repeats: false # This is the default
