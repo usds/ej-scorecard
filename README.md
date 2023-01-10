@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/26466516/169722691-77a6ca86-df54-4a0e-b952-48c3f3ed7526.png" alt="Gatsby TypeScript Starter">
+  <img src="https://user-images.githubusercontent.com/86254807/211453777-5c594217-ad97-4843-b3db-84431e5b6e3b.png" alt="EJ logo">
 </p>
 
 <br />
