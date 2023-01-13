@@ -1,6 +1,6 @@
-<p align="center">
+<!-- <p align="center">
   <img src="https://user-images.githubusercontent.com/86254807/211453777-5c594217-ad97-4843-b3db-84431e5b6e3b.png" alt="EJ logo">
-</p>
+</p> -->
 
 <br />
 
@@ -19,8 +19,8 @@
 - 💖 Prettier — Code Formatter for consistent style
 - 🐶 Husky — For running scripts before committing
 - 🚓 Commitlint — To make sure your commit messages follow the convention
-- 🖌 Renovate — To keep your dependencies up to date (needs to be set up)
-- 🚫 lint-staged — Run ESLint and Prettier against staged Git files (under development)
+- 🖌 Renovate — To keep your dependencies up to date (being configured)
+- 🚫 lint-staged — Run ESLint and Prettier against staged Git files (needs attention)
 - 👷 PR Workflow — Run Type Check & Linters on Pull Requests
 - ⚙️ EditorConfig - Consistent coding styles across editors and IDEs
 - 🗂 Path Mapping — Import components or images using the `@` prefix
