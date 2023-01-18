@@ -7,7 +7,7 @@ import SEO from '@/components/SEO';
 
 export interface ILayoutProps {
   children: ReactNode;
-  location: Location;
+  location?: Location;
   title: string;
 }
 

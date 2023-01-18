@@ -1,0 +1,23 @@
+@use "uswds-core" as *;
+
+.agencyInfoCol1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+};
+
+.agencyInfoCol2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p span {
+        display: block;
+    }
+};
+
+.agencyInfoLogo {
+    @include u-margin(5);
+}
+

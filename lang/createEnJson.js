@@ -10,8 +10,6 @@ for (const [key, value] of Object.entries(enUSExtractJSON)) {
   enJSON[key] = value.defaultMessage;
 }
 
-console.log(enJSON);
-
 fs.writeFile(`lang/en-US.json`, JSON.stringify(enJSON), (error) => {
   if (error) throw error;
 });
