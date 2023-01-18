@@ -1,50 +1,22 @@
-import { defineMessages, useIntl } from 'react-intl';
-import {
-  SummaryBox,
-  SummaryBoxContent,
-  SummaryBoxHeading,
-} from '@trussworks/react-uswds';
+import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
-import { ILocation } from '@/types';
 
-const FIRST_PAGE_COPY = defineMessages({
-  HEADING1: {
-    id: `first.page.copy.HEADING1`,
-    defaultMessage: `First Page`,
-    description: `page heading`,
-  },
-  SUMMARY_TITLE: {
-    id: `first.page.copy.SUMMARY_TITLE`,
-    defaultMessage: `Key Information`,
-    description: `summary title`,
-  },
-  SUMMARY_CONTENT: {
-    id: `first.page.copy.SUMMARY_CONTENT`,
-    defaultMessage: `Summary content for page 1`,
-    description: `summary title`,
-  },
-});
+interface IIndexPage {
+  location: Location;
+}
 
-const IndexPage = ({ location }: ILocation) => {
-  const intl = useIntl();
-
+const IndexPage = ({ location }: IIndexPage) => {
   return (
-    <Layout
-      location={location}
-      title={intl.formatMessage(FIRST_PAGE_COPY.HEADING1)}
-    >
+    <Layout location={location} title={`EJ Landing page`}>
       <MainGridContainer>
-        <h1>{intl.formatMessage(FIRST_PAGE_COPY.HEADING1)}</h1>
-        <SummaryBox>
-          <SummaryBoxHeading headingLevel="h3">
-            {intl.formatMessage(FIRST_PAGE_COPY.SUMMARY_TITLE)}
-          </SummaryBoxHeading>
-          <SummaryBoxContent>
-            {intl.formatMessage(FIRST_PAGE_COPY.SUMMARY_CONTENT)}
-          </SummaryBoxContent>
-        </SummaryBox>
+        <h1>{`EJ Landing page`}</h1>
+        <Grid row gap>
+          <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
+            {`EJ Landing page`}
+          </Grid>
+        </Grid>
       </MainGridContainer>
     </Layout>
   );

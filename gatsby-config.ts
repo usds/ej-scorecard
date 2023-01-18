@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby';
+import path from 'path';
 import enUSMessages from './lang/en-US.json';
 import esMXMessages from './lang/es-MX.json';
 
@@ -14,6 +15,9 @@ require(`dotenv`).config({
 });
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: true,
+  },
   pathPrefix: process.env.DEPLOY_PREFIX || ``,
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
   // don't need to define it here (just if you need to change the options)
@@ -63,6 +67,16 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `scorecards`,
+        path: path.join(__dirname, `/src/data/scorecards`),
+      },
+    },
+    `gatsby-transformer-csv`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
   ],
   jsxRuntime: `automatic`,
 };
