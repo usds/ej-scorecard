@@ -1,21 +1,14 @@
-import { ReactNode } from 'react';
-
 import AppHeader from '@/components/AppHeader';
 import SEO from '@/components/SEO';
+import { ILayoutProps } from '@/types';
 
 // import * as styles from './Layout.module.scss';
 
-export interface ILayoutProps {
-  children: ReactNode;
-  location?: Location;
-  title: string;
-}
-
-const Layout = ({ children, location, title }: ILayoutProps) => {
+const Layout = ({ children, pathname, title }: ILayoutProps) => {
   return (
     <>
       <SEO title={title} />
-      <AppHeader location={location} />
+      <AppHeader pathname={pathname} />
       <main id={`main-content`}>{children}</main>
     </>
   );

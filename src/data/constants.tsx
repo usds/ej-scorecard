@@ -8,3 +8,5 @@ export const USWDS_BREAKPOINTS = {
   MOBILE_LG: 480,
   DESKTOP: 1024,
 };
+
+export const REQUIRED_DATA_FILES = [`AgencyInfo.csv`, `DeliverInvest.csv`];

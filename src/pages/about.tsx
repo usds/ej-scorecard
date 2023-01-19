@@ -7,7 +7,7 @@ import {
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
-import { ILocation } from '@/types';
+import { PAGE_ENDPOINTS } from '@/data/constants';
 
 const SECOND_PAGE_COPY = defineMessages({
   HEADING1: {
@@ -27,12 +27,12 @@ const SECOND_PAGE_COPY = defineMessages({
   },
 });
 
-const SecondPage = ({ location }: ILocation) => {
+const SecondPage = () => {
   const intl = useIntl();
 
   return (
     <Layout
-      location={location}
+      pathname={PAGE_ENDPOINTS[1]}
       title={intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}
     >
       <MainGridContainer>

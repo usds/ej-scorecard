@@ -166,9 +166,6 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
             </div>
           </div>
         </section>
-        <nav>
-          <ul />
-        </nav>
       </div>
     </div>
     <div
@@ -246,16 +243,65 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
               <li
                 className="usa-nav__primary-item"
               >
-                <a
-                  aria-current="page"
-                  className="usa-current"
-                  href="/"
+                <button
+                  aria-controls="scorecardMenu"
+                  aria-expanded={false}
+                  className="usa-accordion__button usa-nav__link usa-current"
+                  data-cy="nav-dropdown-scorecard-nav"
+                  data-testid="navDropDownButton"
                   onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  style={{}}
+                  type="button"
                 >
-                  Scorecard
-                </a>
+                  <span>
+                    Scorecard
+                  </span>
+                </button>
+                <ul
+                  className="usa-nav__submenu"
+                  hidden={true}
+                  id="scorecardMenu"
+                >
+                  <li
+                    className="usa-nav__submenu-item"
+                  >
+                    <a
+                      data-cy="nav-link-agency-a"
+                      href="/scorecard/agency-a"
+                    >
+                      Agency A
+                    </a>
+                  </li>
+                  <li
+                    className="usa-nav__submenu-item"
+                  >
+                    <a
+                      data-cy="nav-link-agency-b"
+                      href="/scorecard/agency-b"
+                    >
+                      Agency B
+                    </a>
+                  </li>
+                  <li
+                    className="usa-nav__submenu-item"
+                  >
+                    <a
+                      data-cy="nav-link-agency-c"
+                      href="/scorecard/agency-c"
+                    >
+                      Agency C
+                    </a>
+                  </li>
+                  <li
+                    className="usa-nav__submenu-item"
+                  >
+                    <a
+                      data-cy="nav-link-agency-d"
+                      href="/scorecard/agency-d"
+                    >
+                      Agency D
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li
                 className="usa-nav__primary-item"

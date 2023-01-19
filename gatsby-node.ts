@@ -1,6 +1,8 @@
 import type { GatsbyNode } from 'gatsby';
 import path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import { IAllFile } from './src/types';
+import { REQUIRED_DATA_FILES } from './src/data/constants';
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions,
@@ -12,10 +14,16 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   });
 };
 
-function checkRelativePaths(obj: any): boolean {
-  const files = [`AgencyInfo.csv`, `DeliverInvest.csv`];
-  for (const edge of obj.data.allFile.edges) {
-    if (!files.includes(edge.node.relativePath)) {
+/**
+ * Function that returns true if all required data files
+ * exist and false otherwise
+ *
+ * @param allFile
+ * @returns {boolean}
+ */
+function isRequiredFilesExist(allFile: IAllFile): boolean {
+  for (const edge of allFile.edges) {
+    if (!REQUIRED_DATA_FILES.includes(edge.node.relativePath)) {
       return false;
     }
   }
@@ -25,7 +33,8 @@ function checkRelativePaths(obj: any): boolean {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const relativePaths = await graphql(
+  // Todo: see if there's a way to use fragments to break up massive query
+  const { data } = await graphql(
     `
       query {
         allFile(sort: { relativePath: ASC }) {
@@ -35,20 +44,6 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-      }
-    `,
-  );
-
-  // Check to see if scorecard files exist in the expected location
-  if (!checkRelativePaths(relativePaths)) {
-    throw Error(`Was not able to read in required data`);
-  }
-  // Todo: consider destructuring result
-  // Todo: consider adding url path to info file
-  // Todo: see if there's a way to use fragments to break up massive query
-  const result = await graphql(
-    `
-      query {
         allAgencyInfoCsv(sort: { Name: ASC }) {
           totalCount
           edges {
@@ -105,14 +100,23 @@ exports.createPages = async ({ graphql, actions }) => {
     `,
   );
 
-  result.data.allAgencyInfoCsv.edges.forEach((edge, index) => {
+  if (!isRequiredFilesExist(data.allFile)) {
+    throw Error(`Was not able to read in required data`);
+  }
+
+  data.allAgencyInfoCsv.edges.forEach((edge, index) => {
+    const pathname = `scorecard/${edge.node.Name.toLowerCase()
+      .split(` `)
+      .join(`-`)}`;
+
     createPage({
       adjustPath: true,
-      path: `scorecard/${edge.node.Name.toLowerCase().split(` `).join(`-`)}`,
+      path: pathname,
       component: path.resolve(`./src/templates/ScorecardTemplate.tsx`),
       context: {
+        pathname: `/${pathname}`,
         agencyInfo: edge.node,
-        deliverInvest: result.data.allDeliverInvestCsv.edges[index],
+        deliverInvest: data.allDeliverInvestCsv.edges[index],
       },
     });
   });

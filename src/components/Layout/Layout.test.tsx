@@ -7,7 +7,7 @@ describe(`rendering of Layout Component`, () => {
 
   it(`checks if component renders`, () => {
     const component = createComponentWithIntl(
-      <Layout location={location} title={`First`}>
+      <Layout pathname={`scorecard/agency-a`} title={`Agency A`}>
         <Component />
       </Layout>,
     );

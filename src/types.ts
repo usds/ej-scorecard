@@ -1,5 +1,11 @@
-export interface ILocation {
-  location?: Location;
+import { ReactNode } from 'react';
+
+export interface IAllFile {
+  edges: {
+    node: {
+      relativePath: string;
+    };
+  }[];
 }
 
 export interface IAgencyInfo {
@@ -46,4 +52,19 @@ export interface IDeliverInvest {
     T4_M1: string;
     T4_V1: string;
   };
+}
+
+export interface IPathname {
+  pathname: string;
+}
+export interface IScorecardTemplateProps {
+  pageContext: {
+    pathname: string;
+    agencyInfo: IAgencyInfo;
+    deliverInvest: IDeliverInvest;
+  };
+}
+export interface ILayoutProps extends IPathname {
+  children: ReactNode;
+  title: string;
 }

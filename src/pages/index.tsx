@@ -2,14 +2,11 @@ import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
+import { PAGE_ENDPOINTS } from '@/data/constants';
 
-interface IIndexPage {
-  location: Location;
-}
-
-const IndexPage = ({ location }: IIndexPage) => {
+const IndexPage = () => {
   return (
-    <Layout location={location} title={`EJ Landing page`}>
+    <Layout pathname={PAGE_ENDPOINTS[0]} title={`EJ Landing page`}>
       <MainGridContainer>
         <h1>{`EJ Landing page`}</h1>
         <Grid row gap>

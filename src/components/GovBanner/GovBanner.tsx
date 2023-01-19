@@ -1,5 +1,5 @@
 import { useIntl } from 'react-intl';
-import { LanguageSwitcher } from 'gatsby-plugin-i18n-l10n';
+// import { LanguageSwitcher } from 'gatsby-plugin-i18n-l10n';
 import { GovBanner as GovBannerTruss } from '@trussworks/react-uswds';
 
 // import Language from '../Language';
@@ -16,12 +16,12 @@ const GovBanner = () => {
           language={intl.locale === `es-MX` ? `spanish` : `english`}
         />
 
-        <LanguageSwitcher
+        {/* <LanguageSwitcher
           className={styles.langSwitcher}
           resolveLanguageName={(locale) =>
             locale.startsWith(`en`) ? `EN` : `ES`
           }
-        />
+        /> */}
         {/* Temporarily removing while language is translated */}
         {/* <Language isDesktop={true}/> */}
       </div>
