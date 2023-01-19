@@ -2,9 +2,9 @@
 // component.tsx
 exports.component = name => `import * as styles from './${name}.module.scss';
 
-export interface I${name}Props {}
+export interface ${name}Props {}
 
-const ${name} = ({}: I${name}Props) => {
+const ${name}: React.FC<${name}Props> = ({}) => {
   return (
     <div className={styles.${name[0].toLowerCase() + name.slice(1)}Container}>
       Hello 👋, I am a ${name} component.

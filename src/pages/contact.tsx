@@ -1,3 +1,4 @@
+import React from 'react';
 import { graphql } from 'gatsby';
 import { defineMessages, useIntl } from 'react-intl';
 import {
@@ -9,7 +10,7 @@ import {
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
 import { PAGE_ENDPOINTS } from '@/data/constants';
-import { IPageProps } from '@/types';
+import { PageProps } from '@/types';
 
 const THIRD_PAGE_COPY = defineMessages({
   HEADING1: {
@@ -29,7 +30,7 @@ const THIRD_PAGE_COPY = defineMessages({
   },
 });
 
-const ThirdPage = ({ data }: IPageProps) => {
+const ThirdPage: React.FC<PageProps> = ({ data }) => {
   const intl = useIntl();
 
   return (

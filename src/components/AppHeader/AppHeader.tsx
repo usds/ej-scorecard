@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, navigate } from 'gatsby';
 import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
 
@@ -17,7 +17,7 @@ import { NAV_LINKS_NAMES, PAGE_ENDPOINTS } from '@/data/constants';
 // @ts-ignore
 import siteLogo from '@/static/images/usds-logo.png';
 import * as styles from './AppHeader.module.scss';
-import { IAppHeader } from '@/types';
+import { AppHeaderProps } from '@/types';
 import { toKebabCase } from '../util';
 
 /**
@@ -31,7 +31,7 @@ import { toKebabCase } from '../util';
  * @param {string} pathname
  * @return {JSX.Element}
  */
-const AppHeader = ({ pathname, allAgencyNames }: IAppHeader) => {
+const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   /**
    * State variable to control the toggling of mobile menu button
    */

@@ -1,15 +1,16 @@
+import React from 'react';
 import AppHeader from '@/components/AppHeader';
 import SEO from '@/components/SEO';
-import { ILayoutProps } from '@/types';
+import { LayoutProps } from '@/types';
 
 // import * as styles from './Layout.module.scss';
 
-const Layout = ({
+const Layout: React.FC<LayoutProps> = ({
   children,
   pathname,
   title,
   allAgencyNames,
-}: ILayoutProps) => {
+}) => {
   return (
     <>
       <SEO title={title} />

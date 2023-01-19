@@ -1,12 +1,13 @@
+import React from 'react';
 import { graphql } from 'gatsby';
 import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
 import { PAGE_ENDPOINTS } from '@/data/constants';
-import { IPageProps } from '@/types';
+import { PageProps } from '@/types';
 
-const IndexPage = ({ data }: IPageProps) => {
+const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout
       pathname={PAGE_ENDPOINTS[0]}

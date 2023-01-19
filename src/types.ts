@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface IAllFile {
+export interface RelativePathData {
   edges: {
     node: {
       relativePath: string;
@@ -8,7 +8,7 @@ export interface IAllFile {
   }[];
 }
 
-export interface IAgencyInfo {
+export interface AgencyInfoData {
   id: string;
   Name: string;
   Contact_Name: string;
@@ -22,7 +22,7 @@ export interface IAgencyInfo {
   About_description: string;
 }
 
-export interface IDeliverInvest {
+export interface DeliverInvestData {
   node: {
     id: string;
     __typename: string;
@@ -54,28 +54,28 @@ export interface IDeliverInvest {
   };
 }
 
-export interface IPathname {
+export interface Pathname {
   pathname: string;
 }
 
-export interface IAppHeader extends IPathname {
+export interface AppHeaderProps extends Pathname {
   allAgencyNames: string[];
 }
-export interface IScorecardTemplateProps {
+export interface ScorecardTemplateProps {
   pageContext: {
     allAgencyNames: string[];
     pathname: string;
-    agencyInfo: IAgencyInfo;
-    deliverInvest: IDeliverInvest;
+    agencyInfo: AgencyInfoData;
+    deliverInvest: DeliverInvestData;
   };
 }
-export interface ILayoutProps extends IPathname {
+export interface LayoutProps extends Pathname {
   children: ReactNode;
   allAgencyNames: string[];
   title: string;
 }
 
-export interface IPageProps {
+export interface PageProps {
   data: {
     allAgencyInfoCsv: {
       edges: {

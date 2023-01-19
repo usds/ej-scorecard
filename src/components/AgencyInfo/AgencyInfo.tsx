@@ -5,11 +5,11 @@ import { Grid } from '@trussworks/react-uswds';
 // import { useAgencyInfo } from '@/hooks/use-agency-info';
 
 import * as styles from './AgencyInfo.module.scss';
-import { IAgencyInfo, IDeliverInvest } from '@/types';
+import { AgencyInfoData, DeliverInvestData } from '@/types';
 
 export interface AgencyInfoProps {
-  info: IAgencyInfo;
-  di: IDeliverInvest;
+  info: AgencyInfoData;
+  di: DeliverInvestData;
 }
 
 const AgencyInfo: React.FC<AgencyInfoProps> = ({ info, di }) => {

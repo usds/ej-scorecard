@@ -4,9 +4,9 @@ import { Grid } from '@trussworks/react-uswds';
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
 import AgencyInfo from '@/components/AgencyInfo';
-import { IScorecardTemplateProps } from '@/types';
+import { ScorecardTemplateProps } from '@/types';
 
-const ScorecardTemplate: React.FC<IScorecardTemplateProps> = ({
+const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
 }) => {
   const { allAgencyNames, pathname, agencyInfo, deliverInvest } = pageContext;
