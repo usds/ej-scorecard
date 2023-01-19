@@ -13,12 +13,13 @@ import {
 } from '@trussworks/react-uswds';
 import MainGridContainer from '@/components/MainGridContainer';
 import GovBanner from '@/components/GovBanner';
-import { PAGE_ENDPOINTS } from '@/data/constants';
+import { NAV_LINKS_NAMES, PAGE_ENDPOINTS } from '@/data/constants';
 
 // @ts-ignore
 import siteLogo from '@/static/images/usds-logo.png';
 import * as styles from './AppHeader.module.scss';
-import { IPathname } from '@/types';
+import { IAppHeader } from '@/types';
+import { toKebabCase } from '../util';
 
 /**
  * The AppHeader component will control how the header looks for both mobile and desktop
@@ -31,7 +32,7 @@ import { IPathname } from '@/types';
  * @param {string} pathname
  * @return {JSX.Element}
  */
-const AppHeader = ({ pathname }: IPathname) => {
+const AppHeader = ({ pathname, allAgencyNames }: IAppHeader) => {
   /**
    * State variable to control the toggling of mobile menu button
    */
@@ -90,42 +91,29 @@ const AppHeader = ({ pathname }: IPathname) => {
   };
 
   /**
-   * This defines the array of links for the scorecard nav
+   * Dynamically create all the subnav links to each agency page
    */
-  // Todo: have this be created dynamically
-  const agencyLinks = [
+  const agencyLinks = allAgencyNames.map((agencyName) => (
     <Link
-      to={`/scorecard/agency-a`}
-      key={`agency-a`}
+      to={`/scorecard/${toKebabCase(agencyName)}`}
+      key={`${toKebabCase(agencyName)}`}
       // activeClassName="usa-current"
-      data-cy={`nav-link-agency-a`}
+      data-cy={`nav-link-${toKebabCase(agencyName)}`}
     >
-      {`Agency A`}
-    </Link>,
+      {agencyName}
+    </Link>
+  ));
+
+  const ScorecardNavSubLinks = [
     <Link
-      to={`/scorecard/agency-b`}
-      key={`agency-b`}
+      to={`/`}
+      key={`scorecards}`}
       // activeClassName="usa-current"
-      data-cy={`nav-link-agency-b`}
+      data-cy={`nav-link-scorecards`}
     >
-      {`Agency B`}
+      {`Scorecards`}
     </Link>,
-    <Link
-      to={`/scorecard/agency-c`}
-      key={`agency-c`}
-      // activeClassName="usa-current"
-      data-cy={`nav-link-agency-c`}
-    >
-      {`Agency C`}
-    </Link>,
-    <Link
-      to={`/scorecard/agency-d`}
-      key={`agency-d`}
-      // activeClassName="usa-current"
-      data-cy={`nav-link-agency-d`}
-    >
-      {`Agency D`}
-    </Link>,
+    ...agencyLinks,
   ];
 
   // ScorecardNavDropDown
@@ -145,7 +133,7 @@ const AppHeader = ({ pathname }: IPathname) => {
       <Menu
         id="scorecardMenu"
         type="subnav"
-        items={agencyLinks}
+        items={ScorecardNavSubLinks}
         isOpen={isOpen[0]}
       ></Menu>
     </>
@@ -154,51 +142,20 @@ const AppHeader = ({ pathname }: IPathname) => {
   // Logo text
   const logoLine1 = HEADER.LOGO_TITLE;
 
-  const navLinks = [
-    <ScorecardNav key="scorecardNav" />,
-    <LocalizedLink
-      to={`/about`}
-      key={`page-about}`}
-      activeClassName={`usa-current`}
-      data-cy={`nav-link-page-about`}
-    >
-      {`About`}
-    </LocalizedLink>,
-    <LocalizedLink
-      to={`/contact`}
-      key={`page-contact}`}
-      activeClassName={`usa-current`}
-      data-cy={`nav-link-page-contact`}
-    >
-      {`Contact`}
-    </LocalizedLink>,
-  ];
-
-  // const navLinks = PAGE_ENDPOINTS.map((name, index) => {
-  //   let navLinksActiveClassName = `usa-current`;
-
-  //   // This is to address a bug with the nav component from
-  //   // Trussworks that keeps the first page as active event
-  //   // when navigating to another page
-  //   if (index === 0) {
-  //     navLinksActiveClassName =
-  //       location?.pathname === withPrefix(PAGE_ENDPOINTS[index]) ||
-  //       location?.pathname === withPrefix(PAGE_ENDPOINTS_ES[index])
-  //         ? `usa-current`
-  //         : ``;
-  //   }
-
-  //   return (
-  //     <LocalizedLink
-  //       to={name}
-  //       key={`page-${index}`}
-  //       activeClassName={navLinksActiveClassName}
-  //       data-cy={`nav-link-page-${index}`}
-  //     >
-  //       {NAV_LINKS_COPY[index]}
-  //     </LocalizedLink>
-  //   );
-  // });
+  const navLinks = PAGE_ENDPOINTS.map((endpoint, index) => {
+    return index === 0 ? (
+      <ScorecardNav key="scorecardNav" />
+    ) : (
+      <LocalizedLink
+        to={endpoint}
+        key={`page-${endpoint.substring(1)}`}
+        activeClassName={`usa-current`}
+        data-cy={`nav-link-page-${endpoint.substring(1)}`}
+      >
+        {NAV_LINKS_NAMES[index]}
+      </LocalizedLink>
+    );
+  });
 
   return (
     <Header basic={true} role={`banner`}>

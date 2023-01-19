@@ -57,8 +57,13 @@ export interface IDeliverInvest {
 export interface IPathname {
   pathname: string;
 }
+
+export interface IAppHeader extends IPathname {
+  allAgencyNames: string[];
+}
 export interface IScorecardTemplateProps {
   pageContext: {
+    allAgencyNames: string[];
     pathname: string;
     agencyInfo: IAgencyInfo;
     deliverInvest: IDeliverInvest;
@@ -66,5 +71,18 @@ export interface IScorecardTemplateProps {
 }
 export interface ILayoutProps extends IPathname {
   children: ReactNode;
+  allAgencyNames: string[];
   title: string;
+}
+
+export interface IPageProps {
+  data: {
+    allAgencyInfoCsv: {
+      edges: {
+        node: {
+          Name: string;
+        };
+      }[];
+    };
+  };
 }

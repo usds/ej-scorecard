@@ -264,6 +264,16 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                   className="usa-nav__submenu-item"
                 >
                   <a
+                    data-cy="nav-link-scorecards"
+                    href="/"
+                  >
+                    Scorecards
+                  </a>
+                </li>
+                <li
+                  className="usa-nav__submenu-item"
+                >
+                  <a
                     data-cy="nav-link-agency-a"
                     href="/scorecard/agency-a"
                   >
@@ -278,26 +288,6 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                     href="/scorecard/agency-b"
                   >
                     Agency B
-                  </a>
-                </li>
-                <li
-                  className="usa-nav__submenu-item"
-                >
-                  <a
-                    data-cy="nav-link-agency-c"
-                    href="/scorecard/agency-c"
-                  >
-                    Agency C
-                  </a>
-                </li>
-                <li
-                  className="usa-nav__submenu-item"
-                >
-                  <a
-                    data-cy="nav-link-agency-d"
-                    href="/scorecard/agency-d"
-                  >
-                    Agency D
                   </a>
                 </li>
               </ul>
@@ -596,6 +586,16 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                   className="usa-nav__submenu-item"
                 >
                   <a
+                    data-cy="nav-link-scorecards"
+                    href="/"
+                  >
+                    Scorecards
+                  </a>
+                </li>
+                <li
+                  className="usa-nav__submenu-item"
+                >
+                  <a
                     data-cy="nav-link-agency-a"
                     href="/scorecard/agency-a"
                   >
@@ -610,26 +610,6 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                     href="/scorecard/agency-b"
                   >
                     Agency B
-                  </a>
-                </li>
-                <li
-                  className="usa-nav__submenu-item"
-                >
-                  <a
-                    data-cy="nav-link-agency-c"
-                    href="/scorecard/agency-c"
-                  >
-                    Agency C
-                  </a>
-                </li>
-                <li
-                  className="usa-nav__submenu-item"
-                >
-                  <a
-                    data-cy="nav-link-agency-d"
-                    href="/scorecard/agency-d"
-                  >
-                    Agency D
                   </a>
                 </li>
               </ul>

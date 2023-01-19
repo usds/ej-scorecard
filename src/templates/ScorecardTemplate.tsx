@@ -9,11 +9,15 @@ import { IScorecardTemplateProps } from '@/types';
 const ScorecardTemplate: React.FC<IScorecardTemplateProps> = ({
   pageContext,
 }) => {
-  const { pathname, agencyInfo, deliverInvest } = pageContext;
+  const { allAgencyNames, pathname, agencyInfo, deliverInvest } = pageContext;
 
   return (
     // location prop is not available during SSR, so removing
-    <Layout pathname={pathname} title={agencyInfo.Name}>
+    <Layout
+      pathname={pathname}
+      title={agencyInfo.Name}
+      allAgencyNames={allAgencyNames}
+    >
       <MainGridContainer>
         <h1>{agencyInfo.Name}</h1>
         <Grid row gap>

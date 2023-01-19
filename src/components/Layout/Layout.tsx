@@ -4,11 +4,16 @@ import { ILayoutProps } from '@/types';
 
 // import * as styles from './Layout.module.scss';
 
-const Layout = ({ children, pathname, title }: ILayoutProps) => {
+const Layout = ({
+  children,
+  pathname,
+  title,
+  allAgencyNames,
+}: ILayoutProps) => {
   return (
     <>
       <SEO title={title} />
-      <AppHeader pathname={pathname} />
+      <AppHeader pathname={pathname} allAgencyNames={allAgencyNames} />
       <main id={`main-content`}>{children}</main>
     </>
   );

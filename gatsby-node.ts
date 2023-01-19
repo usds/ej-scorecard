@@ -3,6 +3,7 @@ import path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import { IAllFile } from './src/types';
 import { REQUIRED_DATA_FILES } from './src/data/constants';
+import { toKebabCase } from './src/components/util';
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions,
@@ -100,23 +101,26 @@ exports.createPages = async ({ graphql, actions }) => {
     `,
   );
 
-  if (!isRequiredFilesExist(data.allFile)) {
+  const { allFile, allAgencyInfoCsv, allDeliverInvestCsv } = data;
+
+  if (!isRequiredFilesExist(allFile)) {
     throw Error(`Was not able to read in required data`);
   }
 
-  data.allAgencyInfoCsv.edges.forEach((edge, index) => {
-    const pathname = `scorecard/${edge.node.Name.toLowerCase()
-      .split(` `)
-      .join(`-`)}`;
+  const allAgencyNames = allAgencyInfoCsv.edges.map((edge) => edge.node.Name);
+
+  allAgencyInfoCsv.edges.forEach((edge, index) => {
+    const pathname = `scorecard/${toKebabCase(edge.node.Name)}`;
 
     createPage({
       adjustPath: true,
       path: pathname,
       component: path.resolve(`./src/templates/ScorecardTemplate.tsx`),
       context: {
+        allAgencyNames,
         pathname: `/${pathname}`,
         agencyInfo: edge.node,
-        deliverInvest: data.allDeliverInvestCsv.edges[index],
+        deliverInvest: allDeliverInvestCsv.edges[index],
       },
     });
   });

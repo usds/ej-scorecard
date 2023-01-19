@@ -265,6 +265,16 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                     className="usa-nav__submenu-item"
                   >
                     <a
+                      data-cy="nav-link-scorecards"
+                      href="/"
+                    >
+                      Scorecards
+                    </a>
+                  </li>
+                  <li
+                    className="usa-nav__submenu-item"
+                  >
+                    <a
                       data-cy="nav-link-agency-a"
                       href="/scorecard/agency-a"
                     >
@@ -279,26 +289,6 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                       href="/scorecard/agency-b"
                     >
                       Agency B
-                    </a>
-                  </li>
-                  <li
-                    className="usa-nav__submenu-item"
-                  >
-                    <a
-                      data-cy="nav-link-agency-c"
-                      href="/scorecard/agency-c"
-                    >
-                      Agency C
-                    </a>
-                  </li>
-                  <li
-                    className="usa-nav__submenu-item"
-                  >
-                    <a
-                      data-cy="nav-link-agency-d"
-                      href="/scorecard/agency-d"
-                    >
-                      Agency D
                     </a>
                   </li>
                 </ul>
