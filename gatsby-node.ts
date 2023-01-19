@@ -1,7 +1,7 @@
 import type { GatsbyNode } from 'gatsby';
 import path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
-import { IAllFile } from './src/types';
+import { RelativePathData } from './src/types';
 import { REQUIRED_DATA_FILES } from './src/data/constants';
 import { toKebabCase } from './src/components/util';
 
@@ -22,7 +22,7 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
  * @param allFile
  * @returns {boolean}
  */
-function isRequiredFilesExist(allFile: IAllFile): boolean {
+function isRequiredFilesExist(allFile: RelativePathData): boolean {
   for (const edge of allFile.edges) {
     if (!REQUIRED_DATA_FILES.includes(edge.node.relativePath)) {
       return false;

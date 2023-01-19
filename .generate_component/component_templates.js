@@ -1,8 +1,10 @@
 
 // component.tsx
-exports.component = name => `import * as styles from './${name}.module.scss';
+exports.component = name => `import React from 'react';
 
-export interface ${name}Props {}
+import * as styles from './${name}.module.scss';
+
+import { ${name}Props } from '@/types';
 
 const ${name}: React.FC<${name}Props> = ({}) => {
   return (

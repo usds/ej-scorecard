@@ -1,10 +1,10 @@
 import React from 'react';
-import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
 import AgencyInfo from '@/components/AgencyInfo';
 import { ScorecardTemplateProps } from '@/types';
+import DeliverInvest from '@/components/DeliverInvest';
 
 const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
@@ -20,12 +20,8 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
     >
       <MainGridContainer>
         <h1>{agencyInfo.Name}</h1>
-        <Grid row gap>
-          <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-            {/* // Todo: remove di prop */}
-            <AgencyInfo info={agencyInfo} di={deliverInvest} />
-          </Grid>
-        </Grid>
+        <AgencyInfo info={agencyInfo} />
+        <DeliverInvest deliverInvest={deliverInvest} />
       </MainGridContainer>
     </Layout>
   );

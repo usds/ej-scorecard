@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
+// Data
 export interface RelativePathData {
   edges: {
     node: {
@@ -7,7 +8,6 @@ export interface RelativePathData {
     };
   }[];
 }
-
 export interface AgencyInfoData {
   id: string;
   Name: string;
@@ -21,7 +21,6 @@ export interface AgencyInfoData {
   Metric: string;
   About_description: string;
 }
-
 export interface DeliverInvestData {
   node: {
     id: string;
@@ -54,6 +53,7 @@ export interface DeliverInvestData {
   };
 }
 
+// Props
 export interface Pathname {
   pathname: string;
 }
@@ -85,4 +85,11 @@ export interface PageProps {
       }[];
     };
   };
+}
+
+export interface AgencyInfoProps {
+  info: AgencyInfoData;
+}
+export interface DeliverInvestProps {
+  deliverInvest: DeliverInvestData;
 }
