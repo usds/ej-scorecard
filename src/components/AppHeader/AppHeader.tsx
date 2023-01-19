@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'gatsby';
-import { FormattedMessage } from 'react-intl';
+import { Link, navigate } from 'gatsby';
 import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
 
 import {
@@ -48,16 +47,6 @@ const AppHeader = ({ pathname, allAgencyNames }: IAppHeader) => {
    * index 0 = Scorecard dropdown
    */
   const [isOpen, setIsOpen] = useState([false]);
-
-  const HEADER = {
-    LOGO_TITLE: (
-      <FormattedMessage
-        id={`common.nav.LOGO_TITLE`}
-        defaultMessage={`Environmental Justice.gov`}
-        description={`Navigate to any page. This is LOGO_TITLE in the header`}
-      />
-    ),
-  };
 
   /**
    * This toggle function will handle Scorecard nav link toggle.
@@ -139,9 +128,6 @@ const AppHeader = ({ pathname, allAgencyNames }: IAppHeader) => {
     </>
   );
 
-  // Logo text
-  const logoLine1 = HEADER.LOGO_TITLE;
-
   const navLinks = PAGE_ENDPOINTS.map((endpoint, index) => {
     return index === 0 ? (
       <ScorecardNav key="scorecardNav" />
@@ -172,24 +158,15 @@ const AppHeader = ({ pathname, allAgencyNames }: IAppHeader) => {
               key={`first-page`}
               data-cy={`nav-link-first-page`}
             >
-              <img
-                className={styles.logo}
-                src={siteLogo}
-                alt={`${logoLine1}`}
-              />
+              <img className={styles.logo} src={siteLogo} />
             </LocalizedLink>
           </Grid>
 
           {/* Logo Title */}
           <Grid col={6}>
-            <LocalizedLink
-              to={PAGE_ENDPOINTS[0]}
-              key={`first-page`}
-              className="remove-link-style"
-              data-cy={`nav-link-first-page`}
-            >
-              <div className={styles.logoTitle}>{logoLine1}</div>
-            </LocalizedLink>
+            <div className={styles.logoTitle} onClick={() => navigate(`/`)}>
+              {`ENVIRONMENTAL JUSTICE.GOV`}
+            </div>
           </Grid>
 
           {/* Nav links */}

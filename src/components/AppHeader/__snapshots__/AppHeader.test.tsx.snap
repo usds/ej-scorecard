@@ -188,7 +188,6 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
           style={{}}
         >
           <img
-            alt="[object Object]"
             src="/static/images/usds-logo.png"
           />
         </a>
@@ -197,18 +196,11 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
         className="grid-col-6"
         data-testid="grid"
       >
-        <a
-          aria-current="page"
-          className="remove-link-style active"
-          href="/"
+        <div
           onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={{}}
         >
-          <div>
-            Environmental Justice.gov
-          </div>
-        </a>
+          ENVIRONMENTAL JUSTICE.GOV
+        </div>
       </div>
       <div
         className="grid-col-fill"
@@ -510,7 +502,6 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
           style={{}}
         >
           <img
-            alt="[object Object]"
             src="/static/images/usds-logo.png"
           />
         </a>
@@ -519,18 +510,11 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
         className="grid-col-6"
         data-testid="grid"
       >
-        <a
-          aria-current="page"
-          className="remove-link-style active"
-          href="/"
+        <div
           onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={{}}
         >
-          <div>
-            Environmental Justice.gov
-          </div>
-        </a>
+          ENVIRONMENTAL JUSTICE.GOV
+        </div>
       </div>
       <div
         className="grid-col-fill"
