@@ -15,10 +15,7 @@ export interface AgencyInfoData {
   Address_Line_1: string;
   Address_Line_2: string;
   Phone: string;
-  Email: string;
-  Size: string;
-  Value: string;
-  Metric: string;
+  Site: string;
   About_description: string;
 }
 export interface DeliverInvestData {
@@ -89,7 +86,21 @@ export interface PageProps {
 
 export interface AgencyInfoProps {
   info: AgencyInfoData;
+  allAgencyNames: string[];
+  pathname: string;
 }
 export interface DeliverInvestProps {
   deliverInvest: DeliverInvestData;
+}
+
+export interface DropDownNavGeneratorProps {
+  agencyNameGroup: string;
+  toggleIndex: number;
+  subNavLinksArray: Array<Array<ReactNode>> & Array<ReactNode>;
+  agencyGroupRange: string[];
+}
+
+export interface ScorecardSideNavProps {
+  allAgencyNames: string[];
+  pathname: string;
 }

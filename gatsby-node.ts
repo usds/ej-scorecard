@@ -55,10 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
               Address_Line_1
               Address_Line_2
               Phone
-              Email
-              Size
-              Value
-              Metric
+              Site
               About_description
             }
           }

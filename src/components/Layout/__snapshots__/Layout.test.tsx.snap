@@ -181,14 +181,12 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
           data-testid="grid"
         >
           <a
-            aria-current="page"
-            className="active"
-            href="/"
+            href="/scorecard"
             onClick={[Function]}
             onMouseEnter={[Function]}
-            style={{}}
           >
             <img
+              alt="Site logo"
               src="/static/images/usds-logo.png"
             />
           </a>
@@ -217,6 +215,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
           </button>
           <nav
             className="usa-nav primary-nav"
+            onClick={[Function]}
           >
             <button
               className="usa-nav__close"
@@ -235,55 +234,145 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
               <li
                 className="usa-nav__primary-item"
               >
+                <a
+                  href="/scorecard"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                >
+                  Scorecard
+                </a>
+              </li>
+              <li
+                className="usa-nav__primary-item"
+              >
                 <button
-                  aria-controls="scorecardMenu"
+                  aria-controls="nav-drop-down-menu-id-a-e"
                   aria-expanded={false}
-                  className="usa-accordion__button usa-nav__link usa-current"
-                  data-cy="nav-dropdown-scorecard-nav"
+                  className="usa-accordion__button usa-nav__link"
+                  data-cy="nav-dropdown-scorecard-nav-a-e"
                   data-testid="navDropDownButton"
                   onClick={[Function]}
                   type="button"
                 >
                   <span>
-                    Scorecard
+                    Agencies A - E
                   </span>
                 </button>
-                <ul
-                  className="usa-nav__submenu"
+                <div
+                  className="usa-nav__submenu usa-megamenu"
+                  data-testid="megamenu"
                   hidden={true}
-                  id="scorecardMenu"
                 >
-                  <li
-                    className="usa-nav__submenu-item"
+                  <div
+                    className="grid-row grid-gap-4"
                   >
-                    <a
-                      data-cy="nav-link-scorecards"
-                      href="/"
+                    <div
+                      className="usa-col"
                     >
-                      Scorecards
-                    </a>
-                  </li>
-                  <li
-                    className="usa-nav__submenu-item"
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="mega-menu-id-a-e"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            activeClassName="usa-current"
+                            data-cy="nav-link-agency-a"
+                            href="/scorecard/agency-a"
+                          >
+                            Agency A
+                          </a>
+                          <a
+                            activeClassName="usa-current"
+                            data-cy="nav-link-agency-b"
+                            href="/scorecard/agency-b"
+                          >
+                            Agency B
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="usa-nav__primary-item"
+              >
+                <button
+                  aria-controls="nav-drop-down-menu-id-d"
+                  aria-expanded={false}
+                  className="usa-accordion__button usa-nav__link"
+                  data-cy="nav-dropdown-scorecard-nav-d"
+                  data-testid="navDropDownButton"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Agencies D
+                  </span>
+                </button>
+                <div
+                  className="usa-nav__submenu usa-megamenu"
+                  data-testid="megamenu"
+                  hidden={true}
+                >
+                  <div
+                    className="grid-row grid-gap-4"
                   >
-                    <a
-                      data-cy="nav-link-agency-a"
-                      href="/scorecard/agency-a"
+                    <div
+                      className="usa-col"
                     >
-                      Agency A
-                    </a>
-                  </li>
-                  <li
-                    className="usa-nav__submenu-item"
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="mega-menu-id-d"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        />
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="usa-nav__primary-item"
+              >
+                <button
+                  aria-controls="nav-drop-down-menu-id-h-v"
+                  aria-expanded={false}
+                  className="usa-accordion__button usa-nav__link"
+                  data-cy="nav-dropdown-scorecard-nav-h-v"
+                  data-testid="navDropDownButton"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Agencies H - V
+                  </span>
+                </button>
+                <div
+                  className="usa-nav__submenu usa-megamenu"
+                  data-testid="megamenu"
+                  hidden={true}
+                >
+                  <div
+                    className="grid-row grid-gap-4"
                   >
-                    <a
-                      data-cy="nav-link-agency-b"
-                      href="/scorecard/agency-b"
+                    <div
+                      className="usa-col"
                     >
-                      Agency B
-                    </a>
-                  </li>
-                </ul>
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="mega-menu-id-h-v"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        />
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li
                 className="usa-nav__primary-item"

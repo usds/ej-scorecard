@@ -1,42 +1,9 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Grid } from '@trussworks/react-uswds';
+import { useEffect } from 'react';
+import { navigate } from 'gatsby';
 
-import Layout from '@/components/Layout';
-import MainGridContainer from '@/components/MainGridContainer';
-import { PAGE_ENDPOINTS } from '@/data/constants';
-import { PageProps } from '@/types';
-
-const IndexPage: React.FC<PageProps> = ({ data }) => {
-  return (
-    <Layout
-      pathname={PAGE_ENDPOINTS[0]}
-      title={`EJ Landing page`}
-      allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
-    >
-      <MainGridContainer>
-        <h1>{`EJ Landing page`}</h1>
-        <Grid row gap>
-          <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-            {`EJ Landing page`}
-          </Grid>
-        </Grid>
-      </MainGridContainer>
-    </Layout>
-  );
+export default () => {
+  useEffect(() => {
+    navigate(`/scorecard/`);
+  }, []);
+  return null;
 };
-
-export const query = graphql`
-  query {
-    allAgencyInfoCsv(sort: { Name: ASC }) {
-      totalCount
-      edges {
-        node {
-          Name
-        }
-      }
-    }
-  }
-`;
-
-export default IndexPage;

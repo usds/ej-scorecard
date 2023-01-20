@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Link, navigate } from 'gatsby';
 import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
 
@@ -8,17 +8,53 @@ import {
   PrimaryNav,
   Grid,
   NavDropDownButton,
-  Menu,
+  MegaMenu,
 } from '@trussworks/react-uswds';
+import { useWindowSize } from 'react-use';
+
 import MainGridContainer from '@/components/MainGridContainer';
 import GovBanner from '@/components/GovBanner';
-import { NAV_LINKS_NAMES, PAGE_ENDPOINTS } from '@/data/constants';
+import {
+  AGENCY_NAME_GROUPS,
+  AGENCY_NAME_RANGE1,
+  AGENCY_NAME_RANGE2,
+  AGENCY_NAME_RANGE3,
+  NON_DROPDOWN_NAV_LINK_NAMES,
+  NON_DROPDOWN_PAGE_ENDPOINTS,
+  NUMBER_SUB_NAV_LINKS_PER_COLUMN,
+  USWDS_BREAKPOINTS,
+} from '@/data/constants';
 
 // @ts-ignore
 import siteLogo from '@/static/images/usds-logo.png';
 import * as styles from './AppHeader.module.scss';
-import { AppHeaderProps } from '@/types';
-import { toKebabCase } from '../util';
+import { AppHeaderProps, DropDownNavGeneratorProps } from '@/types';
+import { chunkArray, isPathInGroupRange, toKebabCase } from '../util';
+
+/**
+ * Group the agency links based on the agencyNameRange
+ *
+ * @param {string[]} allAgencyNames - The array of all agency names.
+ * @param {string[]} agencyNameRange - The array of agency names to be filtered.
+ * @returns {React.ReactNode[]} - An array of arrays of Link elements.
+ */
+export const groupAgencyLinks = (
+  allAgencyNames: string[],
+  agencyNameRange: string[],
+) => {
+  return allAgencyNames
+    .filter((name) => agencyNameRange.includes(name[0]))
+    .map((agencyName) => (
+      <Link
+        to={`/scorecard/${toKebabCase(agencyName)}`}
+        key={`${toKebabCase(agencyName)}`}
+        activeClassName="usa-current"
+        data-cy={`nav-link-${toKebabCase(agencyName)}`}
+      >
+        {agencyName}
+      </Link>
+    ));
+};
 
 /**
  * The AppHeader component will control how the header looks for both mobile and desktop
@@ -32,6 +68,8 @@ import { toKebabCase } from '../util';
  * @return {JSX.Element}
  */
 const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
+  const { width } = useWindowSize();
+
   /**
    * State variable to control the toggling of mobile menu button
    */
@@ -41,15 +79,25 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   };
 
   /**
-   * State variable to hold the open/close state of each nav dropdown. This will allow for two
-   * dropdown that are being used, each corresponding to an index in the state array:
-   *
-   * index 0 = Scorecard dropdown
+   * State variable to hold the open/close state of each dropdown nav link.
    */
-  const [isOpen, setIsOpen] = useState([false]);
+  const [isOpen, setIsOpen] = useState([false, false, false]);
 
   /**
-   * This toggle function will handle Scorecard nav link toggle.
+   * The dropdown nav elements don't automatically close when
+   * clicking on non-dropdown nav elements. This onClick handler
+   * fixes that
+   *
+   * @param event
+   */
+  const onNavClick = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      setIsOpen([false, false, false]);
+    }
+  };
+
+  /**
+   * This toggle function will handle toggling of each dropdown nav link.
    *
    * @param {number} index
    */
@@ -60,88 +108,110 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
       newIsOpen[index] = !prevIsOpen[index];
       return newIsOpen;
     });
+
     /**
      * When on desktop only, the dropdown nav links should close if any of the other ones
-     * are still open. This next set of logic handles that.
+     * are still open
      */
-    // if (
-    //   index === 0 &&
-    //   isOpen[1] === true &&
-    //   width > USWDS_BREAKPOINTS.DESKTOP
-    // ) {
-    //   setIsOpen([isOpen[0], false]);
-    // } else if (
-    //   index === 1 &&
-    //   isOpen[0] === true &&
-    //   width > USWDS_BREAKPOINTS.DESKTOP
-    // ) {
-    //   setIsOpen([false, isOpen[1]]);
-    // }
+    if (width > USWDS_BREAKPOINTS.DESKTOP) {
+      const newIsOpen = [false, false, false];
+      newIsOpen[index] = true;
+      setIsOpen(newIsOpen);
+    }
+  };
+
+  const chunkAgencyLinks = (groupAgencies: ReactNode[]) => {
+    return groupAgencies.length > NUMBER_SUB_NAV_LINKS_PER_COLUMN
+      ? chunkArray(groupAgencies, NUMBER_SUB_NAV_LINKS_PER_COLUMN)
+      : [[groupAgencies]];
+  };
+
+  /*
+   * This component will create all the dropdown nav component
+   */
+  const DropDownNavGenerator: React.FC<DropDownNavGeneratorProps> = ({
+    agencyNameGroup,
+    toggleIndex,
+    subNavLinksArray,
+    agencyGroupRange,
+  }) => {
+    // shorten and lower case the name group
+    const agencyNameGroupLower =
+      agencyNameGroup.length > 1
+        ? agencyNameGroup.toLowerCase().replace(/\s+/g, ``)
+        : agencyNameGroup.toLowerCase();
+
+    return (
+      <>
+        {/* Add a className of usa-current anytime if the path is in the group range */}
+        <NavDropDownButton
+          className={
+            isPathInGroupRange(pathname, agencyGroupRange) ? `usa-current` : ``
+          }
+          key={`nav-drop-down-key-${agencyNameGroupLower}`}
+          label={`Agencies ${agencyNameGroup}`}
+          menuId={`nav-drop-down-menu-id-${agencyNameGroupLower}`}
+          isOpen={isOpen[toggleIndex]}
+          onToggle={(): void => onToggle(toggleIndex)}
+          data-cy={`nav-dropdown-scorecard-nav-${agencyNameGroupLower}`}
+        ></NavDropDownButton>
+        <MegaMenu
+          id={`mega-menu-id-${agencyNameGroupLower}`}
+          // type="subnav"
+          items={subNavLinksArray}
+          isOpen={isOpen[toggleIndex]}
+        ></MegaMenu>
+      </>
+    );
   };
 
   /**
-   * Dynamically create all the subnav links to each agency page
+   * Create all non-dropdown links for the navigation bar
    */
-  const agencyLinks = allAgencyNames.map((agencyName) => (
-    <Link
-      to={`/scorecard/${toKebabCase(agencyName)}`}
-      key={`${toKebabCase(agencyName)}`}
-      // activeClassName="usa-current"
-      data-cy={`nav-link-${toKebabCase(agencyName)}`}
+  const navLinks = NON_DROPDOWN_PAGE_ENDPOINTS.map((endpoint, index) => (
+    <LocalizedLink
+      to={endpoint}
+      key={`page-${endpoint.substring(1)}`}
+      activeClassName={pathname === endpoint ? `usa-current` : ``}
+      data-cy={`nav-link-page-${endpoint.substring(1)}`}
     >
-      {agencyName}
-    </Link>
+      {NON_DROPDOWN_NAV_LINK_NAMES[index]}
+    </LocalizedLink>
   ));
 
-  const ScorecardNavSubLinks = [
-    <Link
-      to={`/`}
-      key={`scorecards}`}
-      // activeClassName="usa-current"
-      data-cy={`nav-link-scorecards`}
-    >
-      {`Scorecards`}
-    </Link>,
-    ...agencyLinks,
-  ];
-
-  // ScorecardNavDropDown
-  const ScorecardNav = () => (
-    <>
-      {/* Add a className of usa-current anytime this component renders when the location of the app is on
-      any scorecard page. This will style the nav link with a bottom border */}
-      <NavDropDownButton
-        className={pathname.includes(`scorecard`) ? `usa-current` : ``}
-        key="scorecardNavDropDown"
-        label={`Scorecard`}
-        menuId="scorecardMenu"
-        isOpen={isOpen[0]}
-        onToggle={(): void => onToggle(0)}
-        data-cy={`nav-dropdown-scorecard-nav`}
-      ></NavDropDownButton>
-      <Menu
-        id="scorecardMenu"
-        type="subnav"
-        items={ScorecardNavSubLinks}
-        isOpen={isOpen[0]}
-      ></Menu>
-    </>
+  /**
+   * Splice in the dropdown nav links into non-dropdown nav links.
+   * The SubNavLinksArray will be first grouped by Agency link,
+   * following by chunking.
+   */
+  navLinks.splice(
+    1,
+    0,
+    <DropDownNavGenerator
+      agencyNameGroup={AGENCY_NAME_GROUPS[0]}
+      toggleIndex={0}
+      subNavLinksArray={chunkAgencyLinks(
+        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE1),
+      )}
+      agencyGroupRange={AGENCY_NAME_RANGE1}
+    />,
+    <DropDownNavGenerator
+      agencyNameGroup={AGENCY_NAME_GROUPS[1]}
+      toggleIndex={1}
+      subNavLinksArray={chunkAgencyLinks(
+        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE2),
+      )}
+      agencyGroupRange={AGENCY_NAME_RANGE2}
+    />,
+    <DropDownNavGenerator
+      agencyNameGroup={AGENCY_NAME_GROUPS[2]}
+      toggleIndex={2}
+      subNavLinksArray={chunkAgencyLinks(
+        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE3),
+      )}
+      agencyGroupRange={AGENCY_NAME_RANGE3}
+    />,
   );
-
-  const navLinks = PAGE_ENDPOINTS.map((endpoint, index) => {
-    return index === 0 ? (
-      <ScorecardNav key="scorecardNav" />
-    ) : (
-      <LocalizedLink
-        to={endpoint}
-        key={`page-${endpoint.substring(1)}`}
-        activeClassName={`usa-current`}
-        data-cy={`nav-link-page-${endpoint.substring(1)}`}
-      >
-        {NAV_LINKS_NAMES[index]}
-      </LocalizedLink>
-    );
-  });
 
   return (
     <Header basic={true} role={`banner`}>
@@ -154,11 +224,11 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
           {/* Logo */}
           <Grid col={1}>
             <LocalizedLink
-              to={PAGE_ENDPOINTS[0]}
+              to={NON_DROPDOWN_PAGE_ENDPOINTS[0]}
               key={`first-page`}
               data-cy={`nav-link-first-page`}
             >
-              <img className={styles.logo} src={siteLogo} />
+              <img className={styles.logo} src={siteLogo} alt={`Site logo`} />
             </LocalizedLink>
           </Grid>
 
@@ -181,6 +251,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
               items={navLinks}
               mobileExpanded={mobileNavOpen}
               onToggleMobileNav={toggleMobileNav}
+              onClick={(e) => onNavClick(e)}
             ></PrimaryNav>
           </Grid>
         </Grid>

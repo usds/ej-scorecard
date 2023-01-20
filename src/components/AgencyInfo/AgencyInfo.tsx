@@ -6,8 +6,13 @@ import { Grid } from '@trussworks/react-uswds';
 
 import * as styles from './AgencyInfo.module.scss';
 import { AgencyInfoProps } from '@/types';
+import ScorecardSideNav from '../ScorecardSideNav';
 
-const AgencyInfo: React.FC<AgencyInfoProps> = ({ info }) => {
+const AgencyInfo: React.FC<AgencyInfoProps> = ({
+  info,
+  allAgencyNames,
+  pathname,
+}) => {
   // Todo: may not need this custom hook
   // const agencyInfo = useAgencyInfo();
 
@@ -22,26 +27,25 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({ info }) => {
                 src="../../../static/images/agency-a.png"
                 alt="Agency logo"
               />
-              <h2>{info.Name}</h2>
+              <h3>{info.Name}</h3>
               <span>{info.Contact_Name}</span>
               <span>{info.Address_Line_1}</span>
               <span>{info.Address_Line_2}</span>
               <span>{info.Phone}</span>
-              <span>{info.Email}</span>
+              <span>{info.Site}</span>
             </div>
           </Grid>
           <Grid col={8}>
             <div className={styles.agencyInfoCol2}>
               <h2>{`About ${info.Name}`}</h2>
-              <p>
-                <span>{`Agency size: ${info.Size}`}</span>
-                <span>{`Agency value: ${info.Value}`}</span>
-                <span>{`Metrics: ${info.Metric}`}</span>
-              </p>
               <p>{info.About_description}</p>
             </div>
           </Grid>
         </Grid>
+      </Grid>
+      <Grid desktop={{ col: 1 }} tablet={{ col: 10 }} col={12} />
+      <Grid desktop={{ col: 3 }} tablet={{ col: 10 }} col={12}>
+        <ScorecardSideNav allAgencyNames={allAgencyNames} pathname={pathname} />
       </Grid>
     </Grid>
   );

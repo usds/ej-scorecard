@@ -32,40 +32,83 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
 // This control the icon in the alerts
 .usa-alert--info:before {
     -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=) no-repeat center/contain;
+    mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=) no-repeat center/contain;
 }
 
 // This sets the down arrow in the gov banner
 .usa-banner__button::after {
     -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNTkgOC41OSAxMiAxMy4xNyA3LjQxIDguNTkgNiAxMGw2IDYgNi02eiIvPjwvc3ZnPg==) no-repeat center/contain;
+    mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNTkgOC41OSAxMiAxMy4xNyA3LjQxIDguNTkgNiAxMGw2IDYgNi02eiIvPjwvc3ZnPg==) no-repeat center/contain;
 }
 
 // This sets the up arrow in the gov banner
 .usa-banner__button[aria-expanded=true]::after{
-  -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0ibTEyIDgtNiA2IDEuNDEgMS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTR6Ii8+PC9zdmc+) no-repeat center/contain
+  -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0ibTEyIDgtNiA2IDEuNDEgMS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTR6Ii8+PC9zdmc+) no-repeat center/contain;
+  mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0ibTEyIDgtNiA2IDEuNDEgMS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTR6Ii8+PC9zdmc+) no-repeat center/contain;
 }
+
+
+
+/* 
+******************************
+*      HEADER STYLES
+****************************** 
+*/
 
 // This sets the down arrow in the scorecard dropdown nav
 .usa-accordion__button.usa-nav__link span::after{
   -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTE2LjU5IDguNTkgMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=) no-repeat center/contain;
+  mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTE2LjU5IDguNTkgMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=) no-repeat center/contain;
 }
 
 // This sets the up arrow in the scorecard dropdown nav
 .usa-accordion__button.usa-nav__link[aria-expanded=true] span::after{
   -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0ibTEyIDgtNiA2IDEuNDEgMS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTR6Ii8+PC9zdmc+) no-repeat center/contain;
+  mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0ibTEyIDgtNiA2IDEuNDEgMS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTR6Ii8+PC9zdmc+) no-repeat center/contain;
+}
+
+// Allow all navigation items to take up the full content width
+
+li.usa-nav__primary-item {
+  width: max-content;
+
+  // Todo: figure out how to get mixins to work here
+  // @include at-media-max('desktop')
+  @media screen and (max-width: 1024px) {
+    width: unset;
+  }
 }
 
 // This sets the alignment of the items in the scorecard dropdown nav
 .usa-nav__submenu-item {
   padding-left: .5rem;
 }
-.usa-nav__submenu-item:last-child {
-  padding-bottom: .5rem;
+
+
+
+// remove the psuedo elements of the mega menu
+.usa-nav__submenu.usa-megamenu::before, .usa-nav__submenu.usa-megamenu::after {
+  display: none;
 }
 
+// these two all for non-dropdown nav links to activate on hover
+li.usa-nav__primary-item a {
+  display: block;
+  position: relative;
+}
+li.usa-nav__primary-item a:hover::after{
+  background-color: #005ea2;
+  border-radius: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.25rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: -0.25rem;
+}
 
-/**
-Remove bottom-border on navbar
-*/
+// Remove bottom-border on navbar
 .usa-header {
   +.usa-section,
   +main {

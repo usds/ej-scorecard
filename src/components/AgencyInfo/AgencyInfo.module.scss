@@ -18,6 +18,8 @@
 };
 
 .agencyInfoLogo {
-    @include u-margin(5);
+    @include u-margin-left(5);
+    @include u-margin-right(5);
+    @include u-margin-top(2);
 }
 
