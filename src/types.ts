@@ -15,10 +15,7 @@ export interface AgencyInfoData {
   Address_Line_1: string;
   Address_Line_2: string;
   Phone: string;
-  Email: string;
-  Size: string;
-  Value: string;
-  Metric: string;
+  Site: string;
   About_description: string;
 }
 export interface DeliverInvestData {

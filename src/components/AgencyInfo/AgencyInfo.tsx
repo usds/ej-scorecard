@@ -27,17 +27,12 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({ info }) => {
               <span>{info.Address_Line_1}</span>
               <span>{info.Address_Line_2}</span>
               <span>{info.Phone}</span>
-              <span>{info.Email}</span>
+              <span>{info.Site}</span>
             </div>
           </Grid>
           <Grid col={8}>
             <div className={styles.agencyInfoCol2}>
               <h2>{`About ${info.Name}`}</h2>
-              <p>
-                <span>{`Agency size: ${info.Size}`}</span>
-                <span>{`Agency value: ${info.Value}`}</span>
-                <span>{`Metrics: ${info.Metric}`}</span>
-              </p>
               <p>{info.About_description}</p>
             </div>
           </Grid>
