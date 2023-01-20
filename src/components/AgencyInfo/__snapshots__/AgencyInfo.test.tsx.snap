@@ -6,52 +6,62 @@ exports[`rendering of AgencyInfo Component > checks if component renders 1`] = `
   data-testid="grid"
 >
   <div
-    className="grid-col-4"
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
     data-testid="grid"
   >
-    <div>
-      <h2>
-        Agency D
-      </h2>
-      <span>
-        Leslie KnopeD
-      </span>
-      <span>
-        333 Any StreetD
-      </span>
-      <span>
-        Washington, D.C. 20032
-      </span>
-      <span>
-        (212) 867-5309
-      </span>
-      <span>
-        Leslie.KnopeD@agencya.gov
-      </span>
-    </div>
-  </div>
-  <div
-    className="grid-col-8"
-    data-testid="grid"
-  >
-    <div>
-      <h2>
-        About Agency D
-      </h2>
-      <p>
-        <span>
-          Agency size: #
-        </span>
-        <span>
-          Agency value: $
-        </span>
-        <span>
-          Metrics: #
-        </span>
-      </p>
-      <p>
-        LoremD ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
-      </p>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <div
+        className="grid-col-4"
+        data-testid="grid"
+      >
+        <div>
+          <h2>
+            Agency D
+          </h2>
+          <span>
+            Leslie KnopeD
+          </span>
+          <span>
+            333 Any StreetD
+          </span>
+          <span>
+            Washington, D.C. 20032
+          </span>
+          <span>
+            (212) 867-5309
+          </span>
+          <span>
+            Leslie.KnopeD@agencya.gov
+          </span>
+        </div>
+      </div>
+      <div
+        className="grid-col-8"
+        data-testid="grid"
+      >
+        <div>
+          <h2>
+            About Agency D
+          </h2>
+          <p>
+            <span>
+              Agency size: #
+            </span>
+            <span>
+              Agency value: $
+            </span>
+            <span>
+              Metrics: #
+            </span>
+          </p>
+          <p>
+            LoremD ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

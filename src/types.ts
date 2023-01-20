@@ -1,8 +1,14 @@
-export interface ILocation {
-  location?: Location;
-}
+import { ReactNode } from 'react';
 
-export interface IAgencyInfo {
+// Data
+export interface RelativePathData {
+  edges: {
+    node: {
+      relativePath: string;
+    };
+  }[];
+}
+export interface AgencyInfoData {
   id: string;
   Name: string;
   Contact_Name: string;
@@ -15,8 +21,7 @@ export interface IAgencyInfo {
   Metric: string;
   About_description: string;
 }
-
-export interface IDeliverInvest {
+export interface DeliverInvestData {
   node: {
     id: string;
     __typename: string;
@@ -46,4 +51,45 @@ export interface IDeliverInvest {
     T4_M1: string;
     T4_V1: string;
   };
+}
+
+// Props
+export interface Pathname {
+  pathname: string;
+}
+
+export interface AppHeaderProps extends Pathname {
+  allAgencyNames: string[];
+}
+export interface ScorecardTemplateProps {
+  pageContext: {
+    allAgencyNames: string[];
+    pathname: string;
+    agencyInfo: AgencyInfoData;
+    deliverInvest: DeliverInvestData;
+  };
+}
+export interface LayoutProps extends Pathname {
+  children: ReactNode;
+  allAgencyNames: string[];
+  title: string;
+}
+
+export interface PageProps {
+  data: {
+    allAgencyInfoCsv: {
+      edges: {
+        node: {
+          Name: string;
+        };
+      }[];
+    };
+  };
+}
+
+export interface AgencyInfoProps {
+  info: AgencyInfoData;
+}
+export interface DeliverInvestProps {
+  deliverInvest: DeliverInvestData;
 }

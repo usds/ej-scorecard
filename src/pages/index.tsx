@@ -1,15 +1,19 @@
+import React from 'react';
+import { graphql } from 'gatsby';
 import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
+import { PAGE_ENDPOINTS } from '@/data/constants';
+import { PageProps } from '@/types';
 
-interface IIndexPage {
-  location: Location;
-}
-
-const IndexPage = ({ location }: IIndexPage) => {
+const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
-    <Layout location={location} title={`EJ Landing page`}>
+    <Layout
+      pathname={PAGE_ENDPOINTS[0]}
+      title={`EJ Landing page`}
+      allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
+    >
       <MainGridContainer>
         <h1>{`EJ Landing page`}</h1>
         <Grid row gap>
@@ -21,5 +25,18 @@ const IndexPage = ({ location }: IIndexPage) => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    allAgencyInfoCsv(sort: { Name: ASC }) {
+      totalCount
+      edges {
+        node {
+          Name
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

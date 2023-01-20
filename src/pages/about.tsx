@@ -1,3 +1,5 @@
+import React from 'react';
+import { graphql } from 'gatsby';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   SummaryBox,
@@ -7,7 +9,8 @@ import {
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
-import { ILocation } from '@/types';
+import { PAGE_ENDPOINTS } from '@/data/constants';
+import { PageProps } from '@/types';
 
 const SECOND_PAGE_COPY = defineMessages({
   HEADING1: {
@@ -27,13 +30,14 @@ const SECOND_PAGE_COPY = defineMessages({
   },
 });
 
-const SecondPage = ({ location }: ILocation) => {
+const SecondPage: React.FC<PageProps> = ({ data }) => {
   const intl = useIntl();
 
   return (
     <Layout
-      location={location}
+      pathname={PAGE_ENDPOINTS[1]}
       title={intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}
+      allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
     >
       <MainGridContainer>
         <h1>{intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}</h1>
@@ -49,5 +53,18 @@ const SecondPage = ({ location }: ILocation) => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    allAgencyInfoCsv(sort: { Name: ASC }) {
+      totalCount
+      edges {
+        node {
+          Name
+        }
+      }
+    }
+  }
+`;
 
 export default SecondPage;
