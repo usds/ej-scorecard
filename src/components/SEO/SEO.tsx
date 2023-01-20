@@ -13,7 +13,7 @@ const SEO = ({ title }: ISEOProps) => {
   // https://github.com/gatsbyjs/gatsby/issues/36458#issuecomment-1334232043
 
   return (
-    <Helmet defer={false}>
+    <Helmet defer={false} htmlAttributes={{ lang: `en` }}>
       <meta charSet="utf-8" />
 
       {/* Render Chrome if available or using latest version of Internet Explorer (Recommended). */}

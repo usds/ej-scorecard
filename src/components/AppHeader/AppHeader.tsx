@@ -16,6 +16,7 @@ import { useWindowSize } from 'react-use';
 import MainGridContainer from '@/components/MainGridContainer';
 import GovBanner from '@/components/GovBanner';
 import {
+  AGENCY_NAME_GROUPS,
   NON_DROPDOWN_NAV_LINK_NAMES,
   NON_DROPDOWN_PAGE_ENDPOINTS,
   USWDS_BREAKPOINTS,
@@ -24,7 +25,7 @@ import {
 // @ts-ignore
 import siteLogo from '@/static/images/usds-logo.png';
 import * as styles from './AppHeader.module.scss';
-import { AppHeaderProps } from '@/types';
+import { AppHeaderProps, DropDownNavGeneratorProps } from '@/types';
 import { toKebabCase } from '../util';
 
 /**
@@ -123,6 +124,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     </Link>
   ));
 
+  // Todo: create dynamically part 1
   const ScorecardSubNavLinksA2E = [
     [
       <Link
@@ -186,72 +188,45 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     ],
   ];
 
-  // Todo: create these dynamically
-  const ScorecardNavA2E = () => (
-    <>
-      {/* Add a className of usa-current anytime this component renders when the location of the app is on
-      any scorecard page. This will style the nav link with a bottom border */}
-      <NavDropDownButton
-        className={pathname.includes(`scorecard`) ? `usa-current` : ``}
-        key="scorecardNavA2EDropDown"
-        label={`Agencies A - E`}
-        menuId="scorecardMenuA2E"
-        isOpen={isOpen[0]}
-        onToggle={(): void => onToggle(0)}
-        data-cy={`nav-dropdown-scorecard-nav-a2e`}
-      ></NavDropDownButton>
-      <MegaMenu
-        id="scorecardMenuA2E"
-        // type="subnav"
-        items={ScorecardSubNavLinksA2E}
-        isOpen={isOpen[0]}
-      ></MegaMenu>
-    </>
-  );
-  const ScorecardNavH2V = () => (
-    <>
-      {/* Add a className of usa-current anytime this component renders when the location of the app is on
-      any scorecard page. This will style the nav link with a bottom border */}
-      <NavDropDownButton
-        className={pathname.includes(`scorecard`) ? `usa-current` : ``}
-        key="scorecardNavH2VDropDown"
-        label={`Agencies H - V`}
-        menuId="scorecardMenuH2V"
-        isOpen={isOpen[1]}
-        onToggle={(): void => onToggle(1)}
-        data-cy={`nav-dropdown-scorecard-nav-h2v`}
-      ></NavDropDownButton>
-      <MegaMenu
-        id="scorecardMenuH2V"
-        // type="subnav"
-        items={ScorecardSubNavLinksH2V}
-        isOpen={isOpen[1]}
-      ></MegaMenu>
-    </>
-  );
+  /*
+   * This component will create all the DropDown navigation components
+   */
+  const DropDownNavGenerator: React.FC<DropDownNavGeneratorProps> = ({
+    agencyNameGroup,
+    toggleIndex,
+    subNavLinksArray,
+  }) => {
+    const agencyNameGroupLower =
+      agencyNameGroup.length > 1
+        ? agencyNameGroup.toLowerCase().replace(/\s+/g, ``)
+        : agencyNameGroup.toLowerCase();
 
-  const ScorecardNavD = () => (
-    <>
-      {/* Add a className of usa-current anytime this component renders when the location of the app is on
+    return (
+      <>
+        {/* Add a className of usa-current anytime this component renders when the location of the app is on
       any scorecard page. This will style the nav link with a bottom border */}
-      <NavDropDownButton
-        className={pathname.includes(`scorecard`) ? `usa-current` : ``}
-        key="scorecardNavD_DropDown"
-        label={`Agency D`}
-        menuId="scorecardMenuD"
-        isOpen={isOpen[2]}
-        onToggle={(): void => onToggle(2)}
-        data-cy={`nav-dropdown-scorecard-nav-d`}
-      ></NavDropDownButton>
-      <MegaMenu
-        id="scorecardMenuD"
-        // type="subnav"
-        items={ScorecardSubNavLinksD}
-        isOpen={isOpen[2]}
-      ></MegaMenu>
-    </>
-  );
+        <NavDropDownButton
+          className={pathname.includes(`scorecard`) ? `usa-current` : ``}
+          key={`nav-drop-down-key-${agencyNameGroupLower}`}
+          label={`Agencies ${agencyNameGroup}`}
+          menuId={`nav-drop-down-menu-id-${agencyNameGroupLower}`}
+          isOpen={isOpen[toggleIndex]}
+          onToggle={(): void => onToggle(toggleIndex)}
+          data-cy={`nav-dropdown-scorecard-nav-${agencyNameGroupLower}`}
+        ></NavDropDownButton>
+        <MegaMenu
+          id={`mega-menu-id-${agencyNameGroupLower}`}
+          // type="subnav"
+          items={subNavLinksArray}
+          isOpen={isOpen[toggleIndex]}
+        ></MegaMenu>
+      </>
+    );
+  };
 
+  /**
+   * Create all non dropdown links for the navigation bar
+   */
   const navLinks = NON_DROPDOWN_PAGE_ENDPOINTS.map((endpoint, index) => (
     <LocalizedLink
       to={endpoint}
@@ -263,12 +238,29 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     </LocalizedLink>
   ));
 
+  /**
+   * Splice in the dropdown nav links into the navigation bar
+   */
   navLinks.splice(
     1,
     0,
-    <ScorecardNavA2E key="scorecardNavA2E" />,
-    <ScorecardNavD key="scorecardNavD" />,
-    <ScorecardNavH2V key="scorecardNavH2V" />,
+    // Todo: create dynamically part 2
+
+    <DropDownNavGenerator
+      agencyNameGroup={AGENCY_NAME_GROUPS[0]}
+      toggleIndex={0}
+      subNavLinksArray={ScorecardSubNavLinksA2E}
+    />,
+    <DropDownNavGenerator
+      agencyNameGroup={AGENCY_NAME_GROUPS[1]}
+      toggleIndex={1}
+      subNavLinksArray={ScorecardSubNavLinksD}
+    />,
+    <DropDownNavGenerator
+      agencyNameGroup={AGENCY_NAME_GROUPS[2]}
+      toggleIndex={2}
+      subNavLinksArray={ScorecardSubNavLinksH2V}
+    />,
   );
 
   return (
@@ -286,7 +278,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
               key={`first-page`}
               data-cy={`nav-link-first-page`}
             >
-              <img className={styles.logo} src={siteLogo} />
+              <img className={styles.logo} src={siteLogo} alt={`Site logo`} />
             </LocalizedLink>
           </Grid>
 

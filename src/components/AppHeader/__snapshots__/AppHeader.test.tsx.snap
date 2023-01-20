@@ -188,6 +188,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
           style={{}}
         >
           <img
+            alt="Site logo"
             src="/static/images/usds-logo.png"
           />
         </a>
@@ -250,10 +251,10 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
               className="usa-nav__primary-item"
             >
               <button
-                aria-controls="scorecardMenuA2E"
+                aria-controls="nav-drop-down-menu-id-a-e"
                 aria-expanded={false}
                 className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-a2e"
+                data-cy="nav-dropdown-scorecard-nav-a-e"
                 data-testid="navDropDownButton"
                 onClick={[Function]}
                 type="button"
@@ -275,7 +276,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuA2E"
+                      id="mega-menu-id-a-e"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -316,7 +317,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
               className="usa-nav__primary-item"
             >
               <button
-                aria-controls="scorecardMenuD"
+                aria-controls="nav-drop-down-menu-id-d"
                 aria-expanded={false}
                 className="usa-accordion__button usa-nav__link"
                 data-cy="nav-dropdown-scorecard-nav-d"
@@ -325,7 +326,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                 type="button"
               >
                 <span>
-                  Agency D
+                  Agencies D
                 </span>
               </button>
               <div
@@ -341,7 +342,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuD"
+                      id="mega-menu-id-d"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -380,7 +381,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuD"
+                      id="mega-menu-id-d"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -421,10 +422,10 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
               className="usa-nav__primary-item"
             >
               <button
-                aria-controls="scorecardMenuH2V"
+                aria-controls="nav-drop-down-menu-id-h-v"
                 aria-expanded={false}
                 className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-h2v"
+                data-cy="nav-dropdown-scorecard-nav-h-v"
                 data-testid="navDropDownButton"
                 onClick={[Function]}
                 type="button"
@@ -446,7 +447,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuH2V"
+                      id="mega-menu-id-h-v"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -485,7 +486,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuH2V"
+                      id="mega-menu-id-h-v"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -720,6 +721,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
           style={{}}
         >
           <img
+            alt="Site logo"
             src="/static/images/usds-logo.png"
           />
         </a>
@@ -782,10 +784,10 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
               className="usa-nav__primary-item"
             >
               <button
-                aria-controls="scorecardMenuA2E"
+                aria-controls="nav-drop-down-menu-id-a-e"
                 aria-expanded={false}
                 className="usa-accordion__button usa-nav__link usa-current"
-                data-cy="nav-dropdown-scorecard-nav-a2e"
+                data-cy="nav-dropdown-scorecard-nav-a-e"
                 data-testid="navDropDownButton"
                 onClick={[Function]}
                 type="button"
@@ -807,7 +809,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuA2E"
+                      id="mega-menu-id-a-e"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -848,7 +850,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
               className="usa-nav__primary-item"
             >
               <button
-                aria-controls="scorecardMenuD"
+                aria-controls="nav-drop-down-menu-id-d"
                 aria-expanded={false}
                 className="usa-accordion__button usa-nav__link usa-current"
                 data-cy="nav-dropdown-scorecard-nav-d"
@@ -857,7 +859,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                 type="button"
               >
                 <span>
-                  Agency D
+                  Agencies D
                 </span>
               </button>
               <div
@@ -873,7 +875,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuD"
+                      id="mega-menu-id-d"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -912,7 +914,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuD"
+                      id="mega-menu-id-d"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -953,10 +955,10 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
               className="usa-nav__primary-item"
             >
               <button
-                aria-controls="scorecardMenuH2V"
+                aria-controls="nav-drop-down-menu-id-h-v"
                 aria-expanded={false}
                 className="usa-accordion__button usa-nav__link usa-current"
-                data-cy="nav-dropdown-scorecard-nav-h2v"
+                data-cy="nav-dropdown-scorecard-nav-h-v"
                 data-testid="navDropDownButton"
                 onClick={[Function]}
                 type="button"
@@ -978,7 +980,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuH2V"
+                      id="mega-menu-id-h-v"
                     >
                       <li
                         className="usa-nav__submenu-item"
@@ -1017,7 +1019,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                   >
                     <ul
                       className="usa-nav__submenu-list"
-                      id="scorecardMenuH2V"
+                      id="mega-menu-id-h-v"
                     >
                       <li
                         className="usa-nav__submenu-item"

@@ -2,6 +2,7 @@
 
 export const NON_DROPDOWN_NAV_LINK_NAMES = [`Scorecard`, `About`, `Contact`];
 export const NON_DROPDOWN_PAGE_ENDPOINTS = [`/`, `/about`, `/contact`];
+export const AGENCY_NAME_GROUPS = [`A - E`, `D`, `H - V`];
 export const PAGE_ENDPOINTS_ES = [`/es/`, `/es/about`, `/es/contact`];
 
 // USWDS Breakpoints
