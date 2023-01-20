@@ -8,7 +8,6 @@ import {
   PrimaryNav,
   Grid,
   NavDropDownButton,
-  // Menu,
   MegaMenu,
 } from '@trussworks/react-uswds';
 import { useWindowSize } from 'react-use';
@@ -17,8 +16,12 @@ import MainGridContainer from '@/components/MainGridContainer';
 import GovBanner from '@/components/GovBanner';
 import {
   AGENCY_NAME_GROUPS,
+  AGENCY_NAME_RANGE1,
+  AGENCY_NAME_RANGE2,
+  AGENCY_NAME_RANGE3,
   NON_DROPDOWN_NAV_LINK_NAMES,
   NON_DROPDOWN_PAGE_ENDPOINTS,
+  NUMBER_SUB_NAV_LINKS_PER_COLUMN,
   USWDS_BREAKPOINTS,
 } from '@/data/constants';
 
@@ -26,7 +29,7 @@ import {
 import siteLogo from '@/static/images/usds-logo.png';
 import * as styles from './AppHeader.module.scss';
 import { AppHeaderProps, DropDownNavGeneratorProps } from '@/types';
-import { toKebabCase } from '../util';
+import { chunkArray, toKebabCase } from '../util';
 
 /**
  * The AppHeader component will control how the header looks for both mobile and desktop
@@ -51,7 +54,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   };
 
   /**
-   * State variable to hold the open/close state of each nav dropdown.
+   * State variable to hold the open/close state of each dropdown nav link.
    */
   const [isOpen, setIsOpen] = useState([false, false, false]);
 
@@ -69,7 +72,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   };
 
   /**
-   * This toggle function will handle toggling of dropdown navs.
+   * This toggle function will handle toggling of each dropdown nav link.
    *
    * @param {number} index
    */
@@ -111,85 +114,38 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   };
 
   /**
-   * Dynamically create all the subnav links to each agency page
+   * Filter the agency names based on the agencyNameRange, then chunk based on
+   * NUMBER_SUB_NAV_LINKS_PER_COLUMN. Chunking will define how many agency links
+   * (sub-nav links) should go in each column of the sub-nav
+   *
+   * @param {string[]} allAgencyNames - The array of all agency names.
+   * @param {string[]} agencyNameRange - The array of agency names to be filtered.
+   * @returns {JSX.Element[][][]} - An array of arrays of JSX elements.
    */
-  const agencyLinks = allAgencyNames.map((agencyName) => (
-    <Link
-      to={`/scorecard/${toKebabCase(agencyName)}`}
-      key={`${toKebabCase(agencyName)}`}
-      // activeClassName="usa-current"
-      data-cy={`nav-link-${toKebabCase(agencyName)}`}
-    >
-      {agencyName}
-    </Link>
-  ));
+  const groupAndChunkAgencyLinks = (
+    allAgencyNames: string[],
+    agencyNameRange: string[],
+  ) => {
+    const groupAgencies = allAgencyNames
+      .filter((name) => agencyNameRange.includes(name[0]))
+      .map((agencyName) => (
+        <Link
+          to={`/scorecard/${toKebabCase(agencyName)}`}
+          key={`${toKebabCase(agencyName)}`}
+          // activeClassName="usa-current"
+          data-cy={`nav-link-${toKebabCase(agencyName)}`}
+        >
+          {agencyName}
+        </Link>
+      ));
 
-  // Todo: create dynamically part 1
-  const ScorecardSubNavLinksA2E = [
-    [
-      <Link
-        to={`/`}
-        key={`scorecards}`}
-        // activeClassName="usa-current"
-        data-cy={`nav-link-scorecards`}
-      >
-        {`Scorecards`}
-      </Link>,
-      ...agencyLinks,
-    ],
-  ];
-
-  const ScorecardSubNavLinksD = [
-    [
-      <Link
-        to={`/`}
-        key={`scorecards}`}
-        // activeClassName="usa-current"
-        data-cy={`nav-link-scorecards`}
-      >
-        {`Scorecards`}
-      </Link>,
-      ...agencyLinks,
-    ],
-    [
-      <Link
-        to={`/`}
-        key={`scorecards}`}
-        // activeClassName="usa-current"
-        data-cy={`nav-link-scorecards`}
-      >
-        {`Scorecards`}
-      </Link>,
-      ...agencyLinks,
-    ],
-  ];
-
-  const ScorecardSubNavLinksH2V = [
-    [
-      <Link
-        to={`/`}
-        key={`scorecards}`}
-        // activeClassName="usa-current"
-        data-cy={`nav-link-scorecards`}
-      >
-        {`Scorecards`}
-      </Link>,
-      ...agencyLinks,
-    ],
-    [
-      <Link
-        to={`/`}
-        key={`scorecards}`}
-        // activeClassName="usa-current"
-        data-cy={`nav-link-scorecards`}
-      >
-        {`Scorecards`}
-      </Link>,
-    ],
-  ];
+    return groupAgencies.length > NUMBER_SUB_NAV_LINKS_PER_COLUMN
+      ? chunkArray(groupAgencies, NUMBER_SUB_NAV_LINKS_PER_COLUMN)
+      : [[groupAgencies]];
+  };
 
   /*
-   * This component will create all the DropDown navigation components
+   * This component will create all the dropdown nav component
    */
   const DropDownNavGenerator: React.FC<DropDownNavGeneratorProps> = ({
     agencyNameGroup,
@@ -225,7 +181,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   };
 
   /**
-   * Create all non dropdown links for the navigation bar
+   * Create all non-dropdown links for the navigation bar
    */
   const navLinks = NON_DROPDOWN_PAGE_ENDPOINTS.map((endpoint, index) => (
     <LocalizedLink
@@ -239,27 +195,34 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   ));
 
   /**
-   * Splice in the dropdown nav links into the navigation bar
+   * Splice in the dropdown nav links into non-dropdown nav links
    */
   navLinks.splice(
     1,
     0,
-    // Todo: create dynamically part 2
-
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[0]}
       toggleIndex={0}
-      subNavLinksArray={ScorecardSubNavLinksA2E}
+      subNavLinksArray={groupAndChunkAgencyLinks(
+        allAgencyNames,
+        AGENCY_NAME_RANGE1,
+      )}
     />,
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[1]}
       toggleIndex={1}
-      subNavLinksArray={ScorecardSubNavLinksD}
+      subNavLinksArray={groupAndChunkAgencyLinks(
+        allAgencyNames,
+        AGENCY_NAME_RANGE2,
+      )}
     />,
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[2]}
       toggleIndex={2}
-      subNavLinksArray={ScorecardSubNavLinksH2V}
+      subNavLinksArray={groupAndChunkAgencyLinks(
+        allAgencyNames,
+        AGENCY_NAME_RANGE3,
+      )}
     />,
   );
 

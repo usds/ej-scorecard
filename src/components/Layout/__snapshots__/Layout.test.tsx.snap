@@ -283,25 +283,11 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                           className="usa-nav__submenu-item"
                         >
                           <a
-                            data-cy="nav-link-scorecards"
-                            href="/"
-                          >
-                            Scorecards
-                          </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
                             data-cy="nav-link-agency-a"
                             href="/scorecard/agency-a"
                           >
                             Agency A
                           </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
                           <a
                             data-cy="nav-link-agency-b"
                             href="/scorecard/agency-b"
@@ -347,73 +333,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                       >
                         <li
                           className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-scorecards"
-                            href="/"
-                          >
-                            Scorecards
-                          </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-agency-a"
-                            href="/scorecard/agency-a"
-                          >
-                            Agency A
-                          </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-agency-b"
-                            href="/scorecard/agency-b"
-                          >
-                            Agency B
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="usa-col"
-                    >
-                      <ul
-                        className="usa-nav__submenu-list"
-                        id="mega-menu-id-d"
-                      >
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-scorecards"
-                            href="/"
-                          >
-                            Scorecards
-                          </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-agency-a"
-                            href="/scorecard/agency-a"
-                          >
-                            Agency A
-                          </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-agency-b"
-                            href="/scorecard/agency-b"
-                          >
-                            Agency B
-                          </a>
-                        </li>
+                        />
                       </ul>
                     </div>
                   </div>
@@ -452,53 +372,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                       >
                         <li
                           className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-scorecards"
-                            href="/"
-                          >
-                            Scorecards
-                          </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-agency-a"
-                            href="/scorecard/agency-a"
-                          >
-                            Agency A
-                          </a>
-                        </li>
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-agency-b"
-                            href="/scorecard/agency-b"
-                          >
-                            Agency B
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="usa-col"
-                    >
-                      <ul
-                        className="usa-nav__submenu-list"
-                        id="mega-menu-id-h-v"
-                      >
-                        <li
-                          className="usa-nav__submenu-item"
-                        >
-                          <a
-                            data-cy="nav-link-scorecards"
-                            href="/"
-                          >
-                            Scorecards
-                          </a>
-                        </li>
+                        />
                       </ul>
                     </div>
                   </div>
