@@ -276,12 +276,14 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
                         className="usa-nav__submenu-item"
                       >
                         <a
+                          activeClassName="usa-current"
                           data-cy="nav-link-agency-a"
                           href="/scorecard/agency-a"
                         >
                           Agency A
                         </a>
                         <a
+                          activeClassName="usa-current"
                           data-cy="nav-link-agency-b"
                           href="/scorecard/agency-b"
                         >
@@ -677,12 +679,14 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
                         className="usa-nav__submenu-item"
                       >
                         <a
+                          activeClassName="usa-current"
                           data-cy="nav-link-agency-a"
                           href="/scorecard/agency-a"
                         >
                           Agency A
                         </a>
                         <a
+                          activeClassName="usa-current"
                           data-cy="nav-link-agency-b"
                           href="/scorecard/agency-b"
                         >

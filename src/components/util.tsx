@@ -21,3 +21,20 @@ export function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
   }
   return results;
 }
+
+/**
+ * Checks if a given pathname (URL) is within some group
+ * of agency names
+ *
+ * @param {string} pathname
+ * @param {string{}} agencyGroupRange
+ * @returns {boolean}
+ */
+export const isPathInGroupRange = (
+  pathname: string,
+  agencyGroupRange: string[],
+) => {
+  const regex = /\/scorecard\/([a-zA-Z])/;
+  const match = pathname.match(regex);
+  return match && agencyGroupRange.includes(match[1].toUpperCase());
+};

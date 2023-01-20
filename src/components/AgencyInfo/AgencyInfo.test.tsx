@@ -1,4 +1,5 @@
 import createComponentWithIntl from '@/test/testHelpers';
+import { mockAllAgencyNames } from '../ScorecardSideNav/ScorecardSideNav.test';
 import AgencyInfo from './AgencyInfo';
 
 // import * as Gatsby from 'gatsby';
@@ -42,7 +43,13 @@ describe(`rendering of AgencyInfo Component`, () => {
   // });
 
   it(`checks if component renders`, () => {
-    const component = createComponentWithIntl(<AgencyInfo info={info} />);
+    const component = createComponentWithIntl(
+      <AgencyInfo
+        info={info}
+        allAgencyNames={mockAllAgencyNames}
+        pathname={`scorecard/d6-agency-dept-office`}
+      />,
+    );
 
     const tree = component.toJSON();
 

@@ -277,12 +277,14 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                           className="usa-nav__submenu-item"
                         >
                           <a
+                            activeClassName="usa-current"
                             data-cy="nav-link-agency-a"
                             href="/scorecard/agency-a"
                           >
                             Agency A
                           </a>
                           <a
+                            activeClassName="usa-current"
                             data-cy="nav-link-agency-b"
                             href="/scorecard/agency-b"
                           >

@@ -6,8 +6,13 @@ import { Grid } from '@trussworks/react-uswds';
 
 import * as styles from './AgencyInfo.module.scss';
 import { AgencyInfoProps } from '@/types';
+import ScorecardSideNav from '../ScorecardSideNav';
 
-const AgencyInfo: React.FC<AgencyInfoProps> = ({ info }) => {
+const AgencyInfo: React.FC<AgencyInfoProps> = ({
+  info,
+  allAgencyNames,
+  pathname,
+}) => {
   // Todo: may not need this custom hook
   // const agencyInfo = useAgencyInfo();
 
@@ -37,6 +42,10 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({ info }) => {
             </div>
           </Grid>
         </Grid>
+      </Grid>
+      <Grid desktop={{ col: 1 }} tablet={{ col: 10 }} col={12} />
+      <Grid desktop={{ col: 3 }} tablet={{ col: 10 }} col={12}>
+        <ScorecardSideNav allAgencyNames={allAgencyNames} pathname={pathname} />
       </Grid>
     </Grid>
   );

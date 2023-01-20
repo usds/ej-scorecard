@@ -86,6 +86,8 @@ export interface PageProps {
 
 export interface AgencyInfoProps {
   info: AgencyInfoData;
+  allAgencyNames: string[];
+  pathname: string;
 }
 export interface DeliverInvestProps {
   deliverInvest: DeliverInvestData;
@@ -96,4 +98,9 @@ export interface DropDownNavGeneratorProps {
   toggleIndex: number;
   subNavLinksArray: Array<Array<ReactNode>> & Array<ReactNode>;
   agencyGroupRange: string[];
+}
+
+export interface ScorecardSideNavProps {
+  allAgencyNames: string[];
+  pathname: string;
 }

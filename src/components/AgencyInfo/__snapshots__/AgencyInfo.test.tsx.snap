@@ -53,5 +53,15 @@ exports[`rendering of AgencyInfo Component > checks if component renders 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-1"
+    data-testid="grid"
+  />
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-3"
+    data-testid="grid"
+  />
 </div>
 `;
+
+exports[`rendering of ScorecardSideNav Component > checks if component renders 1`] = `null`;

@@ -19,7 +19,11 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
     >
       <MainGridContainer>
         <h1>{agencyInfo.Name}</h1>
-        <AgencyInfo info={agencyInfo} />
+        <AgencyInfo
+          info={agencyInfo}
+          allAgencyNames={allAgencyNames}
+          pathname={pathname}
+        />
         <DeliverInvest deliverInvest={deliverInvest} />
       </MainGridContainer>
     </Layout>

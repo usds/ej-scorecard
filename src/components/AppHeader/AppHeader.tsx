@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Link, navigate } from 'gatsby';
 import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
 
@@ -29,7 +29,32 @@ import {
 import siteLogo from '@/static/images/usds-logo.png';
 import * as styles from './AppHeader.module.scss';
 import { AppHeaderProps, DropDownNavGeneratorProps } from '@/types';
-import { chunkArray, toKebabCase } from '../util';
+import { chunkArray, isPathInGroupRange, toKebabCase } from '../util';
+
+/**
+ * Group the agency links based on the agencyNameRange
+ *
+ * @param {string[]} allAgencyNames - The array of all agency names.
+ * @param {string[]} agencyNameRange - The array of agency names to be filtered.
+ * @returns {React.ReactNode[]} - An array of arrays of Link elements.
+ */
+export const groupAgencyLinks = (
+  allAgencyNames: string[],
+  agencyNameRange: string[],
+) => {
+  return allAgencyNames
+    .filter((name) => agencyNameRange.includes(name[0]))
+    .map((agencyName) => (
+      <Link
+        to={`/scorecard/${toKebabCase(agencyName)}`}
+        key={`${toKebabCase(agencyName)}`}
+        activeClassName="usa-current"
+        data-cy={`nav-link-${toKebabCase(agencyName)}`}
+      >
+        {agencyName}
+      </Link>
+    ));
+};
 
 /**
  * The AppHeader component will control how the header looks for both mobile and desktop
@@ -113,32 +138,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     }
   };
 
-  /**
-   * Filter the agency names based on the agencyNameRange, then chunk based on
-   * NUMBER_SUB_NAV_LINKS_PER_COLUMN. Chunking will define how many agency links
-   * (sub-nav links) should go in each column of the sub-nav
-   *
-   * @param {string[]} allAgencyNames - The array of all agency names.
-   * @param {string[]} agencyNameRange - The array of agency names to be filtered.
-   * @returns {JSX.Element[][][]} - An array of arrays of JSX elements.
-   */
-  const groupAndChunkAgencyLinks = (
-    allAgencyNames: string[],
-    agencyNameRange: string[],
-  ) => {
-    const groupAgencies = allAgencyNames
-      .filter((name) => agencyNameRange.includes(name[0]))
-      .map((agencyName) => (
-        <Link
-          to={`/scorecard/${toKebabCase(agencyName)}`}
-          key={`${toKebabCase(agencyName)}`}
-          // activeClassName="usa-current"
-          data-cy={`nav-link-${toKebabCase(agencyName)}`}
-        >
-          {agencyName}
-        </Link>
-      ));
-
+  const chunkAgencyLinks = (groupAgencies: ReactNode[]) => {
     return groupAgencies.length > NUMBER_SUB_NAV_LINKS_PER_COLUMN
       ? chunkArray(groupAgencies, NUMBER_SUB_NAV_LINKS_PER_COLUMN)
       : [[groupAgencies]];
@@ -159,18 +159,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
         ? agencyNameGroup.toLowerCase().replace(/\s+/g, ``)
         : agencyNameGroup.toLowerCase();
 
-    // check the pathname to see if the dropdown nav link should be active (underlined)
-    const regex = /\/scorecard\/([a-zA-Z])/;
-    const match = pathname.match(regex);
-    const isDropDownNavActive =
-      match && agencyGroupRange.includes(match[1].toUpperCase());
-
     return (
       <>
-        {/* Add a className of usa-current anytime this component renders when the location of the app is on
-      any scorecard page. This will style the nav link with a bottom border */}
+        {/* Add a className of usa-current anytime if the path is in the group range */}
         <NavDropDownButton
-          className={isDropDownNavActive ? `usa-current` : ``}
+          className={
+            isPathInGroupRange(pathname, agencyGroupRange) ? `usa-current` : ``
+          }
           key={`nav-drop-down-key-${agencyNameGroupLower}`}
           label={`Agencies ${agencyNameGroup}`}
           menuId={`nav-drop-down-menu-id-${agencyNameGroupLower}`}
@@ -203,7 +198,9 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   ));
 
   /**
-   * Splice in the dropdown nav links into non-dropdown nav links
+   * Splice in the dropdown nav links into non-dropdown nav links.
+   * The SubNavLinksArray will be first grouped by Agency link,
+   * following by chunking.
    */
   navLinks.splice(
     1,
@@ -211,27 +208,24 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[0]}
       toggleIndex={0}
-      subNavLinksArray={groupAndChunkAgencyLinks(
-        allAgencyNames,
-        AGENCY_NAME_RANGE1,
+      subNavLinksArray={chunkAgencyLinks(
+        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE1),
       )}
       agencyGroupRange={AGENCY_NAME_RANGE1}
     />,
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[1]}
       toggleIndex={1}
-      subNavLinksArray={groupAndChunkAgencyLinks(
-        allAgencyNames,
-        AGENCY_NAME_RANGE2,
+      subNavLinksArray={chunkAgencyLinks(
+        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE2),
       )}
       agencyGroupRange={AGENCY_NAME_RANGE2}
     />,
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[2]}
       toggleIndex={2}
-      subNavLinksArray={groupAndChunkAgencyLinks(
-        allAgencyNames,
-        AGENCY_NAME_RANGE3,
+      subNavLinksArray={chunkAgencyLinks(
+        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE3),
       )}
       agencyGroupRange={AGENCY_NAME_RANGE3}
     />,
