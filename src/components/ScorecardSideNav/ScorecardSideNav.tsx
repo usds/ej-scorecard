@@ -24,7 +24,7 @@ const ScorecardSideNav: React.FC<ScorecardSideNavProps> = ({
     return (
       <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE2)} />
     );
-  } else if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE2)) {
+  } else if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE3)) {
     return (
       <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE3)} />
     );

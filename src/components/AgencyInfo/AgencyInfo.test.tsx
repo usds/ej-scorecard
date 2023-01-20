@@ -42,12 +42,40 @@ describe(`rendering of AgencyInfo Component`, () => {
   //   vi.restoreAllMocks();
   // });
 
-  it(`checks if component renders`, () => {
+  it(`checks if component renders group 1`, () => {
+    const component = createComponentWithIntl(
+      <AgencyInfo
+        info={info}
+        allAgencyNames={mockAllAgencyNames}
+        pathname={`scorecard/a1-agency-dept-office`}
+      />,
+    );
+
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`checks if component renders group 2`, () => {
     const component = createComponentWithIntl(
       <AgencyInfo
         info={info}
         allAgencyNames={mockAllAgencyNames}
         pathname={`scorecard/d6-agency-dept-office`}
+      />,
+    );
+
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`checks if component renders group 3`, () => {
+    const component = createComponentWithIntl(
+      <AgencyInfo
+        info={info}
+        allAgencyNames={mockAllAgencyNames}
+        pathname={`scorecard/t1-agency-dept-office`}
       />,
     );
 
