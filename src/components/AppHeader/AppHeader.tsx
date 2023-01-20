@@ -108,33 +108,15 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
       newIsOpen[index] = !prevIsOpen[index];
       return newIsOpen;
     });
+
     /**
      * When on desktop only, the dropdown nav links should close if any of the other ones
-     * are still open. This next set of logic handles that.
+     * are still open
      */
     if (width > USWDS_BREAKPOINTS.DESKTOP) {
-      if (index === 0) {
-        if (isOpen[1] === true) {
-          setIsOpen([isOpen[1], false, false]);
-        }
-        if (isOpen[2] === true) {
-          setIsOpen([isOpen[2], false, false]);
-        }
-      } else if (index === 1) {
-        if (isOpen[0] === true) {
-          setIsOpen([false, isOpen[0], false]);
-        }
-        if (isOpen[2] === true) {
-          setIsOpen([false, isOpen[2], false]);
-        }
-      } else if (index === 2) {
-        if (isOpen[0] === true) {
-          setIsOpen([false, false, isOpen[0]]);
-        }
-        if (isOpen[1] === true) {
-          setIsOpen([false, false, isOpen[1]]);
-        }
-      }
+      const newIsOpen = [false, false, false];
+      newIsOpen[index] = true;
+      setIsOpen(newIsOpen);
     }
   };
 
