@@ -22,7 +22,7 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({ info }) => {
                 src="../../../static/images/agency-a.png"
                 alt="Agency logo"
               />
-              <h2>{info.Name}</h2>
+              <h3>{info.Name}</h3>
               <span>{info.Contact_Name}</span>
               <span>{info.Address_Line_1}</span>
               <span>{info.Address_Line_2}</span>

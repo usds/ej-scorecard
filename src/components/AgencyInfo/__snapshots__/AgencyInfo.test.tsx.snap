@@ -18,9 +18,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders 1`] = `
         data-testid="grid"
       >
         <div>
-          <h2>
+          <h3>
             Agency D
-          </h2>
+          </h3>
           <span>
             Leslie KnopeD
           </span>
