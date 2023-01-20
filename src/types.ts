@@ -95,4 +95,5 @@ export interface DropDownNavGeneratorProps {
   agencyNameGroup: string;
   toggleIndex: number;
   subNavLinksArray: Array<Array<ReactNode>> & Array<ReactNode>;
+  agencyGroupRange: string[];
 }

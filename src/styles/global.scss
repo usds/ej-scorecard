@@ -91,12 +91,24 @@ li.usa-nav__primary-item {
   display: none;
 }
 
-// .usa-nav__submenu.usa-megamenu {
-//   padding-top: 0;
-// }
-/**
-Remove bottom-border on navbar
-*/
+// these two all for non-dropdown nav links to activate on hover
+li.usa-nav__primary-item a {
+  display: block;
+  position: relative;
+}
+li.usa-nav__primary-item a:hover::after{
+  background-color: #005ea2;
+  border-radius: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.25rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: -0.25rem;
+}
+
+// Remove bottom-border on navbar
 .usa-header {
   +.usa-section,
   +main {

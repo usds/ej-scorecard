@@ -181,12 +181,9 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
           data-testid="grid"
         >
           <a
-            aria-current="page"
-            className="active"
-            href="/"
+            href="/scorecard"
             onClick={[Function]}
             onMouseEnter={[Function]}
-            style={{}}
           >
             <img
               alt="Site logo"
@@ -238,12 +235,9 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                 className="usa-nav__primary-item"
               >
                 <a
-                  aria-current="page"
-                  className="usa-current"
-                  href="/"
+                  href="/scorecard"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
-                  style={{}}
                 >
                   Scorecard
                 </a>
@@ -254,7 +248,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                 <button
                   aria-controls="nav-drop-down-menu-id-a-e"
                   aria-expanded={false}
-                  className="usa-accordion__button usa-nav__link usa-current"
+                  className="usa-accordion__button usa-nav__link"
                   data-cy="nav-dropdown-scorecard-nav-a-e"
                   data-testid="navDropDownButton"
                   onClick={[Function]}
@@ -306,7 +300,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                 <button
                   aria-controls="nav-drop-down-menu-id-d"
                   aria-expanded={false}
-                  className="usa-accordion__button usa-nav__link usa-current"
+                  className="usa-accordion__button usa-nav__link"
                   data-cy="nav-dropdown-scorecard-nav-d"
                   data-testid="navDropDownButton"
                   onClick={[Function]}
@@ -345,7 +339,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                 <button
                   aria-controls="nav-drop-down-menu-id-h-v"
                   aria-expanded={false}
-                  className="usa-accordion__button usa-nav__link usa-current"
+                  className="usa-accordion__button usa-nav__link"
                   data-cy="nav-dropdown-scorecard-nav-h-v"
                   data-testid="navDropDownButton"
                   onClick={[Function]}

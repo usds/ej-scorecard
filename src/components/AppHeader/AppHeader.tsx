@@ -151,18 +151,26 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     agencyNameGroup,
     toggleIndex,
     subNavLinksArray,
+    agencyGroupRange,
   }) => {
+    // shorten and lower case the name group
     const agencyNameGroupLower =
       agencyNameGroup.length > 1
         ? agencyNameGroup.toLowerCase().replace(/\s+/g, ``)
         : agencyNameGroup.toLowerCase();
+
+    // check the pathname to see if the dropdown nav link should be active (underlined)
+    const regex = /\/scorecard\/([a-zA-Z])/;
+    const match = pathname.match(regex);
+    const isDropDownNavActive =
+      match && agencyGroupRange.includes(match[1].toUpperCase());
 
     return (
       <>
         {/* Add a className of usa-current anytime this component renders when the location of the app is on
       any scorecard page. This will style the nav link with a bottom border */}
         <NavDropDownButton
-          className={pathname.includes(`scorecard`) ? `usa-current` : ``}
+          className={isDropDownNavActive ? `usa-current` : ``}
           key={`nav-drop-down-key-${agencyNameGroupLower}`}
           label={`Agencies ${agencyNameGroup}`}
           menuId={`nav-drop-down-menu-id-${agencyNameGroupLower}`}
@@ -187,7 +195,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     <LocalizedLink
       to={endpoint}
       key={`page-${endpoint.substring(1)}`}
-      activeClassName={`usa-current`}
+      activeClassName={pathname === endpoint ? `usa-current` : ``}
       data-cy={`nav-link-page-${endpoint.substring(1)}`}
     >
       {NON_DROPDOWN_NAV_LINK_NAMES[index]}
@@ -207,6 +215,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
         allAgencyNames,
         AGENCY_NAME_RANGE1,
       )}
+      agencyGroupRange={AGENCY_NAME_RANGE1}
     />,
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[1]}
@@ -215,6 +224,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
         allAgencyNames,
         AGENCY_NAME_RANGE2,
       )}
+      agencyGroupRange={AGENCY_NAME_RANGE2}
     />,
     <DropDownNavGenerator
       agencyNameGroup={AGENCY_NAME_GROUPS[2]}
@@ -223,6 +233,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
         allAgencyNames,
         AGENCY_NAME_RANGE3,
       )}
+      agencyGroupRange={AGENCY_NAME_RANGE3}
     />,
   );
 
