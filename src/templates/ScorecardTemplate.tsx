@@ -12,7 +12,6 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   const { allAgencyNames, pathname, agencyInfo, deliverInvest } = pageContext;
 
   return (
-    // location prop is not available during SSR, so removing
     <Layout
       pathname={pathname}
       title={agencyInfo.Name}

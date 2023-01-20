@@ -22,7 +22,7 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
  * @param allFile
  * @returns {boolean}
  */
-function isRequiredFilesExist(allFile: RelativePathData): boolean {
+function doRequiredFilesExist(allFile: RelativePathData): boolean {
   for (const edge of allFile.edges) {
     if (!REQUIRED_DATA_FILES.includes(edge.node.relativePath)) {
       return false;
@@ -103,7 +103,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { allFile, allAgencyInfoCsv, allDeliverInvestCsv } = data;
 
-  if (!isRequiredFilesExist(allFile)) {
+  if (!doRequiredFilesExist(allFile)) {
     throw Error(`Was not able to read in required data`);
   }
 

@@ -129,35 +129,33 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
   );
   console.log(deliverInvest);
   return (
-    <>
-      <Grid row gap={6}>
-        <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          <h2 className={styles.h2}>Delivering investments</h2>
-          <Table fullWidth bordered striped>
-            {table1Data}
-          </Table>
-          <Table fullWidth bordered striped>
-            {table2Data}
-          </Table>
-          <Table fullWidth bordered striped>
-            {table3Data}
-          </Table>
-          <Table fullWidth bordered striped>
-            {table4Data}
-          </Table>
-        </Grid>
-        <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
-          <SummaryBox className={styles.summaryBox}>
-            <SummaryBoxHeading headingLevel="h3">
-              {`Delivering investments at ${deliverInvest.node.Agency_Name}`}
-            </SummaryBoxHeading>
-            <SummaryBoxContent>
-              {deliverInvest.node.DeliverInvest}
-            </SummaryBoxContent>
-          </SummaryBox>
-        </Grid>
+    <Grid row gap={6}>
+      <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
+        <h2 className={styles.h2}>Delivering investments</h2>
+        <Table fullWidth bordered striped>
+          {table1Data}
+        </Table>
+        <Table fullWidth bordered striped>
+          {table2Data}
+        </Table>
+        <Table fullWidth bordered striped>
+          {table3Data}
+        </Table>
+        <Table fullWidth bordered striped>
+          {table4Data}
+        </Table>
       </Grid>
-    </>
+      <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
+        <SummaryBox className={styles.summaryBox}>
+          <SummaryBoxHeading headingLevel="h3">
+            {`Delivering investments at ${deliverInvest.node.Agency_Name}`}
+          </SummaryBoxHeading>
+          <SummaryBoxContent>
+            {deliverInvest.node.DeliverInvest}
+          </SummaryBoxContent>
+        </SummaryBox>
+      </Grid>
+    </Grid>
   );
 };
 
