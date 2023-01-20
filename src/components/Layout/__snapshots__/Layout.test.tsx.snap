@@ -217,6 +217,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
           </button>
           <nav
             className="usa-nav primary-nav"
+            onClick={[Function]}
           >
             <button
               className="usa-nav__close"
@@ -235,55 +236,272 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
               <li
                 className="usa-nav__primary-item"
               >
+                <a
+                  aria-current="page"
+                  className="usa-current"
+                  href="/"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  style={{}}
+                >
+                  Scorecard
+                </a>
+              </li>
+              <li
+                className="usa-nav__primary-item"
+              >
                 <button
-                  aria-controls="scorecardMenu"
+                  aria-controls="scorecardMenuA2E"
                   aria-expanded={false}
                   className="usa-accordion__button usa-nav__link usa-current"
-                  data-cy="nav-dropdown-scorecard-nav"
+                  data-cy="nav-dropdown-scorecard-nav-a2e"
                   data-testid="navDropDownButton"
                   onClick={[Function]}
                   type="button"
                 >
                   <span>
-                    Scorecard
+                    Agencies A - E
                   </span>
                 </button>
-                <ul
-                  className="usa-nav__submenu"
+                <div
+                  className="usa-nav__submenu usa-megamenu"
+                  data-testid="megamenu"
                   hidden={true}
-                  id="scorecardMenu"
                 >
-                  <li
-                    className="usa-nav__submenu-item"
+                  <div
+                    className="grid-row grid-gap-4"
                   >
-                    <a
-                      data-cy="nav-link-scorecards"
-                      href="/"
+                    <div
+                      className="usa-col"
                     >
-                      Scorecards
-                    </a>
-                  </li>
-                  <li
-                    className="usa-nav__submenu-item"
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="scorecardMenuA2E"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-scorecards"
+                            href="/"
+                          >
+                            Scorecards
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-a"
+                            href="/scorecard/agency-a"
+                          >
+                            Agency A
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-b"
+                            href="/scorecard/agency-b"
+                          >
+                            Agency B
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="usa-nav__primary-item"
+              >
+                <button
+                  aria-controls="scorecardMenuD"
+                  aria-expanded={false}
+                  className="usa-accordion__button usa-nav__link usa-current"
+                  data-cy="nav-dropdown-scorecard-nav-d"
+                  data-testid="navDropDownButton"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Agency D
+                  </span>
+                </button>
+                <div
+                  className="usa-nav__submenu usa-megamenu"
+                  data-testid="megamenu"
+                  hidden={true}
+                >
+                  <div
+                    className="grid-row grid-gap-4"
                   >
-                    <a
-                      data-cy="nav-link-agency-a"
-                      href="/scorecard/agency-a"
+                    <div
+                      className="usa-col"
                     >
-                      Agency A
-                    </a>
-                  </li>
-                  <li
-                    className="usa-nav__submenu-item"
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="scorecardMenuD"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-scorecards"
+                            href="/"
+                          >
+                            Scorecards
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-a"
+                            href="/scorecard/agency-a"
+                          >
+                            Agency A
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-b"
+                            href="/scorecard/agency-b"
+                          >
+                            Agency B
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      className="usa-col"
+                    >
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="scorecardMenuD"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-scorecards"
+                            href="/"
+                          >
+                            Scorecards
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-a"
+                            href="/scorecard/agency-a"
+                          >
+                            Agency A
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-b"
+                            href="/scorecard/agency-b"
+                          >
+                            Agency B
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="usa-nav__primary-item"
+              >
+                <button
+                  aria-controls="scorecardMenuH2V"
+                  aria-expanded={false}
+                  className="usa-accordion__button usa-nav__link usa-current"
+                  data-cy="nav-dropdown-scorecard-nav-h2v"
+                  data-testid="navDropDownButton"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Agencies H - V
+                  </span>
+                </button>
+                <div
+                  className="usa-nav__submenu usa-megamenu"
+                  data-testid="megamenu"
+                  hidden={true}
+                >
+                  <div
+                    className="grid-row grid-gap-4"
                   >
-                    <a
-                      data-cy="nav-link-agency-b"
-                      href="/scorecard/agency-b"
+                    <div
+                      className="usa-col"
                     >
-                      Agency B
-                    </a>
-                  </li>
-                </ul>
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="scorecardMenuH2V"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-scorecards"
+                            href="/"
+                          >
+                            Scorecards
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-a"
+                            href="/scorecard/agency-a"
+                          >
+                            Agency A
+                          </a>
+                        </li>
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-agency-b"
+                            href="/scorecard/agency-b"
+                          >
+                            Agency B
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      className="usa-col"
+                    >
+                      <ul
+                        className="usa-nav__submenu-list"
+                        id="scorecardMenuH2V"
+                      >
+                        <li
+                          className="usa-nav__submenu-item"
+                        >
+                          <a
+                            data-cy="nav-link-scorecards"
+                            href="/"
+                          >
+                            Scorecards
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li
                 className="usa-nav__primary-item"
