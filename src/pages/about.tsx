@@ -9,7 +9,7 @@ import {
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
-import { PAGE_ENDPOINTS } from '@/data/constants';
+import { NON_DROPDOWN_PAGE_ENDPOINTS } from '@/data/constants';
 import { PageProps } from '@/types';
 
 const SECOND_PAGE_COPY = defineMessages({
@@ -35,7 +35,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
 
   return (
     <Layout
-      pathname={PAGE_ENDPOINTS[1]}
+      pathname={NON_DROPDOWN_PAGE_ENDPOINTS[1]}
       title={intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}
       allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
     >

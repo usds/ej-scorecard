@@ -4,13 +4,13 @@ import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
-import { PAGE_ENDPOINTS } from '@/data/constants';
+import { NON_DROPDOWN_PAGE_ENDPOINTS } from '@/data/constants';
 import { PageProps } from '@/types';
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout
-      pathname={PAGE_ENDPOINTS[0]}
+      pathname={NON_DROPDOWN_PAGE_ENDPOINTS[0]}
       title={`EJ Landing page`}
       allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
     >

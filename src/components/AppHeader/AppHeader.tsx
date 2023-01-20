@@ -8,11 +8,18 @@ import {
   PrimaryNav,
   Grid,
   NavDropDownButton,
-  Menu,
+  // Menu,
+  MegaMenu,
 } from '@trussworks/react-uswds';
+import { useWindowSize } from 'react-use';
+
 import MainGridContainer from '@/components/MainGridContainer';
 import GovBanner from '@/components/GovBanner';
-import { NAV_LINKS_NAMES, PAGE_ENDPOINTS } from '@/data/constants';
+import {
+  NON_DROPDOWN_NAV_LINK_NAMES,
+  NON_DROPDOWN_PAGE_ENDPOINTS,
+  USWDS_BREAKPOINTS,
+} from '@/data/constants';
 
 // @ts-ignore
 import siteLogo from '@/static/images/usds-logo.png';
@@ -32,6 +39,8 @@ import { toKebabCase } from '../util';
  * @return {JSX.Element}
  */
 const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
+  const { width } = useWindowSize();
+
   /**
    * State variable to control the toggling of mobile menu button
    */
@@ -41,15 +50,25 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   };
 
   /**
-   * State variable to hold the open/close state of each nav dropdown. This will allow for two
-   * dropdown that are being used, each corresponding to an index in the state array:
-   *
-   * index 0 = Scorecard dropdown
+   * State variable to hold the open/close state of each nav dropdown.
    */
-  const [isOpen, setIsOpen] = useState([false]);
+  const [isOpen, setIsOpen] = useState([false, false, false]);
 
   /**
-   * This toggle function will handle Scorecard nav link toggle.
+   * The dropdown nav elements don't automatically close when
+   * clicking on non-dropdown nav elements. This onClick handler
+   * fixes that
+   *
+   * @param event
+   */
+  const onNavClick = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      setIsOpen([false, false, false]);
+    }
+  };
+
+  /**
+   * This toggle function will handle toggling of dropdown navs.
    *
    * @param {number} index
    */
@@ -64,19 +83,30 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
      * When on desktop only, the dropdown nav links should close if any of the other ones
      * are still open. This next set of logic handles that.
      */
-    // if (
-    //   index === 0 &&
-    //   isOpen[1] === true &&
-    //   width > USWDS_BREAKPOINTS.DESKTOP
-    // ) {
-    //   setIsOpen([isOpen[0], false]);
-    // } else if (
-    //   index === 1 &&
-    //   isOpen[0] === true &&
-    //   width > USWDS_BREAKPOINTS.DESKTOP
-    // ) {
-    //   setIsOpen([false, isOpen[1]]);
-    // }
+    if (width > USWDS_BREAKPOINTS.DESKTOP) {
+      if (index === 0) {
+        if (isOpen[1] === true) {
+          setIsOpen([isOpen[1], false, false]);
+        }
+        if (isOpen[2] === true) {
+          setIsOpen([isOpen[2], false, false]);
+        }
+      } else if (index === 1) {
+        if (isOpen[0] === true) {
+          setIsOpen([false, isOpen[0], false]);
+        }
+        if (isOpen[2] === true) {
+          setIsOpen([false, isOpen[2], false]);
+        }
+      } else if (index === 2) {
+        if (isOpen[0] === true) {
+          setIsOpen([false, false, isOpen[0]]);
+        }
+        if (isOpen[1] === true) {
+          setIsOpen([false, false, isOpen[1]]);
+        }
+      }
+    }
   };
 
   /**
@@ -93,55 +123,153 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     </Link>
   ));
 
-  const ScorecardNavSubLinks = [
-    <Link
-      to={`/`}
-      key={`scorecards}`}
-      // activeClassName="usa-current"
-      data-cy={`nav-link-scorecards`}
-    >
-      {`Scorecards`}
-    </Link>,
-    ...agencyLinks,
+  const ScorecardSubNavLinksA2E = [
+    [
+      <Link
+        to={`/`}
+        key={`scorecards}`}
+        // activeClassName="usa-current"
+        data-cy={`nav-link-scorecards`}
+      >
+        {`Scorecards`}
+      </Link>,
+      ...agencyLinks,
+    ],
   ];
 
-  // ScorecardNavDropDown
-  const ScorecardNav = () => (
+  const ScorecardSubNavLinksD = [
+    [
+      <Link
+        to={`/`}
+        key={`scorecards}`}
+        // activeClassName="usa-current"
+        data-cy={`nav-link-scorecards`}
+      >
+        {`Scorecards`}
+      </Link>,
+      ...agencyLinks,
+    ],
+    [
+      <Link
+        to={`/`}
+        key={`scorecards}`}
+        // activeClassName="usa-current"
+        data-cy={`nav-link-scorecards`}
+      >
+        {`Scorecards`}
+      </Link>,
+      ...agencyLinks,
+    ],
+  ];
+
+  const ScorecardSubNavLinksH2V = [
+    [
+      <Link
+        to={`/`}
+        key={`scorecards}`}
+        // activeClassName="usa-current"
+        data-cy={`nav-link-scorecards`}
+      >
+        {`Scorecards`}
+      </Link>,
+      ...agencyLinks,
+    ],
+    [
+      <Link
+        to={`/`}
+        key={`scorecards}`}
+        // activeClassName="usa-current"
+        data-cy={`nav-link-scorecards`}
+      >
+        {`Scorecards`}
+      </Link>,
+    ],
+  ];
+
+  // Todo: create these dynamically
+  const ScorecardNavA2E = () => (
     <>
       {/* Add a className of usa-current anytime this component renders when the location of the app is on
       any scorecard page. This will style the nav link with a bottom border */}
       <NavDropDownButton
         className={pathname.includes(`scorecard`) ? `usa-current` : ``}
-        key="scorecardNavDropDown"
-        label={`Scorecard`}
-        menuId="scorecardMenu"
+        key="scorecardNavA2EDropDown"
+        label={`Agencies A - E`}
+        menuId="scorecardMenuA2E"
         isOpen={isOpen[0]}
         onToggle={(): void => onToggle(0)}
-        data-cy={`nav-dropdown-scorecard-nav`}
+        data-cy={`nav-dropdown-scorecard-nav-a2e`}
       ></NavDropDownButton>
-      <Menu
-        id="scorecardMenu"
-        type="subnav"
-        items={ScorecardNavSubLinks}
+      <MegaMenu
+        id="scorecardMenuA2E"
+        // type="subnav"
+        items={ScorecardSubNavLinksA2E}
         isOpen={isOpen[0]}
-      ></Menu>
+      ></MegaMenu>
+    </>
+  );
+  const ScorecardNavH2V = () => (
+    <>
+      {/* Add a className of usa-current anytime this component renders when the location of the app is on
+      any scorecard page. This will style the nav link with a bottom border */}
+      <NavDropDownButton
+        className={pathname.includes(`scorecard`) ? `usa-current` : ``}
+        key="scorecardNavH2VDropDown"
+        label={`Agencies H - V`}
+        menuId="scorecardMenuH2V"
+        isOpen={isOpen[1]}
+        onToggle={(): void => onToggle(1)}
+        data-cy={`nav-dropdown-scorecard-nav-h2v`}
+      ></NavDropDownButton>
+      <MegaMenu
+        id="scorecardMenuH2V"
+        // type="subnav"
+        items={ScorecardSubNavLinksH2V}
+        isOpen={isOpen[1]}
+      ></MegaMenu>
     </>
   );
 
-  const navLinks = PAGE_ENDPOINTS.map((endpoint, index) => {
-    return index === 0 ? (
-      <ScorecardNav key="scorecardNav" />
-    ) : (
-      <LocalizedLink
-        to={endpoint}
-        key={`page-${endpoint.substring(1)}`}
-        activeClassName={`usa-current`}
-        data-cy={`nav-link-page-${endpoint.substring(1)}`}
-      >
-        {NAV_LINKS_NAMES[index]}
-      </LocalizedLink>
-    );
-  });
+  const ScorecardNavD = () => (
+    <>
+      {/* Add a className of usa-current anytime this component renders when the location of the app is on
+      any scorecard page. This will style the nav link with a bottom border */}
+      <NavDropDownButton
+        className={pathname.includes(`scorecard`) ? `usa-current` : ``}
+        key="scorecardNavD_DropDown"
+        label={`Agency D`}
+        menuId="scorecardMenuD"
+        isOpen={isOpen[2]}
+        onToggle={(): void => onToggle(2)}
+        data-cy={`nav-dropdown-scorecard-nav-d`}
+      ></NavDropDownButton>
+      <MegaMenu
+        id="scorecardMenuD"
+        // type="subnav"
+        items={ScorecardSubNavLinksD}
+        isOpen={isOpen[2]}
+      ></MegaMenu>
+    </>
+  );
+
+  const navLinks = NON_DROPDOWN_PAGE_ENDPOINTS.map((endpoint, index) => (
+    <LocalizedLink
+      to={endpoint}
+      key={`page-${endpoint.substring(1)}`}
+      activeClassName={`usa-current`}
+      data-cy={`nav-link-page-${endpoint.substring(1)}`}
+    >
+      {NON_DROPDOWN_NAV_LINK_NAMES[index]}
+    </LocalizedLink>
+  ));
+
+  navLinks.splice(
+    1,
+    0,
+    <ScorecardNavA2E key="scorecardNavA2E" />,
+    <ScorecardNavD key="scorecardNavD" />,
+    <ScorecardNavH2V key="scorecardNavH2V" />,
+  );
 
   return (
     <Header basic={true} role={`banner`}>
@@ -154,7 +282,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
           {/* Logo */}
           <Grid col={1}>
             <LocalizedLink
-              to={PAGE_ENDPOINTS[0]}
+              to={NON_DROPDOWN_PAGE_ENDPOINTS[0]}
               key={`first-page`}
               data-cy={`nav-link-first-page`}
             >
@@ -181,6 +309,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
               items={navLinks}
               mobileExpanded={mobileNavOpen}
               onToggleMobileNav={toggleMobileNav}
+              onClick={(e) => onNavClick(e)}
             ></PrimaryNav>
           </Grid>
         </Grid>

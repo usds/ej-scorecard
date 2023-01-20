@@ -44,6 +44,14 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
   -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0ibTEyIDgtNiA2IDEuNDEgMS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTR6Ii8+PC9zdmc+) no-repeat center/contain
 }
 
+
+
+/* 
+******************************
+*      HEADER STYLES
+****************************** 
+*/
+
 // This sets the down arrow in the scorecard dropdown nav
 .usa-accordion__button.usa-nav__link span::after{
   -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTE2LjU5IDguNTkgMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=) no-repeat center/contain;
@@ -54,15 +62,33 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
   -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0ibTEyIDgtNiA2IDEuNDEgMS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTR6Ii8+PC9zdmc+) no-repeat center/contain;
 }
 
+// Allow all navigation items to take up the full content width
+
+li.usa-nav__primary-item {
+  width: max-content;
+
+  // Todo: figure out how to get mixins to work here
+  // @include at-media-max('desktop')
+  @media screen and (max-width: 1024px) {
+    width: unset;
+  }
+}
+
 // This sets the alignment of the items in the scorecard dropdown nav
 .usa-nav__submenu-item {
   padding-left: .5rem;
 }
-.usa-nav__submenu-item:last-child {
-  padding-bottom: .5rem;
+
+
+
+// remove the psuedo elements of the mega menu
+.usa-nav__submenu.usa-megamenu::before, .usa-nav__submenu.usa-megamenu::after {
+  display: none;
 }
 
-
+// .usa-nav__submenu.usa-megamenu {
+//   padding-top: 0;
+// }
 /**
 Remove bottom-border on navbar
 */
