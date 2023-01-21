@@ -1,0 +1,107 @@
+// Vitest Snapshot v1
+
+exports[`rendering of ReduceHarm Component > checks if component renders 1`] = `
+[
+  <div
+    className="grid-row"
+    data-testid="grid"
+  >
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+      data-testid="grid"
+    >
+      <h2>
+        Reducing burdens & harms
+      </h2>
+    </div>
+  </div>,
+  <div
+    className="grid-row"
+    data-testid="grid"
+  >
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-6"
+      data-testid="grid"
+    >
+      Short narrative about the why reducing hurdens & harms is important. I prem ins _dolor sit amet concertetur adinissing plitvam at magna vitan prat convall bandit. Phasellus id urna ultrices, vestibulum guam a. accumsan mauris
+    </div>
+  </div>,
+  <div
+    className="grid-row grid-gap-6"
+    data-testid="grid"
+  >
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-4"
+      data-testid="grid"
+    >
+      <div
+        className="usa-summary-box margin-top-3"
+        data-testid="summary-box"
+      >
+        <div
+          className="usa-summary-box__body"
+        >
+          <h3
+            className="usa-summary-box__heading"
+          >
+            Reducing burdens & harms at T2 Agency Dept Office
+          </h3>
+          <div
+            className="usa-summary-box__text"
+          >
+            Lorem T2 ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+      data-testid="grid"
+    >
+      <table
+        className="usa-table src-components-Table-Table-module__fullwidth--fOyj6 usa-table--striped"
+        data-testid="table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              Metric T2
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              #
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              Metric T2
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              #
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              Optional: Metric T2
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              Lorem T2 ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>,
+]
+`;
