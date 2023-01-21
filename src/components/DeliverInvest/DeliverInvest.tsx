@@ -6,8 +6,9 @@ import {
   SummaryBoxHeading,
   Table,
 } from '@trussworks/react-uswds';
-import * as styles from './DeliverInvest.module.scss';
 import { DeliverInvestProps } from '@/types';
+
+// import * as styles from './DeliverInvest.module.scss';
 
 const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
   const table1Data = (
@@ -132,7 +133,7 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
     <>
       <Grid row>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          <h2 className={styles.h2}>Delivering investments</h2>
+          <h2 className={`scorecard-header2`}>Delivering investments</h2>
         </Grid>
       </Grid>
       <Grid row>

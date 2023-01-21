@@ -7,12 +7,11 @@ import {
   Table,
 } from '@trussworks/react-uswds';
 
-import * as styles from './InstitutionEJ.module.scss';
+// import * as styles from './InstitutionEJ.module.scss';
 
 import { InstitutEjProps } from '@/types';
 
 const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
-  console.log(`🚀 ~ file: InstitutionEJ.tsx:15 ~ institutEj`, institutEj);
   const table1Data = (
     <>
       <tbody>
@@ -179,7 +178,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
     <>
       <Grid row>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          <h2 className={styles.h2}>
+          <h2 className={`scorecard-header2`}>
             Institutionalizing Environmental Justice
           </h2>
         </Grid>

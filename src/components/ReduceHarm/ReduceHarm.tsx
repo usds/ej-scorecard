@@ -6,9 +6,9 @@ import {
   SummaryBoxHeading,
   Table,
 } from '@trussworks/react-uswds';
-import * as styles from './ReduceHarm.module.scss';
-
 import { ReduceHarmProps } from '@/types';
+
+// import * as styles from './ReduceHarm.module.scss';
 
 const ReduceHarm: React.FC<ReduceHarmProps> = ({ reduceHarm }) => {
   const table1Data = (
@@ -45,7 +45,7 @@ const ReduceHarm: React.FC<ReduceHarmProps> = ({ reduceHarm }) => {
     <>
       <Grid row>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          <h2 className={styles.h2}>Reducing burdens & harms</h2>
+          <h2 className={`scorecard-header2`}>Reducing burdens & harms</h2>
         </Grid>
       </Grid>
       <Grid row>

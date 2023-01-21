@@ -1,6 +1,5 @@
 declare namespace ReduceHarmNamespace {
   export interface IReduceHarmScss {
-    summaryBox: string;
     h2: string;
   }
 }

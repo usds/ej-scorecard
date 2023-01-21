@@ -7,6 +7,7 @@ import { ScorecardTemplateProps } from '@/types';
 import DeliverInvest from '@/components/DeliverInvest';
 import ReduceHarm from '@/components/ReduceHarm';
 import InstitutionEJ from '@/components/InstitutionEJ';
+import AdditionalDetails from '@/components/AdditionalDetails';
 
 const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
@@ -18,7 +19,7 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
     deliverInvest,
     reduceHarm,
     institutEj,
-    // addtional,
+    additional,
   } = pageContext;
 
   return (
@@ -37,6 +38,7 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
         <DeliverInvest deliverInvest={deliverInvest} />
         <ReduceHarm reduceHarm={reduceHarm} />
         <InstitutionEJ institutEj={institutEj} />
+        <AdditionalDetails additional={additional} />
       </MainGridContainer>
     </Layout>
   );

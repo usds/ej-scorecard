@@ -132,7 +132,7 @@ export interface ScorecardTemplateProps {
     deliverInvest: DeliverInvestData;
     reduceHarm: ReduceHarmData;
     institutEj: InstitutEjData;
-    addtional: AddtionalData;
+    additional: AddtionalData;
   };
 }
 export interface LayoutProps extends Pathname {
@@ -166,6 +166,9 @@ export interface ReduceHarmProps {
 }
 export interface InstitutEjProps {
   institutEj: InstitutEjData;
+}
+export interface AdditionalDetailsProps {
+  additional: AddtionalData;
 }
 
 export interface DropDownNavGeneratorProps {

@@ -10,7 +10,9 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
       className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
       data-testid="grid"
     >
-      <h2>
+      <h2
+        className="scorecard-header2"
+      >
         Institutionalizing Environmental Justice
       </h2>
     </div>
