@@ -163,9 +163,7 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`Delivering investments at ${deliverInvest.node.Agency_Name}`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>
-              {deliverInvest.node.DeliverInvest}
-            </SummaryBoxContent>
+            <SummaryBoxContent>{deliverInvest.node.Summary}</SummaryBoxContent>
           </SummaryBox>
         </Grid>
       </Grid>

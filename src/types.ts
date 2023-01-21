@@ -23,7 +23,7 @@ export interface DeliverInvestData {
     id: string;
     __typename: string;
     Agency_Name: string;
-    DeliverInvest: string;
+    Summary: string;
     T1_Title: string;
     Cat1: string;
     Cat1_N1: string;
@@ -67,6 +67,7 @@ export interface InstitutEjData {
   node: {
     id: string;
     Agency_Name: string;
+    Summary: string;
     Row11: string;
     Row12: string;
     Row13: string;
@@ -162,6 +163,9 @@ export interface DeliverInvestProps {
 }
 export interface ReduceHarmProps {
   reduceHarm: ReduceHarmData;
+}
+export interface InstitutEjProps {
+  institutEj: InstitutEjData;
 }
 
 export interface DropDownNavGeneratorProps {

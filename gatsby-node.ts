@@ -67,7 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
               id
               __typename
               Agency_Name
-              DeliverInvest
+              Summary
               T1_Title
               Cat1
               Cat1_N1
@@ -116,6 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               id
               Agency_Name
+              Summary
               Row11
               Row12
               Row13

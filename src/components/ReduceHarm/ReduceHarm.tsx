@@ -11,7 +11,6 @@ import * as styles from './ReduceHarm.module.scss';
 import { ReduceHarmProps } from '@/types';
 
 const ReduceHarm: React.FC<ReduceHarmProps> = ({ reduceHarm }) => {
-  console.log(`🚀 ~ file: ReduceHarm.tsx:14 ~ reduceHarm`, reduceHarm);
   const table1Data = (
     <>
       <tbody>

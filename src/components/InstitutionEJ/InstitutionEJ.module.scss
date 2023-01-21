@@ -1,0 +1,6 @@
+@use "uswds-core" as *;
+
+.h2 { 
+    @include u-margin-top(4);
+    border-bottom: 1px solid #e8e8f0;
+}

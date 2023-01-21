@@ -1,7 +1,6 @@
 declare namespace DeliverInvestNamespace {
   export interface IDeliverInvestScss {
     h2: string;
-    summaryBox: string;
   }
 }
 
