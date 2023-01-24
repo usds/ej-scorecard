@@ -38,7 +38,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
           </td>
         </tr>
         <tr>
-          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+          <td colSpan={5} className="font-mono-sm text-tabular submetric">
             {institutEj.node.Row31}
           </td>
           <td colSpan={2} className="font-mono-sm text-tabular text-left">
@@ -46,7 +46,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
           </td>
         </tr>
         <tr>
-          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+          <td colSpan={5} className="font-mono-sm text-tabular submetric">
             {institutEj.node.Row41}
           </td>
           <td colSpan={2} className="font-mono-sm text-tabular text-left">
@@ -54,7 +54,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
           </td>
         </tr>
         <tr>
-          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+          <td colSpan={5} className="font-mono-sm text-tabular submetric">
             {institutEj.node.Row51}
           </td>
           <td colSpan={2} className="font-mono-sm text-tabular text-left">
@@ -62,7 +62,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
           </td>
         </tr>
         <tr>
-          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+          <td colSpan={5} className="font-mono-sm text-tabular submetric">
             {institutEj.node.Row61}
           </td>
           <td colSpan={2} className="font-mono-sm text-tabular text-left">
@@ -156,15 +156,8 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
             {institutEj.node.Row162}
           </td>
         </tr>
-      </tbody>
-    </>
-  );
-
-  const table3Data = (
-    <>
-      <tbody>
         <tr>
-          <td className="font-mono-sm text-tabular text-left">
+          <td colSpan={10} className="font-mono-sm text-tabular text-left">
             {institutEj.node.Row171}
           </td>
           <td className="font-mono-sm text-tabular text-left">
@@ -174,6 +167,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
       </tbody>
     </>
   );
+
   return (
     <>
       <Grid row>
@@ -198,9 +192,6 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
           </Table>
           <Table fullWidth bordered striped>
             {table2Data}
-          </Table>
-          <Table fullWidth bordered striped>
-            {table3Data}
           </Table>
         </Grid>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>

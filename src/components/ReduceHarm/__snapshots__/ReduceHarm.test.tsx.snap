@@ -91,7 +91,7 @@ exports[`rendering of ReduceHarm Component > checks if component renders 1`] = `
           </tr>
           <tr>
             <td
-              className="font-mono-sm text-tabular text-center"
+              className="font-mono-sm text-tabular text-center vertical-align-top"
             >
               Optional: Metric T2
             </td>

@@ -25,7 +25,6 @@ import AgencyInfo from './AgencyInfo';
 const info = {
   id: `39455749-3310-53aa-b5fa-22590adc1e05`,
   Name: `Agency D`,
-  Contact_Name: `Leslie KnopeD`,
   Address_Line_1: `333 Any StreetD`,
   Address_Line_2: `Washington, D.C. 20032`,
   Phone: `(212) 867-5309`,

@@ -79,7 +79,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
           </tr>
           <tr>
             <td
-              className="font-mono-sm text-tabular text-left"
+              className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
               SubmetricT2
@@ -93,7 +93,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
           </tr>
           <tr>
             <td
-              className="font-mono-sm text-tabular text-left"
+              className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
               SubmetricT2
@@ -107,7 +107,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
           </tr>
           <tr>
             <td
-              className="font-mono-sm text-tabular text-left"
+              className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
               SubmetricT2
@@ -121,7 +121,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
           </tr>
           <tr>
             <td
-              className="font-mono-sm text-tabular text-left"
+              className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
               SubmetricT2
@@ -279,16 +279,10 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis.
             </td>
           </tr>
-        </tbody>
-      </table>
-      <table
-        className="usa-table src-components-Table-Table-module__fullwidth--fOyj6 usa-table--striped"
-        data-testid="table"
-      >
-        <tbody>
           <tr>
             <td
               className="font-mono-sm text-tabular text-left"
+              colSpan={10}
             >
               SummaryT2
             </td>

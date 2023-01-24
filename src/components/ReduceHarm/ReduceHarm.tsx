@@ -31,7 +31,7 @@ const ReduceHarm: React.FC<ReduceHarmProps> = ({ reduceHarm }) => {
           </td>
         </tr>
         <tr>
-          <td className="font-mono-sm text-tabular text-center">
+          <td className="font-mono-sm text-tabular text-center vertical-align-top">
             {reduceHarm.node.Row31}
           </td>
           <td className="font-mono-sm text-tabular text-center">
