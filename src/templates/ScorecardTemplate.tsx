@@ -5,11 +5,22 @@ import MainGridContainer from '@/components/MainGridContainer';
 import AgencyInfo from '@/components/AgencyInfo';
 import { ScorecardTemplateProps } from '@/types';
 import DeliverInvest from '@/components/DeliverInvest';
+import ReduceHarm from '@/components/ReduceHarm';
+import InstitutionEJ from '@/components/InstitutionEJ';
+import AdditionalDetails from '@/components/AdditionalDetails';
 
 const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
 }) => {
-  const { allAgencyNames, pathname, agencyInfo, deliverInvest } = pageContext;
+  const {
+    allAgencyNames,
+    pathname,
+    agencyInfo,
+    deliverInvest,
+    reduceHarm,
+    institutEj,
+    additional,
+  } = pageContext;
 
   return (
     <Layout
@@ -25,6 +36,9 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
           pathname={pathname}
         />
         <DeliverInvest deliverInvest={deliverInvest} />
+        <ReduceHarm reduceHarm={reduceHarm} />
+        <InstitutionEJ institutEj={institutEj} />
+        <AdditionalDetails additional={additional} />
       </MainGridContainer>
     </Layout>
   );

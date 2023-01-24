@@ -6,8 +6,9 @@ import {
   SummaryBoxHeading,
   Table,
 } from '@trussworks/react-uswds';
-import * as styles from './DeliverInvest.module.scss';
 import { DeliverInvestProps } from '@/types';
+
+// import * as styles from './DeliverInvest.module.scss';
 
 const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
   const table1Data = (
@@ -127,35 +128,47 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
       </tbody>
     </>
   );
-  console.log(deliverInvest);
+
   return (
-    <Grid row gap={6}>
-      <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-        <h2 className={styles.h2}>Delivering investments</h2>
-        <Table fullWidth bordered striped>
-          {table1Data}
-        </Table>
-        <Table fullWidth bordered striped>
-          {table2Data}
-        </Table>
-        <Table fullWidth bordered striped>
-          {table3Data}
-        </Table>
-        <Table fullWidth bordered striped>
-          {table4Data}
-        </Table>
+    <>
+      <Grid row>
+        <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
+          <h2 className={`scorecard-header2`}>Delivering investments</h2>
+        </Grid>
       </Grid>
-      <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
-        <SummaryBox className={styles.summaryBox}>
-          <SummaryBoxHeading headingLevel="h3">
-            {`Delivering investments at ${deliverInvest.node.Agency_Name}`}
-          </SummaryBoxHeading>
-          <SummaryBoxContent>
-            {deliverInvest.node.DeliverInvest}
-          </SummaryBoxContent>
-        </SummaryBox>
+      <Grid row>
+        <Grid desktop={{ col: 6 }} tablet={{ col: 10 }} col={12}>
+          Short narrative about the why delivering investments is important. I
+          prem ins _dolor sit amet concertetur adinissing plitvam at magna vitan
+          prat convall bandit. Phasellus id urna ultrices, vestibulum guam a.
+          accumsan mauris
+        </Grid>
       </Grid>
-    </Grid>
+      <Grid row gap={6}>
+        <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
+          <Table fullWidth bordered striped>
+            {table1Data}
+          </Table>
+          <Table fullWidth bordered striped>
+            {table2Data}
+          </Table>
+          <Table fullWidth bordered striped>
+            {table3Data}
+          </Table>
+          <Table fullWidth bordered striped>
+            {table4Data}
+          </Table>
+        </Grid>
+        <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
+          <SummaryBox className={`margin-top-2`}>
+            <SummaryBoxHeading headingLevel="h3">
+              {`Delivering investments at ${deliverInvest.node.Agency_Name}`}
+            </SummaryBoxHeading>
+            <SummaryBoxContent>{deliverInvest.node.Summary}</SummaryBoxContent>
+          </SummaryBox>
+        </Grid>
+      </Grid>
+    </>
   );
 };
 

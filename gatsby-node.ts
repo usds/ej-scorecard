@@ -67,7 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
               id
               __typename
               Agency_Name
-              DeliverInvest
+              Summary
               T1_Title
               Cat1
               Cat1_N1
@@ -94,11 +94,92 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        allReduceHarmCsv(sort: { Agency_Name: ASC }) {
+          totalCount
+          edges {
+            node {
+              id
+              Agency_Name
+              Summary
+              Row11
+              Row12
+              Row21
+              Row22
+              Row31
+              Row32
+            }
+          }
+        }
+        allInstitutEjCsv(sort: { Agency_Name: ASC }) {
+          totalCount
+          edges {
+            node {
+              id
+              Agency_Name
+              Summary
+              Row11
+              Row12
+              Row13
+              Row21
+              Row22
+              Row23
+              Row31
+              Row32
+              Row41
+              Row42
+              Row51
+              Row52
+              Row61
+              Row62
+              Row71
+              Row72
+              Row81
+              Row82
+              Row91
+              Row92
+              Row101
+              Row102
+              Row111
+              Row112
+              Row121
+              Row122
+              Row131
+              Row132
+              Row141
+              Row142
+              Row151
+              Row152
+              Row161
+              Row162
+              Row171
+              Row172
+            }
+          }
+        }
+        allAdditionalCsv(sort: { Agency_Name: ASC }) {
+          totalCount
+          edges {
+            node {
+              id
+              Agency_Name
+              P1
+              P2
+              P3
+            }
+          }
+        }
       }
     `,
   );
 
-  const { allFile, allAgencyInfoCsv, allDeliverInvestCsv } = data;
+  const {
+    allFile,
+    allAgencyInfoCsv,
+    allDeliverInvestCsv,
+    allReduceHarmCsv,
+    allInstitutEjCsv,
+    allAdditionalCsv,
+  } = data;
 
   if (!doRequiredFilesExist(allFile)) {
     throw Error(`Was not able to read in required data`);
@@ -118,6 +199,9 @@ exports.createPages = async ({ graphql, actions }) => {
         pathname: `/${pathname}`,
         agencyInfo: edge.node,
         deliverInvest: allDeliverInvestCsv.edges[index],
+        reduceHarm: allReduceHarmCsv.edges[index],
+        institutEj: allInstitutEjCsv.edges[index],
+        additional: allAdditionalCsv.edges[index],
       },
     });
   });
