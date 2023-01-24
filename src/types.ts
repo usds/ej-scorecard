@@ -11,7 +11,6 @@ export interface RelativePathData {
 export interface AgencyInfoData {
   id: string;
   Name: string;
-  Contact_Name: string;
   Address_Line_1: string;
   Address_Line_2: string;
   Phone: string;
@@ -44,6 +43,8 @@ export interface DeliverInvestData {
     T3_N2: string;
     T3_M3: string;
     T3_N3: string;
+    T3_M4: string;
+    T3_N4: string;
     T4_Title: string;
     T4_M1: string;
     T4_V1: string;

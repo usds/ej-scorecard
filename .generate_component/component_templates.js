@@ -2,7 +2,7 @@
 // component.tsx
 exports.component = name => `import React from 'react';
 
-import * as styles from './${name}.module.scss';
+// import * as styles from './${name}.module.scss';
 
 import { ${name}Props } from '@/types';
 

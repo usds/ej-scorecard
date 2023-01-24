@@ -188,6 +188,19 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               $#
             </td>
           </tr>
+          <tr>
+            <th
+              colSpan={2}
+              scope="row"
+            >
+              MetricA
+            </th>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              $#
+            </td>
+          </tr>
         </tbody>
       </table>
       <table
@@ -206,6 +219,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
         <tbody>
           <tr>
             <th
+              className="vertical-align-top"
               colSpan={2}
               scope="row"
             >

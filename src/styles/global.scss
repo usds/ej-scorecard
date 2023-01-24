@@ -119,5 +119,14 @@ li.usa-nav__primary-item a:hover::after{
 // Scorecard styles
 .scorecard-header2 {
   padding-top: 32px;
+  padding-bottom: 6px;
   border-bottom: 1px solid #e8e8f0;
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+
+.submetric {
+  padding-left: 2rem !important;
 }

@@ -28,11 +28,18 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
                 alt="Agency logo"
               />
               <h3>{info.Name}</h3>
-              <span>{info.Contact_Name}</span>
               <span>{info.Address_Line_1}</span>
               <span>{info.Address_Line_2}</span>
               <span>{info.Phone}</span>
-              <span>{info.Site}</span>
+              <span>
+                <a
+                  href={`https://${info.Site}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {info.Site}
+                </a>
+              </span>
             </div>
           </Grid>
           <Grid col={8}>

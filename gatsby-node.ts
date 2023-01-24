@@ -51,7 +51,6 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               id
               Name
-              Contact_Name
               Address_Line_1
               Address_Line_2
               Phone
@@ -88,6 +87,8 @@ exports.createPages = async ({ graphql, actions }) => {
               T3_N2
               T3_M3
               T3_N3
+              T3_M4
+              T3_N4
               T4_Title
               T4_M1
               T4_V1

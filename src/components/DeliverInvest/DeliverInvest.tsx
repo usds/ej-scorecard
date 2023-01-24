@@ -106,6 +106,14 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
             {deliverInvest.node.T3_N3}
           </td>
         </tr>
+        <tr>
+          <th scope="row" colSpan={2}>
+            {deliverInvest.node.T3_M4}
+          </th>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.T3_N4}
+          </td>
+        </tr>
       </tbody>
     </>
   );
@@ -118,7 +126,7 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
       </thead>
       <tbody>
         <tr>
-          <th scope="row" colSpan={2}>
+          <th scope="row" colSpan={2} className={`vertical-align-top`}>
             {deliverInvest.node.T4_M1}
           </th>
           <td className="font-mono-sm text-tabular text-center">

@@ -22,9 +22,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             Agency D
           </h3>
           <span>
-            Leslie KnopeD
-          </span>
-          <span>
             333 Any StreetD
           </span>
           <span>
@@ -34,7 +31,13 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             (212) 867-5309
           </span>
           <span>
-            agencya.gov
+            <a
+              href="https://agencya.gov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              agencya.gov
+            </a>
           </span>
         </div>
       </div>
@@ -86,9 +89,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
             Agency D
           </h3>
           <span>
-            Leslie KnopeD
-          </span>
-          <span>
             333 Any StreetD
           </span>
           <span>
@@ -98,7 +98,13 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
             (212) 867-5309
           </span>
           <span>
-            agencya.gov
+            <a
+              href="https://agencya.gov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              agencya.gov
+            </a>
           </span>
         </div>
       </div>
@@ -150,9 +156,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
             Agency D
           </h3>
           <span>
-            Leslie KnopeD
-          </span>
-          <span>
             333 Any StreetD
           </span>
           <span>
@@ -162,7 +165,13 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
             (212) 867-5309
           </span>
           <span>
-            agencya.gov
+            <a
+              href="https://agencya.gov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              agencya.gov
+            </a>
           </span>
         </div>
       </div>
