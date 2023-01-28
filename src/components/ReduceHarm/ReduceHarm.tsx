@@ -38,6 +38,14 @@ const ReduceHarm: React.FC<ReduceHarmProps> = ({ reduceHarm }) => {
             {reduceHarm.node.Row32}
           </td>
         </tr>
+        <tr>
+          <td className="font-mono-sm text-tabular text-center vertical-align-top">
+            {reduceHarm.node.Row41}
+          </td>
+          <td className="font-mono-sm text-tabular text-center">
+            {reduceHarm.node.Row42}
+          </td>
+        </tr>
       </tbody>
     </>
   );

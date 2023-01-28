@@ -46,7 +46,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
+              Y-N Questn D8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -64,7 +64,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
+              Y-N Questn D8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -82,7 +82,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
-              SubmetricT2
+              SubmetricD8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -96,7 +96,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
-              SubmetricT2
+              SubmetricD8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -110,7 +110,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
-              SubmetricT2
+              SubmetricD8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -124,7 +124,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular submetric"
               colSpan={5}
             >
-              SubmetricT2
+              SubmetricD8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -138,7 +138,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
+              Y-N Questn D8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -152,7 +152,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
+              Y-N Questn D8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -166,7 +166,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
+              Y-N Questn D8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -180,7 +180,7 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
+              Y-N Questn D8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
@@ -194,13 +194,17 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
+              Y-N Questn D8
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
-              colSpan={2}
             >
               Boolean
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-left"
+            >
+              #
             </td>
           </tr>
           <tr>
@@ -208,55 +212,119 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
               className="font-mono-sm text-tabular text-left"
               colSpan={5}
             >
-              Y-N Questn T2
-            </td>
-            <td
-              className="font-mono-sm text-tabular text-left"
-              colSpan={2}
-            >
               Boolean
-            </td>
-          </tr>
-          <tr>
-            <td
-              className="font-mono-sm text-tabular text-left"
-              colSpan={5}
-            >
-              Y-N Questn T2
-            </td>
-            <td
-              className="font-mono-sm text-tabular text-left"
-              colSpan={2}
-            >
-              Boolean
-            </td>
-          </tr>
-          <tr>
-            <td
-              className="font-mono-sm text-tabular text-left"
-              colSpan={5}
-            >
-              Y-N Questn T2
-            </td>
-            <td
-              className="font-mono-sm text-tabular text-left"
-              colSpan={2}
-            >
-              Boolean
-            </td>
-          </tr>
-          <tr>
-            <td
-              className="font-mono-sm text-tabular text-left"
-              colSpan={5}
-            >
-              Y-N Questn T2
             </td>
             <td
               className="font-mono-sm text-tabular text-left"
               colSpan={2}
             >
               #
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            >
+              Y-N Questn D8
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              Boolean
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            >
+              Y-N Questn D8
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              Boolean
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            >
+              Y-N Questn D8
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              Boolean
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            />
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              Boolean
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            />
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              #
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            >
+              SummaryD8
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis.
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            >
+              SummaryD8
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis.
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={5}
+            />
+            <td
+              className="font-mono-sm text-tabular text-left"
+              colSpan={2}
+            >
+              ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis.
             </td>
           </tr>
         </tbody>
@@ -270,26 +338,22 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
             <td
               className="font-mono-sm text-tabular text-left"
               colSpan={10}
-            >
-              SummaryT2
-            </td>
+            />
             <td
               className="font-mono-sm text-tabular text-left"
             >
-              ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis.
+              Boolean
             </td>
           </tr>
           <tr>
             <td
               className="font-mono-sm text-tabular text-left"
               colSpan={10}
-            >
-              SummaryT2
-            </td>
+            />
             <td
               className="font-mono-sm text-tabular text-left"
             >
-              ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis.
+              #
             </td>
           </tr>
         </tbody>
@@ -309,12 +373,12 @@ exports[`rendering of InstitutionEJ Component > checks if component renders 1`] 
           <h3
             className="usa-summary-box__heading"
           >
-            Institutionalizing EJ at T2 Agency Dept Office
+            Institutionalizing EJ at D8 Agency Dept Office
           </h3>
           <div
             className="usa-summary-box__text"
           >
-            Lorem T2 ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+            Lorem D8 ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
           </div>
         </div>
       </div>
