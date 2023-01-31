@@ -1,24 +1,23 @@
 // import { useStaticQuery, graphql } from 'gatsby';
 
 // export const useAgencyInfo = () => {
-//   const { agencyAEjScorecard2023InfoCsv } = useStaticQuery(
+//   const { allImageSharp } = useStaticQuery(
 //     graphql`
 //       query {
-//         agencyAEjScorecard2023InfoCsv {
-//           Name
-//           Logo
-//           Contact_Name
-//           Address_Line_1
-//           Address_Line_2
-//           Phone
-//           Email
-//           Size
-//           Value
-//           Metrics
-//           About_description
+//         allImageSharp {
+//           totalCount
+//           edges {
+//             node {
+//               original {
+//                 src
+//               }
+//               gatsbyImageData
+//               id
+//             }
+//           }
 //         }
 //       }
 //     `,
 //   );
-//   return agencyAEjScorecard2023InfoCsv;
+//   return allImageSharp;
 // };

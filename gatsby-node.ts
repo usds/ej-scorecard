@@ -38,7 +38,10 @@ exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(
     `
       query {
-        allFile(sort: { relativePath: ASC }) {
+        allFile(
+          sort: { relativePath: ASC }
+          filter: { sourceInstanceName: { eq: "scorecards" } }
+        ) {
           edges {
             node {
               relativePath
@@ -51,6 +54,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               id
               Name
+              Logo
               Address_Line_1
               Address_Line_2
               Phone
@@ -195,6 +199,17 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        allImageSharp {
+          edges {
+            node {
+              id
+              original {
+                src
+              }
+              gatsbyImageData
+            }
+          }
+        }
       }
     `,
   );
@@ -206,6 +221,7 @@ exports.createPages = async ({ graphql, actions }) => {
     allReduceHarmCsv,
     allInstitutEjCsv,
     allAdditionalCsv,
+    allImageSharp,
   } = data;
 
   if (!doRequiredFilesExist(allFile)) {
@@ -216,6 +232,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   allAgencyInfoCsv.edges.forEach((edge, index) => {
     const pathname = `scorecard/${toKebabCase(edge.node.Name)}`;
+
+    // for each agency page, find the gatsbyImageData using the logo field:
+    const imageLogoData = allImageSharp.edges.find(({ node }) =>
+      node.gatsbyImageData.images.fallback.src.endsWith(edge.node.Logo),
+    );
 
     createPage({
       adjustPath: true,
@@ -229,6 +250,7 @@ exports.createPages = async ({ graphql, actions }) => {
         reduceHarm: allReduceHarmCsv.edges[index],
         institutEj: allInstitutEjCsv.edges[index],
         additional: allAdditionalCsv.edges[index],
+        gatsbyImageData: imageLogoData?.node.gatsbyImageData,
       },
     });
   });

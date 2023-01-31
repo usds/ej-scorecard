@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { Grid } from '@trussworks/react-uswds';
 
 // import { useAgencyInfo } from '@/hooks/use-agency-info';
@@ -12,6 +12,7 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
   info,
   allAgencyNames,
   pathname,
+  gatsbyImageData,
 }) => {
   // Todo: may not need this custom hook
   // const agencyInfo = useAgencyInfo();
@@ -22,9 +23,9 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         <Grid row gap>
           <Grid col={4}>
             <div className={styles.agencyInfoCol1}>
-              <StaticImage
+              <GatsbyImage
                 className={styles.agencyInfoLogo}
-                src="../../../static/images/agency-a.png"
+                image={gatsbyImageData}
                 alt="Agency logo"
               />
               <h3>{info.Name}</h3>

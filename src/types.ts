@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Data
 export interface RelativePathData {
@@ -11,6 +12,7 @@ export interface RelativePathData {
 export interface AgencyInfoData {
   id: string;
   Name: string;
+  Logo: string;
   Address_Line_1: string;
   Address_Line_2: string;
   Phone: string;
@@ -160,6 +162,7 @@ export interface ScorecardTemplateProps {
     reduceHarm: ReduceHarmData;
     institutEj: InstitutEjData;
     additional: AddtionalData;
+    gatsbyImageData: IGatsbyImageData;
   };
 }
 export interface LayoutProps extends Pathname {
@@ -184,6 +187,7 @@ export interface AgencyInfoProps {
   info: AgencyInfoData;
   allAgencyNames: string[];
   pathname: string;
+  gatsbyImageData: IGatsbyImageData;
 }
 export interface DeliverInvestProps {
   deliverInvest: DeliverInvestData;

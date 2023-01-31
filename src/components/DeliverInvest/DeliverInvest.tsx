@@ -11,7 +11,6 @@ import { DeliverInvestProps } from '@/types';
 // import * as styles from './DeliverInvest.module.scss';
 
 const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
-  console.log(deliverInvest);
   const table1Data = (
     <>
       <thead>

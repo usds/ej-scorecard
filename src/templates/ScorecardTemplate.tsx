@@ -20,6 +20,7 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
     reduceHarm,
     institutEj,
     additional,
+    gatsbyImageData,
   } = pageContext;
 
   return (
@@ -34,6 +35,7 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
           info={agencyInfo}
           allAgencyNames={allAgencyNames}
           pathname={pathname}
+          gatsbyImageData={gatsbyImageData}
         />
         <DeliverInvest deliverInvest={deliverInvest} />
         <ReduceHarm reduceHarm={reduceHarm} />

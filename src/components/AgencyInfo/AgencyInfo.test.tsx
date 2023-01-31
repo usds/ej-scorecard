@@ -1,4 +1,5 @@
 import createComponentWithIntl from '@/test/testHelpers';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { mockAllAgencyNames } from '../ScorecardSideNav/ScorecardSideNav.test';
 import AgencyInfo from './AgencyInfo';
 
@@ -25,11 +26,33 @@ import AgencyInfo from './AgencyInfo';
 const info = {
   id: `39455749-3310-53aa-b5fa-22590adc1e05`,
   Name: `Agency D`,
+  Logo: `agency-a.png`,
   Address_Line_1: `333 Any StreetD`,
   Address_Line_2: `Washington, D.C. 20032`,
   Phone: `(212) 867-5309`,
   Site: `agencya.gov`,
   About_description: `LoremD ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.`,
+};
+
+const mockGatsbyImageData: IGatsbyImageData = {
+  layout: `constrained`,
+  backgroundColor: `#f8f8f8`,
+  images: {
+    fallback: {
+      src: `/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png`,
+      srcSet: `/static/703cdc54fb8f1bddfe59854183c3829b/c3bfd/agency-a.png 84w,\n/static/703cdc54fb8f1bddfe59854183c3829b/53761/agency-a.png 167w,\n/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png 334w`,
+      sizes: `(min-width: 334px) 334px, 100vw`,
+    },
+    sources: [
+      {
+        srcSet: `/static/703cdc54fb8f1bddfe59854183c3829b/59647/agency-a.webp 84w,\n/static/703cdc54fb8f1bddfe59854183c3829b/02be2/agency-a.webp 167w,\n/static/703cdc54fb8f1bddfe59854183c3829b/7adb0/agency-a.webp 334w`,
+        type: `image/webp`,
+        sizes: `(min-width: 334px) 334px, 100vw`,
+      },
+    ],
+  },
+  width: 334,
+  height: 278,
 };
 
 describe(`rendering of AgencyInfo Component`, () => {
@@ -47,6 +70,7 @@ describe(`rendering of AgencyInfo Component`, () => {
         info={info}
         allAgencyNames={mockAllAgencyNames}
         pathname={`scorecard/a1-agency-dept-office`}
+        gatsbyImageData={mockGatsbyImageData}
       />,
     );
 
@@ -61,6 +85,7 @@ describe(`rendering of AgencyInfo Component`, () => {
         info={info}
         allAgencyNames={mockAllAgencyNames}
         pathname={`scorecard/d6-agency-dept-office`}
+        gatsbyImageData={mockGatsbyImageData}
       />,
     );
 
@@ -75,6 +100,7 @@ describe(`rendering of AgencyInfo Component`, () => {
         info={info}
         allAgencyNames={mockAllAgencyNames}
         pathname={`scorecard/t1-agency-dept-office`}
+        gatsbyImageData={mockGatsbyImageData}
       />,
     );
 
