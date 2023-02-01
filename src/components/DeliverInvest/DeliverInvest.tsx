@@ -52,6 +52,61 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
             {deliverInvest.node.Cat3_N2}
           </td>
         </tr>
+        <tr>
+          <th scope="row" colSpan={2}>
+            {deliverInvest.node.Cat4}
+          </th>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat4_N1}
+          </td>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat4_N2}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" colSpan={2}>
+            {deliverInvest.node.Cat5}
+          </th>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat5_N1}
+          </td>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat5_N2}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" colSpan={2}>
+            {deliverInvest.node.Cat6}
+          </th>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat6_N1}
+          </td>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat6_N2}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" colSpan={2}>
+            {deliverInvest.node.Cat7}
+          </th>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat7_N1}
+          </td>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat7_N2}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" colSpan={2}>
+            {deliverInvest.node.Cat8}
+          </th>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat8_N1}
+          </td>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.Cat8_N2}
+          </td>
+        </tr>
       </tbody>
     </>
   );
@@ -69,6 +124,14 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
           </th>
           <td className="font-mono-sm text-tabular text-center">
             {deliverInvest.node.T2_N1}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" colSpan={2}>
+            {deliverInvest.node.T2_M2}
+          </th>
+          <td className="font-mono-sm text-tabular text-center">
+            {deliverInvest.node.T2_N2}
           </td>
         </tr>
       </tbody>
@@ -130,7 +193,7 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
             {deliverInvest.node.T4_M1}
           </th>
           <td className="font-mono-sm text-tabular text-center">
-            {deliverInvest.node.T4_V1}
+            {deliverInvest.node.T4_M1}
           </td>
         </tr>
       </tbody>

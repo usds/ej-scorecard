@@ -74,9 +74,17 @@ const config: GatsbyConfig = {
         path: path.join(__dirname, `/src/data/scorecards`),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `/src/data/images`),
+      },
+    },
     `gatsby-transformer-csv`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
   jsxRuntime: `automatic`,
 };

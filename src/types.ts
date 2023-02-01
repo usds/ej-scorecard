@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Data
 export interface RelativePathData {
@@ -11,6 +12,7 @@ export interface RelativePathData {
 export interface AgencyInfoData {
   id: string;
   Name: string;
+  Logo: string;
   Address_Line_1: string;
   Address_Line_2: string;
   Phone: string;
@@ -33,9 +35,26 @@ export interface DeliverInvestData {
     Cat3: string;
     Cat3_N1: string;
     Cat3_N2: string;
+    Cat4: string;
+    Cat4_N1: string;
+    Cat4_N2: string;
+    Cat5: string;
+    Cat5_N1: string;
+    Cat5_N2: string;
+    Cat6: string;
+    Cat6_N1: string;
+    Cat6_N2: string;
+    Cat7: string;
+    Cat7_N1: string;
+    Cat7_N2: string;
+    Cat8: string;
+    Cat8_N1: string;
+    Cat8_N2: string;
     T2_Title: string;
     T2_M1: string;
     T2_N1: string;
+    T2_M2: string;
+    T2_N2: string;
     T3_Title: string;
     T3_M1: string;
     T3_N1: string;
@@ -47,7 +66,6 @@ export interface DeliverInvestData {
     T3_N4: string;
     T4_Title: string;
     T4_M1: string;
-    T4_V1: string;
   };
 }
 
@@ -62,6 +80,8 @@ export interface ReduceHarmData {
     Row22: string;
     Row31: string;
     Row32: string;
+    Row41: string;
+    Row42: string;
   };
 }
 export interface InstitutEjData {
@@ -89,10 +109,12 @@ export interface InstitutEjData {
     Row82: string;
     Row91: string;
     Row92: string;
+    Row93: string;
     Row101: string;
     Row102: string;
     Row111: string;
     Row112: string;
+    Row113: string;
     Row121: string;
     Row122: string;
     Row131: string;
@@ -105,6 +127,12 @@ export interface InstitutEjData {
     Row162: string;
     Row171: string;
     Row172: string;
+    Row181: string;
+    Row182: string;
+    Row191: string;
+    Row192: string;
+    Row201: string;
+    Row202: string;
   };
 }
 export interface AddtionalData {
@@ -134,6 +162,7 @@ export interface ScorecardTemplateProps {
     reduceHarm: ReduceHarmData;
     institutEj: InstitutEjData;
     additional: AddtionalData;
+    gatsbyImageData: IGatsbyImageData;
   };
 }
 export interface LayoutProps extends Pathname {
@@ -147,7 +176,20 @@ export interface PageProps {
     allAgencyInfoCsv: {
       edges: {
         node: {
+          id: string;
           Name: string;
+          Logo: string;
+        };
+      }[];
+    };
+    allImageSharp: {
+      edges: {
+        node: {
+          id: string;
+          original: {
+            src: string;
+          };
+          gatsbyImageData: IGatsbyImageData;
         };
       }[];
     };
@@ -158,6 +200,7 @@ export interface AgencyInfoProps {
   info: AgencyInfoData;
   allAgencyNames: string[];
   pathname: string;
+  gatsbyImageData: IGatsbyImageData;
 }
 export interface DeliverInvestProps {
   deliverInvest: DeliverInvestData;
@@ -182,4 +225,10 @@ export interface DropDownNavGeneratorProps {
 export interface ScorecardSideNavProps {
   allAgencyNames: string[];
   pathname: string;
+}
+
+export interface BtnLaunchExternalProps {
+  href: string;
+  buttonText: string;
+  showlaunchIcon?: boolean;
 }

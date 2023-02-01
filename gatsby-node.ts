@@ -38,7 +38,10 @@ exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(
     `
       query {
-        allFile(sort: { relativePath: ASC }) {
+        allFile(
+          sort: { relativePath: ASC }
+          filter: { sourceInstanceName: { eq: "scorecards" } }
+        ) {
           edges {
             node {
               relativePath
@@ -51,6 +54,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               id
               Name
+              Logo
               Address_Line_1
               Address_Line_2
               Phone
@@ -77,9 +81,26 @@ exports.createPages = async ({ graphql, actions }) => {
               Cat3
               Cat3_N1
               Cat3_N2
+              Cat4
+              Cat4_N1
+              Cat4_N2
+              Cat5
+              Cat5_N1
+              Cat5_N2
+              Cat6
+              Cat6_N1
+              Cat6_N2
+              Cat7
+              Cat7_N1
+              Cat7_N2
+              Cat8
+              Cat8_N1
+              Cat8_N2
               T2_Title
               T2_M1
               T2_N1
+              T2_M2
+              T2_N2
               T3_Title
               T3_M1
               T3_N1
@@ -91,7 +112,6 @@ exports.createPages = async ({ graphql, actions }) => {
               T3_N4
               T4_Title
               T4_M1
-              T4_V1
             }
           }
         }
@@ -108,6 +128,8 @@ exports.createPages = async ({ graphql, actions }) => {
               Row22
               Row31
               Row32
+              Row41
+              Row42
             }
           }
         }
@@ -138,10 +160,12 @@ exports.createPages = async ({ graphql, actions }) => {
               Row82
               Row91
               Row92
+              Row93
               Row101
               Row102
               Row111
               Row112
+              Row113
               Row121
               Row122
               Row131
@@ -154,6 +178,12 @@ exports.createPages = async ({ graphql, actions }) => {
               Row162
               Row171
               Row172
+              Row181
+              Row182
+              Row191
+              Row192
+              Row201
+              Row202
             }
           }
         }
@@ -169,6 +199,17 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        allImageSharp {
+          edges {
+            node {
+              id
+              original {
+                src
+              }
+              gatsbyImageData
+            }
+          }
+        }
       }
     `,
   );
@@ -180,6 +221,7 @@ exports.createPages = async ({ graphql, actions }) => {
     allReduceHarmCsv,
     allInstitutEjCsv,
     allAdditionalCsv,
+    allImageSharp,
   } = data;
 
   if (!doRequiredFilesExist(allFile)) {
@@ -190,6 +232,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   allAgencyInfoCsv.edges.forEach((edge, index) => {
     const pathname = `scorecard/${toKebabCase(edge.node.Name)}`;
+
+    // for each agency page, find the gatsbyImageData using the logo field:
+    const imageLogoData = allImageSharp.edges.find(({ node }) =>
+      node.gatsbyImageData.images.fallback.src.endsWith(edge.node.Logo),
+    );
 
     createPage({
       adjustPath: true,
@@ -203,6 +250,7 @@ exports.createPages = async ({ graphql, actions }) => {
         reduceHarm: allReduceHarmCsv.edges[index],
         institutEj: allInstitutEjCsv.edges[index],
         additional: allAdditionalCsv.edges[index],
+        gatsbyImageData: imageLogoData?.node.gatsbyImageData,
       },
     });
   });

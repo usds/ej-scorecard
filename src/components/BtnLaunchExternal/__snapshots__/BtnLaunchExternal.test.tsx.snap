@@ -1,0 +1,24 @@
+// Vitest Snapshot v1
+
+exports[`rendering of BtnLaunchExternal Component > checks if component renders 1`] = `
+<a
+  className="flex-align-center"
+  href="www.google.com"
+  rel="noreferrer"
+  target="_blank"
+>
+  <button
+    className="usa-button"
+    data-testid="button"
+    type="button"
+  >
+    <div>
+      test
+      <img
+        alt="launch icon"
+        src="/node_modules/.pnpm/@uswds+uswds@3.3.0/node_modules/@uswds/uswds/dist/img/usa-icons/launch.svg"
+      />
+    </div>
+  </button>
+</a>
+`;

@@ -105,8 +105,11 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
           <td colSpan={5} className="font-mono-sm text-tabular text-left">
             {institutEj.node.Row111}
           </td>
-          <td colSpan={2} className="font-mono-sm text-tabular text-left">
+          <td className="font-mono-sm text-tabular text-left">
             {institutEj.node.Row112}
+          </td>
+          <td className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row113}
           </td>
         </tr>
         <tr>
@@ -139,6 +142,46 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
           </td>
           <td colSpan={2} className="font-mono-sm text-tabular text-left">
             {institutEj.node.Row152}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row161}
+          </td>
+          <td colSpan={2} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row162}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row171}
+          </td>
+          <td colSpan={2} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row172}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row181}
+          </td>
+          <td colSpan={2} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row182}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row191}
+          </td>
+          <td colSpan={2} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row192}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row201}
+          </td>
+          <td colSpan={2} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row202}
           </td>
         </tr>
       </tbody>

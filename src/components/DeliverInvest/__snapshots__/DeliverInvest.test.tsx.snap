@@ -45,7 +45,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
             <th
               colSpan={4}
             >
-              Table1 Metrics A
+              Table1 Metrics D2
             </th>
           </tr>
         </thead>
@@ -55,7 +55,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              Category 1A
+              Category 1D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
@@ -73,7 +73,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              Category 2A
+              Category 2D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
@@ -91,7 +91,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              Category 3A
+              Category 3D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
@@ -104,6 +104,72 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               $#
             </td>
           </tr>
+          <tr>
+            <th
+              colSpan={2}
+              scope="row"
+            >
+              Category 4
+            </th>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              #
+            </td>
+            <td
+              className="font-mono-sm text-tabular text-center"
+            >
+              $#
+            </td>
+          </tr>
+          <tr>
+            <th
+              colSpan={2}
+              scope="row"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+          </tr>
+          <tr>
+            <th
+              colSpan={2}
+              scope="row"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+          </tr>
+          <tr>
+            <th
+              colSpan={2}
+              scope="row"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+          </tr>
+          <tr>
+            <th
+              colSpan={2}
+              scope="row"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
+          </tr>
         </tbody>
       </table>
       <table
@@ -115,7 +181,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
             <th
               colSpan={4}
             >
-              Table2 Metrics A
+              Table2 Metrics D2
             </th>
           </tr>
         </thead>
@@ -125,13 +191,22 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              MetricA
+              Metric D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
             >
-              $#
+              #
             </td>
+          </tr>
+          <tr>
+            <th
+              colSpan={2}
+              scope="row"
+            />
+            <td
+              className="font-mono-sm text-tabular text-center"
+            />
           </tr>
         </tbody>
       </table>
@@ -144,7 +219,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
             <th
               colSpan={4}
             >
-              Table3 Metrics A
+              Table3 Metrics D2
             </th>
           </tr>
         </thead>
@@ -154,7 +229,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              MetricA
+              Metric D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
@@ -167,7 +242,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              MetricA
+              Metric D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
@@ -180,7 +255,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              MetricA
+              Metric D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
@@ -193,7 +268,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              MetricA
+              Metric D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
@@ -212,7 +287,7 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
             <th
               colSpan={4}
             >
-              Table4 Metrics A
+              Table3 Metrics D2
             </th>
           </tr>
         </thead>
@@ -223,12 +298,12 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
               colSpan={2}
               scope="row"
             >
-              Optional: MetricA
+              Optional: Metric D2
             </th>
             <td
               className="font-mono-sm text-tabular text-center"
             >
-              LoremA ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+              Optional: Metric D2
             </td>
           </tr>
         </tbody>
@@ -248,12 +323,12 @@ exports[`rendering of DeliverInvest Component > checks if component renders 1`] 
           <h3
             className="usa-summary-box__heading"
           >
-            Delivering investments at Agency A
+            Delivering investments at D2 Agency Dept Office
           </h3>
           <div
             className="usa-summary-box__text"
           >
-            LoremA ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+            Lorem D2 ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
           </div>
         </div>
       </div>

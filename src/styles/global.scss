@@ -72,7 +72,7 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
 li.usa-nav__primary-item {
   width: max-content;
 
-  // Todo: figure out how to get mixins to work here
+  // Todo: figure out how to get USWDS mixins to work here in this global file
   // @include at-media-max('desktop')
   @media screen and (max-width: 1024px) {
     width: unset;
@@ -129,4 +129,46 @@ li.usa-nav__primary-item a:hover::after{
 
 .submetric {
   padding-left: 2rem !important;
+}
+
+// Card styles
+.usa-card__footer {
+  align-self: center;
+}
+
+// Scorecard Agency progress header
+.scorecard-header-span {
+  padding-top: 31px;
+  padding-left: 10px;
+}
+
+//Agency progress cards
+.agency-progress-section {
+  display: flex;
+  flex-wrap: wrap;
+
+  div.agency-card {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(238, 238, 238);
+
+    &:hover,
+    &:focus {
+      transform: scale3d(1.006, 1.006, 1);
+      border: 1px solid black;
+      cursor: pointer;
+      
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    .agency-name {
+      margin-top: 12px;
+    }
+  }
 }
