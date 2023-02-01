@@ -1,0 +1,12 @@
+@use "uswds-core" as *;
+
+.btnLaunch {
+    @include u-padding-bottom(2);
+
+    .icon {
+        margin-left: 5px;
+        margin-bottom: -5px;
+        width: 20%;
+        filter: invert(100%) sepia(18%) saturate(129%) hue-rotate(237deg) brightness(113%) contrast(100%);
+    }
+}

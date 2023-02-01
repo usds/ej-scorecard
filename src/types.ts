@@ -176,7 +176,20 @@ export interface PageProps {
     allAgencyInfoCsv: {
       edges: {
         node: {
+          id: string;
           Name: string;
+          Logo: string;
+        };
+      }[];
+    };
+    allImageSharp: {
+      edges: {
+        node: {
+          id: string;
+          original: {
+            src: string;
+          };
+          gatsbyImageData: IGatsbyImageData;
         };
       }[];
     };
@@ -212,4 +225,10 @@ export interface DropDownNavGeneratorProps {
 export interface ScorecardSideNavProps {
   allAgencyNames: string[];
   pathname: string;
+}
+
+export interface BtnLaunchExternalProps {
+  href: string;
+  buttonText: string;
+  showlaunchIcon?: boolean;
 }
