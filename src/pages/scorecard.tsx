@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import {
+  Button,
   Card,
   CardBody,
   CardFooter,
@@ -36,7 +37,16 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
       allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
     >
       <MainGridContainer>
-        <h1>{`Environmental Justice Scorecard`}</h1>
+        <Grid row gap>
+          <Grid desktop={{ col: 9 }} tablet={{ col: 10 }} col={12}>
+            <h1>{`Environmental Justice Scorecard`}</h1>
+          </Grid>
+          <Grid desktop={{ col: 3 }} tablet={{ col: 10 }} col={12}>
+            <Button className={`download-scorecard`} type={`button`}>
+              Download the scorecard
+            </Button>
+          </Grid>
+        </Grid>
         <Grid row gap>
           <Grid desktop={{ col: 7 }} tablet={{ col: 10 }} col={12}>
             <p>

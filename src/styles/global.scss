@@ -131,6 +131,10 @@ li.usa-nav__primary-item a:hover::after{
   padding-left: 2rem !important;
 }
 
+.download-scorecard {
+  margin-top: 20px;
+}
+
 // Card styles
 .usa-card__footer {
   align-self: center;
@@ -171,4 +175,8 @@ li.usa-nav__primary-item a:hover::after{
       margin-top: 12px;
     }
   }
+}
+
+.usa-card-group {
+  margin-top: 16px;
 }
