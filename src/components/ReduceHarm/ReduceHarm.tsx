@@ -15,40 +15,33 @@ const ReduceHarm: React.FC<ReduceHarmProps> = ({ reduceHarm }) => {
     <>
       <tbody>
         <tr>
-          <td className="font-mono-sm text-tabular text-center">
+          <td className="font-mono-sm text-tabular text-left">
             {reduceHarm.node.Row11}
           </td>
-          <td className="font-mono-sm text-tabular text-center">
+          <td className="font-mono-sm text-tabular text-left">
             {reduceHarm.node.Row12}
           </td>
         </tr>
         <tr>
-          <td className="font-mono-sm text-tabular text-center">
+          <td className="font-mono-sm text-tabular text-left">
             {reduceHarm.node.Row21}
           </td>
-          <td className="font-mono-sm text-tabular text-center">
+          <td className="font-mono-sm text-tabular text-left">
             {reduceHarm.node.Row22}
           </td>
         </tr>
         <tr>
-          <td className="font-mono-sm text-tabular text-center vertical-align-top">
+          <td className="font-mono-sm text-tabular text-left vertical-align-top">
             {reduceHarm.node.Row31}
           </td>
-          <td className="font-mono-sm text-tabular text-center">
+          <td className="font-mono-sm text-tabular text-left">
             {reduceHarm.node.Row32}
-          </td>
-        </tr>
-        <tr>
-          <td className="font-mono-sm text-tabular text-center vertical-align-top">
-            {reduceHarm.node.Row41}
-          </td>
-          <td className="font-mono-sm text-tabular text-center">
-            {reduceHarm.node.Row42}
           </td>
         </tr>
       </tbody>
     </>
   );
+
   return (
     <>
       <Grid row>
@@ -70,7 +63,7 @@ const ReduceHarm: React.FC<ReduceHarmProps> = ({ reduceHarm }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`Reducing burdens & harms at ${reduceHarm.node.Agency_Name}`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>{reduceHarm.node.Summary}</SummaryBoxContent>
+            <SummaryBoxContent>{reduceHarm.node.Row42}</SummaryBoxContent>
           </SummaryBox>
         </Grid>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
