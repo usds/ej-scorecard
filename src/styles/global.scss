@@ -180,3 +180,40 @@ li.usa-nav__primary-item a:hover::after{
 .usa-card-group {
   margin-top: 16px;
 }
+
+
+/* 
+******************************
+*      FOOTER STYLES
+****************************** 
+*/ 
+.j40-footer {
+  margin-top: 32px;
+    
+  .usa-footer__primary-section{
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .j40-footer-address {
+    .usa-footer__contact-info {
+      display: inline-block;
+
+      .grid-col-auto {
+        margin-top: 6px;
+      } 
+      // @include typeset('sans', 4, 5); 
+      // @include u-text('normal');  
+    }
+  }
+  
+  .footer-link-first-child{
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  // external links in the footer only
+  .usa-link--external::after {
+    margin-top: .2ex !important;
+  }
+}

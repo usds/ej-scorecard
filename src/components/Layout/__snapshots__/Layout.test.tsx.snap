@@ -409,5 +409,186 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
       Test
     </h1>
   </main>,
+  <div
+    className="footer"
+  >
+    <footer
+      className="j40-footer"
+    >
+      <div
+        className="usa-footer__primary-section"
+        data-cy="footer-primary-block"
+      >
+        <div
+          className="grid-container-desktop-lg"
+          data-testid="gridContainer"
+        >
+          <div
+            className="grid-row tablet-lg:grid-col4"
+          >
+            <div
+              className="mobile-lg:grid-col-12 desktop:grid-col-4"
+            >
+              <section>
+                <div
+                  className="j40-h4"
+                >
+                  <strong>
+                    Contact
+                  </strong>
+                </div>
+                <ul
+                  className="usa-list usa-list--unstyled"
+                >
+                  <li
+                    className="usa-footer__secondary-link"
+                  >
+                    <address
+                      className="usa-footer__address j40-footer-address"
+                    >
+                      <div
+                        className="usa-footer__contact-info grid-row grid-gap"
+                      >
+                        <div
+                          className="grid-col-auto"
+                        >
+                          Council on Environmental Quality
+                        </div>
+                        <div
+                          className="grid-col-auto"
+                        >
+                          730 Jackson Pl NW
+                        </div>
+                        <div
+                          className="grid-col-auto"
+                        >
+                          Washington, D.C. 20506
+                        </div>
+                        <div
+                          className="grid-col-auto"
+                        >
+                          (202) 395-5750
+                        </div>
+                      </div>
+                    </address>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <div
+              className="mobile-lg:grid-col-12 desktop:grid-col-4"
+            >
+              <section>
+                <div
+                  className="j40-h4"
+                >
+                  <strong>
+                    More information
+                  </strong>
+                </div>
+                <ul
+                  className="usa-list usa-list--unstyled"
+                >
+                  <li
+                    className="usa-footer__secondary-link"
+                  >
+                    <a
+                      className="footer-link-first-child"
+                      href="https://www.whitehouse.gov/"
+                      target="_blank"
+                    >
+                      Whitehouse.gov
+                    </a>
+                  </li>
+                  <li
+                    className="usa-footer__secondary-link"
+                  >
+                    <a
+                      href="https://www.whitehouse.gov/ceq/foia"
+                      target="_blank"
+                    >
+                      Freedom of Information Act (FOIA)
+                    </a>
+                  </li>
+                  <li
+                    className="usa-footer__secondary-link"
+                  >
+                    <a
+                      href="https://www.whitehouse.gov/privacy/"
+                      target="_blank"
+                    >
+                      Privacy Policy
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <div
+              className="mobile-lg:grid-col-12 desktop:grid-col-4"
+            >
+              <section>
+                <div
+                  className="j40-h4"
+                >
+                  <strong>
+                    Have questions about government services?
+                  </strong>
+                </div>
+                <ul
+                  className="usa-list usa-list--unstyled"
+                >
+                  <li
+                    className="usa-footer__secondary-link"
+                  >
+                    <a
+                      className="footer-link-first-child"
+                      href="#"
+                      target="_blank"
+                    >
+                      Find a contact at USA.gov
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="usa-footer__secondary-section"
+      >
+        <div
+          className="grid-container-desktop-lg"
+          data-testid="gridContainer"
+        >
+          <div
+            className="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2"
+            data-testid="footerLogo"
+          >
+            <div
+              className="mobile-lg:grid-col-auto"
+            >
+              <img
+                alt="whitehouse seal"
+                className="usa-footer__logo-img"
+                src="/static/images/eop-seal.svg"
+              />
+            </div>
+            <div
+              className="mobile-lg:grid-col-auto"
+            >
+              <div
+                className="j40-footer-ceq-font"
+              >
+                <h3>
+                  Council on Environmental Quality
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>,
 ]
 `;
