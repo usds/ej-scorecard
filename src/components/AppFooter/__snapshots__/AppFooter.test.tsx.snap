@@ -2,7 +2,7 @@
 
 exports[`rendering of AppFooter Component > checks if component renders 1`] = `
 <footer
-  className="j40-footer"
+  className="app-footer"
 >
   <div
     className="usa-footer__primary-section"

@@ -413,7 +413,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
     className="footer"
   >
     <footer
-      className="j40-footer"
+      className="app-footer"
     >
       <div
         className="usa-footer__primary-section"

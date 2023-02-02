@@ -67,7 +67,7 @@ const AppFooter: React.FC = () => {
   ];
 
   return (
-    <footer className={`j40-footer`}>
+    <footer className={`app-footer`}>
       <div
         className={`usa-footer__primary-section`}
         data-cy={`footer-primary-block`}
