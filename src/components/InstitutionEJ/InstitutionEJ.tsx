@@ -178,10 +178,18 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
         </tr>
         <tr>
           <td colSpan={5} className="font-mono-sm text-tabular text-left">
-            {institutEj.node.Row201}
+            {institutEj.node.Row161}
           </td>
           <td colSpan={2} className="font-mono-sm text-tabular text-left">
-            {institutEj.node.Row202}
+            {institutEj.node.Row162}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={5} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row171}
+          </td>
+          <td colSpan={2} className="font-mono-sm text-tabular text-left">
+            {institutEj.node.Row172}
           </td>
         </tr>
       </tbody>
@@ -190,24 +198,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
 
   const table2Data = (
     <>
-      <tbody>
-        <tr>
-          <td colSpan={10} className="font-mono-sm text-tabular text-left">
-            {institutEj.node.Row161}
-          </td>
-          <td className="font-mono-sm text-tabular text-left">
-            {institutEj.node.Row162}
-          </td>
-        </tr>
-        <tr>
-          <td colSpan={10} className="font-mono-sm text-tabular text-left">
-            {institutEj.node.Row171}
-          </td>
-          <td className="font-mono-sm text-tabular text-left">
-            {institutEj.node.Row172}
-          </td>
-        </tr>
-      </tbody>
+      <tbody></tbody>
     </>
   );
 
@@ -242,7 +233,7 @@ const InstitutionEJ: React.FC<InstitutEjProps> = ({ institutEj }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`Institutionalizing EJ at ${institutEj.node.Agency_Name}`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>{institutEj.node.Summary}</SummaryBoxContent>
+            <SummaryBoxContent>{institutEj.node.Row202}</SummaryBoxContent>
           </SummaryBox>
         </Grid>
       </Grid>

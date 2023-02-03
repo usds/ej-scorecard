@@ -41,7 +41,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
     >
       <MainGridContainer>
         <h1>{intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}</h1>
-        <SummaryBox>
+        <SummaryBox className={`summary-box`}>
           <SummaryBoxHeading headingLevel="h3">
             {intl.formatMessage(SECOND_PAGE_COPY.SUMMARY_TITLE)}
           </SummaryBoxHeading>

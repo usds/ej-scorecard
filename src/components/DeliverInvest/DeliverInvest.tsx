@@ -126,14 +126,14 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
             {deliverInvest.node.T2_N1}
           </td>
         </tr>
-        <tr>
+        {/* <tr>
           <th scope="row" colSpan={2}>
             {deliverInvest.node.T2_M2}
           </th>
           <td className="font-mono-sm text-tabular text-center">
             {deliverInvest.node.T2_N2}
           </td>
-        </tr>
+        </tr> */}
       </tbody>
     </>
   );
@@ -182,15 +182,10 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
   );
   const table4Data = (
     <>
-      <thead>
-        <tr>
-          <th colSpan={4}>{deliverInvest.node.T4_Title}</th>
-        </tr>
-      </thead>
       <tbody>
         <tr>
           <th scope="row" colSpan={2} className={`vertical-align-top`}>
-            {deliverInvest.node.T4_M1}
+            {deliverInvest.node.T4_Title}
           </th>
           <td className="font-mono-sm text-tabular text-center">
             {deliverInvest.node.T4_M1}
@@ -235,7 +230,7 @@ const DeliverInvest: React.FC<DeliverInvestProps> = ({ deliverInvest }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`Delivering investments at ${deliverInvest.node.Agency_Name}`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>{deliverInvest.node.Summary}</SummaryBoxContent>
+            <SummaryBoxContent>{deliverInvest.node.T2_N2}</SummaryBoxContent>
           </SummaryBox>
         </Grid>
       </Grid>

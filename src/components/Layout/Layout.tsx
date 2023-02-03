@@ -1,5 +1,6 @@
 import React from 'react';
 import AppHeader from '@/components/AppHeader';
+import AppFooter from '@/components/AppFooter';
 import SEO from '@/components/SEO';
 import { LayoutProps } from '@/types';
 
@@ -16,6 +17,7 @@ const Layout: React.FC<LayoutProps> = ({
       <SEO title={title} />
       <AppHeader pathname={pathname} allAgencyNames={allAgencyNames} />
       <main id={`main-content`}>{children}</main>
+      <AppFooter />
     </>
   );
 };

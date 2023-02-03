@@ -24,3 +24,10 @@ export const REQUIRED_DATA_FILES = [
   `InstitutEJ.csv`,
   `Additional.csv`,
 ];
+
+export const FOOTER_CEQ_ADDRESS = {
+  NAME: `Council on Environmental Quality`,
+  STREET: `730 Jackson Pl NW`,
+  CITY_STATE: `Washington, D.C. 20506`,
+  PHONE: `(202) 395-5750`,
+};
