@@ -144,24 +144,24 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             />
           </div>
           <h3>
-            Agency D
+            Appalachian Regional Commission
           </h3>
           <span>
-            333 Any StreetD
+            1666 Connecticut Ave N.W., Suite 700
           </span>
           <span>
-            Washington, D.C. 20032
+            Washington, D.C. 20009
           </span>
           <span>
-            (212) 867-5309
+            (202) 884-7700
           </span>
           <span>
             <a
-              href="https://agencya.gov"
+              href="https://arc.gov/justice40"
               rel="noopener noreferrer"
               target="_blank"
             >
-              agencya.gov
+              arc.gov/justice40
             </a>
           </span>
         </div>
@@ -172,13 +172,234 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       >
         <div>
           <h2>
-            About Agency D
+            About Appalachian Regional Commission
           </h2>
           <p>
-            LoremD ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+            The Appalachian Regional Commission (ARC) is an economic development partnership agency of the federal government and 13 state governments focusing on 423 counties across the Appalachian Region. ARC’s mission is to innovate, partner, and invest to build community capacity and strengthen economic growth in Appalachia to help the Region achieve socioeconomic parity with the nation.
           </p>
         </div>
       </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <p>
+        
+            This page provides information on how Appalachian Regional Commission is working to reduce climate and environmental burdens and harms in communities across America.
+            
+      </p>
+      <p>
+        
+            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
+            
+      </p>
+      <h3>
+        Justice40 Initiative
+      </h3>
+      <p>
+        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to disadvantaged communities that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page 
+        <a
+          href="arc.gov/justice40"
+        >
+          arc.gov/justice40
+        </a>
+      </p>
+      <p>
+        
+          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
+          
+      </p>
+      <h4>
+        #J40_CP Justice40 covered programs
+      </h4>
+      <ul>
+        <li>
+          
+            #J40_ANNOUNCE announcements in Fiscal Year 2022 representing a total of $J40_AMOUNT funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding 
+            
+        </li>
+        <ul>
+          <li>
+            Justice40 example
+          </li>
+          <li>
+            Justice40 example
+          </li>
+          <li>
+            Justice40 example
+          </li>
+        </ul>
+        <li>
+          Made program modifications for Justice40 covered programs such as:
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+      </ul>
+      <h3>
+        Environmental and Civil Rights Protection
+      </h3>
+      <p>
+        Federal agencies are advancing environmental justice by carrying out their responsibilities under the law to identify and address disproportionate and adverse human health, environmental, climate-related and other cumulative impacts on disadvantaged communities, and to ensure that all communities experience the protection of our nation’s bedrock environmental laws. The following information summarizes some of the work the agency has done from January 2021 to September 2022 in these areas.
+      </p>
+      <h4>
+        National Environmental Policy Act
+      </h4>
+      <p>
+        The National Environmental Policy Act (NEPA) requires Federal agencies to consider and disclose the environmental, health, and community impacts of a decision or planned action before taking it. Environmental reviews that agencies conduct through NEPA help ensure the public is informed about the Federal government’s potential actions, that communities have an opportunity to fully and fairly participate in the government’s decision-making process, and that Federal agencies consider ways to protect and enhance the quality of the human environment and advance environmental justice in decision-making.
+      </p>
+      <ul>
+        <li>
+          ARC contracts with partner agencies to do any required NEPA work.
+        </li>
+        <li>
+          #NEPA_PRJ project modifications where environmental justice concerns were raised during the NEPA process
+        </li>
+        <ul>
+          <li>
+            NEPA highlight
+          </li>
+          <li>
+            NEPA highlight
+          </li>
+          <li>
+            NEPA highlight
+          </li>
+        </ul>
+        <li>
+          
+            #NEPA_TRAIN trainings on environmental justice considerations during NEPA reviews
+            
+        </li>
+      </ul>
+      <h4>
+        Title VI of the Civil Rights Act of 1964 and Environmental Justice
+      </h4>
+      <p>
+        
+          Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving Federal financial assistance on account of their race, color or national origin. Title VI requires Federal agencies to ensure that programs or activities receiving Federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following includes updates from Appalachian Regional Commission on Title VI that are related to environmental justice.
+          
+      </p>
+      <p>
+        Title VI narrative space
+      </p>
+      <ul>
+        <li>
+          
+            #TITLEVI open Title VI or complaints related to environmental justice from January 2021 to September 2022
+            
+        </li>
+        <li>
+          
+              #TITLEVI_R closed Title VI compliance reviews or resolution agreements related to environmental justice from January 2021 to September 2022 
+              
+        </li>
+      </ul>
+      <h4>
+        Centering Justice in Decision-making
+      </h4>
+      <p>
+        
+          Federal agencies are working to ensure that the voices, perspectives, and lived experiences of environmental justice communities are heard and reflected in the priorities, policies, investments, and decision-making of the Federal government. The following information summarizes some of the work Appalachian Regional Commission did from January 2021 to September 2022 to center environmental justice in its decision-making.
+          
+      </p>
+      <h4>
+        <i>
+          Community Input and Engagement
+        </i>
+      </h4>
+      <ul>
+        <li>
+          Community involvement to advance Environmental Justice narrative space
+        </li>
+        <li>
+          #TA technical assistance outreach events in Fiscal Year 2022
+        </li>
+        <ul>
+          <li>
+            Technical Assistance example
+          </li>
+          <li>
+            Technical Assistance example
+          </li>
+          <li>
+            Technical Assistance example
+          </li>
+        </ul>
+        <li>
+          #PP public processes related to EJ, e.g. RFIs or listening sessions
+        </li>
+        <ul>
+          <li>
+            Public processes example
+          </li>
+          <li>
+            Public processes example
+          </li>
+          <li>
+            Public processes example
+          </li>
+        </ul>
+      </ul>
+      <h4>
+        <i>
+          Consultation and Partnership with Tribal Nations
+        </i>
+      </h4>
+      <ul>
+        <li>
+          ARC submits a plan for Tribal Consultation as required, but does not limit subject matter to environmental justice as our mission is more broadly community and economic development.
+        </li>
+        <li>
+          0 Tribal Consultations related to environmental justice from January 2021 to September 2022
+        </li>
+        <ul>
+          <li>
+            Tribal Consultation example
+          </li>
+          <li>
+            Tribal Consultation example
+          </li>
+          <li>
+            Tribal Consultation example
+          </li>
+        </ul>
+      </ul>
+      <h3>
+        Institutionalizing Environmental Justice
+      </h3>
+      <p>
+        Since the start of the Biden-Harris Administration, Federal agencies have been working to better institutionalize environmental justice into their work, including by implementing Executive Order 12898 and Executive Order 14008. The following section provides information on some of the work the agency has done from January 2021 to September 2022 to institutionalize environmental justice.
+         
+      </p>
+      <ul>
+        <li>
+          BLANK an EJ Strategic Plan that BLANK updated in the past 5 years
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+        <li>
+          0 EJ tools or resources
+        </li>
+        <li>
+          
+            0 staff that work on environmental justice, either in a full- or part-time capacity
+            
+        </li>
+        <li>
+          0 training for staff on environmental justice, as a general EJ training or civil rights and EJ training
+        </li>
+        <li>
+          BLANK EJ office and internal working groups/steering committees/councils on environmental justice]	
+        </li>
+        <li />
+      </ul>
     </div>
   </div>
   <div
@@ -336,24 +557,24 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
             />
           </div>
           <h3>
-            Agency D
+            Appalachian Regional Commission
           </h3>
           <span>
-            333 Any StreetD
+            1666 Connecticut Ave N.W., Suite 700
           </span>
           <span>
-            Washington, D.C. 20032
+            Washington, D.C. 20009
           </span>
           <span>
-            (212) 867-5309
+            (202) 884-7700
           </span>
           <span>
             <a
-              href="https://agencya.gov"
+              href="https://arc.gov/justice40"
               rel="noopener noreferrer"
               target="_blank"
             >
-              agencya.gov
+              arc.gov/justice40
             </a>
           </span>
         </div>
@@ -364,13 +585,234 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
       >
         <div>
           <h2>
-            About Agency D
+            About Appalachian Regional Commission
           </h2>
           <p>
-            LoremD ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+            The Appalachian Regional Commission (ARC) is an economic development partnership agency of the federal government and 13 state governments focusing on 423 counties across the Appalachian Region. ARC’s mission is to innovate, partner, and invest to build community capacity and strengthen economic growth in Appalachia to help the Region achieve socioeconomic parity with the nation.
           </p>
         </div>
       </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <p>
+        
+            This page provides information on how Appalachian Regional Commission is working to reduce climate and environmental burdens and harms in communities across America.
+            
+      </p>
+      <p>
+        
+            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
+            
+      </p>
+      <h3>
+        Justice40 Initiative
+      </h3>
+      <p>
+        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to disadvantaged communities that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page 
+        <a
+          href="arc.gov/justice40"
+        >
+          arc.gov/justice40
+        </a>
+      </p>
+      <p>
+        
+          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
+          
+      </p>
+      <h4>
+        #J40_CP Justice40 covered programs
+      </h4>
+      <ul>
+        <li>
+          
+            #J40_ANNOUNCE announcements in Fiscal Year 2022 representing a total of $J40_AMOUNT funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding 
+            
+        </li>
+        <ul>
+          <li>
+            Justice40 example
+          </li>
+          <li>
+            Justice40 example
+          </li>
+          <li>
+            Justice40 example
+          </li>
+        </ul>
+        <li>
+          Made program modifications for Justice40 covered programs such as:
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+      </ul>
+      <h3>
+        Environmental and Civil Rights Protection
+      </h3>
+      <p>
+        Federal agencies are advancing environmental justice by carrying out their responsibilities under the law to identify and address disproportionate and adverse human health, environmental, climate-related and other cumulative impacts on disadvantaged communities, and to ensure that all communities experience the protection of our nation’s bedrock environmental laws. The following information summarizes some of the work the agency has done from January 2021 to September 2022 in these areas.
+      </p>
+      <h4>
+        National Environmental Policy Act
+      </h4>
+      <p>
+        The National Environmental Policy Act (NEPA) requires Federal agencies to consider and disclose the environmental, health, and community impacts of a decision or planned action before taking it. Environmental reviews that agencies conduct through NEPA help ensure the public is informed about the Federal government’s potential actions, that communities have an opportunity to fully and fairly participate in the government’s decision-making process, and that Federal agencies consider ways to protect and enhance the quality of the human environment and advance environmental justice in decision-making.
+      </p>
+      <ul>
+        <li>
+          ARC contracts with partner agencies to do any required NEPA work.
+        </li>
+        <li>
+          #NEPA_PRJ project modifications where environmental justice concerns were raised during the NEPA process
+        </li>
+        <ul>
+          <li>
+            NEPA highlight
+          </li>
+          <li>
+            NEPA highlight
+          </li>
+          <li>
+            NEPA highlight
+          </li>
+        </ul>
+        <li>
+          
+            #NEPA_TRAIN trainings on environmental justice considerations during NEPA reviews
+            
+        </li>
+      </ul>
+      <h4>
+        Title VI of the Civil Rights Act of 1964 and Environmental Justice
+      </h4>
+      <p>
+        
+          Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving Federal financial assistance on account of their race, color or national origin. Title VI requires Federal agencies to ensure that programs or activities receiving Federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following includes updates from Appalachian Regional Commission on Title VI that are related to environmental justice.
+          
+      </p>
+      <p>
+        Title VI narrative space
+      </p>
+      <ul>
+        <li>
+          
+            #TITLEVI open Title VI or complaints related to environmental justice from January 2021 to September 2022
+            
+        </li>
+        <li>
+          
+              #TITLEVI_R closed Title VI compliance reviews or resolution agreements related to environmental justice from January 2021 to September 2022 
+              
+        </li>
+      </ul>
+      <h4>
+        Centering Justice in Decision-making
+      </h4>
+      <p>
+        
+          Federal agencies are working to ensure that the voices, perspectives, and lived experiences of environmental justice communities are heard and reflected in the priorities, policies, investments, and decision-making of the Federal government. The following information summarizes some of the work Appalachian Regional Commission did from January 2021 to September 2022 to center environmental justice in its decision-making.
+          
+      </p>
+      <h4>
+        <i>
+          Community Input and Engagement
+        </i>
+      </h4>
+      <ul>
+        <li>
+          Community involvement to advance Environmental Justice narrative space
+        </li>
+        <li>
+          #TA technical assistance outreach events in Fiscal Year 2022
+        </li>
+        <ul>
+          <li>
+            Technical Assistance example
+          </li>
+          <li>
+            Technical Assistance example
+          </li>
+          <li>
+            Technical Assistance example
+          </li>
+        </ul>
+        <li>
+          #PP public processes related to EJ, e.g. RFIs or listening sessions
+        </li>
+        <ul>
+          <li>
+            Public processes example
+          </li>
+          <li>
+            Public processes example
+          </li>
+          <li>
+            Public processes example
+          </li>
+        </ul>
+      </ul>
+      <h4>
+        <i>
+          Consultation and Partnership with Tribal Nations
+        </i>
+      </h4>
+      <ul>
+        <li>
+          ARC submits a plan for Tribal Consultation as required, but does not limit subject matter to environmental justice as our mission is more broadly community and economic development.
+        </li>
+        <li>
+          0 Tribal Consultations related to environmental justice from January 2021 to September 2022
+        </li>
+        <ul>
+          <li>
+            Tribal Consultation example
+          </li>
+          <li>
+            Tribal Consultation example
+          </li>
+          <li>
+            Tribal Consultation example
+          </li>
+        </ul>
+      </ul>
+      <h3>
+        Institutionalizing Environmental Justice
+      </h3>
+      <p>
+        Since the start of the Biden-Harris Administration, Federal agencies have been working to better institutionalize environmental justice into their work, including by implementing Executive Order 12898 and Executive Order 14008. The following section provides information on some of the work the agency has done from January 2021 to September 2022 to institutionalize environmental justice.
+         
+      </p>
+      <ul>
+        <li>
+          BLANK an EJ Strategic Plan that BLANK updated in the past 5 years
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+        <li>
+          0 EJ tools or resources
+        </li>
+        <li>
+          
+            0 staff that work on environmental justice, either in a full- or part-time capacity
+            
+        </li>
+        <li>
+          0 training for staff on environmental justice, as a general EJ training or civil rights and EJ training
+        </li>
+        <li>
+          BLANK EJ office and internal working groups/steering committees/councils on environmental justice]	
+        </li>
+        <li />
+      </ul>
     </div>
   </div>
   <div
@@ -528,24 +970,24 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
             />
           </div>
           <h3>
-            Agency D
+            Appalachian Regional Commission
           </h3>
           <span>
-            333 Any StreetD
+            1666 Connecticut Ave N.W., Suite 700
           </span>
           <span>
-            Washington, D.C. 20032
+            Washington, D.C. 20009
           </span>
           <span>
-            (212) 867-5309
+            (202) 884-7700
           </span>
           <span>
             <a
-              href="https://agencya.gov"
+              href="https://arc.gov/justice40"
               rel="noopener noreferrer"
               target="_blank"
             >
-              agencya.gov
+              arc.gov/justice40
             </a>
           </span>
         </div>
@@ -556,13 +998,234 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
       >
         <div>
           <h2>
-            About Agency D
+            About Appalachian Regional Commission
           </h2>
           <p>
-            LoremD ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.
+            The Appalachian Regional Commission (ARC) is an economic development partnership agency of the federal government and 13 state governments focusing on 423 counties across the Appalachian Region. ARC’s mission is to innovate, partner, and invest to build community capacity and strengthen economic growth in Appalachia to help the Region achieve socioeconomic parity with the nation.
           </p>
         </div>
       </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <p>
+        
+            This page provides information on how Appalachian Regional Commission is working to reduce climate and environmental burdens and harms in communities across America.
+            
+      </p>
+      <p>
+        
+            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
+            
+      </p>
+      <h3>
+        Justice40 Initiative
+      </h3>
+      <p>
+        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to disadvantaged communities that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page 
+        <a
+          href="arc.gov/justice40"
+        >
+          arc.gov/justice40
+        </a>
+      </p>
+      <p>
+        
+          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
+          
+      </p>
+      <h4>
+        #J40_CP Justice40 covered programs
+      </h4>
+      <ul>
+        <li>
+          
+            #J40_ANNOUNCE announcements in Fiscal Year 2022 representing a total of $J40_AMOUNT funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding 
+            
+        </li>
+        <ul>
+          <li>
+            Justice40 example
+          </li>
+          <li>
+            Justice40 example
+          </li>
+          <li>
+            Justice40 example
+          </li>
+        </ul>
+        <li>
+          Made program modifications for Justice40 covered programs such as:
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+      </ul>
+      <h3>
+        Environmental and Civil Rights Protection
+      </h3>
+      <p>
+        Federal agencies are advancing environmental justice by carrying out their responsibilities under the law to identify and address disproportionate and adverse human health, environmental, climate-related and other cumulative impacts on disadvantaged communities, and to ensure that all communities experience the protection of our nation’s bedrock environmental laws. The following information summarizes some of the work the agency has done from January 2021 to September 2022 in these areas.
+      </p>
+      <h4>
+        National Environmental Policy Act
+      </h4>
+      <p>
+        The National Environmental Policy Act (NEPA) requires Federal agencies to consider and disclose the environmental, health, and community impacts of a decision or planned action before taking it. Environmental reviews that agencies conduct through NEPA help ensure the public is informed about the Federal government’s potential actions, that communities have an opportunity to fully and fairly participate in the government’s decision-making process, and that Federal agencies consider ways to protect and enhance the quality of the human environment and advance environmental justice in decision-making.
+      </p>
+      <ul>
+        <li>
+          ARC contracts with partner agencies to do any required NEPA work.
+        </li>
+        <li>
+          #NEPA_PRJ project modifications where environmental justice concerns were raised during the NEPA process
+        </li>
+        <ul>
+          <li>
+            NEPA highlight
+          </li>
+          <li>
+            NEPA highlight
+          </li>
+          <li>
+            NEPA highlight
+          </li>
+        </ul>
+        <li>
+          
+            #NEPA_TRAIN trainings on environmental justice considerations during NEPA reviews
+            
+        </li>
+      </ul>
+      <h4>
+        Title VI of the Civil Rights Act of 1964 and Environmental Justice
+      </h4>
+      <p>
+        
+          Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving Federal financial assistance on account of their race, color or national origin. Title VI requires Federal agencies to ensure that programs or activities receiving Federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following includes updates from Appalachian Regional Commission on Title VI that are related to environmental justice.
+          
+      </p>
+      <p>
+        Title VI narrative space
+      </p>
+      <ul>
+        <li>
+          
+            #TITLEVI open Title VI or complaints related to environmental justice from January 2021 to September 2022
+            
+        </li>
+        <li>
+          
+              #TITLEVI_R closed Title VI compliance reviews or resolution agreements related to environmental justice from January 2021 to September 2022 
+              
+        </li>
+      </ul>
+      <h4>
+        Centering Justice in Decision-making
+      </h4>
+      <p>
+        
+          Federal agencies are working to ensure that the voices, perspectives, and lived experiences of environmental justice communities are heard and reflected in the priorities, policies, investments, and decision-making of the Federal government. The following information summarizes some of the work Appalachian Regional Commission did from January 2021 to September 2022 to center environmental justice in its decision-making.
+          
+      </p>
+      <h4>
+        <i>
+          Community Input and Engagement
+        </i>
+      </h4>
+      <ul>
+        <li>
+          Community involvement to advance Environmental Justice narrative space
+        </li>
+        <li>
+          #TA technical assistance outreach events in Fiscal Year 2022
+        </li>
+        <ul>
+          <li>
+            Technical Assistance example
+          </li>
+          <li>
+            Technical Assistance example
+          </li>
+          <li>
+            Technical Assistance example
+          </li>
+        </ul>
+        <li>
+          #PP public processes related to EJ, e.g. RFIs or listening sessions
+        </li>
+        <ul>
+          <li>
+            Public processes example
+          </li>
+          <li>
+            Public processes example
+          </li>
+          <li>
+            Public processes example
+          </li>
+        </ul>
+      </ul>
+      <h4>
+        <i>
+          Consultation and Partnership with Tribal Nations
+        </i>
+      </h4>
+      <ul>
+        <li>
+          ARC submits a plan for Tribal Consultation as required, but does not limit subject matter to environmental justice as our mission is more broadly community and economic development.
+        </li>
+        <li>
+          0 Tribal Consultations related to environmental justice from January 2021 to September 2022
+        </li>
+        <ul>
+          <li>
+            Tribal Consultation example
+          </li>
+          <li>
+            Tribal Consultation example
+          </li>
+          <li>
+            Tribal Consultation example
+          </li>
+        </ul>
+      </ul>
+      <h3>
+        Institutionalizing Environmental Justice
+      </h3>
+      <p>
+        Since the start of the Biden-Harris Administration, Federal agencies have been working to better institutionalize environmental justice into their work, including by implementing Executive Order 12898 and Executive Order 14008. The following section provides information on some of the work the agency has done from January 2021 to September 2022 to institutionalize environmental justice.
+         
+      </p>
+      <ul>
+        <li>
+          BLANK an EJ Strategic Plan that BLANK updated in the past 5 years
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+        <li>
+          0 EJ tools or resources
+        </li>
+        <li>
+          
+            0 staff that work on environmental justice, either in a full- or part-time capacity
+            
+        </li>
+        <li>
+          0 training for staff on environmental justice, as a general EJ training or civil rights and EJ training
+        </li>
+        <li>
+          BLANK EJ office and internal working groups/steering committees/councils on environmental justice]	
+        </li>
+        <li />
+      </ul>
     </div>
   </div>
   <div

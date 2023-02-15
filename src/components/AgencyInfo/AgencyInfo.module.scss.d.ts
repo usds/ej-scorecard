@@ -3,6 +3,7 @@ declare namespace AgencyInfoNamespace {
     agencyInfoCol1: string;
     agencyInfoCol2: string;
     agencyInfoLogo: string;
+    bullet1: string;
   }
 }
 

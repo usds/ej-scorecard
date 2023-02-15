@@ -37,7 +37,9 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
     <Layout
       pathname={NON_DROPDOWN_PAGE_ENDPOINTS[1]}
       title={intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}
-      allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
+      allAgencyNames={data.allAgencyInfoCsv.edges.map(
+        (edge) => edge.node.A_NAME,
+      )}
     >
       <MainGridContainer>
         <h1>{intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}</h1>
@@ -56,11 +58,11 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
 
 export const query = graphql`
   query {
-    allAgencyInfoCsv(sort: { Name: ASC }) {
+    allAgencyInfoCsv(sort: { A_NAME: ASC }) {
       totalCount
       edges {
         node {
-          Name
+          A_NAME
         }
       }
     }

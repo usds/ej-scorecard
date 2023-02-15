@@ -23,3 +23,10 @@
     @include u-margin-top(2);
 }
 
+.bullet1 {
+    @include u-margin-left(3);
+    
+    li {
+        @include u-margin-bottom(2)
+    }
+}
