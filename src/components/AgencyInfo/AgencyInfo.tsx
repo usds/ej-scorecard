@@ -110,7 +110,9 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         </Grid>
 
         <Grid row>
-          <div>Highlights</div>
+          <div>
+            <i>Highlights</i>
+          </div>
         </Grid>
         <Grid row>
           <div>{info.J40_HIGH}</div>
@@ -223,7 +225,9 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         </Grid>
 
         <Grid row>
-          <div>Highlights</div>
+          <div>
+            <i>Highlights</i>
+          </div>
         </Grid>
         <Grid row>
           <div>{info.ECR_HIGH}</div>
@@ -258,7 +262,9 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         </Grid>
 
         <Grid row>
-          <div>Highlights</div>
+          <div>
+            <i>Highlights</i>
+          </div>
         </Grid>
         <Grid row>
           <div>{info.IEJ_HIGH}</div>

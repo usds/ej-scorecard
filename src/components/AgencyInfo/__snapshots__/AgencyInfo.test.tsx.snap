@@ -245,7 +245,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -395,7 +397,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -448,7 +452,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -716,7 +722,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -866,7 +874,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -919,7 +929,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -1187,7 +1199,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -1337,7 +1351,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
@@ -1390,7 +1406,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
       data-testid="grid"
     >
       <div>
-        Highlights
+        <i>
+          Highlights
+        </i>
       </div>
     </div>
     <div
