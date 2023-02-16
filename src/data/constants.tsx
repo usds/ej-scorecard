@@ -17,14 +17,6 @@ export const USWDS_BREAKPOINTS = {
   DESKTOP: 1024,
 };
 
-export const REQUIRED_DATA_FILES = [
-  `AgencyInfo.csv`,
-  `DeliverInvest.csv`,
-  `ReduceHarm.csv`,
-  `InstitutEJ.csv`,
-  `Additional.csv`,
-];
-
 export const FOOTER_CEQ_ADDRESS = {
   NAME: `Council on Environmental Quality`,
   STREET: `730 Jackson Pl NW`,

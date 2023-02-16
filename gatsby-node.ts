@@ -1,8 +1,6 @@
 import type { GatsbyNode } from 'gatsby';
 import path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
-// import { RelativePathData } from './src/types';
-// import { REQUIRED_DATA_FILES } from './src/data/constants';
 import { toKebabCase } from './src/components/util';
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
@@ -14,22 +12,6 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
     },
   });
 };
-
-/**
- * Function that returns true if all required data files
- * exist and false otherwise
- *
- * @param allFile
- * @returns {boolean}
- */
-// function doRequiredFilesExist(allFile: RelativePathData): boolean {
-//   for (const edge of allFile.edges) {
-//     if (!REQUIRED_DATA_FILES.includes(edge.node.relativePath)) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;

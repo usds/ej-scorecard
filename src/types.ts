@@ -2,13 +2,6 @@ import { ReactNode } from 'react';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Data
-export interface RelativePathData {
-  edges: {
-    node: {
-      relativePath: string;
-    };
-  }[];
-}
 export interface AgencyInfoData {
   id: string;
   A_NAME: string;
