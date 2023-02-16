@@ -179,11 +179,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
           </p>
         </div>
       </div>
-    </div>
-    <div
-      className="grid-row grid-gap"
-      data-testid="grid"
-    >
       <p>
         
             This page provides information on how Appalachian Regional Commission is working to reduce climate and environmental burdens and harms in communities across America.
@@ -194,6 +189,11 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
             
       </p>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Justice40 Initiative
       </h3>
@@ -239,6 +239,27 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
           <li />
         </ul>
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Justice40 highlight space
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Environmental and Civil Rights Protection
       </h3>
@@ -368,6 +389,27 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
           </li>
         </ul>
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Environmental Justice and Civil Rights highlight space
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Institutionalizing Environmental Justice
       </h3>
@@ -396,10 +438,26 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
           0 training for staff on environmental justice, as a general EJ training or civil rights and EJ training
         </li>
         <li>
-          BLANK EJ office and internal working groups/steering committees/councils on environmental justice]	
+          BLANK EJ office and internal working groups/steering committees/councils on environmental justice
         </li>
         <li />
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Advancing Environmental Justice highlight space
+      </div>
     </div>
   </div>
   <div
@@ -592,11 +650,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
           </p>
         </div>
       </div>
-    </div>
-    <div
-      className="grid-row grid-gap"
-      data-testid="grid"
-    >
       <p>
         
             This page provides information on how Appalachian Regional Commission is working to reduce climate and environmental burdens and harms in communities across America.
@@ -607,6 +660,11 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
             This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
             
       </p>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Justice40 Initiative
       </h3>
@@ -652,6 +710,27 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
           <li />
         </ul>
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Justice40 highlight space
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Environmental and Civil Rights Protection
       </h3>
@@ -781,6 +860,27 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
           </li>
         </ul>
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Environmental Justice and Civil Rights highlight space
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Institutionalizing Environmental Justice
       </h3>
@@ -809,10 +909,26 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 2
           0 training for staff on environmental justice, as a general EJ training or civil rights and EJ training
         </li>
         <li>
-          BLANK EJ office and internal working groups/steering committees/councils on environmental justice]	
+          BLANK EJ office and internal working groups/steering committees/councils on environmental justice
         </li>
         <li />
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Advancing Environmental Justice highlight space
+      </div>
     </div>
   </div>
   <div
@@ -1005,11 +1121,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
           </p>
         </div>
       </div>
-    </div>
-    <div
-      className="grid-row grid-gap"
-      data-testid="grid"
-    >
       <p>
         
             This page provides information on how Appalachian Regional Commission is working to reduce climate and environmental burdens and harms in communities across America.
@@ -1020,6 +1131,11 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
             This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
             
       </p>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Justice40 Initiative
       </h3>
@@ -1065,6 +1181,27 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
           <li />
         </ul>
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Justice40 highlight space
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Environmental and Civil Rights Protection
       </h3>
@@ -1194,6 +1331,27 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
           </li>
         </ul>
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Environmental Justice and Civil Rights highlight space
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
       <h3>
         Institutionalizing Environmental Justice
       </h3>
@@ -1222,10 +1380,26 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 3
           0 training for staff on environmental justice, as a general EJ training or civil rights and EJ training
         </li>
         <li>
-          BLANK EJ office and internal working groups/steering committees/councils on environmental justice]	
+          BLANK EJ office and internal working groups/steering committees/councils on environmental justice
         </li>
         <li />
       </ul>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Highlights
+      </div>
+    </div>
+    <div
+      className="grid-row"
+      data-testid="grid"
+    >
+      <div>
+        Advancing Environmental Justice highlight space
+      </div>
     </div>
   </div>
   <div

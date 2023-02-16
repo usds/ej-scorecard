@@ -50,10 +50,6 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <p>{info.A_MISSION}</p>
             </div>
           </Grid>
-        </Grid>
-
-        {/* Template Info */}
-        <Grid row gap>
           <p>
             {`
             This page provides information on how ${info.A_NAME} is working to reduce climate and environmental burdens and harms in communities across America.
@@ -64,8 +60,10 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
             This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
             `}
           </p>
+        </Grid>
 
-          {/* Justice40 Initiative */}
+        {/* Justice40 Initiative */}
+        <Grid row gap>
           <h3>Justice40 Initiative</h3>
           <p>
             For the first time in our nation’s history, the Federal government
@@ -109,12 +107,17 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <li>{info.J40_MOD3}</li>
             </ul>
           </ul>
+        </Grid>
 
-          {/* Highlights */}
-          {/* <h4>Highlights</h4>
-          <p>{info.J40_HIGH}</p> */}
+        <Grid row>
+          <div>Highlights</div>
+        </Grid>
+        <Grid row>
+          <div>{info.J40_HIGH}</div>
+        </Grid>
 
-          {/* Environmental and Civil Rights Protection */}
+        {/* Environmental and Civil Rights Protection */}
+        <Grid row gap>
           <h3>Environmental and Civil Rights Protection</h3>
           {info.A_STRATPLANLINK ? (
             <p>
@@ -187,7 +190,6 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
           <p>{`
           Federal agencies are working to ensure that the voices, perspectives, and lived experiences of environmental justice communities are heard and reflected in the priorities, policies, investments, and decision-making of the Federal government. The following information summarizes some of the work ${info.A_NAME} did from January 2021 to September 2022 to center environmental justice in its decision-making.
           `}</p>
-
           <h4>
             <i>Community Input and Engagement</i>
           </h4>
@@ -206,7 +208,6 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <li>{info.PP_E3}</li>
             </ul>
           </ul>
-
           <h4>
             <i>Consultation and Partnership with Tribal Nations</i>
           </h4>
@@ -219,12 +220,17 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <li>{info.TC_E3}</li>
             </ul>
           </ul>
+        </Grid>
 
-          {/* Highlights */}
-          {/* <h4>Highlights</h4>
-          <p>{info.ECR_HIGH}</p> */}
+        <Grid row>
+          <div>Highlights</div>
+        </Grid>
+        <Grid row>
+          <div>{info.ECR_HIGH}</div>
+        </Grid>
 
-          {/* Institutionalizing Environmental Justice */}
+        {/* Institutionalizing Environmental Justice */}
+        <Grid row gap>
           <h3>Institutionalizing Environmental Justice</h3>
           <p>
             Since the start of the Biden-Harris Administration, Federal agencies
@@ -246,13 +252,16 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
             ${info.EJSTAFF_N} staff that work on environmental justice, either in a full- or part-time capacity
             `}</li>
             <li>{`${info.EJTRAIN_N} training for staff on environmental justice, as a general EJ training or civil rights and EJ training`}</li>
-            <li>{`${info.EJWG_N} EJ office and internal working groups/steering committees/councils on environmental justice]	`}</li>
+            <li>{`${info.EJWG_N} EJ office and internal working groups/steering committees/councils on environmental justice`}</li>
             <li>{info.EJP_NAR}</li>
           </ul>
+        </Grid>
 
-          {/* Highlights */}
-          {/* <h4>Highlights</h4>
-          <p>{info.IEJ_HIGH}</p> */}
+        <Grid row>
+          <div>Highlights</div>
+        </Grid>
+        <Grid row>
+          <div>{info.IEJ_HIGH}</div>
         </Grid>
       </Grid>
       <Grid desktop={{ col: 1 }} tablet={{ col: 10 }} col={12} />
