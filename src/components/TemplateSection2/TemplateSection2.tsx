@@ -16,7 +16,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
       <Grid row gap={6}>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}></Grid>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          <h2 className={`scorecard-header2`}>Reducing burdens & harms</h2>
+          <h2 className={`scorecard-header2`}>
+            Environmental and Civil Rights Protection
+          </h2>
         </Grid>
       </Grid>
       <Grid row gap={6}>
