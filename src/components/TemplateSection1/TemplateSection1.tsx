@@ -10,7 +10,6 @@ import {
 import { TemplateSectionProps } from '@/types';
 
 const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
-  console.log(`🚀 ~ file: TemplateSection1.tsx:13 ~ agencyData`, agencyData);
   return (
     <>
       <Grid row>
