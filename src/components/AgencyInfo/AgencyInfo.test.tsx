@@ -23,15 +23,65 @@ import AgencyInfo from './AgencyInfo';
 //   },
 // };
 
-const info = {
+const agencyData = {
   id: `39455749-3310-53aa-b5fa-22590adc1e05`,
-  Name: `Agency D`,
-  Logo: `agency-a.png`,
-  Address_Line_1: `333 Any StreetD`,
-  Address_Line_2: `Washington, D.C. 20032`,
-  Phone: `(212) 867-5309`,
-  Site: `agencya.gov`,
-  About_description: `LoremD ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus velit non justo tempus, sit amet bibendum tellus convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in gravida mi. Nam nisl ante, ultricies et massa id, euismod sodales arcu. Sed velit felis, tristique a nunc sit amet, rutrum iaculis lectus. Nullam auctor justo at odio sagittis rutrum. Nunc eget malesuada mauris. Donec tincidunt ex in mi ultrices sodales. Aliquam at lobortis eros, eu mollis tellus. Nullam sit amet elementum tellus. Suspendisse viverra ligula neque, id dapibus nisl elementum et. Integer mattis magna ac lorem fermentum, laoreet accumsan tellus tincidunt. Donec bibendum viverra velit vel eleifend.`,
+  A_NAME: `Test Agency`,
+  A_LOGO: `aaa.png`,
+  A_ADD1: `1 Pennsylvania Avenue N.W.`,
+  A_ADD2: `Washington, D.C. 20004`,
+  A_PHONE: `(212) 533-3333`,
+  A_URL: `aaa.gov`,
+  A_MISSION: `mission`,
+  J40_URLTXT: `aaa.gov/test`,
+  J40_URLLINK: `aaa.gov/test`,
+  A_EMAIL: ``,
+  J40_TCP: `100`,
+  J40_ANNOUNCE: `100`,
+  J40_AMOUNT: `100`,
+  J40_E1: `E1`,
+  J40_E2: `E2`,
+  J40_E3: `E3`,
+  J40_MOD1: ``,
+  J40_MOD2: ``,
+  J40_MOD3: ``,
+  J40_HIGH: `Highlight`,
+  A_STRATPLANTXT: ``,
+  A_STRATPLANLINK: ``,
+  A_NEPA: `test`,
+  NUM_NEPA: `1`,
+  NEPA_H1: `H1`,
+  NEPA_H2: `H2`,
+  NEPA_H3: `H3`,
+  NEPA_TRAIN: `100`,
+  TITLEVI_NAR: `test`,
+  TITLEVI_N: `100`,
+  TITLEVI_R_N: `100`,
+  A_NAR: `test`,
+  TA_N: `100`,
+  TA_E1: `E1`,
+  TA_E2: `E2`,
+  TA_E3: `E3`,
+  PP_N: `100`,
+  PP_E1: `E1`,
+  PP_E2: `E3`,
+  PP_E3: `E3`,
+  TC_NAR: `test`,
+  TC_N: `100`,
+  TC_E1: `test`,
+  TC_E2: `test`,
+  TC_E3: `test`,
+  ECR_HIGH: `Section header 3`,
+  PLAN_BOOL: `Has`,
+  PLAN_UPDATE: `was not`,
+  EJP_E1: ``,
+  EJP_E2: ``,
+  EJP_E3: ``,
+  EJTOOL_N: `100`,
+  EJSTAFF_N: `100`,
+  EJTRAIN_N: `100`,
+  EJWG_N: `100`,
+  EJP_NAR: ``,
+  IEJ_HIGH: `test`,
 };
 
 const mockGatsbyImageData: IGatsbyImageData = {
@@ -67,39 +117,9 @@ describe(`rendering of AgencyInfo Component`, () => {
   it(`checks if component renders group 1`, () => {
     const component = createComponentWithIntl(
       <AgencyInfo
-        info={info}
+        agencyData={agencyData}
         allAgencyNames={mockAllAgencyNames}
-        pathname={`scorecard/a1-agency-dept-office`}
-        gatsbyImageData={mockGatsbyImageData}
-      />,
-    );
-
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  it(`checks if component renders group 2`, () => {
-    const component = createComponentWithIntl(
-      <AgencyInfo
-        info={info}
-        allAgencyNames={mockAllAgencyNames}
-        pathname={`scorecard/d6-agency-dept-office`}
-        gatsbyImageData={mockGatsbyImageData}
-      />,
-    );
-
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  it(`checks if component renders group 3`, () => {
-    const component = createComponentWithIntl(
-      <AgencyInfo
-        info={info}
-        allAgencyNames={mockAllAgencyNames}
-        pathname={`scorecard/t1-agency-dept-office`}
+        pathname={`scorecard/test-agency`}
         gatsbyImageData={mockGatsbyImageData}
       />,
     );

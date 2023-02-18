@@ -1,0 +1,88 @@
+// Vitest Snapshot v1
+
+exports[`rendering of TemplateSection3 Component > checks if component renders 1`] = `
+[
+  <div
+    className="grid-row"
+    data-testid="grid"
+  >
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+      data-testid="grid"
+    >
+      <h2
+        className="scorecard-header2"
+      >
+        Institutionalizing Environmental Justice
+      </h2>
+    </div>
+  </div>,
+  <div
+    className="grid-row grid-gap-6"
+    data-testid="grid"
+  >
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+      data-testid="grid"
+    >
+      <p
+        className="margin-top-0"
+      >
+        Since the start of the Biden-Harris Administration, Federal agencies have been working to better institutionalize environmental justice into their work, including by implementing Executive Order 12898 and Executive Order 14008. The following section provides information on some of the work the agency has done from January 2021 to September 2022 to institutionalize environmental justice.
+         
+      </p>
+      <ul
+        className="bullet1"
+      >
+        <li>
+          Has an EJ Strategic Plan that was not updated in the past 5 years
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+        <li>
+          70 EJ tools or resources
+        </li>
+        <li>
+          
+            206 staff that work on environmental justice, either in a full- or part-time capacity
+            
+        </li>
+        <li>
+          25 training for staff on environmental justice, as a general EJ training or civil rights and EJ training
+        </li>
+        <li>
+          20 EJ office and internal working groups/steering committees/councils on environmental justice]	
+        </li>
+        <li />
+      </ul>
+    </div>
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-4"
+      data-testid="grid"
+    >
+      <div
+        className="usa-summary-box"
+        data-testid="summary-box"
+      >
+        <div
+          className="usa-summary-box__body"
+        >
+          <h3
+            className="usa-summary-box__heading"
+          >
+            Institutionalizing EJ at Environmental Protection Agency
+          </h3>
+          <div
+            className="usa-summary-box__text"
+          >
+            Institutionalizing Environmental Justice    Federal agencies have been working to institutionalize Environmental Justice in keeping with their unique missions and the statutory authorities that govern their work, including to continue to implement Executive Order 12898, and to advance the objectives of Executive Order 14008. The following section describes example activities that the agency has taken from January 2021 to September 2022.    •	has an Environmental Justice related Strategic Plan that was not updated in the last five years  •	25 policies developed or updated related to Environmental Justice   •	70 Environmental Justice tools or resources  •	206 staff, either in a full- or part-time capacity, working on Environmental Justice  •	421 trainings for staff on Environmental Justice, as a general study or regarding civil rights specifically  •	20 Environmental Justice working groups, steering committees and/or councils    Additional Institutionalizing Environmental Justice Highlights at EPA    o	Added Environmental Justice components to different EPA efforts, such as the Border 2025 program guiding principles, adding “inclusion” as a cross-cutting research priority, and adding Environmental Justice as a component in the Excellence in Site Reuse Awards nomination form   o	Strategic Research Action Plans (StRAPs) included approximately 145 research products that are "Environmental Justice-focused" or "Environmental Justice-relevant”  o	Included Environmental Justice considerations into numerous competitive notice of funding opportunities.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

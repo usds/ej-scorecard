@@ -9,7 +9,7 @@ import { AgencyInfoProps } from '@/types';
 import ScorecardSideNav from '../ScorecardSideNav';
 
 const AgencyInfo: React.FC<AgencyInfoProps> = ({
-  info,
+  agencyData,
   allAgencyNames,
   pathname,
   gatsbyImageData,
@@ -28,27 +28,41 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
                 image={gatsbyImageData}
                 alt="Agency logo"
               />
-              <h3>{info.Name}</h3>
-              <span>{info.Address_Line_1}</span>
-              <span>{info.Address_Line_2}</span>
-              <span>{info.Phone}</span>
+              <h3>{agencyData.A_NAME}</h3>
+              <span>{agencyData.A_ADD1}</span>
+              <span>{agencyData.A_ADD2}</span>
+              <span>{agencyData.A_PHONE}</span>
               <span>
                 <a
-                  href={`https://${info.Site}`}
+                  href={`https://${agencyData.J40_URLLINK}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {info.Site}
+                  {agencyData.J40_URLTXT}
                 </a>
               </span>
             </div>
           </Grid>
           <Grid col={8}>
             <div className={styles.agencyInfoCol2}>
-              <h2>{`About ${info.Name}`}</h2>
-              <p>{info.About_description}</p>
+              <h2>{`About ${agencyData.A_NAME}`}</h2>
+              <p>{agencyData.A_MISSION}</p>
+              {` `}
             </div>
           </Grid>
+        </Grid>
+
+        <Grid row gap>
+          <p>
+            {`
+            This page provides information on how ${agencyData.A_NAME} is working to reduce climate and environmental burdens and harms in communities across America.
+            `}
+          </p>
+          <p>
+            {`
+            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
+            `}
+          </p>
         </Grid>
       </Grid>
       <Grid desktop={{ col: 1 }} tablet={{ col: 10 }} col={12} />

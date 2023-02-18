@@ -21,11 +21,11 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
   const agencyGridData = data.allAgencyInfoCsv.edges.map((edge) => {
     // for each agency page, find the gatsbyImageData using the logo field:
     const imageLogoData = data.allImageSharp.edges.find(({ node }) =>
-      node.gatsbyImageData.images.fallback?.src.endsWith(edge.node.Logo),
+      node.gatsbyImageData.images.fallback?.src.endsWith(edge.node.A_LOGO),
     );
     return {
       id: edge.node.id,
-      agencyName: edge.node.Name,
+      agencyName: edge.node.A_NAME,
       agencyLogo: imageLogoData?.node.gatsbyImageData,
     };
   });
@@ -34,7 +34,9 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
     <Layout
       pathname={NON_DROPDOWN_PAGE_ENDPOINTS[0]}
       title={`Environmental Justice Scorecard`}
-      allAgencyNames={data.allAgencyInfoCsv.edges.map((edge) => edge.node.Name)}
+      allAgencyNames={data.allAgencyInfoCsv.edges.map(
+        (edge) => edge.node.A_NAME,
+      )}
     >
       <MainGridContainer>
         <Grid row gap>
@@ -184,13 +186,13 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
 
 export const query = graphql`
   query {
-    allAgencyInfoCsv(sort: { Name: ASC }) {
+    allAgencyInfoCsv(sort: { A_NAME: ASC }) {
       totalCount
       edges {
         node {
           id
-          Name
-          Logo
+          A_NAME
+          A_LOGO
         }
       }
     }

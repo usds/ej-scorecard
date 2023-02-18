@@ -4,43 +4,32 @@ import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
 import AgencyInfo from '@/components/AgencyInfo';
 import { ScorecardTemplateProps } from '@/types';
-import DeliverInvest from '@/components/DeliverInvest';
-import ReduceHarm from '@/components/ReduceHarm';
-import InstitutionEJ from '@/components/InstitutionEJ';
-import AdditionalDetails from '@/components/AdditionalDetails';
+import TemplateSection1 from '@/components/TemplateSection1';
+import TemplateSection2 from '@/components/TemplateSection2';
+import TemplateSection3 from '@/components/TemplateSection3';
 
 const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
 }) => {
-  const {
-    allAgencyNames,
-    pathname,
-    agencyInfo,
-    deliverInvest,
-    reduceHarm,
-    institutEj,
-    additional,
-    gatsbyImageData,
-  } = pageContext;
+  const { allAgencyNames, pathname, agencyData, gatsbyImageData } = pageContext;
 
   return (
     <Layout
       pathname={pathname}
-      title={agencyInfo.Name}
+      title={agencyData.A_NAME}
       allAgencyNames={allAgencyNames}
     >
       <MainGridContainer>
-        <h1>{agencyInfo.Name}</h1>
+        <h1>{agencyData.A_NAME}</h1>
         <AgencyInfo
-          info={agencyInfo}
+          agencyData={agencyData}
           allAgencyNames={allAgencyNames}
           pathname={pathname}
           gatsbyImageData={gatsbyImageData}
         />
-        <DeliverInvest deliverInvest={deliverInvest} />
-        <ReduceHarm reduceHarm={reduceHarm} />
-        <InstitutionEJ institutEj={institutEj} />
-        <AdditionalDetails additional={additional} />
+        <TemplateSection1 agencyData={agencyData} />
+        <TemplateSection2 agencyData={agencyData} />
+        <TemplateSection3 agencyData={agencyData} />
       </MainGridContainer>
     </Layout>
   );
