@@ -30,19 +30,43 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             2022 to institutionalize environmental justice.{` `}
           </p>
           <ul className={`bullet1`}>
-            <li>{`${agencyData.PLAN_BOOL} an EJ Strategic Plan that ${agencyData.PLAN_UPDATE} updated in the past 5 years`}</li>
+            <li>
+              <strong>{agencyData.PLAN_BOOL}</strong> an EJ Strategic Plan that
+              {` `}
+              <strong>{agencyData.PLAN_UPDATE}</strong> updated in the past 5
+              years
+            </li>
             <ul>
-              <li>{agencyData.EJP_E1}</li>
-              <li>{agencyData.EJP_E2}</li>
-              <li>{agencyData.EJP_E3}</li>
+              <li>
+                <strong>{agencyData.EJP_E1}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.EJP_E2}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.EJP_E3}</strong>
+              </li>
             </ul>
-            <li>{`${agencyData.EJTOOL_N} EJ tools or resources`}</li>
-            <li>{`
-            ${agencyData.EJSTAFF_N} staff that work on environmental justice, either in a full- or part-time capacity
-            `}</li>
-            <li>{`${agencyData.EJTRAIN_N} training for staff on environmental justice, as a general EJ training or civil rights and EJ training`}</li>
-            <li>{`${agencyData.EJWG_N} EJ office and internal working groups/steering committees/councils on environmental justice]	`}</li>
-            <li>{agencyData.EJP_NAR}</li>
+            <li>
+              <strong>{agencyData.EJTOOL_N}</strong> EJ tools or resources
+            </li>
+            <li>
+              <strong>{agencyData.EJSTAFF_N}</strong> staff that work on
+              environmental justice, either in a full- or part-time capacity
+            </li>
+            <li>
+              <strong>{agencyData.EJTRAIN_N}</strong> training for staff on
+              environmental justice, as a general EJ training or civil rights
+              and EJ training
+            </li>
+            <li>
+              <strong>{agencyData.EJWG_N}</strong> EJ office and internal
+              working groups/steering committees/councils on environmental
+              justice{` `}
+            </li>
+            <li>
+              <strong>{agencyData.EJP_NAR}</strong>
+            </li>
           </ul>
         </Grid>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
@@ -50,7 +74,9 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`Institutionalizing EJ at ${agencyData.A_NAME}`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>{agencyData.IEJ_HIGH}</SummaryBoxContent>
+            <SummaryBoxContent>
+              <strong>{agencyData.IEJ_HIGH}</strong>
+            </SummaryBoxContent>
           </SummaryBox>
         </Grid>
       </Grid>

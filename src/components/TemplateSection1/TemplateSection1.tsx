@@ -22,12 +22,42 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <p className={`margin-top-0`}>
             For the first time in our nation’s history, the Federal government
             has made it a goal that 40 percent of the overall benefits of
-            certain Federal investments flow to disadvantaged communities that
-            are marginalized, underserved, and overburdened by pollution. The
-            following reflects the historic resources available to communities
-            in Fiscal Year 2022 to implement the Justice40 Initiative. Please
-            visit this page{` `}
-            <a href={agencyData.J40_URLLINK}>{agencyData.J40_URLTXT}</a>
+            certain Federal investments flow to
+            {` `}
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href={`https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              disadvantaged communities
+            </a>
+            {` `}
+            that are marginalized, underserved, and overburdened by pollution.
+            The following reflects the historic resources available to
+            communities in Fiscal Year 2022 to implement the Justice40
+            Initiative. Please visit this page for more information about the
+            {` `}
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Justice40 Initiative
+            </a>
+            {` `}
+            and visit
+            {` `}
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href={agencyData.J40_URLLINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {agencyData.J40_URLTXT}
+            </a>
+            .
           </p>
 
           {agencyData.A_EMAIL ? (
@@ -45,21 +75,39 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           )}
           <h4>{`${agencyData.J40_TCP} Justice40 covered programs`}</h4>
           <ul className={`bullet1`}>
-            <li>{`
-            ${agencyData.J40_ANNOUNCE} announcements in Fiscal Year 2022 representing a total of ${agencyData.J40_AMOUNT} funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding 
-            `}</li>
+            <li>
+              <strong>{agencyData.J40_ANNOUNCE}</strong>
+              {` `}
+              announcements in Fiscal Year 2022 representing a total of{` `}
+              <strong>{agencyData.J40_AMOUNT}</strong> funding that is available
+              to benefit communities **add footnote, that the funding amounts
+              include annual discretionary and mandatory appropriations,
+              Inflation Reduction Act, and Bipartisan Infrastructure Law funding
+            </li>
             <ul>
-              <li>{agencyData.J40_E1}</li>
-              <li>{agencyData.J40_E2}</li>
-              <li>{agencyData.J40_E3}</li>
+              <li>
+                <strong>{agencyData.J40_E1}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.J40_E2}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.J40_E3}</strong>
+              </li>
             </ul>
             <li>
               Made program modifications for Justice40 covered programs such as:
             </li>
             <ul>
-              <li>{agencyData.J40_MOD1}</li>
-              <li>{agencyData.J40_MOD2}</li>
-              <li>{agencyData.J40_MOD3}</li>
+              <li>
+                <strong>{agencyData.J40_MOD1}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.J40_MOD2}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.J40_MOD3}</strong>
+              </li>
             </ul>
           </ul>
         </Grid>
@@ -68,7 +116,9 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`${agencyData.A_NAME} Justice40 highlights`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>{agencyData.J40_HIGH}</SummaryBoxContent>
+            <SummaryBoxContent>
+              <strong>{agencyData.J40_HIGH}</strong>
+            </SummaryBoxContent>
           </SummaryBox>
         </Grid>
       </Grid>

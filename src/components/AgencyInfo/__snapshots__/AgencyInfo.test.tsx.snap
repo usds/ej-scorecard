@@ -186,9 +186,12 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       data-testid="grid"
     >
       <p>
-        
-            This page provides information on how Test Agency is working to reduce climate and environmental burdens and harms in communities across America.
-            
+        This page provides information on how
+         
+        <strong>
+          Test Agency
+        </strong>
+         is working to reduce climate and environmental burdens and harms in communities across America.
       </p>
       <p>
         

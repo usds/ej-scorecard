@@ -28,13 +28,39 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
       <p
         className="margin-top-0"
       >
-        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to disadvantaged communities that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page
+        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to
          
         <a
+          className="usa-link usa-link--alt usa-link--external"
+          href="https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5"
+          rel="noreferrer"
+          target="_blank"
+        >
+          disadvantaged communities
+        </a>
+         
+        that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page for more information about the
+         
+        <a
+          className="usa-link usa-link--alt usa-link--external"
+          href="https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Justice40 Initiative
+        </a>
+         
+        and visit
+         
+        <a
+          className="usa-link usa-link--alt usa-link--external"
           href="epa.gov/justice40"
+          rel="noreferrer"
+          target="_blank"
         >
           epa.gov/justice40
         </a>
+        .
       </p>
       <p>
         
@@ -48,28 +74,47 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
         className="bullet1"
       >
         <li>
-          
-            80 announcements in Fiscal Year 2022 representing a total of $28 million funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding 
-            
+          <strong>
+            80
+          </strong>
+           
+          announcements in Fiscal Year 2022 representing a total of
+           
+          <strong>
+            $28 million
+          </strong>
+           funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding
         </li>
         <ul>
           <li>
-            Developed resources for states revising their disadvantaged community definitions and affordability criteria through the Clean Water State Revolving Fund (CWSRF), the Drinking Water State Revolving Fund (DWSRF), the Water Infrastructure Improvements for the Nation (WIIN), and Bipartisan Infrastructure Law (BIL) funding
+            <strong>
+              Developed resources for states revising their disadvantaged community definitions and affordability criteria through the Clean Water State Revolving Fund (CWSRF), the Drinking Water State Revolving Fund (DWSRF), the Water Infrastructure Improvements for the Nation (WIIN), and Bipartisan Infrastructure Law (BIL) funding
+            </strong>
           </li>
           <li>
-            Engaged with State Revolving Fund partners to prioritize and launch technical assistance pilots for disadvantaged communities
+            <strong>
+              Engaged with State Revolving Fund partners to prioritize and launch technical assistance pilots for disadvantaged communities
+            </strong>
           </li>
           <li>
-            Prioritized financing projects in economically stressed communities in the Water Infrastructure Finance and Innovation Act (WIFIA) program FY22 Notice of Funding Availability (NOFA)
+            <strong>
+              Prioritized financing projects in economically stressed communities in the Water Infrastructure Finance and Innovation Act (WIFIA) program FY22 Notice of Funding Availability (NOFA)
+            </strong>
           </li>
         </ul>
         <li>
           Made program modifications for Justice40 covered programs such as:
         </li>
         <ul>
-          <li />
-          <li />
-          <li />
+          <li>
+            <strong />
+          </li>
+          <li>
+            <strong />
+          </li>
+          <li>
+            <strong />
+          </li>
         </ul>
       </ul>
     </div>
@@ -92,7 +137,9 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <div
             className="usa-summary-box__text"
           >
-            •	Provided assistance to [XX] communities through the Technical Assistance Services for Communities (TASC) program  •	Worked with over 200 Tribal partners to design, develop, and publish curriculum about how to reduce childhood lead exposure, and hosted 10 training sessions in Tribal communities, reaching 450 participants  •	Improved multilingual access to information, including Requests for Proposals, webinars, and in-person trainings  •	Conducted and participated in 27 federal outreach and engagement events in support of small and disadvantaged businesses, reaching over 700 participants in FY22
+            <strong>
+              •	Provided assistance to [XX] communities through the Technical Assistance Services for Communities (TASC) program  •	Worked with over 200 Tribal partners to design, develop, and publish curriculum about how to reduce childhood lead exposure, and hosted 10 training sessions in Tribal communities, reaching 450 participants  •	Improved multilingual access to information, including Requests for Proposals, webinars, and in-person trainings  •	Conducted and participated in 27 federal outreach and engagement events in support of small and disadvantaged businesses, reaching over 700 participants in FY22
+            </strong>
           </div>
         </div>
       </div>

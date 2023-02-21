@@ -27,7 +27,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`${agencyData.A_NAME} Environmental and Civil Rights highlights`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>{agencyData.ECR_HIGH}</SummaryBoxContent>
+            <SummaryBoxContent>
+              <strong>{agencyData.ECR_HIGH}</strong>
+            </SummaryBoxContent>
           </SummaryBox>
         </Grid>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
@@ -42,9 +44,11 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               following information summarizes some of the work the agency has
               done from January 2021 to September 2022 in these areas. For more
               information, please visit{` `}
-              <a href={agencyData.A_STRATPLANLINK}>
-                {agencyData.A_STRATPLANTXT}
-              </a>
+              <strong>
+                <a href={agencyData.A_STRATPLANLINK}>
+                  {agencyData.A_STRATPLANTXT}
+                </a>
+              </strong>
               .
             </p>
           ) : (
@@ -73,64 +77,127 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             decision-making.
           </p>
           <ul className={`bullet1`}>
-            <li>{agencyData.A_NEPA}</li>
-            <li>{`${agencyData.NUM_NEPA} project modifications where environmental justice concerns were raised during the NEPA process`}</li>
+            <li>
+              <strong>{agencyData.A_NEPA}</strong>
+            </li>
+            <li>
+              <strong>{agencyData.NUM_NEPA}</strong> project modifications where
+              environmental justice concerns were raised during the NEPA process
+            </li>
             <ul>
-              <li>{agencyData.NEPA_H1}</li>
-              <li>{agencyData.NEPA_H2}</li>
-              <li>{agencyData.NEPA_H3}</li>
+              <li>
+                <strong>{agencyData.NEPA_H1}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.NEPA_H2}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.NEPA_H3}</strong>
+              </li>
             </ul>
-            <li>{`
-            ${agencyData.NEPA_TRAIN} trainings on environmental justice considerations during NEPA reviews
-            `}</li>
+            <li>
+              <strong>{agencyData.NEPA_TRAIN}</strong> trainings on
+              environmental justice considerations during NEPA reviews
+            </li>
           </ul>
           <h3>
             Title VI of the Civil Rights Act of 1964 and Environmental Justice
           </h3>
-          <p>{`
-          Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving Federal financial assistance on account of their race, color or national origin. Title VI requires Federal agencies to ensure that programs or activities receiving Federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following includes updates from ${agencyData.A_NAME} on Title VI that are related to environmental justice.
-          `}</p>
-          <p>{agencyData.TITLEVI_NAR}</p>
+          <p>
+            Title VI of the Civil Rights Act of 1964 requires that no person be
+            excluded from participation in, be denied the benefits of, or be
+            subject to discrimination under any program or activity receiving
+            Federal financial assistance on account of their race, color or
+            national origin. Title VI requires Federal agencies to ensure that
+            programs or activities receiving Federal funding, including those
+            that affect human health or the environment, do not use
+            discriminatory criteria, methods, or practices. The following
+            includes updates from <strong>{agencyData.A_NAME}</strong> on Title
+            VI that are related to environmental justice.
+          </p>
+          <p>
+            <strong>{agencyData.TITLEVI_NAR}</strong>
+          </p>
           <ul className={`bullet1`}>
-            <li>{`
-            ${agencyData.TITLEVI_N} open Title VI or complaints related to environmental justice from January 2021 to September 2022
-            `}</li>
             <li>
-              {`
-              ${agencyData.TITLEVI_R_N} closed Title VI compliance reviews or resolution agreements related to environmental justice from January 2021 to September 2022 
-              `}
+              <strong>{agencyData.TITLEVI_N}</strong> open Title VI or
+              complaints related to environmental justice from January 2021 to
+              September 2022
+            </li>
+            <li>
+              <strong>{agencyData.TITLEVI_R_N}</strong> closed Title VI
+              compliance reviews or resolution agreements related to
+              environmental justice from January 2021 to September 2022
             </li>
           </ul>
           <h3>Centering Justice in Decision-making</h3>
-          <p>{`
-          Federal agencies are working to ensure that the voices, perspectives, and lived experiences of environmental justice communities are heard and reflected in the priorities, policies, investments, and decision-making of the Federal government. The following information summarizes some of the work ${agencyData.A_NAME} did from January 2021 to September 2022 to center environmental justice in its decision-making.
-          `}</p>
+          <p>
+            Federal agencies are working to ensure that the voices,
+            perspectives, and lived experiences of environmental justice
+            communities are heard and reflected in the priorities, policies,
+            investments, and decision-making of the Federal government. The
+            following information summarizes some of the work{` `}
+            <strong>{agencyData.A_NAME}</strong> did from January 2021 to
+            September 2022 to center environmental justice in its
+            decision-making.
+          </p>
 
           <h3>Community Input and Engagement</h3>
           <ul className={`bullet1`}>
-            <li>{agencyData.A_NAR}</li>
-            <li>{`${agencyData.TA_N} technical assistance outreach events in Fiscal Year 2022`}</li>
+            <li>
+              <strong>{agencyData.A_NAR}</strong>
+            </li>
+            <li>
+              <strong>{agencyData.TA_N}</strong> technical assistance outreach
+              events in Fiscal Year 2022
+            </li>
             <ul>
-              <li>{agencyData.TA_E1}</li>
-              <li>{agencyData.TA_E2}</li>
-              <li>{agencyData.TA_E3}</li>
+              <li>
+                <strong>{agencyData.TA_E1}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.TA_E2}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.TA_E3}</strong>
+              </li>
             </ul>
-            <li>{`${agencyData.PP_N} public processes related to EJ, e.g. RFIs or listening sessions`}</li>
+            <li>
+              <strong>{agencyData.PP_N}</strong> public processes related to EJ,
+              e.g. RFIs or listening sessions
+            </li>
             <ul>
-              <li>{agencyData.PP_E1}</li>
-              <li>{agencyData.PP_E2}</li>
-              <li>{agencyData.PP_E3}</li>
+              <li>
+                <strong>{agencyData.PP_E1}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.PP_E2}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.PP_E3}</strong>
+              </li>
             </ul>
           </ul>
 
           <h3>Consultation and Partnership with Tribal Nations</h3>
           <ul className={`bullet1`}>
-            <li>{agencyData.TC_NAR}</li>
-            <li>{`${agencyData.TC_N} Tribal Consultations related to environmental justice from January 2021 to September 2022`}</li>
+            <li>
+              <strong>{agencyData.TC_NAR}</strong>
+            </li>
+            <li>
+              <strong>{agencyData.TC_N}</strong> Tribal Consultations related to
+              environmental justice from January 2021 to September 2022
+            </li>
             <ul>
-              <li>{agencyData.TC_E1}</li>
-              <li>{agencyData.TC_E2}</li>
-              <li>{agencyData.TC_E3}</li>
+              <li>
+                <strong>{agencyData.TC_E1}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.TC_E2}</strong>
+              </li>
+              <li>
+                <strong>{agencyData.TC_E3}</strong>
+              </li>
             </ul>
           </ul>
         </Grid>

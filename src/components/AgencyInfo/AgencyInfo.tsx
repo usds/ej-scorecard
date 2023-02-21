@@ -54,9 +54,9 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
 
         <Grid row gap>
           <p>
-            {`
-            This page provides information on how ${agencyData.A_NAME} is working to reduce climate and environmental burdens and harms in communities across America.
-            `}
+            This page provides information on how{` `}
+            <strong>{agencyData.A_NAME}</strong> is working to reduce climate
+            and environmental burdens and harms in communities across America.
           </p>
           <p>
             {`
