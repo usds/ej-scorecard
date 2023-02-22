@@ -33,12 +33,18 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <span>{agencyData.A_ADD2}</span>
               <span>{agencyData.A_PHONE}</span>
               <span>
+                <a href={`mailto:${agencyData.A_EMAIL}`}>
+                  {agencyData.A_EMAIL}
+                </a>
+              </span>
+              <span>
                 <a
-                  href={`https://${agencyData.J40_URLLINK}`}
+                  className="usa-link usa-link--alt usa-link--external"
+                  href={`${agencyData.A_URLLINK}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {agencyData.J40_URLTXT}
+                  {agencyData.A_URLTXT}
                 </a>
               </span>
             </div>

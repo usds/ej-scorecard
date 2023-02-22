@@ -58,11 +58,13 @@ exports.createPages = async ({ graphql, actions }) => {
               A_ADD1
               A_ADD2
               A_PHONE
-              A_URL
+              A_URLTXT
+              A_URLLINK
               A_MISSION
               J40_URLTXT
               J40_URLLINK
               A_EMAIL
+              A_EMAILLINK
               J40_TCP
               J40_ANNOUNCE
               J40_AMOUNT
@@ -84,6 +86,7 @@ exports.createPages = async ({ graphql, actions }) => {
               TITLEVI_NAR
               TITLEVI_N
               TITLEVI_R_N
+              TITLEVI_TRAIN_N
               A_NAR
               TA_N
               TA_E1
@@ -98,6 +101,7 @@ exports.createPages = async ({ graphql, actions }) => {
               TC_E1
               TC_E2
               TC_E3
+              TC_TRAIN_N
               ECR_HIGH
               PLAN_BOOL
               PLAN_UPDATE

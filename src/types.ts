@@ -15,11 +15,14 @@ export interface AgencyData {
   A_ADD1: string;
   A_ADD2: string;
   A_PHONE: string;
+  A_URLTXT: string;
+  A_URLLINK: string;
   A_URL: string;
   A_MISSION: string;
   J40_URLTXT: string;
   J40_URLLINK: string;
   A_EMAIL: string;
+  A_EMAILLINK: string;
   J40_TCP: string;
   J40_ANNOUNCE: string;
   J40_AMOUNT: string;
@@ -41,6 +44,7 @@ export interface AgencyData {
   TITLEVI_NAR: string;
   TITLEVI_N: string;
   TITLEVI_R_N: string;
+  TITLEVI_TRAIN_N: string;
   A_NAR: string;
   TA_N: string;
   TA_E1: string;
@@ -55,6 +59,7 @@ export interface AgencyData {
   TC_E1: string;
   TC_E2: string;
   TC_E3: string;
+  TC_TRAIN_N: string;
   ECR_HIGH: string;
   PLAN_BOOL: string;
   PLAN_UPDATE: string;

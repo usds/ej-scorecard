@@ -1,5 +1,224 @@
 // Vitest Snapshot v1
 
+exports[`rendering of AgencyInfo Component > checks if component renders group 1 1`] = `
+<div
+  className="grid-row grid-gap"
+  data-testid="grid"
+>
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+    data-testid="grid"
+  >
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <div
+        className="grid-col-4"
+        data-testid="grid"
+      >
+        <div>
+          <div
+            className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            data-gatsby-image-wrapper=""
+            style={
+              {
+                "backgroundColor": undefined,
+                "display": "inline-block",
+                "overflow": "hidden",
+                "position": "relative",
+                "verticalAlign": "top",
+              }
+            }
+          >
+            <div
+              style={
+                {
+                  "display": "block",
+                  "maxWidth": 334,
+                }
+              }
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                role="presentation"
+                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='278'%20width='334'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                style={
+                  {
+                    "display": "block",
+                    "maxWidth": "100%",
+                    "position": "static",
+                  }
+                }
+              />
+            </div>
+            <div
+              aria-hidden={true}
+              data-placeholder-image=""
+              style={
+                {
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                data-srcset="/static/703cdc54fb8f1bddfe59854183c3829b/59647/agency-a.webp 84w,/static/703cdc54fb8f1bddfe59854183c3829b/02be2/agency-a.webp 167w,/static/703cdc54fb8f1bddfe59854183c3829b/7adb0/agency-a.webp 334w"
+                sizes="(min-width: 334px) 334px, 100vw"
+                type="image/webp"
+              />
+              <img
+                alt="Agency logo"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png"
+                data-srcset="/static/703cdc54fb8f1bddfe59854183c3829b/c3bfd/agency-a.png 84w,/static/703cdc54fb8f1bddfe59854183c3829b/53761/agency-a.png 167w,/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png 334w"
+                decoding="async"
+                loading="lazy"
+                sizes="(min-width: 334px) 334px, 100vw"
+                style={
+                  {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+            </picture>
+            <noscript>
+              <picture>
+                <source
+                  sizes="(min-width: 334px) 334px, 100vw"
+                  srcSet="/static/703cdc54fb8f1bddfe59854183c3829b/59647/agency-a.webp 84w,/static/703cdc54fb8f1bddfe59854183c3829b/02be2/agency-a.webp 167w,/static/703cdc54fb8f1bddfe59854183c3829b/7adb0/agency-a.webp 334w"
+                  type="image/webp"
+                />
+                <img
+                  alt="Agency logo"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="lazy"
+                  sizes="(min-width: 334px) 334px, 100vw"
+                  src="/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png"
+                  srcSet="/static/703cdc54fb8f1bddfe59854183c3829b/c3bfd/agency-a.png 84w,/static/703cdc54fb8f1bddfe59854183c3829b/53761/agency-a.png 167w,/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png 334w"
+                  style={
+                    {
+                      "backgroundColor": undefined,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateZ(0)",
+                      "transition": "opacity 250ms linear",
+                      "width": "100%",
+                      "willChange": "opacity",
+                    }
+                  }
+                />
+              </picture>
+            </noscript>
+            <script
+              dangerouslySetInnerHTML={
+                {
+                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector(\\"[data-placeholder-image]\\").style.opacity=0)}}",
+                }
+              }
+              type="module"
+            />
+          </div>
+          <h3>
+            Test Agency
+          </h3>
+          <span>
+            1 Pennsylvania Avenue N.W.
+          </span>
+          <span>
+            Washington, D.C. 20004
+          </span>
+          <span>
+            (212) 533-3333
+          </span>
+          <span>
+            <a
+              href="mailto:"
+            />
+          </span>
+          <span>
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href="https://someagency.gov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              someagency.gov
+            </a>
+          </span>
+        </div>
+      </div>
+      <div
+        className="grid-col-8"
+        data-testid="grid"
+      >
+        <div>
+          <h2>
+            About Test Agency
+          </h2>
+          <p>
+            mission
+          </p>
+           
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <p>
+        This page provides information on how
+         
+        <strong>
+          Test Agency
+        </strong>
+         is working to reduce climate and environmental burdens and harms in communities across America.
+      </p>
+      <p>
+        
+            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
+            
+      </p>
+    </div>
+  </div>
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-1"
+    data-testid="grid"
+  />
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-3"
+    data-testid="grid"
+  />
+</div>
+`;
+
+exports[`rendering of ScorecardSideNav Component > checks if component renders 1`] = `null`;
+
 exports[`rendering of TemplateSection2 Component > checks if component renders 1`] = `
 [
   <div
@@ -39,14 +258,12 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            Environmental Protection Agency Environmental and Civil Rights highlights
+            Test Agency Environmental and Civil Rights highlights
           </h3>
           <div
             className="usa-summary-box__text"
           >
-            <strong>
-              Environmental and Civil Rights highlight space
-            </strong>
+            Section header 3
           </div>
         </div>
       </div>
@@ -70,9 +287,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         className="bullet1"
       >
         <li>
-          <strong>
-            EPA outlines NEPA policies and guidelines on their website, including Executive Order 12898, key steps in the NEPA process, how to approach public participation in decision making, and EJScreen—an Environmental Justice mapping and screening tool
-          </strong>
+          test
         </li>
         <li>
           <strong>
@@ -82,24 +297,18 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         </li>
         <ul>
           <li>
-            <strong>
-              Hosted 3 public meetings with 200 participants regarding projects to reduce Tijuana River watershed pollution that affects communities in Tijuana/San Diego
-            </strong>
+            H1
           </li>
           <li>
-            <strong>
-              Additional NEPA highlight
-            </strong>
+            H2
           </li>
           <li>
-            <strong>
-              Additional NEPA highlight
-            </strong>
+            H3
           </li>
         </ul>
         <li>
           <strong>
-            421
+            100
           </strong>
            trainings on environmental justice considerations during NEPA reviews
         </li>
@@ -110,13 +319,13 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
       <p>
         Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving Federal financial assistance on account of their race, color or national origin. Title VI requires Federal agencies to ensure that programs or activities receiving Federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following includes updates from 
         <strong>
-          Environmental Protection Agency
+          Test Agency
         </strong>
          on Title VI that are related to environmental justice.
       </p>
       <p>
         <strong>
-          Most complaints under investigation involve state and local agencies and allege that actions or inactions have disparate impacts, and have subjected people to discrimination on the basis of race, national origin, disability, and/or age. Complaints involve many types of facilities and services, including: petrochemical, asphalt, concrete, recycling, CAFO, and water treatment and management services/facilities.
+          test
         </strong>
       </p>
       <ul
@@ -124,15 +333,19 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
       >
         <li>
           <strong>
-            28
+            100
           </strong>
            open Title VI or complaints related to environmental justice from January 2021 to September 2022
         </li>
         <li>
           <strong>
-            2
+            100
           </strong>
            closed Title VI compliance reviews or resolution agreements related to environmental justice from January 2021 to September 2022
+        </li>
+        <li>
+          <strong />
+           trainings on Tribal Consultations or working with Tribes and Indigenous Peoples to advance environmental justice
         </li>
       </ul>
       <h3>
@@ -142,7 +355,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         Federal agencies are working to ensure that the voices, perspectives, and lived experiences of environmental justice communities are heard and reflected in the priorities, policies, investments, and decision-making of the Federal government. The following information summarizes some of the work
          
         <strong>
-          Environmental Protection Agency
+          Test Agency
         </strong>
          did from January 2021 to September 2022 to center environmental justice in its decision-making.
       </p>
@@ -153,54 +366,40 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         className="bullet1"
       >
         <li>
-          <strong>
-            Formal partnerships between EPA and non-federal entities helps to advance Environmental Justice and/or inform policy and decision-making. Additionally, cooperative agreements support formal partnership agreements with states, Tribes, and community-based organizations.
-          </strong>
+          test
         </li>
         <li>
           <strong>
-            130
+            100
           </strong>
            technical assistance outreach events in Fiscal Year 2022
         </li>
         <ul>
           <li>
-            <strong>
-              Events/webinars/workshops through The Environmental Justice Thriving Communities Technical Assistance Centers
-            </strong>
+            E1
           </li>
           <li>
-            <strong>
-              Closing America’s Wastewater Access Gap
-            </strong>
+            E2
           </li>
           <li>
-            <strong>
-              Technical assistance calls with communities with regional offices
-            </strong>
+            E3
           </li>
         </ul>
         <li>
           <strong>
-            480
+            100
           </strong>
            public processes related to EJ, e.g. RFIs or listening sessions
         </li>
         <ul>
           <li>
-            <strong>
-              2 Journey to Justice tours, where EPA Administrator Michael S. Regan heard firsthand from communities facing Environmental Justice concerns in Puerto Rico, Mississippi, Louisiana, and Texas
-            </strong>
+            E1
           </li>
           <li>
-            <strong>
-              5 public engagement sessions, attended by over 500 people, at 276 Superfund sites where there are environmental concerns. Participants had the opportunity to comment on the Office of Land and Emergency Management Environmental Justice Action Plan.
-            </strong>
+            E3
           </li>
           <li>
-            <strong>
-              Office of Environmental Justice and External Civil Rights hosted 19 National Environmental Justice Community Engagement calls to inform the public about EPA's Environmental Justice work and enhance opportunities to maintain an open dialogue with advocates.
-            </strong>
+            E3
           </li>
         </ul>
       </ul>
@@ -211,31 +410,23 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         className="bullet1"
       >
         <li>
-          <strong>
-            EPA issued the Policy on Environmental Justice for Working with Federally Recognized Tribes and Indigenous Peoples in 2014, to advance Environmental Justice for the protection of the environment and public health
-          </strong>
+          test
         </li>
         <li>
           <strong>
-            18
+            100
           </strong>
            Tribal Consultations related to environmental justice from January 2021 to September 2022
         </li>
         <ul>
           <li>
-            <strong>
-              Formal consultation and coordination with Indian Tribal Governments, as well as public engagement events with communities, on risk management for nine of the first 10 chemicals under risk evaluations by EPA
-            </strong>
+            test
           </li>
           <li>
-            <strong>
-              “EJ, Tribes, and Indigenous Peoples” training webinar in May 2022
-            </strong>
+            test
           </li>
           <li>
-            <strong>
-              “Reflections on What Indigenous Research Means,” with Dr. Kyle Whyte at the May 2021 Tribal Science Council (TSC) meeting
-            </strong>
+            test
           </li>
         </ul>
       </ul>

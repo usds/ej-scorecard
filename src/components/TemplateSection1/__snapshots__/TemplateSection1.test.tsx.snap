@@ -1,5 +1,224 @@
 // Vitest Snapshot v1
 
+exports[`rendering of AgencyInfo Component > checks if component renders group 1 1`] = `
+<div
+  className="grid-row grid-gap"
+  data-testid="grid"
+>
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+    data-testid="grid"
+  >
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <div
+        className="grid-col-4"
+        data-testid="grid"
+      >
+        <div>
+          <div
+            className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            data-gatsby-image-wrapper=""
+            style={
+              {
+                "backgroundColor": undefined,
+                "display": "inline-block",
+                "overflow": "hidden",
+                "position": "relative",
+                "verticalAlign": "top",
+              }
+            }
+          >
+            <div
+              style={
+                {
+                  "display": "block",
+                  "maxWidth": 334,
+                }
+              }
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                role="presentation"
+                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='278'%20width='334'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                style={
+                  {
+                    "display": "block",
+                    "maxWidth": "100%",
+                    "position": "static",
+                  }
+                }
+              />
+            </div>
+            <div
+              aria-hidden={true}
+              data-placeholder-image=""
+              style={
+                {
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                data-srcset="/static/703cdc54fb8f1bddfe59854183c3829b/59647/agency-a.webp 84w,/static/703cdc54fb8f1bddfe59854183c3829b/02be2/agency-a.webp 167w,/static/703cdc54fb8f1bddfe59854183c3829b/7adb0/agency-a.webp 334w"
+                sizes="(min-width: 334px) 334px, 100vw"
+                type="image/webp"
+              />
+              <img
+                alt="Agency logo"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png"
+                data-srcset="/static/703cdc54fb8f1bddfe59854183c3829b/c3bfd/agency-a.png 84w,/static/703cdc54fb8f1bddfe59854183c3829b/53761/agency-a.png 167w,/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png 334w"
+                decoding="async"
+                loading="lazy"
+                sizes="(min-width: 334px) 334px, 100vw"
+                style={
+                  {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+            </picture>
+            <noscript>
+              <picture>
+                <source
+                  sizes="(min-width: 334px) 334px, 100vw"
+                  srcSet="/static/703cdc54fb8f1bddfe59854183c3829b/59647/agency-a.webp 84w,/static/703cdc54fb8f1bddfe59854183c3829b/02be2/agency-a.webp 167w,/static/703cdc54fb8f1bddfe59854183c3829b/7adb0/agency-a.webp 334w"
+                  type="image/webp"
+                />
+                <img
+                  alt="Agency logo"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="lazy"
+                  sizes="(min-width: 334px) 334px, 100vw"
+                  src="/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png"
+                  srcSet="/static/703cdc54fb8f1bddfe59854183c3829b/c3bfd/agency-a.png 84w,/static/703cdc54fb8f1bddfe59854183c3829b/53761/agency-a.png 167w,/static/703cdc54fb8f1bddfe59854183c3829b/dff88/agency-a.png 334w"
+                  style={
+                    {
+                      "backgroundColor": undefined,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateZ(0)",
+                      "transition": "opacity 250ms linear",
+                      "width": "100%",
+                      "willChange": "opacity",
+                    }
+                  }
+                />
+              </picture>
+            </noscript>
+            <script
+              dangerouslySetInnerHTML={
+                {
+                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector(\\"[data-placeholder-image]\\").style.opacity=0)}}",
+                }
+              }
+              type="module"
+            />
+          </div>
+          <h3>
+            Test Agency
+          </h3>
+          <span>
+            1 Pennsylvania Avenue N.W.
+          </span>
+          <span>
+            Washington, D.C. 20004
+          </span>
+          <span>
+            (212) 533-3333
+          </span>
+          <span>
+            <a
+              href="mailto:"
+            />
+          </span>
+          <span>
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href="https://someagency.gov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              someagency.gov
+            </a>
+          </span>
+        </div>
+      </div>
+      <div
+        className="grid-col-8"
+        data-testid="grid"
+      >
+        <div>
+          <h2>
+            About Test Agency
+          </h2>
+          <p>
+            mission
+          </p>
+           
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid-row grid-gap"
+      data-testid="grid"
+    >
+      <p>
+        This page provides information on how
+         
+        <strong>
+          Test Agency
+        </strong>
+         is working to reduce climate and environmental burdens and harms in communities across America.
+      </p>
+      <p>
+        
+            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
+            
+      </p>
+    </div>
+  </div>
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-1"
+    data-testid="grid"
+  />
+  <div
+    className="grid-col-12 tablet:grid-col-10 desktop:grid-col-3"
+    data-testid="grid"
+  />
+</div>
+`;
+
+exports[`rendering of ScorecardSideNav Component > checks if component renders 1`] = `null`;
+
 exports[`rendering of TemplateSection1 Component > checks if component renders 1`] = `
 [
   <div
@@ -54,11 +273,11 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
          
         <a
           className="usa-link usa-link--alt usa-link--external"
-          href="epa.gov/justice40"
+          href="aaa.gov/test"
           rel="noreferrer"
           target="_blank"
         >
-          epa.gov/justice40
+          aaa.gov/test
         </a>
         .
       </p>
@@ -68,53 +287,41 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           
       </p>
       <h4>
-        40 Justice40 covered programs
+        100 Justice40 covered programs
       </h4>
       <ul
         className="bullet1"
       >
         <li>
           <strong>
-            80
+            100
           </strong>
            
           announcements in Fiscal Year 2022 representing a total of
            
           <strong>
-            $28 million
+            100
           </strong>
            funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding
         </li>
         <ul>
           <li>
-            <strong>
-              Developed resources for states revising their disadvantaged community definitions and affordability criteria through the Clean Water State Revolving Fund (CWSRF), the Drinking Water State Revolving Fund (DWSRF), the Water Infrastructure Improvements for the Nation (WIIN), and Bipartisan Infrastructure Law (BIL) funding
-            </strong>
+            E1
           </li>
           <li>
-            <strong>
-              Engaged with State Revolving Fund partners to prioritize and launch technical assistance pilots for disadvantaged communities
-            </strong>
+            E2
           </li>
           <li>
-            <strong>
-              Prioritized financing projects in economically stressed communities in the Water Infrastructure Finance and Innovation Act (WIFIA) program FY22 Notice of Funding Availability (NOFA)
-            </strong>
+            E3
           </li>
         </ul>
         <li>
           Made program modifications for Justice40 covered programs such as:
         </li>
         <ul>
-          <li>
-            <strong />
-          </li>
-          <li>
-            <strong />
-          </li>
-          <li>
-            <strong />
-          </li>
+          <li />
+          <li />
+          <li />
         </ul>
       </ul>
     </div>
@@ -132,14 +339,12 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            Environmental Protection Agency Justice40 highlights
+            Test Agency Justice40 highlights
           </h3>
           <div
             className="usa-summary-box__text"
           >
-            <strong>
-              •	Provided assistance to [XX] communities through the Technical Assistance Services for Communities (TASC) program  •	Worked with over 200 Tribal partners to design, develop, and publish curriculum about how to reduce childhood lead exposure, and hosted 10 training sessions in Tribal communities, reaching 450 participants  •	Improved multilingual access to information, including Requests for Proposals, webinars, and in-person trainings  •	Conducted and participated in 27 federal outreach and engagement events in support of small and disadvantaged businesses, reaching over 700 participants in FY22
-            </strong>
+            Highlight
           </div>
         </div>
       </div>

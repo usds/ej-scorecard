@@ -37,15 +37,9 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               years
             </li>
             <ul>
-              <li>
-                <strong>{agencyData.EJP_E1}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.EJP_E2}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.EJP_E3}</strong>
-              </li>
+              <li>{agencyData.EJP_E1}</li>
+              <li>{agencyData.EJP_E2}</li>
+              <li>{agencyData.EJP_E3}</li>
             </ul>
             <li>
               <strong>{agencyData.EJTOOL_N}</strong> EJ tools or resources
@@ -64,9 +58,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               working groups/steering committees/councils on environmental
               justice{` `}
             </li>
-            <li>
-              <strong>{agencyData.EJP_NAR}</strong>
-            </li>
+            <li>{agencyData.EJP_NAR}</li>
           </ul>
         </Grid>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
@@ -74,9 +66,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`Institutionalizing EJ at ${agencyData.A_NAME}`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>
-              <strong>{agencyData.IEJ_HIGH}</strong>
-            </SummaryBoxContent>
+            <SummaryBoxContent>{agencyData.IEJ_HIGH}</SummaryBoxContent>
           </SummaryBox>
         </Grid>
       </Grid>

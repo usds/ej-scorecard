@@ -85,29 +85,17 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               Inflation Reduction Act, and Bipartisan Infrastructure Law funding
             </li>
             <ul>
-              <li>
-                <strong>{agencyData.J40_E1}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.J40_E2}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.J40_E3}</strong>
-              </li>
+              <li>{agencyData.J40_E1}</li>
+              <li>{agencyData.J40_E2}</li>
+              <li>{agencyData.J40_E3}</li>
             </ul>
             <li>
               Made program modifications for Justice40 covered programs such as:
             </li>
             <ul>
-              <li>
-                <strong>{agencyData.J40_MOD1}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.J40_MOD2}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.J40_MOD3}</strong>
-              </li>
+              <li>{agencyData.J40_MOD1}</li>
+              <li>{agencyData.J40_MOD2}</li>
+              <li>{agencyData.J40_MOD3}</li>
             </ul>
           </ul>
         </Grid>
@@ -116,9 +104,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`${agencyData.A_NAME} Justice40 highlights`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>
-              <strong>{agencyData.J40_HIGH}</strong>
-            </SummaryBoxContent>
+            <SummaryBoxContent>{agencyData.J40_HIGH}</SummaryBoxContent>
           </SummaryBox>
         </Grid>
       </Grid>

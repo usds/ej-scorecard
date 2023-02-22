@@ -23,18 +23,21 @@ import AgencyInfo from './AgencyInfo';
 //   },
 // };
 
-const agencyData = {
+export const agencyData = {
   id: `39455749-3310-53aa-b5fa-22590adc1e05`,
   A_NAME: `Test Agency`,
   A_LOGO: `aaa.png`,
   A_ADD1: `1 Pennsylvania Avenue N.W.`,
   A_ADD2: `Washington, D.C. 20004`,
   A_PHONE: `(212) 533-3333`,
+  A_URLTXT: `someagency.gov`,
+  A_URLLINK: `https://someagency.gov`,
   A_URL: `aaa.gov`,
   A_MISSION: `mission`,
   J40_URLTXT: `aaa.gov/test`,
   J40_URLLINK: `aaa.gov/test`,
   A_EMAIL: ``,
+  A_EMAILLINK: ``,
   J40_TCP: `100`,
   J40_ANNOUNCE: `100`,
   J40_AMOUNT: `100`,
@@ -56,6 +59,7 @@ const agencyData = {
   TITLEVI_NAR: `test`,
   TITLEVI_N: `100`,
   TITLEVI_R_N: `100`,
+  TITLEVI_TRAIN_N: ``,
   A_NAR: `test`,
   TA_N: `100`,
   TA_E1: `E1`,
@@ -70,6 +74,7 @@ const agencyData = {
   TC_E1: `test`,
   TC_E2: `test`,
   TC_E3: `test`,
+  TC_TRAIN_N: ``,
   ECR_HIGH: `Section header 3`,
   PLAN_BOOL: `Has`,
   PLAN_UPDATE: `was not`,

@@ -157,11 +157,17 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
           </span>
           <span>
             <a
-              href="https://aaa.gov/test"
+              href="mailto:"
+            />
+          </span>
+          <span>
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href="https://someagency.gov"
               rel="noopener noreferrer"
               target="_blank"
             >
-              aaa.gov/test
+              someagency.gov
             </a>
           </span>
         </div>

@@ -27,9 +27,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             <SummaryBoxHeading headingLevel="h3">
               {`${agencyData.A_NAME} Environmental and Civil Rights highlights`}
             </SummaryBoxHeading>
-            <SummaryBoxContent>
-              <strong>{agencyData.ECR_HIGH}</strong>
-            </SummaryBoxContent>
+            <SummaryBoxContent>{agencyData.ECR_HIGH}</SummaryBoxContent>
           </SummaryBox>
         </Grid>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
@@ -44,11 +42,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               following information summarizes some of the work the agency has
               done from January 2021 to September 2022 in these areas. For more
               information, please visit{` `}
-              <strong>
-                <a href={agencyData.A_STRATPLANLINK}>
-                  {agencyData.A_STRATPLANTXT}
-                </a>
-              </strong>
+              <a href={agencyData.A_STRATPLANLINK}>
+                {agencyData.A_STRATPLANTXT}
+              </a>
               .
             </p>
           ) : (
@@ -77,23 +73,15 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             decision-making.
           </p>
           <ul className={`bullet1`}>
-            <li>
-              <strong>{agencyData.A_NEPA}</strong>
-            </li>
+            <li>{agencyData.A_NEPA}</li>
             <li>
               <strong>{agencyData.NUM_NEPA}</strong> project modifications where
               environmental justice concerns were raised during the NEPA process
             </li>
             <ul>
-              <li>
-                <strong>{agencyData.NEPA_H1}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.NEPA_H2}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.NEPA_H3}</strong>
-              </li>
+              <li>{agencyData.NEPA_H1}</li>
+              <li>{agencyData.NEPA_H2}</li>
+              <li>{agencyData.NEPA_H3}</li>
             </ul>
             <li>
               <strong>{agencyData.NEPA_TRAIN}</strong> trainings on
@@ -129,6 +117,11 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               compliance reviews or resolution agreements related to
               environmental justice from January 2021 to September 2022
             </li>
+            <li>
+              <strong>{agencyData.TITLEVI_TRAIN_N}</strong> trainings on Tribal
+              Consultations or working with Tribes and Indigenous Peoples to
+              advance environmental justice
+            </li>
           </ul>
           <h3>Centering Justice in Decision-making</h3>
           <p>
@@ -144,60 +137,38 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
 
           <h3>Community Input and Engagement</h3>
           <ul className={`bullet1`}>
-            <li>
-              <strong>{agencyData.A_NAR}</strong>
-            </li>
+            <li>{agencyData.A_NAR}</li>
             <li>
               <strong>{agencyData.TA_N}</strong> technical assistance outreach
               events in Fiscal Year 2022
             </li>
             <ul>
-              <li>
-                <strong>{agencyData.TA_E1}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.TA_E2}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.TA_E3}</strong>
-              </li>
+              <li>{agencyData.TA_E1}</li>
+              <li>{agencyData.TA_E2}</li>
+              <li>{agencyData.TA_E3}</li>
             </ul>
             <li>
               <strong>{agencyData.PP_N}</strong> public processes related to EJ,
               e.g. RFIs or listening sessions
             </li>
             <ul>
-              <li>
-                <strong>{agencyData.PP_E1}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.PP_E2}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.PP_E3}</strong>
-              </li>
+              <li>{agencyData.PP_E1}</li>
+              <li>{agencyData.PP_E2}</li>
+              <li>{agencyData.PP_E3}</li>
             </ul>
           </ul>
 
           <h3>Consultation and Partnership with Tribal Nations</h3>
           <ul className={`bullet1`}>
-            <li>
-              <strong>{agencyData.TC_NAR}</strong>
-            </li>
+            <li>{agencyData.TC_NAR}</li>
             <li>
               <strong>{agencyData.TC_N}</strong> Tribal Consultations related to
               environmental justice from January 2021 to September 2022
             </li>
             <ul>
-              <li>
-                <strong>{agencyData.TC_E1}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.TC_E2}</strong>
-              </li>
-              <li>
-                <strong>{agencyData.TC_E3}</strong>
-              </li>
+              <li>{agencyData.TC_E1}</li>
+              <li>{agencyData.TC_E2}</li>
+              <li>{agencyData.TC_E3}</li>
             </ul>
           </ul>
         </Grid>
