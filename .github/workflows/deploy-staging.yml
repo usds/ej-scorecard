@@ -7,7 +7,8 @@ on:
 
 env:
   PR_NUMBER: ${{github.event.pull_request.number}}
-  AWS_BUCKET_NAME: ej-scorecard
+  AWS_APP_BUCKET_NAME: ej-scorecard
+  AWS_DATA_BUCKET_NAME: ej-scorecard-private
   AWS_REGION: us-east-2
 
 jobs:
@@ -32,7 +33,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Get data from S3
-        run: aws s3 sync s3://$AWS_BUCKET_NAME/scorecards ./src/data/scorecards/ 
+        run: aws s3 sync s3://$AWS_DATA_BUCKET_NAME/scorecards ./src/data/scorecards/ 
         
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.4
@@ -82,11 +83,11 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Deploy to AWS
-        run: aws s3 sync ./public/ s3://$AWS_BUCKET_NAME/${{env.DESTINATION_FOLDER}} --acl public-read --delete
+        run: aws s3 sync ./public/ s3://$AWS_APP_BUCKET_NAME/${{env.DESTINATION_FOLDER}} --acl public-read --delete
       
-      - name: Write AWS_BUCKET_NAME to env context
+      - name: Write AWS_APP_BUCKET_NAME to env context
         run: |
-          echo "AWS_BUCKET_NAME=$(echo $AWS_BUCKET_NAME)" >> $GITHUB_ENV
+          echo "AWS_APP_BUCKET_NAME=$(echo $AWS_APP_BUCKET_NAME)" >> $GITHUB_ENV
       
       - name: Update PR with staging URL
         uses: mshick/add-pr-comment@v1
@@ -94,7 +95,7 @@ jobs:
           # Deploy to S3 for the staging URL
           message: |
             **🚢  Here is the frontend staging link: 🚢**   
-            Find it here: http://${{env.AWS_BUCKET_NAME}}.s3-website.${{env.AWS_REGION}}.amazonaws.com/${{env.DESTINATION_FOLDER}} !
+            Find it here: http://${{env.AWS_APP_BUCKET_NAME}}.s3-website.${{env.AWS_REGION}}.amazonaws.com/${{env.DESTINATION_FOLDER}} !
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: "github-actions[bot]" # The user.login for temporary GitHub tokens
           allow-repeats: false # This is the default

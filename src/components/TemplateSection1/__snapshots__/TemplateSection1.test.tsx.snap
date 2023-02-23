@@ -218,3 +218,140 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
 `;
 
 exports[`rendering of ScorecardSideNav Component > checks if component renders 1`] = `null`;
+
+exports[`rendering of TemplateSection1 Component > checks if component renders 1`] = `
+[
+  <div
+    className="grid-row"
+    data-testid="grid"
+  >
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+      data-testid="grid"
+    >
+      <h2
+        className="scorecard-header2"
+      >
+        Justice40 Initiative
+      </h2>
+    </div>
+  </div>,
+  <div
+    className="grid-row grid-gap-6"
+    data-testid="grid"
+  >
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8"
+      data-testid="grid"
+    >
+      <p
+        className="margin-top-0"
+      >
+        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to
+         
+        <a
+          className="usa-link usa-link--alt usa-link--external"
+          href="https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5"
+          rel="noreferrer"
+          target="_blank"
+        >
+          disadvantaged communities
+        </a>
+         
+        that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page for more information about the
+         
+        <a
+          className="usa-link usa-link--alt usa-link--external"
+          href="https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Justice40 Initiative
+        </a>
+         
+        and visit
+         
+        <a
+          className="usa-link usa-link--alt usa-link--external"
+          href="aaa.gov/test"
+          rel="noreferrer"
+          target="_blank"
+        >
+          aaa.gov/test
+        </a>
+        .
+      </p>
+      <p>
+        
+          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
+          
+      </p>
+      <ul
+        className="bullet1"
+      >
+        <li>
+          <strong>
+            100
+          </strong>
+           Justice40 covered programs
+        </li>
+        <li>
+          <strong>
+            100
+          </strong>
+           
+          announcements in Fiscal Year 2022 representing a total of
+           
+          <strong>
+            100
+          </strong>
+           funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding
+        </li>
+        <ul>
+          <li>
+            E1
+          </li>
+          <li>
+            E2
+          </li>
+          <li>
+            E3
+          </li>
+        </ul>
+        <li>
+          Made program modifications for Justice40 covered programs such as:
+        </li>
+        <ul>
+          <li />
+          <li />
+          <li />
+        </ul>
+      </ul>
+    </div>
+    <div
+      className="grid-col-12 tablet:grid-col-10 desktop:grid-col-4"
+      data-testid="grid"
+    >
+      <div
+        className="usa-summary-box"
+        data-testid="summary-box"
+      >
+        <div
+          className="usa-summary-box__body"
+        >
+          <h3
+            className="usa-summary-box__heading"
+          >
+            Test Agency Justice40 highlights
+          </h3>
+          <div
+            className="usa-summary-box__text"
+          >
+            Highlight
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
