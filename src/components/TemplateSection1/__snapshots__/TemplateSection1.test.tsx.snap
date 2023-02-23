@@ -286,12 +286,15 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
           
       </p>
-      <h4>
-        100 Justice40 covered programs
-      </h4>
       <ul
         className="bullet1"
       >
+        <li>
+          <strong>
+            100
+          </strong>
+           Justice40 covered programs
+        </li>
         <li>
           <strong>
             100

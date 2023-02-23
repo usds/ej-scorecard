@@ -42,7 +42,10 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               following information summarizes some of the work the agency has
               done from January 2021 to September 2022 in these areas. For more
               information, please visit{` `}
-              <a href={agencyData.A_STRATPLANLINK}>
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={agencyData.A_STRATPLANLINK}
+              >
                 {agencyData.A_STRATPLANTXT}
               </a>
               .
@@ -103,10 +106,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             includes updates from <strong>{agencyData.A_NAME}</strong> on Title
             VI that are related to environmental justice.
           </p>
-          <p>
-            <strong>{agencyData.TITLEVI_NAR}</strong>
-          </p>
+          <p></p>
           <ul className={`bullet1`}>
+            <li>{agencyData.TITLEVI_NAR}</li>
             <li>
               <strong>{agencyData.TITLEVI_N}</strong> open Title VI or
               complaints related to environmental justice from January 2021 to
@@ -118,9 +120,8 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               environmental justice from January 2021 to September 2022
             </li>
             <li>
-              <strong>{agencyData.TITLEVI_TRAIN_N}</strong> trainings on Tribal
-              Consultations or working with Tribes and Indigenous Peoples to
-              advance environmental justice
+              <strong>{agencyData.TITLEVI_TRAIN_N}</strong> Title VI civil
+              rights and environmental justice training
             </li>
           </ul>
           <h3>Centering Justice in Decision-making</h3>
@@ -170,6 +171,11 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               <li>{agencyData.TC_E2}</li>
               <li>{agencyData.TC_E3}</li>
             </ul>
+            <li>
+              <strong>{agencyData.TC_TRAIN_N}</strong> trainings on Tribal
+              Consultations or working with Tribes and Indigenous Peoples to
+              advance environmental justice
+            </li>
           </ul>
         </Grid>
       </Grid>

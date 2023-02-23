@@ -6,7 +6,7 @@ on:
 
 env:
   PR_NUMBER: ${{ github.event.number }}
-  AWS_BUCKET_NAME: ej-scorecard
+  AWS_BUCKET_NAME: ej-scorecard-private
   AWS_REGION: us-east-2
 
 jobs:
@@ -67,7 +67,6 @@ jobs:
         run: pnpm build
         env: 
           SITE_URL: "${{ secrets.STAGE_SITE_URL }}"
-          DEPLOY_PREFIX: "/${{env.DESTINATION_FOLDER}}/"
 
       - name: Write AWS_REGION to env context
         run: |

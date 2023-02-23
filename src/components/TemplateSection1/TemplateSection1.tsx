@@ -73,8 +73,10 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           `}
             </p>
           )}
-          <h4>{`${agencyData.J40_TCP} Justice40 covered programs`}</h4>
           <ul className={`bullet1`}>
+            <li>
+              <strong>{agencyData.J40_TCP}</strong> Justice40 covered programs
+            </li>
             <li>
               <strong>{agencyData.J40_ANNOUNCE}</strong>
               {` `}

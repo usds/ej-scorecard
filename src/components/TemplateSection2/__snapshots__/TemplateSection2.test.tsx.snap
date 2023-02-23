@@ -323,14 +323,13 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         </strong>
          on Title VI that are related to environmental justice.
       </p>
-      <p>
-        <strong>
-          test
-        </strong>
-      </p>
+      <p />
       <ul
         className="bullet1"
       >
+        <li>
+          test
+        </li>
         <li>
           <strong>
             100
@@ -345,7 +344,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         </li>
         <li>
           <strong />
-           trainings on Tribal Consultations or working with Tribes and Indigenous Peoples to advance environmental justice
+           Title VI civil rights and environmental justice training
         </li>
       </ul>
       <h3>
@@ -429,6 +428,10 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
             test
           </li>
         </ul>
+        <li>
+          <strong />
+           trainings on Tribal Consultations or working with Tribes and Indigenous Peoples to advance environmental justice
+        </li>
       </ul>
     </div>
   </div>,
