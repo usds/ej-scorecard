@@ -1,6 +1,6 @@
 declare namespace AppFooterNamespace {
   export interface IAppFooterScss {
-    appFooterContainer: string;
+    footerTextBox: string;
   }
 }
 

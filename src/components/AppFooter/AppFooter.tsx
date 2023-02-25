@@ -1,16 +1,22 @@
 import React from 'react';
-import MainGridContainer from '../MainGridContainer';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import MainGridContainer from '@/components/MainGridContainer';
 import { FOOTER_CEQ_ADDRESS } from '@/data/constants';
-import { Address, Logo, NavList } from '@trussworks/react-uswds';
+import { Address, Grid, NavList } from '@trussworks/react-uswds';
+import { useGatsbyImageData } from '@/hooks/gatsby-image-data';
 
-// @ts-ignore
-import whitehouseIcon from '@/static/images/eop-seal.svg';
-
-// import * as styles from './AppFooter.module.scss';
-
-// import { AppFooterProps } from '@/types';
+import * as styles from './AppFooter.module.scss';
 
 const AppFooter: React.FC = () => {
+  const allImageSharp = useGatsbyImageData();
+
+  const footerSealObject = allImageSharp.edges.filter(
+    (edge: {
+      node: { gatsbyImageData: { images: { fallback: { src: string } } } };
+    }) =>
+      edge.node.gatsbyImageData.images.fallback.src.endsWith(`footer-seal.png`),
+  );
+
   const NAVLINKS = [
     [
       <strong key={`col1-header`}>Contact</strong>,
@@ -88,22 +94,60 @@ const AppFooter: React.FC = () => {
 
       <div className={`usa-footer__secondary-section`}>
         <MainGridContainer>
-          <Logo
-            size={`medium`}
-            key={`logoimg`}
-            image={
-              <img
-                className={`usa-footer__logo-img`}
-                src={whitehouseIcon}
-                alt={`whitehouse seal`}
+          <Grid row>
+            <Grid col={1}>
+              <GatsbyImage
+                image={footerSealObject[0].node?.gatsbyImageData}
+                alt="Agency logo"
               />
-            }
-            heading={
-              <div className={`j40-footer-ceq-font`}>
-                <h3>Council on Environmental Quality</h3>
+            </Grid>
+            <Grid col={11}>
+              <div className={styles.footerTextBox}>
+                <div>
+                  The Council on Environmental Quality (CEQ), Office of
+                  Management and Budget (OMB), and the White House Environmental
+                  Justice Interagency Council (IAC)
+                </div>
+                <div>
+                  CEQ, OMB and the IAC acknowledges appreciates the support
+                  provided by the
+                  {` `}
+                  <a
+                    className="usa-link usa-link--alt usa-link--external"
+                    href={`https://www.usds.gov/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    U.S. Digital Service
+                  </a>
+                  {` `}
+                  and the
+                  {` `}
+                  <a
+                    className="usa-link usa-link--alt usa-link--external"
+                    href={`https://www.whitehouse.gov/ostp/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Office of Science, Technology, and Privacy
+                  </a>
+                  {` `}
+                  for this website, which is hosted on the
+                  {` `}
+                  <a
+                    className="usa-link usa-link--alt usa-link--external"
+                    href={`https://www.doi.gov/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Department of the Interior&#39;s
+                  </a>
+                  {` `}
+                  Geoplatform.
+                </div>
               </div>
-            }
-          />
+            </Grid>
+          </Grid>
         </MainGridContainer>
       </div>
       {/* <SurveyButton /> */}
