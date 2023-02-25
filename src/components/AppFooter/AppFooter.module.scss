@@ -1,5 +1,12 @@
 @use "uswds-core" as *;
 
-.appFooterContainer{
+.footerTextBox{
+    @include u-padding-left(3);
+    @include u-padding-right(3);
+    @include u-padding-top(1);
 
+    div:first-child {
+        font-weight: bold;
+        @include u-margin-bottom(1);
+    }
 }

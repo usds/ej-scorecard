@@ -1,8 +1,19 @@
 import createComponentWithIntl from '@/test/testHelpers';
-
+import {
+  useStaticQuery,
+  mockUseStaticQuery,
+} from '../AppFooter/AppFooter.test';
+import { vi } from 'vitest';
 import Layout from './Layout';
 
 describe(`rendering of Layout Component`, () => {
+  beforeEach(() => {
+    useStaticQuery.mockImplementation(() => mockUseStaticQuery);
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
   const Component = () => <h1>Test</h1>;
 
   it(`checks if component renders`, () => {

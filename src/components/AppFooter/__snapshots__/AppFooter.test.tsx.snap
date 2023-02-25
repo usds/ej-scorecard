@@ -151,27 +151,183 @@ exports[`rendering of AppFooter Component > checks if component renders 1`] = `
       data-testid="gridContainer"
     >
       <div
-        className="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2"
-        data-testid="footerLogo"
+        className="grid-row"
+        data-testid="grid"
       >
         <div
-          className="mobile-lg:grid-col-auto"
-        >
-          <img
-            alt="whitehouse seal"
-            className="usa-footer__logo-img"
-            src="/static/images/eop-seal.svg"
-          />
-        </div>
-        <div
-          className="mobile-lg:grid-col-auto"
+          className="grid-col-1"
+          data-testid="grid"
         >
           <div
-            className="j40-footer-ceq-font"
+            className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            data-gatsby-image-wrapper=""
+            style={
+              {
+                "backgroundColor": undefined,
+                "display": "inline-block",
+                "overflow": "hidden",
+                "position": "relative",
+                "verticalAlign": "top",
+              }
+            }
           >
-            <h3>
-              Council on Environmental Quality
-            </h3>
+            <div
+              style={
+                {
+                  "display": "block",
+                  "maxWidth": 500,
+                }
+              }
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                role="presentation"
+                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='500'%20width='500'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                style={
+                  {
+                    "display": "block",
+                    "maxWidth": "100%",
+                    "position": "static",
+                  }
+                }
+              />
+            </div>
+            <div
+              aria-hidden={true}
+              data-placeholder-image=""
+              style={
+                {
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                data-srcset="/static/0b564c52880012d2cf2cf2ead8582803/d66e1/footer-seal.webp 125w,/static/0b564c52880012d2cf2cf2ead8582803/e7160/footer-seal.webp 250w,/static/0b564c52880012d2cf2cf2ead8582803/5f169/footer-seal.webp 500w"
+                sizes="(min-width: 500px) 500px, 100vw"
+                type="image/webp"
+              />
+              <img
+                alt="Agency logo"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="/static/0b564c52880012d2cf2cf2ead8582803/82c11/footer-seal.png"
+                data-srcset="/static/0b564c52880012d2cf2cf2ead8582803/2fd20/footer-seal.png 125w,/static/0b564c52880012d2cf2cf2ead8582803/de391/footer-seal.png 250w,/static/0b564c52880012d2cf2cf2ead8582803/82c11/footer-seal.png 500w"
+                decoding="async"
+                loading="lazy"
+                sizes="(min-width: 500px) 500px, 100vw"
+                style={
+                  {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+            </picture>
+            <noscript>
+              <picture>
+                <source
+                  sizes="(min-width: 500px) 500px, 100vw"
+                  srcSet="/static/0b564c52880012d2cf2cf2ead8582803/d66e1/footer-seal.webp 125w,/static/0b564c52880012d2cf2cf2ead8582803/e7160/footer-seal.webp 250w,/static/0b564c52880012d2cf2cf2ead8582803/5f169/footer-seal.webp 500w"
+                  type="image/webp"
+                />
+                <img
+                  alt="Agency logo"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="lazy"
+                  sizes="(min-width: 500px) 500px, 100vw"
+                  src="/static/0b564c52880012d2cf2cf2ead8582803/82c11/footer-seal.png"
+                  srcSet="/static/0b564c52880012d2cf2cf2ead8582803/2fd20/footer-seal.png 125w,/static/0b564c52880012d2cf2cf2ead8582803/de391/footer-seal.png 250w,/static/0b564c52880012d2cf2cf2ead8582803/82c11/footer-seal.png 500w"
+                  style={
+                    {
+                      "backgroundColor": undefined,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateZ(0)",
+                      "transition": "opacity 250ms linear",
+                      "width": "100%",
+                      "willChange": "opacity",
+                    }
+                  }
+                />
+              </picture>
+            </noscript>
+            <script
+              dangerouslySetInnerHTML={
+                {
+                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector(\\"[data-placeholder-image]\\").style.opacity=0)}}",
+                }
+              }
+              type="module"
+            />
+          </div>
+        </div>
+        <div
+          className="grid-col-11"
+          data-testid="grid"
+        >
+          <div>
+            <div>
+              The Council on Environmental Quality (CEQ), Office of Management and Budget (OMB), and the White House Environmental Justice Interagency Council (IAC)
+            </div>
+            <div>
+              CEQ, OMB and the IAC acknowledges and appreciates the support provided by the
+               
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href="https://www.usds.gov/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                U.S. Digital Service
+              </a>
+               
+              and the
+               
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href="https://www.whitehouse.gov/ostp/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Office of Science, Technology, and Privacy
+              </a>
+               
+              for this website, which is hosted on the
+               
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href="https://www.doi.gov/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Department of the Interior's
+              </a>
+               
+              Geoplatform.
+            </div>
           </div>
         </div>
       </div>
