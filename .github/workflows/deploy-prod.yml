@@ -9,6 +9,7 @@ env:
   AWS_APP_BUCKET_NAME: ej-scorecard
   AWS_DATA_BUCKET_NAME: ej-scorecard-private
   AWS_REGION: us-east-2
+  CDN_ID: EV4UY6HP6S3CE
 
 jobs:
   run-ci:
@@ -87,13 +88,22 @@ jobs:
         run: |
           echo "AWS_APP_BUCKET_NAME=$(echo $AWS_APP_BUCKET_NAME)" >> $GITHUB_ENV
       
+      - name: Invalidate cache on AWS CDNs
+        uses: chetan/invalidate-cloudfront-action@master
+        env:
+          DISTRIBUTION: ${{env.WEB_CDN_ID}}
+          PATHS: "/*"
+          AWS_REGION: "us-east-2"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - name: Update PR with production URL
         uses: mshick/add-pr-comment@v1
         with:
           # Deploy to S3 for the production URL
           message: |
             **🚢  Here is the frontend production link: 🚢**   
-            Find it here: http://${{env.AWS_APP_BUCKET_NAME}}.s3-website.${{env.AWS_REGION}}.amazonaws.com/${{env.DESTINATION_FOLDER}} !
+            Find it here:https://df8u87au4pzn3.cloudfront.net !
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: "github-actions[bot]" # The user.login for temporary GitHub tokens
           allow-repeats: false # This is the default
