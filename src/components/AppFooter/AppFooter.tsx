@@ -109,7 +109,7 @@ const AppFooter: React.FC = () => {
                   Justice Interagency Council (IAC)
                 </div>
                 <div>
-                  CEQ, OMB and the IAC acknowledges appreciates the support
+                  CEQ, OMB and the IAC acknowledges and appreciates the support
                   provided by the
                   {` `}
                   <a
