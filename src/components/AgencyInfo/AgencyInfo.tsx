@@ -14,9 +14,6 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
   pathname,
   gatsbyImageData,
 }) => {
-  // Todo: may not need this custom hook
-  // const agencyInfo = useAgencyInfo();
-
   return (
     <Grid row gap>
       <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
