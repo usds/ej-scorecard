@@ -86,7 +86,7 @@ exports.createPages = async ({ graphql, actions }) => {
               TITLEVI_NAR
               TITLEVI_N
               TITLEVI_R_N
-              TITLEVI_TRAIN_N
+              TITLEVI_CR_EJ
               A_NAR
               TA_N
               TA_E1

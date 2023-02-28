@@ -44,7 +44,7 @@ export interface AgencyData {
   TITLEVI_NAR: string;
   TITLEVI_N: string;
   TITLEVI_R_N: string;
-  TITLEVI_TRAIN_N: string;
+  TITLEVI_CR_EJ: string;
   A_NAR: string;
   TA_N: string;
   TA_E1: string;

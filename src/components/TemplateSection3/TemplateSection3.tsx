@@ -33,8 +33,11 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             <li>
               <strong>{agencyData.PLAN_BOOL}</strong> an EJ Strategic Plan that
               {` `}
-              <strong>{agencyData.PLAN_UPDATE}</strong> updated in the past 5
-              years
+              {agencyData.PLAN_UPDATE !== `` && (
+                <strong>{agencyData.PLAN_UPDATE}</strong>
+              )}
+              {` `}
+              updated in the past 5 years
             </li>
             <ul>
               <li>{agencyData.EJP_E1}</li>
@@ -62,12 +65,14 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           </ul>
         </Grid>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
-          <SummaryBox>
-            <SummaryBoxHeading headingLevel="h3">
-              {`Institutionalizing EJ at ${agencyData.A_NAME}`}
-            </SummaryBoxHeading>
-            <SummaryBoxContent>{agencyData.IEJ_HIGH}</SummaryBoxContent>
-          </SummaryBox>
+          {agencyData.IEJ_HIGH !== `` && (
+            <SummaryBox>
+              <SummaryBoxHeading headingLevel="h3">
+                {`Institutionalizing EJ at ${agencyData.A_NAME}`}
+              </SummaryBoxHeading>
+              <SummaryBoxContent>{agencyData.IEJ_HIGH}</SummaryBoxContent>
+            </SummaryBox>
+          )}
         </Grid>
       </Grid>
     </>

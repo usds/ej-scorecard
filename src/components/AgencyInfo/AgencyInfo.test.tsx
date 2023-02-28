@@ -59,7 +59,7 @@ export const agencyData = {
   TITLEVI_NAR: `test`,
   TITLEVI_N: `100`,
   TITLEVI_R_N: `100`,
-  TITLEVI_TRAIN_N: ``,
+  TITLEVI_CR_EJ: ``,
   A_NAR: `test`,
   TA_N: `100`,
   TA_E1: `E1`,

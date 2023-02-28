@@ -29,11 +29,13 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <span>{agencyData.A_ADD1}</span>
               <span>{agencyData.A_ADD2}</span>
               <span>{agencyData.A_PHONE}</span>
-              <span>
-                <a href={`mailto:${agencyData.A_EMAIL}`}>
-                  {agencyData.A_EMAIL}
-                </a>
-              </span>
+              {agencyData.A_EMAIL !== `` && (
+                <span>
+                  <a href={`mailto:${agencyData.A_EMAIL}`}>
+                    {agencyData.A_EMAIL}
+                  </a>
+                </span>
+              )}
               <span>
                 <a
                   className="usa-link usa-link--alt usa-link--external"
