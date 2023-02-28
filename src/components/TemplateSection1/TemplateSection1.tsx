@@ -74,9 +74,11 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </p>
           )}
           <ul className={`bullet1`}>
-            <li>
-              <strong>{agencyData.J40_TCP}</strong> Justice40 covered programs
-            </li>
+            {agencyData.J40_TCP !== `` && (
+              <li>
+                <strong>{agencyData.J40_TCP}</strong> Justice40 covered programs
+              </li>
+            )}
             <li>
               <strong>{agencyData.J40_ANNOUNCE}</strong>
               {` `}

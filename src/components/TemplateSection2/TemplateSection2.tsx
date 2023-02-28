@@ -23,15 +23,17 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
       </Grid>
       <Grid row gap={6}>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
-          <SummaryBox>
-            <SummaryBoxHeading headingLevel="h3">
-              {`${agencyData.A_NAME} Environmental and Civil Rights highlights`}
-            </SummaryBoxHeading>
-            <SummaryBoxContent>{agencyData.ECR_HIGH}</SummaryBoxContent>
-          </SummaryBox>
+          {agencyData.ECR_HIGH !== `` && (
+            <SummaryBox>
+              <SummaryBoxHeading headingLevel="h3">
+                {`${agencyData.A_NAME} Environmental and Civil Rights highlights`}
+              </SummaryBoxHeading>
+              <SummaryBoxContent>{agencyData.ECR_HIGH}</SummaryBoxContent>
+            </SummaryBox>
+          )}
         </Grid>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          {agencyData.A_STRATPLANLINK ? (
+          {agencyData.A_STRATPLANLINK !== `` ? (
             <p className={`margin-top-0`}>
               Federal agencies are advancing environmental justice by carrying
               out their responsibilities under the law to identify and address
@@ -77,15 +79,20 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           </p>
           <ul className={`bullet1`}>
             <li>{agencyData.A_NEPA}</li>
-            <li>
-              <strong>{agencyData.NUM_NEPA}</strong> project modifications where
-              environmental justice concerns were raised during the NEPA process
-            </li>
-            <ul>
-              <li>{agencyData.NEPA_H1}</li>
-              <li>{agencyData.NEPA_H2}</li>
-              <li>{agencyData.NEPA_H3}</li>
-            </ul>
+            {agencyData.NUM_NEPA !== `` && (
+              <>
+                <li>
+                  <strong>{agencyData.NUM_NEPA}</strong> project modifications
+                  where environmental justice concerns were raised during the
+                  NEPA process
+                </li>
+                <ul>
+                  <li>{agencyData.NEPA_H1}</li>
+                  <li>{agencyData.NEPA_H2}</li>
+                  <li>{agencyData.NEPA_H3}</li>
+                </ul>
+              </>
+            )}
             <li>
               <strong>{agencyData.NEPA_TRAIN}</strong> trainings on
               environmental justice considerations during NEPA reviews
@@ -139,10 +146,12 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <h3>Community Input and Engagement</h3>
           <ul className={`bullet1`}>
             <li>{agencyData.A_NAR}</li>
-            <li>
-              <strong>{agencyData.TA_N}</strong> technical assistance outreach
-              events in Fiscal Year 2022
-            </li>
+            {agencyData.TA_N !== `` && (
+              <li>
+                <strong>{agencyData.TA_N}</strong> technical assistance outreach
+                events in Fiscal Year 2022
+              </li>
+            )}
             <ul>
               <li>{agencyData.TA_E1}</li>
               <li>{agencyData.TA_E2}</li>

@@ -157,11 +157,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
           </span>
           <span>
             <a
-              href="mailto:"
-            />
-          </span>
-          <span>
-            <a
               className="usa-link usa-link--alt usa-link--external"
               href="https://someagency.gov"
               rel="noopener noreferrer"
@@ -262,7 +257,8 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <strong>
             was not
           </strong>
-           updated in the past 5 years
+           
+          updated in the past 5 years
         </li>
         <ul>
           <li />
