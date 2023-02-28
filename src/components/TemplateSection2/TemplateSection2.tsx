@@ -120,8 +120,8 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               environmental justice from January 2021 to September 2022
             </li>
             <li>
-              <strong>{agencyData.TITLEVI_TRAIN_N}</strong> Title VI civil
-              rights and environmental justice training
+              <strong>{agencyData.TITLEVI_CR_EJ}</strong> Title VI civil rights
+              and environmental justice training
             </li>
           </ul>
           <h3>Centering Justice in Decision-making</h3>
