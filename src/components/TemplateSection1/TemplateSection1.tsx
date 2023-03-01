@@ -79,15 +79,22 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
                 <strong>{agencyData.J40_TCP}</strong> Justice40 covered programs
               </li>
             )}
-            <li>
-              <strong>{agencyData.J40_ANNOUNCE}</strong>
-              {` `}
-              announcements in Fiscal Year 2022 representing a total of{` `}
-              <strong>{agencyData.J40_AMOUNT}</strong> funding that is available
-              to benefit communities **add footnote, that the funding amounts
-              include annual discretionary and mandatory appropriations,
-              Inflation Reduction Act, and Bipartisan Infrastructure Law funding
-            </li>
+            {agencyData.J40_ANNOUNCE !== `` && (
+              <li>
+                <strong>{agencyData.J40_ANNOUNCE}</strong>
+                {` `}
+                announcements in Fiscal Year 2022
+              </li>
+            )}
+            {agencyData.J40_AMOUNT !== `` && (
+              <li>
+                <strong>{agencyData.J40_AMOUNT}</strong> funding that is
+                available to benefit communities **add footnote, that the
+                funding amounts include annual discretionary and mandatory
+                appropriations, Inflation Reduction Act, and Bipartisan
+                Infrastructure Law funding
+              </li>
+            )}
             <ul>
               <li>{agencyData.J40_E1}</li>
               <li>{agencyData.J40_E2}</li>
