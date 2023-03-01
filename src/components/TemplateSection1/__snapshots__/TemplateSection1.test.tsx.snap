@@ -295,8 +295,9 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
             100
           </strong>
            
-          announcements in Fiscal Year 2022 representing a total of
-           
+          announcements in Fiscal Year 2022
+        </li>
+        <li>
           <strong>
             100
           </strong>

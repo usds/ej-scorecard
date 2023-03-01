@@ -9,7 +9,7 @@ export const AGENCY_NAME_GROUPS = [`A - E`, `D`, `H - T`];
 export const AGENCY_NAME_RANGE1 = [`A`, `B`, `C`, `E`];
 export const AGENCY_NAME_RANGE2 = [`D`];
 export const AGENCY_NAME_RANGE3 = [`H`, `T`, `N`, `U`, `V`, `S`];
-export const NUMBER_SUB_NAV_LINKS_PER_COLUMN = 3;
+export const NUMBER_SUB_NAV_LINKS_PER_COLUMN = 4;
 
 // USWDS Breakpoints
 export const USWDS_BREAKPOINTS = {
