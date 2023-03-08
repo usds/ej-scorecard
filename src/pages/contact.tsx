@@ -40,6 +40,8 @@ const ThirdPage: React.FC<PageProps> = ({ data }) => {
       allAgencyNames={data.allAgencyInfoCsv.edges.map(
         (edge) => edge.node.A_NAME,
       )}
+      description={`Contact us about the Environmental Justice Scorecard, the first government-wide assessment of progress towards environmental justice goals, and share your feedback on the Scorecard.`}
+      keywords={`environmental justice, what is the environmental justice scorecard, what is environmental justice, environmental justice website`}
     >
       <MainGridContainer>
         <h1>{intl.formatMessage(THIRD_PAGE_COPY.HEADING1)}</h1>

@@ -37,6 +37,8 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
       allAgencyNames={data.allAgencyInfoCsv.edges.map(
         (edge) => edge.node.A_NAME,
       )}
+      description={`Environmentaljustice.gov provides access to tools used by the Federal Government to measure environmental justice, including Environmental Justice Scorecard, measuring how agencies are funding solutions.`}
+      keywords={`environmental justice, scorecard, council on environmental quality, justice40, environmental justice communities`}
     >
       <MainGridContainer>
         <Grid row gap>

@@ -10,11 +10,13 @@ const Layout: React.FC<LayoutProps> = ({
   children,
   pathname,
   title,
+  keywords,
+  description,
   allAgencyNames,
 }) => {
   return (
     <>
-      <SEO title={title} />
+      <SEO title={title} keywords={keywords} description={description} />
       <AppHeader pathname={pathname} allAgencyNames={allAgencyNames} />
       <main id={`main-content`}>{children}</main>
       <AppFooter />
