@@ -94,6 +94,8 @@ export interface LayoutProps extends Pathname {
   children: ReactNode;
   allAgencyNames: string[];
   title: string;
+  keywords: string;
+  description: string;
 }
 
 export interface PageProps {

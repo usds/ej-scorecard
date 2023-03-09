@@ -16,8 +16,10 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   return (
     <Layout
       pathname={pathname}
-      title={agencyData.A_NAME}
+      title={`${agencyData.A_NAME} Environmental Justice Scorecard`}
       allAgencyNames={allAgencyNames}
+      description={`Learn more about how ${agencyData.A_NAME} is making efforts to meet Federal environmental justice goals and improve the lived experiences of communities impacted by environmental justice.`}
+      keywords={`${agencyData.A_NAME}, ${agencyData.A_NAME} environmental justice`}
     >
       <MainGridContainer>
         <h1>{agencyData.A_NAME}</h1>

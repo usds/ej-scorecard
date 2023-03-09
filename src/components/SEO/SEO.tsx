@@ -6,9 +6,11 @@ import { Helmet } from 'react-helmet';
 export interface ISEOProps {
   children?: React.ReactNode;
   title: React.ReactNode;
+  keywords: string;
+  description: string;
 }
 
-const SEO = ({ title }: ISEOProps) => {
+const SEO = ({ title, keywords, description }: ISEOProps) => {
   // The reason why Gatsby HEAD API is not being used is because of:
   // https://github.com/gatsbyjs/gatsby/issues/36458#issuecomment-1334232043
 
@@ -22,28 +24,20 @@ const SEO = ({ title }: ISEOProps) => {
       <title>{`${title}`}</title>
 
       {/* Description content should ideally be between 160 - 200 characters */}
-      <meta
-        name="description"
-        content={`This new web app will do X for the government providing Y, Z and W.`}
-      />
+      <meta name="description" content={description} />
 
       {/* Keyword content should list the top 10 words in order of relevance. The words chosen need
         to appear on every page. These words were chosen from the header as it appears on each page */}
-      <meta
-        name="keywords"
-        content={`screening tool climate environmental economic justice beta council quality methodology`}
-      />
+      <meta name="keywords" content={keywords} />
 
       {/* Allows for Open Graph meta tags */}
-      <meta property="og:url" content="https://new-usds-app.gov" />
-      <meta property="og:title" content="New USDS App" />
-      <meta property="og:site_name" content="New USDS App" />
-      <meta
-        property="og:description"
-        content={`This new web app will do X for the government providing Y, Z and W.`}
-      />
+      <meta property="og:url" content="https://environmentaljustice.gov" />
+      <meta property="og:title" content="Environmental Justice.gov" />
+      <meta property="og:site_name" content="Environmental Justice.gov" />
+      <meta property="og:description" content={description} />
 
       {/* DAP Tag */}
+      {/* // Todo: Add DAP Tag */}
       <script></script>
     </Helmet>
   );

@@ -36,10 +36,12 @@ const ThirdPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout
       pathname={NON_DROPDOWN_PAGE_ENDPOINTS[2]}
-      title={intl.formatMessage(THIRD_PAGE_COPY.HEADING1)}
+      title={`Environmental Justice Scorecard Contact`}
       allAgencyNames={data.allAgencyInfoCsv.edges.map(
         (edge) => edge.node.A_NAME,
       )}
+      description={`Contact the Council on Environmental Quality (CEQ) with your questions about the Environmental Justice Scorecard and EnvironmentalJustice.gov`}
+      keywords={`contact, environmental justice questions, council on environmental quality`}
     >
       <MainGridContainer>
         <h1>{intl.formatMessage(THIRD_PAGE_COPY.HEADING1)}</h1>

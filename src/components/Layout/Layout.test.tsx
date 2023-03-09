@@ -22,6 +22,8 @@ describe(`rendering of Layout Component`, () => {
         pathname={`scorecard/agency-a`}
         title={`Agency A`}
         allAgencyNames={[`Agency A`, `Agency B`]}
+        keywords={`some set of awesome SEO friendly keywords`}
+        description={`some awesome SEO friendly description`}
       >
         <Component />
       </Layout>,
