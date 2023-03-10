@@ -9,7 +9,7 @@ env:
   AWS_APP_BUCKET_NAME: ej-scorecard
   AWS_DATA_BUCKET_NAME: ej-scorecard-private
   AWS_REGION: us-east-2
-  CDN_ID: EV4UY6HP6S3CE
+  AWS_APP_CDN_ID: EV4UY6HP6S3CE
 
 jobs:
   run-ci:
@@ -91,7 +91,7 @@ jobs:
       - name: Invalidate cache on AWS CDNs
         uses: chetan/invalidate-cloudfront-action@master
         env:
-          DISTRIBUTION: ${{env.WEB_CDN_ID}}
+          DISTRIBUTION: ${{env.AWS_APP_CDN_ID}}
           PATHS: '/*'
           AWS_REGION: ${{ env.AWS_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
