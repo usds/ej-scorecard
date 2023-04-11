@@ -252,9 +252,12 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
       </p>
       <p>
         
-          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
+              This Phase One Scorecard provides an update on initial progress made by the Test Agency in implementing the Justice40 Initiative. Future versions of the Environmental Justice Scorecard will provide additional information and updates on the benefits of Justice40 covered programs.
           
       </p>
+      <div>
+        Phase one Scorecard metrics and highligts include:
+      </div>
       <ul
         className="bullet1"
       >
@@ -262,20 +265,23 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           Justice40 covered programs
+           Justice40 covered program(s)
         </li>
         <li>
           <strong>
             100
           </strong>
            
-          announcements in Fiscal Year 2022
+          funding announcement(s) covered under the Justice40 Initiative
+          <sup>
+            1
+          </sup>
         </li>
         <li>
           <strong>
             100
           </strong>
-           funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding
+           of funding made available from covered programs
         </li>
         <ul>
           <li>
@@ -289,6 +295,12 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           </li>
         </ul>
       </ul>
+      <p>
+        <sup>
+          1
+        </sup>
+         Infrastructure Law (Pub. L. 117-58) for a covered program, which may include program implementation and 1 oversight funding in addition to funding available to disadvantaged communities. The Justice40 Initiative is measured as 40 percent of total benefits being directed to disadvantaged communities, not 40 percent of total program funding.
+      </p>
     </div>
     <div
       className="grid-col-12 tablet:grid-col-10 desktop:grid-col-4"
@@ -304,7 +316,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            Test Agency Justice40 highlights
+            TAG Justice40 highlights
           </h3>
           <div
             className="usa-summary-box__text"

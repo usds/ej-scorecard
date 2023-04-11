@@ -26,6 +26,8 @@ import AgencyInfo from './AgencyInfo';
 export const agencyData = {
   id: `39455749-3310-53aa-b5fa-22590adc1e05`,
   A_NAME: `Test Agency`,
+  A_ACRONYM: `TAG`,
+  THE_A_NAME: `the Test Agency`,
   A_LOGO: `aaa.png`,
   A_ADD1: `1 Pennsylvania Avenue N.W.`,
   A_ADD2: `Washington, D.C. 20004`,
@@ -84,6 +86,7 @@ export const agencyData = {
   EJTOOL_N: `100`,
   EJSTAFF_N: `100`,
   EJTRAIN_N: `100`,
+  EJ_OFFICE: `hello`,
   EJWG_N: `100`,
   EJP_NAR: ``,
   IEJ_HIGH: `test`,

@@ -10,6 +10,22 @@ import {
 import { TemplateSectionProps } from '@/types';
 
 const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
+  const {
+    A_EMAIL,
+    A_ACRONYM,
+    THE_A_NAME,
+    J40_TCP,
+    J40_ANNOUNCE,
+    J40_AMOUNT,
+    J40_MOD1,
+    J40_MOD2,
+    J40_MOD3,
+    J40_E1,
+    J40_E2,
+    J40_E3,
+    J40_HIGH,
+  } = agencyData;
+
   return (
     <>
       <Grid row>
@@ -42,86 +58,91 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             water and wastewater infrastructure.
           </p>
 
-          {agencyData.A_EMAIL && (
+          {A_EMAIL && (
             <p>
               Contact
               {` `}
-              <a
-                href={`mailto:${agencyData.A_EMAIL}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {agencyData.A_EMAIL}
+              <a href={`mailto:${A_EMAIL}`} target="_blank" rel="noreferrer">
+                {A_EMAIL}
               </a>
               {` `}
               for more information.
             </p>
           )}
 
-          {agencyData.A_EMAIL ? (
-            <p>
-              {`
-          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard. For more information about the benefits of the covered programs in this agency, please contact ${agencyData.A_EMAIL}.
+          <p>
+            {`
+              This Phase One Scorecard provides an update on initial progress made by ${THE_A_NAME} in implementing the Justice40 Initiative. Future versions of the Environmental Justice Scorecard will provide additional information and updates on the benefits of Justice40 covered programs.
           `}
-            </p>
-          ) : (
-            <p>
-              {`
-          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
-          `}
-            </p>
+          </p>
+
+          {(J40_TCP ||
+            J40_ANNOUNCE ||
+            J40_AMOUNT ||
+            J40_MOD1 ||
+            J40_MOD2 ||
+            J40_MOD3) && (
+            <div>Phase one Scorecard metrics and highligts include:</div>
           )}
+
           <ul className={`bullet1`}>
-            {agencyData.J40_TCP !== `` && (
+            {J40_TCP && (
               <li>
-                <strong>{agencyData.J40_TCP}</strong> Justice40 covered programs
+                <strong>{J40_TCP}</strong> Justice40 covered program(s)
               </li>
             )}
-            {agencyData.J40_ANNOUNCE !== `` && (
+            {J40_ANNOUNCE && (
               <li>
-                <strong>{agencyData.J40_ANNOUNCE}</strong>
+                <strong>{J40_ANNOUNCE}</strong>
                 {` `}
-                announcements in Fiscal Year 2022
+                funding announcement(s) covered under the Justice40 Initiative
+                <sup>1</sup>
               </li>
             )}
-            {agencyData.J40_AMOUNT !== `` && (
+            {J40_AMOUNT && (
               <li>
-                <strong>{agencyData.J40_AMOUNT}</strong> funding that is
-                available to benefit communities **add footnote, that the
-                funding amounts include annual discretionary and mandatory
-                appropriations, Inflation Reduction Act, and Bipartisan
-                Infrastructure Law funding
+                <strong>{J40_AMOUNT}</strong> of funding made available from
+                covered programs
               </li>
             )}
             <ul>
-              {agencyData.J40_E1 && <li>{agencyData.J40_E1}</li>}
-              {agencyData.J40_E2 && <li>{agencyData.J40_E2}</li>}
-              {agencyData.J40_E3 && <li>{agencyData.J40_E3}</li>}
+              {J40_E1 && <li>{J40_E1}</li>}
+              {J40_E2 && <li>{J40_E2}</li>}
+              {J40_E3 && <li>{J40_E3}</li>}
             </ul>
-            {(agencyData.J40_MOD1 !== `` ||
-              agencyData.J40_MOD2 !== `` ||
-              agencyData.J40_MOD3 !== ``) && (
+            {(J40_MOD1 || J40_MOD2 || J40_MOD3) && (
               <>
                 <li>
                   Made program modifications for Justice40 covered programs such
                   as:
                 </li>
                 <ul>
-                  {agencyData.J40_MOD1 !== `` && <li>{agencyData.J40_MOD1}</li>}
-                  {agencyData.J40_MOD2 !== `` && <li>{agencyData.J40_MOD2}</li>}
-                  {agencyData.J40_MOD3 !== `` && <li>{agencyData.J40_MOD3}</li>}
+                  {J40_MOD1 && <li>{J40_MOD1}</li>}
+                  {J40_MOD2 && <li>{J40_MOD2}</li>}
+                  {J40_MOD3 && <li>{J40_MOD3}</li>}
                 </ul>
               </>
             )}
           </ul>
+
+          {J40_ANNOUNCE && (
+            <p>
+              <sup>1</sup> Infrastructure Law (Pub. L. 117-58) for a covered
+              program, which may include program implementation and 1 oversight
+              funding in addition to funding available to disadvantaged
+              communities. The Justice40 Initiative is measured as 40 percent of
+              total benefits being directed to disadvantaged communities, not 40
+              percent of total program funding.
+            </p>
+          )}
         </Grid>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
-          {agencyData.J40_HIGH !== `` && (
+          {J40_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${agencyData.A_NAME} Justice40 highlights`}
+                {`${A_ACRONYM} Justice40 highlights`}
               </SummaryBoxHeading>
-              <SummaryBoxContent>{agencyData.J40_HIGH}</SummaryBoxContent>
+              <SummaryBoxContent>{J40_HIGH}</SummaryBoxContent>
             </SummaryBox>
           )}
         </Grid>
