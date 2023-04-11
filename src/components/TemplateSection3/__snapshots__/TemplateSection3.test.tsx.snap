@@ -173,7 +173,7 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       >
         <div>
           <h2>
-            About Test Agency
+            About the Test Agency
           </h2>
           <p>
             mission
@@ -190,9 +190,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         This page provides information on how
          
         <strong>
-          Test Agency
+          the Test Agency
         </strong>
-         is working to reduce climate and environmental burdens and harms in communities across America.
+         is working to reduce climate and environmental burdens and harms in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
       </p>
     </div>
   </div>
@@ -237,7 +237,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
       <p
         className="margin-top-0"
       >
-        Since the start of the Biden-Harris Administration, Federal agencies have been working to better institutionalize environmental justice into their work, including by implementing
+        Since the start of the Biden-Harris Administration, federal agencies have been working to embed environmental justice into all aspects of their work, including by implementing
          
         <a
           className="usa-link usa-link--alt usa-link--external"
@@ -257,11 +257,12 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
         >
           Executive Order 14008
         </a>
-        . The following section provides information on some of the work
+        . The following information shares some of the work
          
-        the Test Agency
+        <strong>
+          the Test Agency
+        </strong>
          has done from January 2021 to September 2022 to institutionalize environmental justice.
-         
       </p>
       <p>
         <strong>

@@ -50,7 +50,7 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
           </Grid>
           <Grid col={8}>
             <div className={styles.agencyInfoCol2}>
-              <h2>{`About ${agencyData.A_NAME}`}</h2>
+              <h2>{`About ${agencyData.THE_A_NAME}`}</h2>
               <p>{agencyData.A_MISSION}</p>
               {` `}
             </div>
@@ -60,8 +60,10 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         <Grid row gap>
           <p>
             This page provides information on how{` `}
-            <strong>{agencyData.A_NAME}</strong> is working to reduce climate
-            and environmental burdens and harms in communities across America.
+            <strong>{agencyData.THE_A_NAME}</strong> is working to reduce
+            climate and environmental burdens and harms in communities across
+            America. It is part of Phase One of the Biden-Harris
+            Administration&apos;s Environmental Justice Scorecard.
           </p>
         </Grid>
       </Grid>

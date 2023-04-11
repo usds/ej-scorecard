@@ -36,11 +36,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
       <Grid row gap={6}>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
           <p className={`margin-top-0`}>
-            As part of President Biden’s Justice40 Initiative, the Federal
-            government is working to ensure that 40 percent of the overall
-            benefits of certain Federal investments reach disadvantaged
-            communities that are marginalized, underserved, and overburdened by
-            pollution. In particular, the President’s
+            As part of President Biden’s
             {` `}
             <a
               className="usa-link usa-link--alt usa-link--external"
@@ -50,12 +46,15 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             >
               Justice40 Initiative
             </a>
-            {` `}
-            applies to Federal investments in climate change, clean energy and
-            energy efficiency, clean transit, affordable and sustainable
-            housing, training and workforce development, remediation and
-            reduction of legacy pollution, and the development of critical clean
-            water and wastewater infrastructure.
+            {` `}, the Federal government is working to ensure that 40 percent
+            of the overall benefits of certain Federal investments reach
+            disadvantaged communities that are marginalized, underserved, and
+            overburdened by pollution. In particular, the President’s Justice40
+            Initiative applies to Federal investments in climate change, clean
+            energy and energy efficiency, clean transit, affordable and
+            sustainable housing, training and workforce development, remediation
+            and reduction of legacy pollution, and the development of critical
+            clean water and wastewater infrastructure.
           </p>
 
           {A_EMAIL && (
@@ -76,14 +75,9 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           `}
           </p>
 
-          {(J40_TCP ||
-            J40_ANNOUNCE ||
-            J40_AMOUNT ||
-            J40_MOD1 ||
-            J40_MOD2 ||
-            J40_MOD3) && (
-            <div>Phase one Scorecard metrics and highligts include:</div>
-          )}
+          <div>
+            <strong>Phase one Scorecard metrics and highlights include:</strong>
+          </div>
 
           <ul className={`bullet1`}>
             {J40_TCP && (
@@ -127,12 +121,18 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
 
           {J40_ANNOUNCE && (
             <p>
-              <sup>1</sup> Infrastructure Law (Pub. L. 117-58) for a covered
-              program, which may include program implementation and 1 oversight
-              funding in addition to funding available to disadvantaged
-              communities. The Justice40 Initiative is measured as 40 percent of
-              total benefits being directed to disadvantaged communities, not 40
-              percent of total program funding.
+              <sup>1</sup> This funding amount describes examples of the funding
+              that was made available in Fiscal Year 2022 through Justice40
+              covered programs. The amount does not represent the total funding
+              that benefits disadvantaged communities. The funding was made
+              available through grants, notices of funding opportunity, and
+              other funding announcements. These funding announcements were from
+              Justice40 covered programs that were funded through discretionary
+              and mandatory appropriations, as well as supplemental
+              appropriations, such as those enacted under the Bipartisan
+              Infrastructure Law (Pub. L. 117-58). The Justice40 Initiative sets
+              a goal that 40 percent of overall benefits from certain federal
+              investments flow to disadvantaged communities.
             </p>
           )}
         </Grid>

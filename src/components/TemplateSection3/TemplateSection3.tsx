@@ -22,9 +22,9 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
       <Grid row gap={6}>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
           <p className={`margin-top-0`}>
-            Since the start of the Biden-Harris Administration, Federal agencies
-            have been working to better institutionalize environmental justice
-            into their work, including by implementing
+            Since the start of the Biden-Harris Administration, federal agencies
+            have been working to embed environmental justice into all aspects of
+            their work, including by implementing
             {` `}
             <a
               className="usa-link usa-link--alt usa-link--external"
@@ -44,25 +44,14 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             >
               Executive Order 14008
             </a>
-            . The following section provides information on some of the work
-            {` `}
-            {agencyData.THE_A_NAME} has done from January 2021 to September 2022
-            to institutionalize environmental justice.{` `}
+            . The following information shares some of the work{` `}
+            <strong>{agencyData.THE_A_NAME}</strong> has done from January 2021
+            to September 2022 to institutionalize environmental justice.
           </p>
 
-          {(agencyData.PLAN_BOOL ||
-            agencyData.EJTOOL_N ||
-            agencyData.EJSTAFF_N ||
-            agencyData.EJTRAIN_N ||
-            agencyData.EJ_OFFICE ||
-            agencyData.EJWG_N ||
-            agencyData.EJP_NAR) && (
-            <p>
-              <strong>
-                Phase One Scorecard metrics and highlights include:
-              </strong>
-            </p>
-          )}
+          <p>
+            <strong>Phase One Scorecard metrics and highlights include:</strong>
+          </p>
 
           <ul className={`bullet1`}>
             {agencyData.PLAN_BOOL && agencyData.PLAN_UPDATE && (

@@ -173,7 +173,7 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       >
         <div>
           <h2>
-            About Test Agency
+            About the Test Agency
           </h2>
           <p>
             mission
@@ -190,9 +190,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         This page provides information on how
          
         <strong>
-          Test Agency
+          the Test Agency
         </strong>
-         is working to reduce climate and environmental burdens and harms in communities across America.
+         is working to reduce climate and environmental burdens and harms in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
       </p>
     </div>
   </div>

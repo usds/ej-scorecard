@@ -155,3 +155,7 @@ export interface BtnLaunchExternalProps {
   buttonText: string;
   showlaunchIcon?: boolean;
 }
+
+export interface AppBreadcrumbProps {
+  agencyName: string;
+}

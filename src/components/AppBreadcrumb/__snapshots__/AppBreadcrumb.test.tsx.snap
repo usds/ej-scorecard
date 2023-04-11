@@ -1,0 +1,33 @@
+// Vitest Snapshot v1
+
+exports[`rendering of AppBreadcrumb Component > checks if component renders 1`] = `
+<nav
+  aria-label="Breadcrumbs"
+  className="usa-breadcrumb"
+>
+  <ol
+    className="usa-breadcrumb__list"
+  >
+    <li
+      className="usa-breadcrumb__list-item"
+    >
+      <a
+        className="usa-breadcrumb__link"
+        href="/scorecard"
+      >
+        <a
+          activeClassName="usa-current"
+          href="/scorecard"
+        >
+          Scorecard
+        </a>
+      </a>
+    </li>
+    <li
+      className="usa-breadcrumb__list-item"
+    >
+      TestAgency
+    </li>
+  </ol>
+</nav>
+`;
