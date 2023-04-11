@@ -28,7 +28,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${agencyData.A_ACRONYM} Environmental and Civil Rights highlights`}
+                {`${agencyData.A_ACRONYM}'s Environmental and Civil Rights Protection highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>{agencyData.ECR_HIGH}</SummaryBoxContent>
             </SummaryBox>

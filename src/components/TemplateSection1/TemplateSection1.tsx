@@ -140,7 +140,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {J40_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${A_ACRONYM} Justice40 highlights`}
+                {`${A_ACRONYM}'s Justice40 Initiative highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>{J40_HIGH}</SummaryBoxContent>
             </SummaryBox>

@@ -106,7 +106,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {agencyData.IEJ_HIGH !== `` && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`Institutionalizing EJ at ${agencyData.A_ACRONYM}`}
+                {`${agencyData.A_ACRONYM}'s Institutionalizing Environmental Justice highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>{agencyData.IEJ_HIGH}</SummaryBoxContent>
             </SummaryBox>
