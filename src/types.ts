@@ -85,6 +85,7 @@ export interface AppHeaderProps extends Pathname {
 export interface ScorecardTemplateProps {
   pageContext: {
     allAgencyNames: string[];
+    allAgencyNamesWithAcronym: string[];
     pathname: string;
     agencyData: AgencyData;
     gatsbyImageData: IGatsbyImageData;

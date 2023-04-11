@@ -194,11 +194,6 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         </strong>
          is working to reduce climate and environmental burdens and harms in communities across America.
       </p>
-      <p>
-        
-            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
-            
-      </p>
     </div>
   </div>
   <div
@@ -242,18 +237,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
       <p
         className="margin-top-0"
       >
-        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to
-         
-        <a
-          className="usa-link usa-link--alt usa-link--external"
-          href="https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5"
-          rel="noreferrer"
-          target="_blank"
-        >
-          disadvantaged communities
-        </a>
-         
-        that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page for more information about the
+        As part of President Biden’s Justice40 Initiative, the Federal government is working to ensure that 40 percent of the overall benefits of certain Federal investments reach disadvantaged communities that are marginalized, underserved, and overburdened by pollution. In particular, the President’s
          
         <a
           className="usa-link usa-link--alt usa-link--external"
@@ -264,17 +248,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           Justice40 Initiative
         </a>
          
-        and visit
-         
-        <a
-          className="usa-link usa-link--alt usa-link--external"
-          href="aaa.gov/test"
-          rel="noreferrer"
-          target="_blank"
-        >
-          aaa.gov/test
-        </a>
-        .
+        applies to Federal investments in climate change, clean energy and energy efficiency, clean transit, affordable and sustainable housing, training and workforce development, remediation and reduction of legacy pollution, and the development of critical clean water and wastewater infrastructure.
       </p>
       <p>
         
@@ -313,14 +287,6 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <li>
             E3
           </li>
-        </ul>
-        <li>
-          Made program modifications for Justice40 covered programs such as:
-        </li>
-        <ul>
-          <li />
-          <li />
-          <li />
         </ul>
       </ul>
     </div>

@@ -54,6 +54,8 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               id
               A_NAME
+              THE_A_NAME
+              A_ACRONYM
               A_LOGO
               A_ADD1
               A_ADD2
@@ -111,6 +113,7 @@ exports.createPages = async ({ graphql, actions }) => {
               EJTOOL_N
               EJSTAFF_N
               EJTRAIN_N
+              EJ_OFFICE
               EJWG_N
               EJP_NAR
               IEJ_HIGH
@@ -139,6 +142,9 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const allAgencyNames = allAgencyInfoCsv.edges.map((edge) => edge.node.A_NAME);
+  const allAgencyNamesWithAcronym = allAgencyInfoCsv.edges.map(
+    (edge) => `${edge.node.A_NAME} (${edge.node.A_ACRONYM})`,
+  );
 
   allAgencyInfoCsv.edges.forEach((edge) => {
     const pathname = `scorecard/${toKebabCase(edge.node.A_NAME)}`;
@@ -157,6 +163,7 @@ exports.createPages = async ({ graphql, actions }) => {
         pathname: `/${pathname}`,
         agencyData: edge.node,
         gatsbyImageData: imageLogoData?.node.gatsbyImageData,
+        allAgencyNamesWithAcronym,
       },
     });
   });

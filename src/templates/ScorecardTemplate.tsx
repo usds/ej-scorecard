@@ -11,8 +11,15 @@ import TemplateSection3 from '@/components/TemplateSection3';
 const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
 }) => {
-  const { allAgencyNames, pathname, agencyData, gatsbyImageData } = pageContext;
+  const {
+    allAgencyNames,
+    allAgencyNamesWithAcronym,
+    pathname,
+    agencyData,
+    gatsbyImageData,
+  } = pageContext;
 
+  console.log(allAgencyNamesWithAcronym);
   return (
     <Layout
       pathname={pathname}

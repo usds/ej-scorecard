@@ -63,11 +63,6 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
             <strong>{agencyData.A_NAME}</strong> is working to reduce climate
             and environmental burdens and harms in communities across America.
           </p>
-          <p>
-            {`
-            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
-            `}
-          </p>
         </Grid>
       </Grid>
       <Grid desktop={{ col: 1 }} tablet={{ col: 10 }} col={12} />

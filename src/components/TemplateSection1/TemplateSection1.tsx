@@ -20,23 +20,11 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
       <Grid row gap={6}>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
           <p className={`margin-top-0`}>
-            For the first time in our nation’s history, the Federal government
-            has made it a goal that 40 percent of the overall benefits of
-            certain Federal investments flow to
-            {` `}
-            <a
-              className="usa-link usa-link--alt usa-link--external"
-              href={`https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              disadvantaged communities
-            </a>
-            {` `}
-            that are marginalized, underserved, and overburdened by pollution.
-            The following reflects the historic resources available to
-            communities in Fiscal Year 2022 to implement the Justice40
-            Initiative. Please visit this page for more information about the
+            As part of President Biden’s Justice40 Initiative, the Federal
+            government is working to ensure that 40 percent of the overall
+            benefits of certain Federal investments reach disadvantaged
+            communities that are marginalized, underserved, and overburdened by
+            pollution. In particular, the President’s
             {` `}
             <a
               className="usa-link usa-link--alt usa-link--external"
@@ -47,18 +35,28 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               Justice40 Initiative
             </a>
             {` `}
-            and visit
-            {` `}
-            <a
-              className="usa-link usa-link--alt usa-link--external"
-              href={agencyData.J40_URLLINK}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {agencyData.J40_URLTXT}
-            </a>
-            .
+            applies to Federal investments in climate change, clean energy and
+            energy efficiency, clean transit, affordable and sustainable
+            housing, training and workforce development, remediation and
+            reduction of legacy pollution, and the development of critical clean
+            water and wastewater infrastructure.
           </p>
+
+          {agencyData.A_EMAIL && (
+            <p>
+              Contact
+              {` `}
+              <a
+                href={`mailto:${agencyData.A_EMAIL}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {agencyData.A_EMAIL}
+              </a>
+              {` `}
+              for more information.
+            </p>
+          )}
 
           {agencyData.A_EMAIL ? (
             <p>
@@ -96,27 +94,36 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               </li>
             )}
             <ul>
-              <li>{agencyData.J40_E1}</li>
-              <li>{agencyData.J40_E2}</li>
-              <li>{agencyData.J40_E3}</li>
+              {agencyData.J40_E1 && <li>{agencyData.J40_E1}</li>}
+              {agencyData.J40_E2 && <li>{agencyData.J40_E2}</li>}
+              {agencyData.J40_E3 && <li>{agencyData.J40_E3}</li>}
             </ul>
-            <li>
-              Made program modifications for Justice40 covered programs such as:
-            </li>
-            <ul>
-              <li>{agencyData.J40_MOD1}</li>
-              <li>{agencyData.J40_MOD2}</li>
-              <li>{agencyData.J40_MOD3}</li>
-            </ul>
+            {(agencyData.J40_MOD1 !== `` ||
+              agencyData.J40_MOD2 !== `` ||
+              agencyData.J40_MOD3 !== ``) && (
+              <>
+                <li>
+                  Made program modifications for Justice40 covered programs such
+                  as:
+                </li>
+                <ul>
+                  {agencyData.J40_MOD1 !== `` && <li>{agencyData.J40_MOD1}</li>}
+                  {agencyData.J40_MOD2 !== `` && <li>{agencyData.J40_MOD2}</li>}
+                  {agencyData.J40_MOD3 !== `` && <li>{agencyData.J40_MOD3}</li>}
+                </ul>
+              </>
+            )}
           </ul>
         </Grid>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
-          <SummaryBox>
-            <SummaryBoxHeading headingLevel="h3">
-              {`${agencyData.A_NAME} Justice40 highlights`}
-            </SummaryBoxHeading>
-            <SummaryBoxContent>{agencyData.J40_HIGH}</SummaryBoxContent>
-          </SummaryBox>
+          {agencyData.J40_HIGH !== `` && (
+            <SummaryBox>
+              <SummaryBoxHeading headingLevel="h3">
+                {`${agencyData.A_NAME} Justice40 highlights`}
+              </SummaryBoxHeading>
+              <SummaryBoxContent>{agencyData.J40_HIGH}</SummaryBoxContent>
+            </SummaryBox>
+          )}
         </Grid>
       </Grid>
     </>
