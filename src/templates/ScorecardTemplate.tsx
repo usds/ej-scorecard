@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
@@ -8,6 +10,7 @@ import TemplateSection1 from '@/components/TemplateSection1';
 import TemplateSection2 from '@/components/TemplateSection2';
 import TemplateSection3 from '@/components/TemplateSection3';
 import AppBreadcrumb from '@/components/AppBreadcrumb';
+import { toKebabCase } from '@/components/util';
 
 const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
@@ -56,6 +59,17 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
           agencyData.EJ_OFFICE ||
           agencyData.EJWG_N ||
           agencyData.EJP_NAR) && <TemplateSection3 agencyData={agencyData} />}
+
+        <Grid row className="return-top">
+          <Grid col={1} offset={11}>
+            <Link
+              className={`usa-link`}
+              to={`/scorecard/${toKebabCase(agencyData.A_NAME)}`}
+            >
+              Return to top
+            </Link>
+          </Grid>
+        </Grid>
       </MainGridContainer>
     </Layout>
   );

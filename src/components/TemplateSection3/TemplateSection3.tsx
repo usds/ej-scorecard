@@ -49,9 +49,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             to September 2022 to institutionalize environmental justice.
           </p>
 
-          <p>
-            <strong>Phase One Scorecard metrics and highlights include:</strong>
-          </p>
+          <p>Phase One Scorecard metrics and highlights include:</p>
 
           <ul className={`bullet1`}>
             {agencyData.PLAN_BOOL && agencyData.PLAN_UPDATE && (
@@ -89,7 +87,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {agencyData.EJ_OFFICE && (
               <li>
                 <strong>{agencyData.EJTRAIN_N}</strong> new or strengthened
-                office on environmental justice
+                office(s) on environmental justice
               </li>
             )}
             {agencyData.EJWG_N && (

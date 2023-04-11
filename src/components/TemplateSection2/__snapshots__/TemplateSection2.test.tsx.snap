@@ -282,9 +282,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         has done from January 2021 to September 2022.
       </p>
       <p>
-        <strong>
-          Phase One Scorecard metrics and highlights include:
-        </strong>
+        Phase One Scorecard metrics and highlights include:
       </p>
       <ul
         className="bullet1"
@@ -328,9 +326,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
       </p>
       <p />
       <p>
-        <strong>
-          Phase One Scorecard metrics and highlights include:
-        </strong>
+        Phase One Scorecard metrics and highlights include:
       </p>
       <ul
         className="bullet1"
@@ -355,17 +351,18 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         Centering Justice in Decision-making
       </h3>
       <p>
-        Federal agencies work to ensure that the voices, perspectives, and lived experiences of communities are heard and reflected in the priorities, policies, and decision-making of the federal government. Agencies also take steps to respect Tribal sovereignty and ensure government-to-government consultation on federal policies. The following information highlights work 
-        the Test Agency
+        Federal agencies work to ensure that the voices, perspectives, and lived experiences of communities are heard and reflected in the priorities, policies, and decision-making of the federal government. Agencies also take steps to respect Tribal sovereignty and ensure government-to-government consultation on federal policies. The following information highlights work
+         
+        <strong>
+          the Test Agency
+        </strong>
          has done from January 2021 to September 2022 to center environmental justice in its decision-making.
       </p>
       <h4>
         Community Input and Engagement
       </h4>
       <p>
-        <strong>
-          Phase One Scorecard metrics and highlights include:
-        </strong>
+        Phase One Scorecard metrics and highlights include:
       </p>
       <ul
         className="bullet1"
@@ -412,9 +409,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         Consultation and Partnership with Tribal Nations
       </h4>
       <p>
-        <strong>
-          Phase One Scorecard metrics and highlights include:
-        </strong>
+        Phase One Scorecard metrics and highlights include:
       </p>
       <ul
         className="bullet1"

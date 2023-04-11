@@ -265,9 +265,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
          has done from January 2021 to September 2022 to institutionalize environmental justice.
       </p>
       <p>
-        <strong>
-          Phase One Scorecard metrics and highlights include:
-        </strong>
+        Phase One Scorecard metrics and highlights include:
       </p>
       <ul
         className="bullet1"
@@ -306,7 +304,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           new or strengthened office on environmental justice
+           new or strengthened office(s) on environmental justice
         </li>
         <li>
           <strong>

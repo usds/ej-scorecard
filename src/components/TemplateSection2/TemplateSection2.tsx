@@ -82,11 +82,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
                 {` `}
                 has done from January 2021 to September 2022.
               </p>
-              <p>
-                <strong>
-                  Phase One Scorecard metrics and highlights include:
-                </strong>
-              </p>
+              <p>Phase One Scorecard metrics and highlights include:</p>
               <ul className={`bullet1`}>
                 {agencyData.A_NEPA && <li>{agencyData.A_NEPA}</li>}
                 {agencyData.NUM_NEPA && (
@@ -137,11 +133,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               </p>
               <p></p>
 
-              <p>
-                <strong>
-                  Phase One Scorecard metrics and highlights include:
-                </strong>
-              </p>
+              <p>Phase One Scorecard metrics and highlights include:</p>
               <ul className={`bullet1`}>
                 {agencyData.TITLEVI_NAR && <li>{agencyData.TITLEVI_NAR}</li>}
                 {agencyData.TITLEVI_N && (
@@ -176,20 +168,17 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             priorities, policies, and decision-making of the federal government.
             Agencies also take steps to respect Tribal sovereignty and ensure
             government-to-government consultation on federal policies. The
-            following information highlights work {agencyData.THE_A_NAME} has
-            done from January 2021 to September 2022 to center environmental
-            justice in its decision-making.
+            following information highlights work{` `}
+            <strong>{agencyData.THE_A_NAME}</strong> has done from January 2021
+            to September 2022 to center environmental justice in its
+            decision-making.
           </p>
 
           {/* Community Input requires at least one metric (A_NAR, TA_N or PP_N) */}
           {(agencyData.A_NAR || agencyData.TA_N || agencyData.PP_N) && (
             <>
               <h4>Community Input and Engagement</h4>
-              <p>
-                <strong>
-                  Phase One Scorecard metrics and highlights include:
-                </strong>
-              </p>
+              <p>Phase One Scorecard metrics and highlights include:</p>
             </>
           )}
           <ul className={`bullet1`}>
@@ -226,11 +215,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             agencyData.TC_E3) && (
             <>
               <h4>Consultation and Partnership with Tribal Nations</h4>
-              <p>
-                <strong>
-                  Phase One Scorecard metrics and highlights include:
-                </strong>
-              </p>
+              <p>Phase One Scorecard metrics and highlights include:</p>
             </>
           )}
           <ul className={`bullet1`}>

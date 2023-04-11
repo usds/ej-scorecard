@@ -35,37 +35,57 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
       </Grid>
       <Grid row gap={6}>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          <p className={`margin-top-0`}>
-            As part of President Biden’s
-            {` `}
-            <a
-              className="usa-link usa-link--alt usa-link--external"
-              href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Justice40 Initiative
-            </a>
-            {` `}, the Federal government is working to ensure that 40 percent
-            of the overall benefits of certain Federal investments reach
-            disadvantaged communities that are marginalized, underserved, and
-            overburdened by pollution. In particular, the President’s Justice40
-            Initiative applies to Federal investments in climate change, clean
-            energy and energy efficiency, clean transit, affordable and
-            sustainable housing, training and workforce development, remediation
-            and reduction of legacy pollution, and the development of critical
-            clean water and wastewater infrastructure.
-          </p>
-
-          {A_EMAIL && (
-            <p>
-              Contact
+          {A_EMAIL ? (
+            <p className={`margin-top-0`}>
+              As part of President Biden’s
+              {` `}
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Justice40 Initiative
+              </a>
+              {` `}, the Federal government is working to ensure that 40 percent
+              of the overall benefits of certain Federal investments reach
+              disadvantaged communities that are marginalized, underserved, and
+              overburdened by pollution. In particular, the President’s
+              Justice40 Initiative applies to Federal investments in climate
+              change, clean energy and energy efficiency, clean transit,
+              affordable and sustainable housing, training and workforce
+              development, remediation and reduction of legacy pollution, and
+              the development of critical clean water and wastewater
+              infrastructure. Contact
               {` `}
               <a href={`mailto:${A_EMAIL}`} target="_blank" rel="noreferrer">
                 {A_EMAIL}
               </a>
               {` `}
               for more information.
+            </p>
+          ) : (
+            <p className={`margin-top-0`}>
+              As part of President Biden’s
+              {` `}
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Justice40 Initiative
+              </a>
+              {` `}, the Federal government is working to ensure that 40 percent
+              of the overall benefits of certain Federal investments reach
+              disadvantaged communities that are marginalized, underserved, and
+              overburdened by pollution. In particular, the President’s
+              Justice40 Initiative applies to Federal investments in climate
+              change, clean energy and energy efficiency, clean transit,
+              affordable and sustainable housing, training and workforce
+              development, remediation and reduction of legacy pollution, and
+              the development of critical clean water and wastewater
+              infrastructure.
             </p>
           )}
 
