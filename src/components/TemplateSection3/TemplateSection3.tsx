@@ -24,51 +24,100 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <p className={`margin-top-0`}>
             Since the start of the Biden-Harris Administration, Federal agencies
             have been working to better institutionalize environmental justice
-            into their work, including by implementing Executive Order 12898 and
-            Executive Order 14008. The following section provides information on
-            some of the work the agency has done from January 2021 to September
-            2022 to institutionalize environmental justice.{` `}
+            into their work, including by implementing
+            {` `}
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href={`https://www.archives.gov/files/federal-register/executive-orders/pdf/12898.pdf`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Executive Order 12898
+            </a>
+            {` `}
+            and
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href={`https://www.federalregister.gov/documents/2021/02/01/2021-02177/tackling-the-climate-crisis-at-home-and-abroad#:~:text=Sec.%20223.%20Justice40,40-percent%20goal.`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Executive Order 14008
+            </a>
+            . The following section provides information on some of the work
+            {` `}
+            {agencyData.THE_A_NAME} has done from January 2021 to September 2022
+            to institutionalize environmental justice.{` `}
           </p>
+
+          {(agencyData.PLAN_BOOL ||
+            agencyData.EJTOOL_N ||
+            agencyData.EJSTAFF_N ||
+            agencyData.EJTRAIN_N ||
+            agencyData.EJ_OFFICE ||
+            agencyData.EJWG_N ||
+            agencyData.EJP_NAR) && (
+            <p>
+              <strong>
+                Phase One Scorecard metrics and highlights include:
+              </strong>
+            </p>
+          )}
+
           <ul className={`bullet1`}>
-            <li>
-              <strong>{agencyData.PLAN_BOOL}</strong> an EJ Strategic Plan that
-              {` `}
-              {agencyData.PLAN_UPDATE !== `` && (
-                <strong>{agencyData.PLAN_UPDATE}</strong>
-              )}
-              {` `}
-              updated in the past 5 years
-            </li>
+            {agencyData.PLAN_BOOL && agencyData.PLAN_UPDATE && (
+              <li>
+                <strong>{agencyData.PLAN_BOOL}</strong> an environmental justice
+                Strategic Plan that <strong>{agencyData.PLAN_UPDATE}</strong>
+                {` `}
+                updated in the past 5 years
+              </li>
+            )}
             <ul>
-              <li>{agencyData.EJP_E1}</li>
-              <li>{agencyData.EJP_E2}</li>
-              <li>{agencyData.EJP_E3}</li>
+              {agencyData.EJP_E1 && <li>{agencyData.EJP_E1}</li>}
+              {agencyData.EJP_E2 && <li>{agencyData.EJP_E2}</li>}
+              {agencyData.EJP_E3 && <li>{agencyData.EJP_E3}</li>}
             </ul>
-            <li>
-              <strong>{agencyData.EJTOOL_N}</strong> EJ tools or resources
-            </li>
-            <li>
-              <strong>{agencyData.EJSTAFF_N}</strong> staff that work on
-              environmental justice, either in a full- or part-time capacity
-            </li>
-            <li>
-              <strong>{agencyData.EJTRAIN_N}</strong> training for staff on
-              environmental justice, as a general EJ training or civil rights
-              and EJ training
-            </li>
-            <li>
-              <strong>{agencyData.EJWG_N}</strong> EJ office and internal
-              working groups/steering committees/councils on environmental
-              justice{` `}
-            </li>
-            <li>{agencyData.EJP_NAR}</li>
+            {agencyData.EJTOOL_N && (
+              <li>
+                <strong>{agencyData.EJTOOL_N}</strong> environmental justice
+                tool(s) or resource(s)
+              </li>
+            )}
+            {agencyData.EJSTAFF_N && (
+              <li>
+                <strong>{agencyData.EJSTAFF_N}</strong> staff that work on
+                environmental justice, either in a full- or part-time capacity
+              </li>
+            )}
+            {agencyData.EJTRAIN_N && (
+              <li>
+                <strong>{agencyData.EJTRAIN_N}</strong> trainings for staff on
+                environmental justice, as a general environmental justice
+                training or Civil Rights and environmental justice training
+              </li>
+            )}
+            {agencyData.EJ_OFFICE && (
+              <li>
+                <strong>{agencyData.EJTRAIN_N}</strong> new or strengthened
+                office on environmental justice
+              </li>
+            )}
+            {agencyData.EJWG_N && (
+              <li>
+                <strong>{agencyData.EJWG_N}</strong> new or strengthened office
+                internal working group(s)/steering committee(s)/council(s) on
+                environmental justice{` `}
+              </li>
+            )}
+            {agencyData.EJP_NAR && <li>{agencyData.EJP_NAR}</li>}
           </ul>
         </Grid>
         <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
           {agencyData.IEJ_HIGH !== `` && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`Institutionalizing EJ at ${agencyData.A_NAME}`}
+                {`Institutionalizing EJ at ${agencyData.A_ACRONYM}`}
               </SummaryBoxHeading>
               <SummaryBoxContent>{agencyData.IEJ_HIGH}</SummaryBoxContent>
             </SummaryBox>

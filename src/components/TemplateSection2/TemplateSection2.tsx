@@ -14,7 +14,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
   return (
     <>
       <Grid row gap={6}>
-        <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}></Grid>
+        {agencyData.ECR_HIGH && (
+          <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}></Grid>
+        )}
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
           <h2 className={`scorecard-header2`}>
             Environmental and Civil Rights Protection
@@ -22,16 +24,16 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
         </Grid>
       </Grid>
       <Grid row gap={6}>
-        <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
-          {agencyData.ECR_HIGH !== `` && (
+        {agencyData.ECR_HIGH && (
+          <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
                 {`${agencyData.A_ACRONYM} Environmental and Civil Rights highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>{agencyData.ECR_HIGH}</SummaryBoxContent>
             </SummaryBox>
-          )}
-        </Grid>
+          </Grid>
+        )}
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
           {agencyData.A_STRATPLANLINK !== `` ? (
             <p className={`margin-top-0`}>
