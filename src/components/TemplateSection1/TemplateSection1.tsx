@@ -35,65 +35,47 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
       </Grid>
       <Grid row gap={6}>
         <Grid desktop={{ col: 8 }} tablet={{ col: 10 }} col={12}>
-          {A_EMAIL ? (
-            <p className={`margin-top-0`}>
-              As part of President Biden’s
-              {` `}
-              <a
-                className="usa-link usa-link--alt usa-link--external"
-                href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Justice40 Initiative
-              </a>
-              {` `}, the Federal government is working to ensure that 40 percent
-              of the overall benefits of certain Federal investments reach
-              disadvantaged communities that are marginalized, underserved, and
-              overburdened by pollution. In particular, the President’s
-              Justice40 Initiative applies to Federal investments in climate
-              change, clean energy and energy efficiency, clean transit,
-              affordable and sustainable housing, training and workforce
-              development, remediation and reduction of legacy pollution, and
-              the development of critical clean water and wastewater
-              infrastructure. Contact
+          <p className={`margin-top-0`}>
+            As part of President Biden’s
+            {` `}
+            <a
+              className="usa-link usa-link--alt usa-link--external"
+              href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Justice40 Initiative
+            </a>
+            {` `}, the federal government is working to ensure that 40 percent
+            of the overall benefits of certain federal investments reach
+            disadvantaged communities that are marginalized and overburdened by
+            pollution and underinvestment. In particular, the President’s
+            Justice40 Initiative applies to federal investments that address
+            climate change, clean energy and energy efficiency, clean transit,
+            affordable and sustainable housing, training and workforce
+            development, remediation and reduction of legacy pollution, and the
+            development of critical clean water and wastewater infrastructure.
+          </p>
+
+          <p>
+            This Phase One Scorecard provides an update on initial progress made
+            by {THE_A_NAME} in implementing the Justice40 Initiative. Future
+            versions of the Environmental Justice Scorecard will provide
+            additional information and updates on the benefits of Justice40
+            covered programs.
+          </p>
+
+          {A_EMAIL && (
+            <p>
+              For more information on {agencyData.A_ACRONYM}’s Justice40 covered
+              programs, please contact
               {` `}
               <a href={`mailto:${A_EMAIL}`} target="_blank" rel="noreferrer">
                 {A_EMAIL}
               </a>
-              {` `}
-              for more information.
-            </p>
-          ) : (
-            <p className={`margin-top-0`}>
-              As part of President Biden’s
-              {` `}
-              <a
-                className="usa-link usa-link--alt usa-link--external"
-                href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Justice40 Initiative
-              </a>
-              {` `}, the Federal government is working to ensure that 40 percent
-              of the overall benefits of certain Federal investments reach
-              disadvantaged communities that are marginalized, underserved, and
-              overburdened by pollution. In particular, the President’s
-              Justice40 Initiative applies to Federal investments in climate
-              change, clean energy and energy efficiency, clean transit,
-              affordable and sustainable housing, training and workforce
-              development, remediation and reduction of legacy pollution, and
-              the development of critical clean water and wastewater
-              infrastructure.
+              {` `}.
             </p>
           )}
-
-          <p>
-            {`
-              This Phase One Scorecard provides an update on initial progress made by ${THE_A_NAME} in implementing the Justice40 Initiative. Future versions of the Environmental Justice Scorecard will provide additional information and updates on the benefits of Justice40 covered programs.
-          `}
-          </p>
 
           <div>
             <strong>Phase one Scorecard metrics and highlights include:</strong>

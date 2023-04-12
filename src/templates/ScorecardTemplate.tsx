@@ -24,6 +24,7 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   } = pageContext;
 
   console.log(allAgencyNamesWithAcronym);
+
   return (
     <Layout
       pathname={pathname}
