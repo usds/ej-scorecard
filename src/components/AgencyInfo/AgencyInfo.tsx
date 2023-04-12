@@ -8,6 +8,30 @@ import * as styles from './AgencyInfo.module.scss';
 import { AgencyInfoProps } from '@/types';
 import ScorecardSideNav from '../ScorecardSideNav';
 
+// If the phone has a comma in it (implying more than one phone number), split it into
+// two distict phone numbers
+const getPhoneMarkup = (agencyPhone: string) => {
+  if (agencyPhone.includes(`,`)) {
+    const phoneNumberArray = agencyPhone.split(`,`);
+    return (
+      <>
+        <span>
+          <a href={`tel:${phoneNumberArray[0]}`}>{phoneNumberArray[0]}</a>
+        </span>
+        <span>
+          <a href={`tel:${phoneNumberArray[1]}`}>{phoneNumberArray[1]}</a>
+        </span>
+      </>
+    );
+  } else {
+    return (
+      <span>
+        <a href={`tel:${agencyPhone}`}>{agencyPhone}</a>
+      </span>
+    );
+  }
+};
+
 const AgencyInfo: React.FC<AgencyInfoProps> = ({
   agencyData,
   allAgencyNames,
@@ -28,7 +52,7 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <h3>{agencyData.A_NAME}</h3>
               <span>{agencyData.A_ADD1}</span>
               <span>{agencyData.A_ADD2}</span>
-              <span>{agencyData.A_PHONE}</span>
+              {agencyData.A_PHONE && getPhoneMarkup(agencyData.A_PHONE)}
               {agencyData.A_EMAIL !== `` && (
                 <span>
                   <a href={`mailto:${agencyData.A_EMAIL}`}>
