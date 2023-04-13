@@ -8,6 +8,8 @@ import {
 // import * as styles from './TemplateSection1.module.scss';
 
 import { TemplateSectionProps } from '@/types';
+import { DELIMITERS } from '@/data/constants';
+import { splitTextIntoParagraphs } from '../util';
 
 const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
   const {
@@ -144,7 +146,14 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               <SummaryBoxHeading headingLevel="h3">
                 {`${A_ACRONYM}'s Justice40 Initiative highlights`}
               </SummaryBoxHeading>
-              <SummaryBoxContent>{J40_HIGH}</SummaryBoxContent>
+              <SummaryBoxContent>
+                {agencyData.J40_HIGH.includes(DELIMITERS.PARAGRAPH)
+                  ? splitTextIntoParagraphs(
+                      agencyData.J40_HIGH,
+                      DELIMITERS.PARAGRAPH,
+                    ).map((paragraph) => paragraph)
+                  : agencyData.J40_HIGH}
+              </SummaryBoxContent>
             </SummaryBox>
           )}
         </Grid>
