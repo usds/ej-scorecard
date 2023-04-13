@@ -333,6 +333,20 @@ exports[`rendering of AppFooter Component > checks if component renders 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="grid-container-desktop-lg"
+    data-testid="gridContainer"
+  >
+    <a
+      href="#"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <strong>
+        Share your feedback
+      </strong>
+    </a>
+  </div>
 </footer>
 `;
 
@@ -1061,6 +1075,20 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="grid-container-desktop-lg"
+      data-testid="gridContainer"
+    >
+      <a
+        href="#"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <strong>
+          Share your feedback
+        </strong>
+      </a>
     </div>
   </footer>,
 ]

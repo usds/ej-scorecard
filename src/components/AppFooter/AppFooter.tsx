@@ -6,6 +6,7 @@ import { Address, Grid, NavList } from '@trussworks/react-uswds';
 import { useGatsbyImageData } from '@/hooks/gatsby-image-data';
 
 import * as styles from './AppFooter.module.scss';
+import SurveyButton from '@/components/SurveyButton';
 
 const AppFooter: React.FC = () => {
   const allImageSharp = useGatsbyImageData();
@@ -150,7 +151,7 @@ const AppFooter: React.FC = () => {
           </Grid>
         </MainGridContainer>
       </div>
-      {/* <SurveyButton /> */}
+      <SurveyButton />
     </footer>
   );
 };
