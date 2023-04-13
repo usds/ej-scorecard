@@ -9,7 +9,7 @@ import {
 // import * as styles from './TemplateSection2.module.scss';
 
 import { TemplateSectionProps } from '@/types';
-import { splitTextIntoParagraphs } from '../util';
+import { possessivePlural, splitTextIntoParagraphs } from '../util';
 import { DELIMITERS } from '@/data/constants';
 
 const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
@@ -30,7 +30,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${agencyData.A_ACRONYM}'s Environmental and Civil Rights Protection highlights`}
+                {`${possessivePlural(
+                  agencyData.A_ACRONYM,
+                )} Environmental and Civil Rights Protection highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.ECR_HIGH.includes(DELIMITERS.PARAGRAPH)
@@ -52,7 +54,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             environmental justice concerns. Agencies are working to ensure that
             all communities experience the protection of our country’s bedrock
             environmental laws. The following information reflects some of the
-            environmental and civil rights work {agencyData.THE_A_NAME}
+            environmental and civil rights work{` `}
+            <strong>{agencyData.THE_A_NAME}</strong>
+            {` `}
             has done from January 2021 to September 2022.
           </p>
 

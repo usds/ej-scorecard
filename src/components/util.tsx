@@ -49,3 +49,7 @@ export const splitTextIntoParagraphs = (text: string, delimiter: string) => {
   const textArray = text.split(delimiter);
   return textArray.map((paragraph, index) => <p key={index}>{paragraph}</p>);
 };
+
+export const possessivePlural = (text: string) => {
+  return text.slice(-1) === `s` ? `${text}'` : `${text}'s`;
+};
