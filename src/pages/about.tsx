@@ -1,32 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { defineMessages, useIntl } from 'react-intl';
-import {
-  SummaryBox,
-  SummaryBoxContent,
-  SummaryBoxHeading,
-} from '@trussworks/react-uswds';
+import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
 import { NON_DROPDOWN_PAGE_ENDPOINTS } from '@/data/constants';
 import { PageProps } from '@/types';
 
-const SECOND_PAGE_COPY = defineMessages({
+const ABOUT_PAGE_COPY = defineMessages({
   HEADING1: {
-    id: `second.page.copy.HEADING1`,
-    defaultMessage: `Second Page`,
-    description: `page heading`,
-  },
-  SUMMARY_TITLE: {
-    id: `second.page.copy.SUMMARY_TITLE`,
-    defaultMessage: `Key Information`,
-    description: `summary title`,
-  },
-  SUMMARY_CONTENT: {
-    id: `second.page.copy.SUMMARY_CONTENT`,
-    defaultMessage: `Summary content for page 2`,
-    description: `summary title`,
+    id: `about.page.copy.HEADING1`,
+    defaultMessage: `About`,
+    description: `about page heading`,
   },
 });
 
@@ -44,15 +30,105 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
       keywords={`environmental justice, what is the environmental justice scorecard, what is environmental justice, environmental justice website`}
     >
       <MainGridContainer>
-        <h1>{intl.formatMessage(SECOND_PAGE_COPY.HEADING1)}</h1>
-        <SummaryBox className={`summary-box`}>
-          <SummaryBoxHeading headingLevel="h3">
-            {intl.formatMessage(SECOND_PAGE_COPY.SUMMARY_TITLE)}
-          </SummaryBoxHeading>
-          <SummaryBoxContent>
-            {intl.formatMessage(SECOND_PAGE_COPY.SUMMARY_CONTENT)}
-          </SummaryBoxContent>
-        </SummaryBox>
+        <h1>{intl.formatMessage(ABOUT_PAGE_COPY.HEADING1)}</h1>
+
+        <Grid row gap>
+          <Grid desktop={{ col: 7 }} tablet={{ col: 10 }} col={12}>
+            <h2>About the Scorecard</h2>
+
+            <p>
+              President Biden prioritized environmental justice from the start
+              of his Administration by launching a whole-of-government effort to
+              confront longstanding environmental injustices and inequities. The
+              Environmental Justice Scorecard is a signature component of this
+              commitment. It is the first-ever government-wide assessment of
+              what the federal government is doing to advance environmental
+              justice.
+            </p>
+
+            <p>
+              Executive Order 14008,
+              {` `}
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={`https://www.whitehouse.gov/briefing-room/presidential-actions/2021/01/27/executive-order-on-tackling-the-climate-crisis-at-home-and-abroad/`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Tackling the Climate Crisis at Home and Abroad
+              </a>
+              {` `}, directs the White House Office of Management and Budget, in
+              coordination with the White House Council on Environmental
+              Quality, the U.S. Digital Service, and other relevant agency
+              heads, to publish an annual Environmental Justice Scorecard
+              detailing agency environmental justice performance measures. The
+              White House Environmental Justice Interagency Council (IAC)
+              {` `}
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={`https://www.whitehouse.gov/environmentaljustice/white-house-environmental-justice-interagency-council/`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                White House Environmental Justice Interagency Council (IAC)
+              </a>
+              {` `} is also directed to develop performance measures to ensure
+              accountability for work to address current and historic
+              environmental injustice.
+            </p>
+
+            <h2>Scorecard Phase One</h2>
+
+            <p>
+              The Phase One Scorecard incorporates recommendations and feedback
+              from environmental justice stakeholders and experts. In
+              particular, recommendations from the
+              {` `}
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={`https://www.whitehouse.gov/environmentaljustice/white-house-environmental-justice-advisory-council/`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                White House Environmental Justice Advisory Council
+              </a>
+              {` `}
+              and public comments informed its development.
+            </p>
+
+            <p>
+              The Phase One Scorecard provides a baseline assessment of the
+              federal government&apos;s efforts to secure environmental justice.
+              It outlines steps taken, processes implemented, and other actions
+              by federal agencies in 2021 and 2022 to help achieve the
+              Biden-Harris Administration&apos;s environmental justice goals.
+              Establishing this baseline will help measure the progress of
+              federal agencies over time, creating a tool for transparency and
+              accountability.
+            </p>
+
+            <p>
+              The metrics and actions included in the Phase One Scorecard vary
+              based on the type, size, and mission of each federal agency. For
+              example, some but not all of the agencies participating in the
+              Phase One Scorecard are members of the IAC and have Justice40
+              covered programs. If data were unavailable for a federal agency,
+              the corresponding metrics do not appear on that agency&apos;s
+              page.
+            </p>
+
+            <p>
+              The Phase One Scorecard provides a valuable snapshot of key
+              environmental justice work in progress at a particular point in
+              time, but it alone cannot fully capture the depth or range of
+              active work or the long-term impact on communities. The
+              Environmental Justice Scorecard will be updated annually, with the
+              goal of creating a durable, robust, and comprehensive tool to
+              assess and demonstrate the federal government&apos;s efforts to
+              secure environmental justice for all.
+            </p>
+          </Grid>
+        </Grid>
       </MainGridContainer>
     </Layout>
   );
