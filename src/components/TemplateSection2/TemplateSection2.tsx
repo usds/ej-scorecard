@@ -56,6 +56,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             environmental laws. The following information reflects some of the
             environmental and civil rights work{` `}
             <strong>{agencyData.THE_A_NAME}</strong>
+            {` `}
             has done from January 2021 to September 2022.
           </p>
 
