@@ -9,7 +9,7 @@ import {
 
 import { TemplateSectionProps } from '@/types';
 import { DELIMITERS } from '@/data/constants';
-import { splitTextIntoParagraphs } from '../util';
+import { possessivePlural, splitTextIntoParagraphs } from '../util';
 
 const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
   const {
@@ -61,10 +61,10 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
 
           <p>
             This Phase One Scorecard provides an update on initial progress made
-            by {THE_A_NAME} in implementing the Justice40 Initiative. Future
-            versions of the Environmental Justice Scorecard will provide
-            additional information and updates on the benefits of Justice40
-            covered programs.
+            by <strong>{THE_A_NAME}</strong> in implementing the Justice40
+            Initiative. Future versions of the Environmental Justice Scorecard
+            will provide additional information and updates on the benefits of
+            Justice40 covered programs.
           </p>
 
           {A_EMAIL && (
@@ -79,9 +79,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </p>
           )}
 
-          <div>
-            <strong>Phase one Scorecard metrics and highlights include:</strong>
-          </div>
+          <div>Phase one Scorecard metrics and highlights include:</div>
 
           <ul className={`bullet1`}>
             {J40_TCP && (
@@ -144,7 +142,9 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {J40_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${A_ACRONYM}'s Justice40 Initiative highlights`}
+                {`${possessivePlural(
+                  A_ACRONYM,
+                )} Justice40 Initiative highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.J40_HIGH.includes(DELIMITERS.PARAGRAPH)

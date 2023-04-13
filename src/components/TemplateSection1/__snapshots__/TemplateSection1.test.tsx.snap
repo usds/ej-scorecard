@@ -256,13 +256,13 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
       </p>
       <p>
         This Phase One Scorecard provides an update on initial progress made by 
-        the Test Agency
+        <strong>
+          the Test Agency
+        </strong>
          in implementing the Justice40 Initiative. Future versions of the Environmental Justice Scorecard will provide additional information and updates on the benefits of Justice40 covered programs.
       </p>
       <div>
-        <strong>
-          Phase one Scorecard metrics and highlights include:
-        </strong>
+        Phase one Scorecard metrics and highlights include:
       </div>
       <ul
         className="bullet1"

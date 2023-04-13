@@ -9,7 +9,7 @@ import {
 
 import { TemplateSectionProps } from '@/types';
 import { DELIMITERS } from '@/data/constants';
-import { splitTextIntoParagraphs } from '../util';
+import { possessivePlural, splitTextIntoParagraphs } from '../util';
 
 const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
   return (
@@ -106,7 +106,9 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {agencyData.IEJ_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${agencyData.A_ACRONYM}'s Institutionalizing Environmental Justice highlights`}
+                {`${possessivePlural(
+                  agencyData.A_ACRONYM,
+                )} Institutionalizing Environmental Justice highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.IEJ_HIGH.includes(DELIMITERS.PARAGRAPH)

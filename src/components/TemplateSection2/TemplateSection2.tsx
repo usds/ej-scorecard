@@ -9,7 +9,7 @@ import {
 // import * as styles from './TemplateSection2.module.scss';
 
 import { TemplateSectionProps } from '@/types';
-import { splitTextIntoParagraphs } from '../util';
+import { possessivePlural, splitTextIntoParagraphs } from '../util';
 import { DELIMITERS } from '@/data/constants';
 
 const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
@@ -30,7 +30,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${agencyData.A_ACRONYM}'s Environmental and Civil Rights Protection highlights`}
+                {`${possessivePlural(
+                  agencyData.A_ACRONYM,
+                )} Environmental and Civil Rights Protection highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.ECR_HIGH.includes(DELIMITERS.PARAGRAPH)
