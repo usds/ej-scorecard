@@ -54,55 +54,69 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
         <Grid row gap>
           <Grid desktop={{ col: 7 }} tablet={{ col: 10 }} col={12}>
             <p>
-              Narative about the whole-of-governement progress during the first
-              2 years of the Biden Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also
-              the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
+              Welcome to the Biden-Harris Administration&apos;s Environmental
+              Justice Scorecard. On this website, you will find information
+              about what federal agencies are doing to advance environmental
+              justice in communities across America.
             </p>
             <p>
-              Note about now it came together, contributions of the lAC and the
-              WHEIAC. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              President Biden has prioritized environmental justice by launching
+              a whole-of-government effort to confront longstanding
+              environmental injustices and inequities. The Environmental Justice
+              Scorecard is a signature component of this commitment. It is the
+              first-ever government-wide assessment of what the federal
+              government is doing to advance environmental justice.
             </p>
             <p>
-              Note about how this is iterative, first version, first of a kind.
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              The Environmental Justice Scorecard was created at the direction
+              of President Biden to assess the federal government&apos;s
+              progress on advancing environmental justice, to provide
+              transparency for the public, and to increase accountability for
+              federal agencies.
             </p>
+
+            <h2>Phase One Scrorecard</h2>
+
             <p>
-              Encouraging feedback. Praesent ac mauris nisi. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum.
+              This first version of the Environmental Justice Scorecard, or the
+              Phase One Scorecard, presents a baseline assessment of actions
+              taken by federal agencies in 2021 and 2022 to help achieve the
+              Biden-Harris Administration&apos;s environmental justice goals.
+            </p>
+
+            <p>
+              The Phase One Scorecard reports on the progress of XX federal
+              agencies in the following areas:
+            </p>
+
+            <ul>
+              <li>
+                Advancing the President&apos;s
+                {` `}
+                <a
+                  className="usa-link usa-link--alt usa-link--external"
+                  href={`https://www.whitehouse.gov/environmentaljustice/justice40/`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Justice40 Initiative
+                </a>
+                {` `}
+              </li>
+              <li>
+                Implementing and enforcing environmental and civil rights laws
+              </li>
+              <li>
+                Embedding environmental justice throughout the federal
+                government
+              </li>
+            </ul>
+
+            <p>
+              Future versions of the Environmental Justice Scorecard will build
+              on this baseline assessment, measure the progress of federal
+              agencies over time, and include additional information on how this
+              work is benefiting disadvantaged communities.
             </p>
           </Grid>
           <Grid desktop={{ col: 1 }} tablet={{ col: 10 }} col={12}></Grid>
@@ -117,9 +131,9 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
                 <CardBody>
                   <p>
                     {` `}
-                    The Council on Environmental Quality (CEQ) made version 1.0
-                    of the Climate and Economic Justice Screening Tool available
-                    on November 22, 2022
+                    The Climate and Economic Justice Screening Tool helps
+                    federal agencies identify disadvantaged communities that are
+                    overburdened by pollution and underinvestment.
                     {` `}
                   </p>
                 </CardBody>
