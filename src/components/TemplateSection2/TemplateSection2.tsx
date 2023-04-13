@@ -54,7 +54,8 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             environmental justice concerns. Agencies are working to ensure that
             all communities experience the protection of our country’s bedrock
             environmental laws. The following information reflects some of the
-            environmental and civil rights work {agencyData.THE_A_NAME}
+            environmental and civil rights work{` `}
+            <strong>{agencyData.THE_A_NAME}</strong>
             has done from January 2021 to September 2022.
           </p>
 

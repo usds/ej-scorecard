@@ -269,8 +269,11 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
       <p
         className="margin-top-0"
       >
-        Federal agencies are advancing environmental justice by carrying out their responsibilities under the law to identify and address disproportionate and adverse public health and environmental, climate-related, and cumulative impacts on communities with environmental justice concerns. Agencies are working to ensure that all communities experience the protection of our country’s bedrock environmental laws. The following information reflects some of the environmental and civil rights work 
-        the Test Agency
+        Federal agencies are advancing environmental justice by carrying out their responsibilities under the law to identify and address disproportionate and adverse public health and environmental, climate-related, and cumulative impacts on communities with environmental justice concerns. Agencies are working to ensure that all communities experience the protection of our country’s bedrock environmental laws. The following information reflects some of the environmental and civil rights work
+         
+        <strong>
+          the Test Agency
+        </strong>
         has done from January 2021 to September 2022.
       </p>
       <h3>
