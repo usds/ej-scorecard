@@ -8,6 +8,30 @@ import * as styles from './AgencyInfo.module.scss';
 import { AgencyInfoProps } from '@/types';
 import ScorecardSideNav from '../ScorecardSideNav';
 
+// If the phone has a comma in it (implying more than one phone number), split it into
+// two distict phone numbers
+const getPhoneMarkup = (agencyPhone: string) => {
+  if (agencyPhone.includes(`,`)) {
+    const phoneNumberArray = agencyPhone.split(`,`);
+    return (
+      <>
+        <span>
+          <a href={`tel:${phoneNumberArray[0]}`}>{phoneNumberArray[0]}</a>
+        </span>
+        <span>
+          <a href={`tel:${phoneNumberArray[1]}`}>{phoneNumberArray[1]}</a>
+        </span>
+      </>
+    );
+  } else {
+    return (
+      <span>
+        <a href={`tel:${agencyPhone}`}>{agencyPhone}</a>
+      </span>
+    );
+  }
+};
+
 const AgencyInfo: React.FC<AgencyInfoProps> = ({
   agencyData,
   allAgencyNames,
@@ -28,7 +52,7 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <h3>{agencyData.A_NAME}</h3>
               <span>{agencyData.A_ADD1}</span>
               <span>{agencyData.A_ADD2}</span>
-              <span>{agencyData.A_PHONE}</span>
+              {agencyData.A_PHONE && getPhoneMarkup(agencyData.A_PHONE)}
               {agencyData.A_EMAIL !== `` && (
                 <span>
                   <a href={`mailto:${agencyData.A_EMAIL}`}>
@@ -50,7 +74,7 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
           </Grid>
           <Grid col={8}>
             <div className={styles.agencyInfoCol2}>
-              <h2>{`About ${agencyData.A_NAME}`}</h2>
+              <h2>{`About ${agencyData.THE_A_NAME}`}</h2>
               <p>{agencyData.A_MISSION}</p>
               {` `}
             </div>
@@ -60,13 +84,10 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         <Grid row gap>
           <p>
             This page provides information on how{` `}
-            <strong>{agencyData.A_NAME}</strong> is working to reduce climate
-            and environmental burdens and harms in communities across America.
-          </p>
-          <p>
-            {`
-            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
-            `}
+            <strong>{agencyData.THE_A_NAME}</strong> is working to reduce
+            climate and environmental burdens and harms in communities across
+            America. It is part of Phase One of the Biden-Harris
+            Administration&apos;s Environmental Justice Scorecard.
           </p>
         </Grid>
       </Grid>

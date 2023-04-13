@@ -153,7 +153,11 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             Washington, D.C. 20004
           </span>
           <span>
-            (212) 533-3333
+            <a
+              href="tel:(212) 533-3333"
+            >
+              (212) 533-3333
+            </a>
           </span>
           <span>
             <a
@@ -173,7 +177,7 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       >
         <div>
           <h2>
-            About Test Agency
+            About the Test Agency
           </h2>
           <p>
             mission
@@ -190,14 +194,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         This page provides information on how
          
         <strong>
-          Test Agency
+          the Test Agency
         </strong>
-         is working to reduce climate and environmental burdens and harms in communities across America.
-      </p>
-      <p>
-        
-            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
-            
+         is working to reduce climate and environmental burdens and harms in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
       </p>
     </div>
   </div>
@@ -242,18 +241,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
       <p
         className="margin-top-0"
       >
-        For the first time in our nation’s history, the Federal government has made it a goal that 40 percent of the overall benefits of certain Federal investments flow to
-         
-        <a
-          className="usa-link usa-link--alt usa-link--external"
-          href="https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5"
-          rel="noreferrer"
-          target="_blank"
-        >
-          disadvantaged communities
-        </a>
-         
-        that are marginalized, underserved, and overburdened by pollution. The following reflects the historic resources available to communities in Fiscal Year 2022 to implement the Justice40 Initiative. Please visit this page for more information about the
+        As part of President Biden’s
          
         <a
           className="usa-link usa-link--alt usa-link--external"
@@ -264,23 +252,18 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           Justice40 Initiative
         </a>
          
-        and visit
-         
-        <a
-          className="usa-link usa-link--alt usa-link--external"
-          href="aaa.gov/test"
-          rel="noreferrer"
-          target="_blank"
-        >
-          aaa.gov/test
-        </a>
-        .
+        , the federal government is working to ensure that 40 percent of the overall benefits of certain federal investments reach disadvantaged communities that are marginalized and overburdened by pollution and underinvestment. In particular, the President’s Justice40 Initiative applies to federal investments that address climate change, clean energy and energy efficiency, clean transit, affordable and sustainable housing, training and workforce development, remediation and reduction of legacy pollution, and the development of critical clean water and wastewater infrastructure.
       </p>
       <p>
-        
-          The goal of 40 percent of overall benefits refers to all covered programs under the Justice40 Initiative. Information about how these programs will identify and track benefits will be shared in the Phase Two Environmental Justice Scorecard.
-          
+        This Phase One Scorecard provides an update on initial progress made by 
+        the Test Agency
+         in implementing the Justice40 Initiative. Future versions of the Environmental Justice Scorecard will provide additional information and updates on the benefits of Justice40 covered programs.
       </p>
+      <div>
+        <strong>
+          Phase one Scorecard metrics and highlights include:
+        </strong>
+      </div>
       <ul
         className="bullet1"
       >
@@ -288,20 +271,23 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           Justice40 covered programs
+           Justice40 covered program(s)
         </li>
         <li>
           <strong>
             100
           </strong>
            
-          announcements in Fiscal Year 2022
+          funding announcement(s) covered under the Justice40 Initiative
+          <sup>
+            1
+          </sup>
         </li>
         <li>
           <strong>
             100
           </strong>
-           funding that is available to benefit communities **add footnote, that the funding amounts include annual discretionary and mandatory appropriations, Inflation Reduction Act, and Bipartisan Infrastructure Law funding
+           of funding made available from covered programs
         </li>
         <ul>
           <li>
@@ -314,15 +300,13 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
             E3
           </li>
         </ul>
-        <li>
-          Made program modifications for Justice40 covered programs such as:
-        </li>
-        <ul>
-          <li />
-          <li />
-          <li />
-        </ul>
       </ul>
+      <p>
+        <sup>
+          1
+        </sup>
+         This funding amount describes examples of the funding that was made available in Fiscal Year 2022 through Justice40 covered programs. The amount does not represent the total funding that benefits disadvantaged communities. The funding was made available through grants, notices of funding opportunity, and other funding announcements. These funding announcements were from Justice40 covered programs that were funded through discretionary and mandatory appropriations, as well as supplemental appropriations, such as those enacted under the Bipartisan Infrastructure Law (Pub. L. 117-58). The Justice40 Initiative sets a goal that 40 percent of overall benefits from certain federal investments flow to disadvantaged communities.
+      </p>
     </div>
     <div
       className="grid-col-12 tablet:grid-col-10 desktop:grid-col-4"
@@ -338,7 +322,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            Test Agency Justice40 highlights
+            TAG's Justice40 Initiative highlights
           </h3>
           <div
             className="usa-summary-box__text"

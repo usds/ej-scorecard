@@ -153,7 +153,11 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             Washington, D.C. 20004
           </span>
           <span>
-            (212) 533-3333
+            <a
+              href="tel:(212) 533-3333"
+            >
+              (212) 533-3333
+            </a>
           </span>
           <span>
             <a
@@ -173,7 +177,7 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       >
         <div>
           <h2>
-            About Test Agency
+            About the Test Agency
           </h2>
           <p>
             mission
@@ -190,14 +194,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         This page provides information on how
          
         <strong>
-          Test Agency
+          the Test Agency
         </strong>
-         is working to reduce climate and environmental burdens and harms in communities across America.
-      </p>
-      <p>
-        
-            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
-            
+         is working to reduce climate and environmental burdens and harms in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
       </p>
     </div>
   </div>
@@ -242,8 +241,35 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
       <p
         className="margin-top-0"
       >
-        Since the start of the Biden-Harris Administration, Federal agencies have been working to better institutionalize environmental justice into their work, including by implementing Executive Order 12898 and Executive Order 14008. The following section provides information on some of the work the agency has done from January 2021 to September 2022 to institutionalize environmental justice.
+        Since the start of the Biden-Harris Administration, federal agencies have been working to embed environmental justice into all aspects of their work, including by implementing
          
+        <a
+          className="usa-link usa-link--alt usa-link--external"
+          href="https://www.archives.gov/files/federal-register/executive-orders/pdf/12898.pdf"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Executive Order 12898
+        </a>
+         
+        and
+        <a
+          className="usa-link usa-link--alt usa-link--external"
+          href="https://www.federalregister.gov/documents/2021/02/01/2021-02177/tackling-the-climate-crisis-at-home-and-abroad#:~:text=Sec.%20223.%20Justice40,40-percent%20goal."
+          rel="noreferrer"
+          target="_blank"
+        >
+          Executive Order 14008
+        </a>
+        . The following information shares some of the work
+         
+        <strong>
+          the Test Agency
+        </strong>
+         has done from January 2021 to September 2022 to institutionalize environmental justice.
+      </p>
+      <p>
+        Phase One Scorecard metrics and highlights include:
       </p>
       <ul
         className="bullet1"
@@ -252,24 +278,19 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <strong>
             Has
           </strong>
-           an EJ Strategic Plan that
-           
+           an environmental justice Strategic Plan that 
           <strong>
             was not
           </strong>
            
           updated in the past 5 years
         </li>
-        <ul>
-          <li />
-          <li />
-          <li />
-        </ul>
+        <ul />
         <li>
           <strong>
             100
           </strong>
-           EJ tools or resources
+           environmental justice tool(s) or resource(s)
         </li>
         <li>
           <strong>
@@ -281,16 +302,21 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           training for staff on environmental justice, as a general EJ training or civil rights and EJ training
+           trainings for staff on environmental justice, as a general environmental justice training or Civil Rights and environmental justice training
         </li>
         <li>
           <strong>
             100
           </strong>
-           EJ office and internal working groups/steering committees/councils on environmental justice
+           new or strengthened office(s) on environmental justice
+        </li>
+        <li>
+          <strong>
+            100
+          </strong>
+           new or strengthened office internal working group(s)/steering committee(s)/council(s) on environmental justice
            
         </li>
-        <li />
       </ul>
     </div>
     <div
@@ -307,7 +333,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            Institutionalizing EJ at Test Agency
+            TAG's Institutionalizing Environmental Justice highlights
           </h3>
           <div
             className="usa-summary-box__text"

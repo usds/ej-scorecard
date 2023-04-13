@@ -12,6 +12,8 @@ export interface RelativePathData {
 export interface AgencyData {
   id: string;
   A_NAME: string;
+  THE_A_NAME: string;
+  A_ACRONYM: string;
   A_ADD1: string;
   A_ADD2: string;
   A_PHONE: string;
@@ -69,6 +71,7 @@ export interface AgencyData {
   EJTOOL_N: string;
   EJSTAFF_N: string;
   EJTRAIN_N: string;
+  EJ_OFFICE: string;
   EJWG_N: string;
   EJP_NAR: string;
   IEJ_HIGH: string;
@@ -85,6 +88,7 @@ export interface AppHeaderProps extends Pathname {
 export interface ScorecardTemplateProps {
   pageContext: {
     allAgencyNames: string[];
+    allAgencyNamesWithAcronym: string[];
     pathname: string;
     agencyData: AgencyData;
     gatsbyImageData: IGatsbyImageData;
@@ -150,4 +154,8 @@ export interface BtnLaunchExternalProps {
   href: string;
   buttonText: string;
   showlaunchIcon?: boolean;
+}
+
+export interface AppBreadcrumbProps {
+  agencyName: string;
 }

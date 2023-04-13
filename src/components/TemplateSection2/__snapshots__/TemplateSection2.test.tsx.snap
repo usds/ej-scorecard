@@ -153,7 +153,11 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             Washington, D.C. 20004
           </span>
           <span>
-            (212) 533-3333
+            <a
+              href="tel:(212) 533-3333"
+            >
+              (212) 533-3333
+            </a>
           </span>
           <span>
             <a
@@ -173,7 +177,7 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
       >
         <div>
           <h2>
-            About Test Agency
+            About the Test Agency
           </h2>
           <p>
             mission
@@ -190,14 +194,9 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         This page provides information on how
          
         <strong>
-          Test Agency
+          the Test Agency
         </strong>
-         is working to reduce climate and environmental burdens and harms in communities across America.
-      </p>
-      <p>
-        
-            This information is part of the Federal government’s first Environmental Justice Scorecard, which will be updated and improved each year based on public input and feedback. The Environmental Justice Scorecard tracks the work of Federal agencies to deliver on the Justice 40 Initiative, to implement and enforce environmental and civil rights protections on behalf of communities, and to evaluate and develop agency capacity and resources to institutionalize environmental justice.
-            
+         is working to reduce climate and environmental burdens and harms in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
       </p>
     </div>
   </div>
@@ -253,7 +252,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            Test Agency Environmental and Civil Rights highlights
+            TAG's Environmental and Civil Rights Protection highlights
           </h3>
           <div
             className="usa-summary-box__text"
@@ -270,13 +269,24 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
       <p
         className="margin-top-0"
       >
-        Federal agencies are advancing environmental justice by carrying out their responsibilities under the law to identify and address disproportionate and adverse human health, environmental, climate-related and other cumulative impacts on disadvantaged communities, and to ensure that all communities experience the protection of our nation’s bedrock environmental laws. The following information summarizes some of the work the agency has done from January 2021 to September 2022 in these areas.
+        Federal agencies are advancing environmental justice by carrying out their responsibilities under the law to identify and address disproportionate and adverse public health and environmental, climate-related, and cumulative impacts on communities with environmental justice concerns. Agencies are working to ensure that all communities experience the protection of our country’s bedrock environmental laws. The following information reflects some of the environmental and civil rights work 
+        the Test Agency
+        has done from January 2021 to September 2022.
       </p>
       <h3>
         National Environmental Policy Act
       </h3>
       <p>
-        The National Environmental Policy Act (NEPA) requires Federal agencies to consider and disclose the environmental, health, and community impacts of a decision or planned action before taking it. Environmental reviews that agencies conduct through NEPA help ensure the public is informed about the Federal government’s potential actions, that communities have an opportunity to fully and fairly participate in the government’s decision-making process, and that Federal agencies consider ways to protect and enhance the quality of the human environment and advance environmental justice in decision-making.
+        The National Environmental Policy Act (NEPA) requires federal agencies to consider and disclose the environmental, health, and community impacts of a decision or action before taking it. Environmental reviews help ensure the public is informed about potential actions, and give communities an opportunity to participate in the government’s decision-making process. Environmental reviews also ensure that federal agencies consider ways to protect and enhance public health and the environment, and advance environmental justice in their decision-making. The following information highlights some work
+         
+        <strong>
+          the Test Agency
+        </strong>
+         
+        has done from January 2021 to September 2022.
+      </p>
+      <p>
+        Phase One Scorecard metrics and highlights include:
       </p>
       <ul
         className="bullet1"
@@ -288,7 +298,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <strong>
             1
           </strong>
-           project modifications where environmental justice concerns were raised during the NEPA process
+           project modification(s) where environmental justice concerns were raised during the NEPA process
         </li>
         <ul>
           <li>
@@ -312,13 +322,16 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         Title VI of the Civil Rights Act of 1964 and Environmental Justice
       </h3>
       <p>
-        Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving Federal financial assistance on account of their race, color or national origin. Title VI requires Federal agencies to ensure that programs or activities receiving Federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following includes updates from 
+        Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving federal financial assistance on account of their race, color, or national origin. Title VI requires federal agencies to ensure that programs or activities receiving federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following information includes updates from January 2021 to September 2022 from 
         <strong>
-          Test Agency
+          the Test Agency
         </strong>
          on Title VI that are related to environmental justice.
       </p>
       <p />
+      <p>
+        Phase One Scorecard metrics and highlights include:
+      </p>
       <ul
         className="bullet1"
       >
@@ -329,33 +342,32 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           open Title VI or complaints related to environmental justice from January 2021 to September 2022
+           open Title VI investigation(s) or compliance review(s) related to environmental justice
         </li>
         <li>
           <strong>
             100
           </strong>
-           closed Title VI compliance reviews or resolution agreements related to environmental justice from January 2021 to September 2022
-        </li>
-        <li>
-          <strong />
-           Title VI civil rights and environmental justice training
+           closed Title VI compliance review(s) or resolution agreement(s) related to environmental justice
         </li>
       </ul>
       <h3>
-        Centering Justice in Decision-making
+        Centering Justice in Decision-Making
       </h3>
       <p>
-        Federal agencies are working to ensure that the voices, perspectives, and lived experiences of environmental justice communities are heard and reflected in the priorities, policies, investments, and decision-making of the Federal government. The following information summarizes some of the work
+        Federal agencies work to ensure that the voices, perspectives, and lived experiences of communities are heard and reflected in the priorities, policies, and decision-making of the federal government. Agencies also take steps to respect Tribal sovereignty and ensure government-to-government consultation on federal policies. The following information highlights work
          
         <strong>
-          Test Agency
+          the Test Agency
         </strong>
-         did from January 2021 to September 2022 to center environmental justice in its decision-making.
+         has done from January 2021 to September 2022 to center environmental justice in its decision-making.
       </p>
-      <h3>
+      <h4>
         Community Input and Engagement
-      </h3>
+      </h4>
+      <p>
+        Phase One Scorecard metrics and highlights include:
+      </p>
       <ul
         className="bullet1"
       >
@@ -366,7 +378,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           technical assistance outreach events in Fiscal Year 2022
+           technical assistance outreach event(s) in Fiscal Year 2022
         </li>
         <ul>
           <li>
@@ -383,7 +395,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           public processes related to EJ, e.g. RFIs or listening sessions
+           public process(es) related to environmental justice, e.g., requests for information or listening sessions
         </li>
         <ul>
           <li>
@@ -397,9 +409,12 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           </li>
         </ul>
       </ul>
-      <h3>
+      <h4>
         Consultation and Partnership with Tribal Nations
-      </h3>
+      </h4>
+      <p>
+        Phase One Scorecard metrics and highlights include:
+      </p>
       <ul
         className="bullet1"
       >
@@ -410,7 +425,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           Tribal Consultations related to environmental justice from January 2021 to September 2022
+           Tribal Consultation(s) related to environmental justice
         </li>
         <ul>
           <li>
@@ -423,10 +438,6 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
             test
           </li>
         </ul>
-        <li>
-          <strong />
-           trainings on Tribal Consultations or working with Tribes and Indigenous Peoples to advance environmental justice
-        </li>
       </ul>
     </div>
   </div>,

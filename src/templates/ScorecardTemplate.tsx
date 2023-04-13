@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import { Grid } from '@trussworks/react-uswds';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
@@ -7,11 +9,21 @@ import { ScorecardTemplateProps } from '@/types';
 import TemplateSection1 from '@/components/TemplateSection1';
 import TemplateSection2 from '@/components/TemplateSection2';
 import TemplateSection3 from '@/components/TemplateSection3';
+import AppBreadcrumb from '@/components/AppBreadcrumb';
+import { toKebabCase } from '@/components/util';
 
 const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
   pageContext,
 }) => {
-  const { allAgencyNames, pathname, agencyData, gatsbyImageData } = pageContext;
+  const {
+    allAgencyNames,
+    allAgencyNamesWithAcronym,
+    pathname,
+    agencyData,
+    gatsbyImageData,
+  } = pageContext;
+
+  console.log(allAgencyNamesWithAcronym);
 
   return (
     <Layout
@@ -22,16 +34,43 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
       keywords={`${agencyData.A_NAME}, ${agencyData.A_NAME} environmental justice`}
     >
       <MainGridContainer>
-        <h1>{agencyData.A_NAME}</h1>
+        <h1>
+          <AppBreadcrumb agencyName={agencyData.A_NAME} />
+        </h1>
         <AgencyInfo
           agencyData={agencyData}
           allAgencyNames={allAgencyNames}
           pathname={pathname}
           gatsbyImageData={gatsbyImageData}
         />
-        <TemplateSection1 agencyData={agencyData} />
+
+        {(agencyData.J40_TCP ||
+          agencyData.J40_ANNOUNCE ||
+          agencyData.J40_AMOUNT ||
+          agencyData.J40_MOD1 ||
+          agencyData.J40_MOD2 ||
+          agencyData.J40_MOD3) && <TemplateSection1 agencyData={agencyData} />}
+
         <TemplateSection2 agencyData={agencyData} />
-        <TemplateSection3 agencyData={agencyData} />
+
+        {(agencyData.PLAN_BOOL ||
+          agencyData.EJTOOL_N ||
+          agencyData.EJSTAFF_N ||
+          agencyData.EJTRAIN_N ||
+          agencyData.EJ_OFFICE ||
+          agencyData.EJWG_N ||
+          agencyData.EJP_NAR) && <TemplateSection3 agencyData={agencyData} />}
+
+        <Grid row className="return-top">
+          <Grid col={1} offset={11}>
+            <Link
+              className={`usa-link`}
+              to={`/scorecard/${toKebabCase(agencyData.A_NAME)}`}
+            >
+              Return to top
+            </Link>
+          </Grid>
+        </Grid>
       </MainGridContainer>
     </Layout>
   );

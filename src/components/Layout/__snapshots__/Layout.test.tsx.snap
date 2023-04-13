@@ -582,16 +582,16 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                 className="usa-nav__primary-item"
               >
                 <button
-                  aria-controls="nav-drop-down-menu-id-a-e"
+                  aria-controls="nav-drop-down-menu-id-a-g"
                   aria-expanded={false}
                   className="usa-accordion__button usa-nav__link"
-                  data-cy="nav-dropdown-scorecard-nav-a-e"
+                  data-cy="nav-dropdown-scorecard-nav-a-g"
                   data-testid="navDropDownButton"
                   onClick={[Function]}
                   type="button"
                 >
                   <span>
-                    Agencies A - E
+                    Agencies A - G
                   </span>
                 </button>
                 <div
@@ -607,7 +607,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
                     >
                       <ul
                         className="usa-nav__submenu-list"
-                        id="mega-menu-id-a-e"
+                        id="mega-menu-id-a-g"
                       >
                         <li
                           className="usa-nav__submenu-item"
