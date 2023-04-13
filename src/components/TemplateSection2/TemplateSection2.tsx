@@ -9,6 +9,8 @@ import {
 // import * as styles from './TemplateSection2.module.scss';
 
 import { TemplateSectionProps } from '@/types';
+import { splitTextIntoParagraphs } from '../util';
+import { DELIMITERS } from '@/data/constants';
 
 const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
   return (
@@ -30,7 +32,14 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               <SummaryBoxHeading headingLevel="h3">
                 {`${agencyData.A_ACRONYM}'s Environmental and Civil Rights Protection highlights`}
               </SummaryBoxHeading>
-              <SummaryBoxContent>{agencyData.ECR_HIGH}</SummaryBoxContent>
+              <SummaryBoxContent>
+                {agencyData.ECR_HIGH.includes(DELIMITERS.PARAGRAPH)
+                  ? splitTextIntoParagraphs(
+                      agencyData.ECR_HIGH,
+                      DELIMITERS.PARAGRAPH,
+                    ).map((paragraph) => paragraph)
+                  : agencyData.ECR_HIGH}
+              </SummaryBoxContent>
             </SummaryBox>
           </Grid>
         )}

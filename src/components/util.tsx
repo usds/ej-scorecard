@@ -38,3 +38,14 @@ export const isPathInGroupRange = (
   const match = pathname.match(regex);
   return match && agencyGroupRange.includes(match[1].toUpperCase());
 };
+
+/**
+ *
+ * @param text text without paragraphs
+ * @param delimiter characters used to indicate paragraph boundary
+ * @returns {Array}
+ */
+export const splitTextIntoParagraphs = (text: string, delimiter: string) => {
+  const textArray = text.split(delimiter);
+  return textArray.map((paragraph, index) => <p key={index}>{paragraph}</p>);
+};

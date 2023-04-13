@@ -25,3 +25,7 @@ export const FOOTER_CEQ_ADDRESS = {
   CITY_STATE: `Washington, D.C. 20506`,
   PHONE: `(202) 395-5750`,
 };
+
+export const DELIMITERS = {
+  PARAGRAPH: `%%%%`,
+};

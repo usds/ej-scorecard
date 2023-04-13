@@ -153,7 +153,11 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
             Washington, D.C. 20004
           </span>
           <span>
-            (212) 533-3333
+            <a
+              href="tel:(212) 533-3333"
+            >
+              (212) 533-3333
+            </a>
           </span>
           <span>
             <a
