@@ -102,14 +102,14 @@ const AppFooter: React.FC = () => {
                 alt="Agency logo"
               />
             </Grid>
-            <Grid col={11}>
+            <Grid col={8}>
               <div className={styles.footerTextBox}>
                 <div>
                   The Council on Environmental Quality (CEQ), Office of
                   Management and Budget (OMB), and the White House Environmental
                   Justice Interagency Council (IAC)
                 </div>
-                <div>
+                {/* <div>
                   CEQ, OMB and the IAC acknowledges and appreciates the support
                   provided by the
                   {` `}
@@ -145,7 +145,7 @@ const AppFooter: React.FC = () => {
                   </a>
                   {` `}
                   Geoplatform.
-                </div>
+                </div> */}
               </div>
             </Grid>
           </Grid>

@@ -12,21 +12,29 @@ import {
 } from '@/data/constants';
 import { isPathInGroupRange } from '../util';
 
+import * as styles from './ScorecardSideNav.module.scss';
+
 const ScorecardSideNav: React.FC<ScorecardSideNavProps> = ({
   allAgencyNames,
   pathname,
 }) => {
   if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE1)) {
     return (
-      <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE1)} />
+      <div className={styles.scorecardSideNavContainer}>
+        <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE1)} />
+      </div>
     );
   } else if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE2)) {
     return (
-      <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE2)} />
+      <div className={styles.scorecardSideNavContainer}>
+        <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE2)} />
+      </div>
     );
   } else if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE3)) {
     return (
-      <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE3)} />
+      <div className={styles.scorecardSideNavContainer}>
+        <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE3)} />
+      </div>
     );
   } else {
     return null;

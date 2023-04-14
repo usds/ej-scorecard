@@ -124,9 +124,7 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
             <CardGroup>
               <Card>
                 <CardHeader>
-                  <h2 className="usa-card__heading">
-                    CEJST 1.0 is now available
-                  </h2>
+                  <h2 className="usa-card__heading">CEJST 1.0 is available</h2>
                 </CardHeader>
                 <CardBody>
                   <p>
@@ -144,7 +142,7 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
                   />
                 </CardFooter>
               </Card>
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <h2 className="usa-card__heading">Agency Highlights</h2>
                 </CardHeader>
@@ -165,13 +163,13 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
                     showlaunchIcon={false}
                   />
                 </CardFooter>
-              </Card>
+              </Card> */}
             </CardGroup>
           </Grid>
         </Grid>
 
         <Grid row>
-          <h1>{`View Agency progress`}</h1>
+          <h1>{`View Agency Progress`}</h1>
           <span className={`scorecard-header-span`}>
             (Click on any Agency to see additional details)
           </span>

@@ -59,10 +59,10 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               </a>
               {` `}, directs the White House Office of Management and Budget, in
               coordination with the White House Council on Environmental
-              Quality, the U.S. Digital Service, and other relevant agency
-              heads, to publish an annual Environmental Justice Scorecard
-              detailing agency environmental justice performance measures. The
-              White House Environmental Justice Interagency Council (IAC)
+              Quality, and other relevant agency heads, to publish an annual
+              Environmental Justice Scorecard detailing agency environmental
+              justice performance measures. The White House Environmental
+              Justice Interagency Council (IAC)
               {` `}
               <a
                 className="usa-link usa-link--alt usa-link--external"
@@ -77,7 +77,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               environmental injustice.
             </p>
 
-            <h2>Scorecard Phase One</h2>
+            <h2>Phase One Scorecard</h2>
 
             <p>
               The Phase One Scorecard incorporates recommendations and feedback
@@ -126,6 +126,46 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               goal of creating a durable, robust, and comprehensive tool to
               assess and demonstrate the federal government&apos;s efforts to
               secure environmental justice for all.
+            </p>
+
+            <h2>About the Justice40 Initiative</h2>
+
+            <p>
+              President Biden’s
+              {` `}
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={`https://www.whitehouse.gov/environmentaljustice/justice40/`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Justice40 Initiative
+              </a>
+              {` `}
+              is a key piece of the Biden-Harris Administration’s environmental
+              justice agenda. Under the Justice40 Initiative, the federal
+              government is working to ensure that 40 percent of the overall
+              benefits of certain federal investments in climate, clean energy,
+              and other areas reach disadvantaged communities that are
+              marginalized and overburdened by pollution and underinvestment.
+            </p>
+
+            <p>
+              The
+              {` `}
+              <a
+                className="usa-link usa-link--alt usa-link--external"
+                href={`https://www.whitehouse.gov/wp-content/uploads/2021/07/M-21-28.pdf`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Interim Implementation Guidance for the Justice40 Initiative
+              </a>
+              {` `}
+              provides guidance to agencies on how to identify and track these
+              benefits[CEQ1] . Future versions of the Environmental Justice
+              Scorecard will provide additional information and updates on the
+              benefits of covered programs in the Justice40 Initiative.
             </p>
           </Grid>
         </Grid>

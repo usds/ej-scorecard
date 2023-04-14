@@ -1,5 +1,7 @@
-// @use "uswds-core" as *;
+@use "uswds-core" as *;
 
-// .scorecardSideNavContainer{
-
-// }
+.scorecardSideNavContainer{
+    @include at-media-max("desktop") {
+        display: none;
+          }
+}
