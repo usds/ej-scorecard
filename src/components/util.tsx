@@ -51,5 +51,7 @@ export const splitTextIntoParagraphs = (text: string, delimiter: string) => {
 };
 
 export const possessivePlural = (text: string) => {
-  return text.slice(-1) === `s` ? `${text}'` : `${text}'s`;
+  return text.slice(-1) === `s` || text.slice(-1) === `S`
+    ? `${text}'`
+    : `${text}'s`;
 };

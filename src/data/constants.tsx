@@ -3,7 +3,7 @@
 export const NON_DROPDOWN_NAV_LINK_NAMES = [`Scorecard`, `About`, `Contact`];
 export const NON_DROPDOWN_PAGE_ENDPOINTS = [`/scorecard`, `/about`, `/contact`];
 export const PAGE_ENDPOINTS_ES = [`/es/`, `/es/about`, `/es/contact`];
-export const AGENCY_NAME_GROUPS = [`A - G`, `D`, `H - T`];
+export const AGENCY_NAME_GROUPS = [`A - G`, `D`, `H - V`];
 
 // Todo: change to AGENCY_GROUP1_RANGE
 export const AGENCY_NAME_RANGE1 = [`A`, `B`, `C`, `E`, `F`, `G`];

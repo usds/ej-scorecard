@@ -58,8 +58,8 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
                 Tackling the Climate Crisis at Home and Abroad
               </a>
               {` `}, directs the White House Office of Management and Budget, in
-              coordination with the White House Council on Environmental
-              Quality, and other relevant agency heads, to publish an annual
+              coordination with the White House Council on Environmental Quality
+              and other relevant agency heads, to publish an annual
               Environmental Justice Scorecard detailing agency environmental
               justice performance measures. The White House Environmental
               Justice Interagency Council (IAC)
