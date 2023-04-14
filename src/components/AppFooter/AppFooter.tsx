@@ -105,9 +105,8 @@ const AppFooter: React.FC = () => {
             <Grid col={8}>
               <div className={styles.footerTextBox}>
                 <div>
-                  The Council on Environmental Quality (CEQ), Office of
-                  Management and Budget (OMB), and the White House Environmental
-                  Justice Interagency Council (IAC)
+                  The Office of Management and Budget and the Council on
+                  Environmental Quality
                 </div>
                 {/* <div>
                   CEQ, OMB and the IAC acknowledges and appreciates the support

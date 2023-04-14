@@ -290,7 +290,7 @@ exports[`rendering of AppFooter Component > checks if component renders 1`] = `
         >
           <div>
             <div>
-              The Council on Environmental Quality (CEQ), Office of Management and Budget (OMB), and the White House Environmental Justice Interagency Council (IAC)
+              The Office of Management and Budget and the Council on Environmental Quality
             </div>
           </div>
         </div>
@@ -997,7 +997,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
           >
             <div>
               <div>
-                The Council on Environmental Quality (CEQ), Office of Management and Budget (OMB), and the White House Environmental Justice Interagency Council (IAC)
+                The Office of Management and Budget and the Council on Environmental Quality
               </div>
             </div>
           </div>
