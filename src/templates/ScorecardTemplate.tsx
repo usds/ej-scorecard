@@ -47,6 +47,9 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
         {(agencyData.J40_TCP ||
           agencyData.J40_ANNOUNCE ||
           agencyData.J40_AMOUNT ||
+          agencyData.J40_E1 ||
+          agencyData.J40_E2 ||
+          agencyData.J40_E3 ||
           agencyData.J40_MOD1 ||
           agencyData.J40_MOD2 ||
           agencyData.J40_MOD3) && <TemplateSection1 agencyData={agencyData} />}
