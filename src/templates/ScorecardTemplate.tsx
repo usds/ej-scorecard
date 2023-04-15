@@ -54,7 +54,33 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
           agencyData.J40_MOD2 ||
           agencyData.J40_MOD3) && <TemplateSection1 agencyData={agencyData} />}
 
-        <TemplateSection2 agencyData={agencyData} />
+        {(agencyData.A_NEPA ||
+          agencyData.NUM_NEPA ||
+          agencyData.NEPA_H1 ||
+          agencyData.NEPA_H2 ||
+          agencyData.NEPA_H3 ||
+          agencyData.NEPA_TRAIN ||
+          agencyData.TITLEVI_NAR ||
+          agencyData.TITLEVI_N ||
+          agencyData.TITLEVI_R_N ||
+          agencyData.TITLEVI_CR_EJ ||
+          agencyData.A_NAR ||
+          agencyData.TA_N ||
+          agencyData.TA_E1 ||
+          agencyData.TA_E2 ||
+          agencyData.TA_E3 ||
+          agencyData.PP_N ||
+          agencyData.PP_E1 ||
+          agencyData.PP_E2 ||
+          agencyData.PP_E3 ||
+          agencyData.TC_NAR ||
+          agencyData.TC_N ||
+          agencyData.TC_E1 ||
+          agencyData.TC_E2 ||
+          agencyData.TC_E3 ||
+          agencyData.TC_TRAIN_N) && (
+          <TemplateSection2 agencyData={agencyData} />
+        )}
 
         {(agencyData.PLAN_BOOL ||
           agencyData.EJTOOL_N ||
