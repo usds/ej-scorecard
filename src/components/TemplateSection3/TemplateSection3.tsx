@@ -38,6 +38,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </a>
             {` `}
             and
+            {` `}
             <a
               className="usa-link usa-link--alt usa-link--external"
               href={`https://www.federalregister.gov/documents/2021/02/01/2021-02177/tackling-the-climate-crisis-at-home-and-abroad#:~:text=Sec.%20223.%20Justice40,40-percent%20goal.`}
@@ -82,13 +83,12 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {agencyData.EJTRAIN_N && (
               <li>
                 <strong>{agencyData.EJTRAIN_N}</strong> trainings for staff on
-                environmental justice, as a general environmental justice
-                training or Civil Rights and environmental justice training
+                environmental justice
               </li>
             )}
             {agencyData.EJ_OFFICE && (
               <li>
-                <strong>{agencyData.EJTRAIN_N}</strong> new or strengthened
+                <strong>{agencyData.EJ_OFFICE}</strong> new or strengthened
                 office(s) on environmental justice
               </li>
             )}

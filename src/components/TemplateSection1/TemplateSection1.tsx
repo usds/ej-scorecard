@@ -79,7 +79,10 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </p>
           )}
 
-          <div>Phase one Scorecard metrics and highlights include:</div>
+          <div>
+            Phase One Scorecard metrics and highlights in Fiscal Year 2022
+            include:
+          </div>
 
           <ul className={`bullet1`}>
             {J40_TCP && (
@@ -92,13 +95,13 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
                 <strong>{J40_ANNOUNCE}</strong>
                 {` `}
                 funding announcement(s) covered under the Justice40 Initiative
-                <sup>1</sup>
               </li>
             )}
             {J40_AMOUNT && (
               <li>
-                <strong>{J40_AMOUNT}</strong> of funding made available from
+                <strong>{J40_AMOUNT}</strong> in funding made available from
                 covered programs
+                <sup>1</sup>
               </li>
             )}
             <ul>

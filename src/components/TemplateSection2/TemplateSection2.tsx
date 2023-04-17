@@ -113,7 +113,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
 
                 {agencyData.NEPA_TRAIN && (
                   <li>
-                    <strong>{agencyData.NEPA_TRAIN}</strong> trainings on
+                    <strong>{agencyData.NEPA_TRAIN}</strong> training(s) on
                     environmental justice considerations during NEPA reviews
                   </li>
                 )}
@@ -174,18 +174,29 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </>
           )}
 
-          <h3>Centering Justice in Decision-Making</h3>
-          <p>
-            Federal agencies work to ensure that the voices, perspectives, and
-            lived experiences of communities are heard and reflected in the
-            priorities, policies, and decision-making of the federal government.
-            Agencies also take steps to respect Tribal sovereignty and ensure
-            government-to-government consultation on federal policies. The
-            following information highlights work{` `}
-            <strong>{agencyData.THE_A_NAME}</strong> has done from January 2021
-            to September 2022 to center environmental justice in its
-            decision-making.
-          </p>
+          {/* Centering Justice section will require all fields from Community Input and Tribal Nations */}
+          {(agencyData.A_NAR ||
+            agencyData.TA_N ||
+            agencyData.PP_N ||
+            agencyData.TC_NAR ||
+            agencyData.TC_E1 ||
+            agencyData.TC_E2 ||
+            agencyData.TC_E3) && (
+            <>
+              <h3>Centering Justice in Decision-Making</h3>
+              <p>
+                Federal agencies work to ensure that the voices, perspectives,
+                and lived experiences of communities are heard and reflected in
+                the priorities, policies, and decision-making of the federal
+                government. Agencies also take steps to respect Tribal
+                sovereignty and ensure government-to-government consultation on
+                federal policies. The following information highlights work{` `}
+                <strong>{agencyData.THE_A_NAME}</strong> has done from January
+                2021 to September 2022 to center environmental justice in its
+                decision-making.
+              </p>
+            </>
+          )}
 
           {/* Community Input requires at least one metric (A_NAR, TA_N or PP_N) */}
           {(agencyData.A_NAR || agencyData.TA_N || agencyData.PP_N) && (
@@ -236,7 +247,8 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {agencyData.TC_N && (
               <li>
                 <strong>{agencyData.TC_N}</strong> Tribal Consultation(s)
-                related to environmental justice
+                related to environmental justice from January 2021 to Septemeber
+                2022
               </li>
             )}
             <ul>

@@ -253,6 +253,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
         </a>
          
         and
+         
         <a
           className="usa-link usa-link--alt usa-link--external"
           href="https://www.federalregister.gov/documents/2021/02/01/2021-02177/tackling-the-climate-crisis-at-home-and-abroad#:~:text=Sec.%20223.%20Justice40,40-percent%20goal."
@@ -302,11 +303,11 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           trainings for staff on environmental justice, as a general environmental justice training or Civil Rights and environmental justice training
+           trainings for staff on environmental justice
         </li>
         <li>
           <strong>
-            100
+            hello
           </strong>
            new or strengthened office(s) on environmental justice
         </li>

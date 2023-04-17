@@ -29,6 +29,21 @@
 Some USWDS components have pseudo elements (::before and ::after) that use the mask CSS property. This property does not always render in Chrome 108 (seems to work in FF  and Safari)
 */
 
+//General styling
+
+.mt-unset {
+  margin-top: unset;
+}
+
+.mb-unset {
+  margin-bottom: unset;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+
 // This control the icon in the alerts
 .usa-alert--info:before {
     -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=) no-repeat center/contain;
@@ -155,12 +170,6 @@ li.usa-nav__primary-item a:hover::after{
 // Card styles
 .usa-card__footer {
   align-self: center;
-}
-
-// Scorecard Agency progress header
-.scorecard-header-span {
-  padding-top: 31px;
-  padding-left: 10px;
 }
 
 //Agency progress cards

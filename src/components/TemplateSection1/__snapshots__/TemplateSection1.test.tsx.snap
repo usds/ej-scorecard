@@ -262,7 +262,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
          in implementing the Justice40 Initiative. Future versions of the Environmental Justice Scorecard will provide additional information and updates on the benefits of Justice40 covered programs.
       </p>
       <div>
-        Phase one Scorecard metrics and highlights include:
+        Phase One Scorecard metrics and highlights in Fiscal Year 2022 include:
       </div>
       <ul
         className="bullet1"
@@ -279,15 +279,15 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           </strong>
            
           funding announcement(s) covered under the Justice40 Initiative
-          <sup>
-            1
-          </sup>
         </li>
         <li>
           <strong>
             100
           </strong>
-           of funding made available from covered programs
+           in funding made available from covered programs
+          <sup>
+            1
+          </sup>
         </li>
         <ul>
           <li>

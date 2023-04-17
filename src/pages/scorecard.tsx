@@ -75,7 +75,7 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
               federal agencies.
             </p>
 
-            <h2>Phase One Scrorecard</h2>
+            <h2>Phase One Scorecard</h2>
 
             <p>
               This first version of the Environmental Justice Scorecard, or the
@@ -85,7 +85,7 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
             </p>
 
             <p>
-              The Phase One Scorecard reports on the progress of XX federal
+              The Phase One Scorecard reports on the progress of 24 federal
               agencies in the following areas:
             </p>
 
@@ -168,12 +168,11 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
           </Grid>
         </Grid>
 
-        <Grid row>
-          <h1>{`View Agency Progress`}</h1>
-          <span className={`scorecard-header-span`}>
-            (Click on any Agency to see additional details)
-          </span>
-        </Grid>
+        <h1 className={`mb-unset`}>{`View Agency Progress`}</h1>
+        <p className={`mt-unset mb-32`}>
+          Select an agency below to view its baseline assessment and progress on
+          environmental justice.
+        </p>
 
         <Grid row>
           <div className="agency-progress-section">

@@ -34,7 +34,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
 
         <Grid row gap>
           <Grid desktop={{ col: 7 }} tablet={{ col: 10 }} col={12}>
-            <h2>About the Scorecard</h2>
+            <h2>About the Environmental Justice Scorecard</h2>
 
             <p>
               President Biden prioritized environmental justice from the start
@@ -62,7 +62,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               and other relevant agency heads, to publish an annual
               Environmental Justice Scorecard detailing agency environmental
               justice performance measures. The White House Environmental
-              Justice Interagency Council (IAC)
+              Justice
               {` `}
               <a
                 className="usa-link usa-link--alt usa-link--external"
@@ -70,14 +70,14 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                White House Environmental Justice Interagency Council (IAC)
+                Interagency Council (IAC)
               </a>
               {` `} is also directed to develop performance measures to ensure
               accountability for work to address current and historic
               environmental injustice.
             </p>
 
-            <h2>Phase One Scorecard</h2>
+            <h2>The Phase One Scorecard</h2>
 
             <p>
               The Phase One Scorecard incorporates recommendations and feedback
@@ -163,9 +163,9 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               </a>
               {` `}
               provides guidance to agencies on how to identify and track these
-              benefits[CEQ1] . Future versions of the Environmental Justice
-              Scorecard will provide additional information and updates on the
-              benefits of covered programs in the Justice40 Initiative.
+              benefits. Future versions of the Environmental Justice Scorecard
+              will provide additional information and updates on the benefits of
+              covered programs in the Justice40 Initiative.
             </p>
           </Grid>
         </Grid>
