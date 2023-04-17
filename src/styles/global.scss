@@ -43,6 +43,9 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
   margin-bottom: 2rem;
 }
 
+#main-content {
+  min-height: 60vh;
+}
 
 // This control the icon in the alerts
 .usa-alert--info:before {
