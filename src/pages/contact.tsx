@@ -1,35 +1,37 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { defineMessages, useIntl } from 'react-intl';
-import {
-  SummaryBox,
-  SummaryBoxContent,
-  SummaryBoxHeading,
-} from '@trussworks/react-uswds';
+import { FormattedMessage, defineMessages, useIntl } from 'react-intl';
 
 import Layout from '@/components/Layout';
 import MainGridContainer from '@/components/MainGridContainer';
 import { NON_DROPDOWN_PAGE_ENDPOINTS } from '@/data/constants';
 import { PageProps } from '@/types';
 
-const THIRD_PAGE_COPY = defineMessages({
+const CONTACT_PAGE_COPY = defineMessages({
   HEADING1: {
-    id: `third.page.copy.HEADING1`,
-    defaultMessage: `Third Page`,
-    description: `page heading`,
+    id: `contact.page.copy.HEADING1`,
+    defaultMessage: `Contact`,
+    description: `contact page heading`,
   },
-  SUMMARY_TITLE: {
-    id: `third.page.copy.SUMMARY_TITLE`,
-    defaultMessage: `Key Information`,
-    description: `summary title`,
-  },
-  SUMMARY_CONTENT: {
-    id: `third.page.copy.SUMMARY_CONTENT`,
-    defaultMessage: `Summary content for page 3`,
-    description: `summary title`,
+  HEADING2: {
+    id: `contact.page.copy.HEADING2`,
+    defaultMessage: `Send Email`,
+    description: `contact page heading 2`,
   },
 });
 
+const CONTACT_PAGE_COPY_JSX = {
+  BODY: (
+    <FormattedMessage
+      id={`contact.page.body`}
+      defaultMessage={`For general feedback, email: <link1>EJScorecard-Support@omb.eop.gov</link1>`}
+      description={`contact body`}
+      values={{
+        link1: (msg) => <a href={`mailto:${msg}`}>{msg}</a>,
+      }}
+    />
+  ),
+};
 const ThirdPage: React.FC<PageProps> = ({ data }) => {
   const intl = useIntl();
 
@@ -44,15 +46,9 @@ const ThirdPage: React.FC<PageProps> = ({ data }) => {
       keywords={`contact, environmental justice questions, council on environmental quality`}
     >
       <MainGridContainer>
-        <h1>{intl.formatMessage(THIRD_PAGE_COPY.HEADING1)}</h1>
-        <SummaryBox className={`summary-box`}>
-          <SummaryBoxHeading headingLevel="h3">
-            {intl.formatMessage(THIRD_PAGE_COPY.SUMMARY_TITLE)}
-          </SummaryBoxHeading>
-          <SummaryBoxContent>
-            {intl.formatMessage(THIRD_PAGE_COPY.SUMMARY_CONTENT)}
-          </SummaryBoxContent>
-        </SummaryBox>
+        <h1>{intl.formatMessage(CONTACT_PAGE_COPY.HEADING1)}</h1>
+        <h2>{intl.formatMessage(CONTACT_PAGE_COPY.HEADING2)}</h2>
+        <p>{CONTACT_PAGE_COPY_JSX.BODY}</p>
       </MainGridContainer>
     </Layout>
   );
