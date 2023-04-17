@@ -112,7 +112,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               based on the type, size, and mission of each federal agency. For
               example, some but not all of the agencies participating in the
               Phase One Scorecard are members of the IAC and have Justice40
-              covered programs. If data were unavailable for a federal agency,
+              covered programs. If data are unavailable for a federal agency,
               the corresponding metrics do not appear on that agency&apos;s
               page.
             </p>
@@ -144,10 +144,11 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               {` `}
               is a key piece of the Biden-Harris Administration’s environmental
               justice agenda. Under the Justice40 Initiative, the federal
-              government is working to ensure that 40 percent of the overall
-              benefits of certain federal investments in climate, clean energy,
-              and other areas reach disadvantaged communities that are
-              marginalized and overburdened by pollution and underinvestment.
+              government is working towards the goal to ensure that 40 percent
+              of the overall benefits of certain federal investments in climate,
+              clean energy, and other areas reach disadvantaged communities that
+              are marginalized and overburdened by pollution and
+              underinvestment.
             </p>
 
             <p>

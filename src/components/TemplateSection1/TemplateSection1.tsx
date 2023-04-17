@@ -42,14 +42,14 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {` `}
             <a
               className="usa-link usa-link--alt usa-link--external"
-              href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
+              href={`https://www.whitehouse.gov/environmentaljustice/justice40/`}
               target="_blank"
               rel="noreferrer"
             >
               Justice40 Initiative
             </a>
-            {` `}, the federal government is working to ensure that 40 percent
-            of the overall benefits of certain federal investments reach
+            {` `}, the federal government is working toward the goal that 40
+            percent of the overall benefits of certain federal investments reach
             disadvantaged communities that are marginalized and overburdened by
             pollution and underinvestment. In particular, the President’s
             Justice40 Initiative applies to federal investments that address

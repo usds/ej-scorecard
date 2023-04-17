@@ -183,7 +183,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             agencyData.TC_E2 ||
             agencyData.TC_E3) && (
             <>
-              <h3>Centering Justice in Decision-Making</h3>
+              <h3>Centering Environmental Justice in Decision-Making</h3>
               <p>
                 Federal agencies work to ensure that the voices, perspectives,
                 and lived experiences of communities are heard and reflected in
