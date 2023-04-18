@@ -65,7 +65,7 @@ const AppFooter: React.FC = () => {
       <a
         className={`footer-link-first-child`}
         key={`col1-link1`}
-        href={`#`}
+        href={`https://www.usa.gov/`}
         target={`_blank`}
       >
         Find a contact at USA.gov

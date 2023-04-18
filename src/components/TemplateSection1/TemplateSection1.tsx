@@ -124,7 +124,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             )}
           </ul>
 
-          {J40_ANNOUNCE && (
+          {J40_AMOUNT && (
             <p>
               <sup>1</sup> This funding amount describes examples of the funding
               that was made available in Fiscal Year 2022 through Justice40
