@@ -144,11 +144,10 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               {` `}
               is a key piece of the Biden-Harris Administration’s environmental
               justice agenda. Under the Justice40 Initiative, the federal
-              government is working towards the goal to ensure that 40 percent
-              of the overall benefits of certain federal investments in climate,
-              clean energy, and other areas reach disadvantaged communities that
-              are marginalized and overburdened by pollution and
-              underinvestment.
+              government is working towards the goal that 40 percent of the
+              overall benefits of certain federal investments in climate, clean
+              energy, and other areas reach disadvantaged communities that are
+              marginalized and overburdened by pollution and underinvestment.
             </p>
 
             <p>
