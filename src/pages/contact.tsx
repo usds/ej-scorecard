@@ -24,7 +24,7 @@ const CONTACT_PAGE_COPY_JSX = {
   BODY: (
     <FormattedMessage
       id={`contact.page.body`}
-      defaultMessage={`For general feedback, email: <link1>EJScorecard-Support@omb.eop.gov</link1>`}
+      defaultMessage={`For general feedback, email: <link1>EJScorecard-Support@omb.eop.gov</link1>.`}
       description={`contact body`}
       values={{
         link1: (msg) => <a href={`mailto:${msg}`}>{msg}</a>,
