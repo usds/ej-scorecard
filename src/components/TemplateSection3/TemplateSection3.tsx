@@ -58,7 +58,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {agencyData.PLAN_BOOL && agencyData.PLAN_UPDATE && (
               <li>
                 <strong>{agencyData.PLAN_BOOL}</strong> an environmental justice
-                Strategic Plan that <strong>{agencyData.PLAN_UPDATE}</strong>
+                strategic plan that <strong>{agencyData.PLAN_UPDATE}</strong>
                 {` `}
                 updated in the past 5 years
               </li>
@@ -82,8 +82,8 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             )}
             {agencyData.EJTRAIN_N && (
               <li>
-                <strong>{agencyData.EJTRAIN_N}</strong> trainings for staff on
-                environmental justice
+                <strong>{agencyData.EJTRAIN_N}</strong> internal training(s) for
+                staff on environmental justice
               </li>
             )}
             {agencyData.EJ_OFFICE && (
@@ -94,7 +94,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             )}
             {agencyData.EJWG_N && (
               <li>
-                <strong>{agencyData.EJWG_N}</strong> new or strengthened office
+                <strong>{agencyData.EJWG_N}</strong> new or strengthened
                 internal working group(s)/steering committee(s)/council(s) on
                 environmental justice{` `}
               </li>
@@ -106,9 +106,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {agencyData.IEJ_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(
-                  agencyData.A_ACRONYM,
-                )} Institutionalizing Environmental Justice highlights`}
+                {`${possessivePlural(agencyData.A_ACRONYM)} highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.IEJ_HIGH.includes(DELIMITERS.PARAGRAPH)

@@ -77,10 +77,10 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         <Grid row gap>
           <p>
             This page provides information on how{` `}
-            <strong>{agencyData.THE_A_NAME}</strong> is working to reduce
-            climate and environmental burdens and harms in communities across
-            America. It is part of Phase One of the Biden-Harris
-            Administration&apos;s Environmental Justice Scorecard.
+            <strong>{agencyData.THE_A_NAME}</strong> is working to advance
+            environmental justice for in communities across America. It is part
+            of Phase One of the Biden-Harris Administration&apos;s Environmental
+            Justice Scorecard.
           </p>
         </Grid>
       </Grid>

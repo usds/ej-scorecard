@@ -196,7 +196,7 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         <strong>
           the Test Agency
         </strong>
-         is working to reduce climate and environmental burdens and harms in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
+         is working to advance environmental justice for in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
       </p>
     </div>
   </div>
@@ -252,7 +252,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            TAG's Environmental and Civil Rights Protection highlights
+            TAG's highlights
           </h3>
           <div
             className="usa-summary-box__text"
@@ -281,7 +281,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         National Environmental Policy Act
       </h3>
       <p>
-        The National Environmental Policy Act (NEPA) requires federal agencies to consider and disclose the environmental, health, and community impacts of a decision or action before taking it. Environmental reviews help ensure the public is informed about potential actions, and give communities an opportunity to participate in the government’s decision-making process. Environmental reviews also ensure that federal agencies consider ways to protect and enhance public health and the environment, and advance environmental justice in their decision-making. The following information highlights some work
+        The National Environmental Policy Act (NEPA) requires federal agencies to consider and disclose the environmental, health, and community impacts of certain decisions or actions before taking them. Environmental reviews help ensure the public is informed about potential actions, and give communities an opportunity to participate in the government’s decision-making process. Environmental reviews also ensure that federal agencies consider ways to protect and enhance public health and the environment, and advance environmental justice in their decision-making. The following information highlights some work
          
         <strong>
           the Test Agency
@@ -326,7 +326,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
         Title VI of the Civil Rights Act of 1964 and Environmental Justice
       </h3>
       <p>
-        Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving federal financial assistance on account of their race, color, or national origin. Title VI requires federal agencies to ensure that programs or activities receiving federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following information includes updates from January 2021 to September 2022 from 
+        Title VI of the Civil Rights Act of 1964 requires that no person be excluded from participation in, be denied the benefits of, or be subject to discrimination under any program or activity receiving federal financial assistance on account of race, color, or national origin. Title VI requires federal agencies to ensure that programs or activities receiving federal funding, including those that affect human health or the environment, do not use discriminatory criteria, methods, or practices. The following information includes updates from January 2021 to September 2022 from 
         <strong>
           the Test Agency
         </strong>

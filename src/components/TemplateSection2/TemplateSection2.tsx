@@ -30,9 +30,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(
-                  agencyData.A_ACRONYM,
-                )} Environmental and Civil Rights Protection highlights`}
+                {`${possessivePlural(agencyData.A_ACRONYM)} highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.ECR_HIGH.includes(DELIMITERS.PARAGRAPH)
@@ -83,9 +81,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               <p>
                 The National Environmental Policy Act (NEPA) requires federal
                 agencies to consider and disclose the environmental, health, and
-                community impacts of a decision or action before taking it.
-                Environmental reviews help ensure the public is informed about
-                potential actions, and give communities an opportunity to
+                community impacts of certain decisions or actions before taking
+                them. Environmental reviews help ensure the public is informed
+                about potential actions, and give communities an opportunity to
                 participate in the government’s decision-making process.
                 Environmental reviews also ensure that federal agencies consider
                 ways to protect and enhance public health and the environment,
@@ -135,7 +133,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
                 Title VI of the Civil Rights Act of 1964 requires that no person
                 be excluded from participation in, be denied the benefits of, or
                 be subject to discrimination under any program or activity
-                receiving federal financial assistance on account of their race,
+                receiving federal financial assistance on account of race,
                 color, or national origin. Title VI requires federal agencies to
                 ensure that programs or activities receiving federal funding,
                 including those that affect human health or the environment, do

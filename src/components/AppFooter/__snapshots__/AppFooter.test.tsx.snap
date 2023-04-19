@@ -131,7 +131,7 @@ exports[`rendering of AppFooter Component > checks if component renders 1`] = `
               >
                 <a
                   className="footer-link-first-child"
-                  href="#"
+                  href="https://www.usa.gov/"
                   target="_blank"
                 >
                   Find a contact at USA.gov

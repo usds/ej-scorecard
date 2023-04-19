@@ -100,7 +100,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {J40_AMOUNT && (
               <li>
                 <strong>{J40_AMOUNT}</strong> in funding made available from
-                covered programs
+                Justice40 covered programs
                 <sup>1</sup>
               </li>
             )}
@@ -145,9 +145,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {J40_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(
-                  A_ACRONYM,
-                )} Justice40 Initiative highlights`}
+                {`${possessivePlural(A_ACRONYM)} highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.J40_HIGH.includes(DELIMITERS.PARAGRAPH)

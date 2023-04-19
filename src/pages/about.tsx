@@ -34,7 +34,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
 
         <Grid row gap>
           <Grid desktop={{ col: 7 }} tablet={{ col: 10 }} col={12}>
-            <h2>About the Environmental Justice Scorecard</h2>
+            <h2>The Environmental Justice Scorecard</h2>
 
             <p>
               President Biden prioritized environmental justice from the start
@@ -121,7 +121,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               The Phase One Scorecard provides a valuable snapshot of key
               environmental justice work in progress at a particular point in
               time, but it alone cannot fully capture the depth or range of
-              active work or the long-term impact on communities. The
+              active work or the long-term impact in communities. The
               Environmental Justice Scorecard will be updated annually, with the
               goal of creating a durable, robust, and comprehensive tool to
               assess and demonstrate the federal government&apos;s efforts to
