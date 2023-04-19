@@ -1,51 +1,40 @@
 @use "uswds-core" as *;
 
-.logoNavRow {
-    @include u-margin-top(4);
-  
+.logoRow {
+    max-width: 71rem; 
+    height: 4.5rem;
+    @include u-margin-left(auto);
+    @include u-margin-right(auto);
+    @include u-padding-top(1);
+    @include u-padding-bottom(1);
+
     .logo {
-      @include u-width(10);
-      @include u-padding("05");
+      height: 100%;
+      max-width: 100%;
+      display: block;
     }
     
-    // The logoTitle declaration is enabled for widths > 1200px
-    .logoTitle {
-      text-decoration: none;
-      @include u-display("flex");
-      @include u-flex-direction("column");
-      @include typeset("sans", 10, 3);
-      max-width: 270px;
-      min-width: 218px;
-      cursor: pointer;
-    }
-  
-    .navLinks {
-      @include u-display("flex");
-      justify-content: end;
-    }
-  
-    // This media query limits this declaration to 1024 < width < 1200px
+    // less than 1024 px
     @include at-media-max("desktop-lg") {
-      .logoTitle {
-        @include typeset("sans", 7, 3);
-      }
+      padding-left: 1rem;
     }
-  
-    // This media query limits this declaration to 880 < width < 1024px
-    @include at-media-max("tablet-lg") {
-      .logoTitle {
-        @include typeset("sans", 7, 2);
-      }
+}
+
+.navRow{
+    max-width: 23rem; 
+    height: 4rem;
+    @include u-margin-left(auto);
+    @include u-margin-right(auto);
+    @include u-padding-top(1);
+    @include u-padding-bottom(1);
+
+    @media screen and (min-width: 1024px) and (max-width: 1200px){
+      max-width: 27rem;
     }
-  
-    // This media query limits this declaration to 640 < width < 880px
-    @include at-media-max("tablet") {
-      .logoTitle {
-        @include typeset("sans", 5, 2);
+    
+    @include at-media-max("desktop") {
+      max-width: 5rem;
+      margin-right: 0;
       }
-  
-      .betaPill {
-        @include u-font("body", "3xs");
-      }
-    }
-  }
+    
+}
