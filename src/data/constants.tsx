@@ -4,7 +4,7 @@ export const NON_DROPDOWN_NAV_LINK_NAMES = [`Scorecard`, `About`, `Contact`];
 export const NON_DROPDOWN_PAGE_ENDPOINTS = [`/scorecard`, `/about`, `/contact`];
 export const PAGE_ENDPOINTS_ES = [`/es/`, `/es/about`, `/es/contact`];
 
-export const NUMBER_SUB_NAV_LINKS_PER_COLUMN = 4;
+export const NUMBER_SUB_NAV_LINKS_PER_COLUMN = 5;
 
 // nameGroup is the grouping of agency names and how they will display on the main nav
 // the range, are the letters that exist in that range and will be used to filter which agencies to show
