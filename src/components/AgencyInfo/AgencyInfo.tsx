@@ -6,7 +6,7 @@ import { Grid } from '@trussworks/react-uswds';
 
 import * as styles from './AgencyInfo.module.scss';
 import { AgencyInfoProps } from '@/types';
-import ScorecardSideNav from '../ScorecardSideNav';
+// import ScorecardSideNav from '../ScorecardSideNav';
 
 // If the phone has a comma in it (implying more than one phone number), split it into
 // two distict phone numbers
@@ -34,8 +34,8 @@ const getPhoneMarkup = (agencyPhone: string) => {
 
 const AgencyInfo: React.FC<AgencyInfoProps> = ({
   agencyData,
-  allAgencyNames,
-  pathname,
+  // allAgencyNames,
+  // pathname,
   gatsbyImageData,
 }) => {
   return (
@@ -86,7 +86,7 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
       </Grid>
       <Grid desktop={{ col: 1 }} tablet={{ col: 10 }} col={12} />
       <Grid desktop={{ col: 3 }} tablet={{ col: 10 }} col={12}>
-        <ScorecardSideNav allAgencyNames={allAgencyNames} pathname={pathname} />
+        {/* <ScorecardSideNav allAgencyNames={allAgencyNames} pathname={pathname} /> */}
       </Grid>
     </Grid>
   );

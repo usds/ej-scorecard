@@ -103,7 +103,6 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
 }
 
 // Allow all navigation items to take up the full content width
-
 li.usa-nav__primary-item {
   width: max-content;
 
@@ -114,6 +113,10 @@ li.usa-nav__primary-item {
   }
 }
 
+// adjust the left value for the dropdown menu position
+.usa-megamenu.usa-nav__submenu{
+  left: -40.7%;
+}
 // This sets the alignment of the items in the scorecard dropdown nav
 .usa-nav__submenu-item {
   padding-left: .5rem;
