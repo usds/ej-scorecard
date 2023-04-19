@@ -42,14 +42,14 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {` `}
             <a
               className="usa-link usa-link--alt usa-link--external"
-              href={`https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40`}
+              href={`https://www.whitehouse.gov/environmentaljustice/justice40/`}
               target="_blank"
               rel="noreferrer"
             >
               Justice40 Initiative
             </a>
-            {` `}, the federal government is working to ensure that 40 percent
-            of the overall benefits of certain federal investments reach
+            {` `}, the federal government is working toward the goal that 40
+            percent of the overall benefits of certain federal investments reach
             disadvantaged communities that are marginalized and overburdened by
             pollution and underinvestment. In particular, the President’s
             Justice40 Initiative applies to federal investments that address
@@ -79,7 +79,10 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </p>
           )}
 
-          <div>Phase one Scorecard metrics and highlights include:</div>
+          <div>
+            Phase One Scorecard metrics and highlights in Fiscal Year 2022
+            include:
+          </div>
 
           <ul className={`bullet1`}>
             {J40_TCP && (
@@ -92,13 +95,13 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
                 <strong>{J40_ANNOUNCE}</strong>
                 {` `}
                 funding announcement(s) covered under the Justice40 Initiative
-                <sup>1</sup>
               </li>
             )}
             {J40_AMOUNT && (
               <li>
-                <strong>{J40_AMOUNT}</strong> of funding made available from
-                covered programs
+                <strong>{J40_AMOUNT}</strong> in funding made available from
+                Justice40 covered programs
+                <sup>1</sup>
               </li>
             )}
             <ul>
@@ -121,7 +124,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             )}
           </ul>
 
-          {J40_ANNOUNCE && (
+          {J40_AMOUNT && (
             <p>
               <sup>1</sup> This funding amount describes examples of the funding
               that was made available in Fiscal Year 2022 through Justice40
@@ -142,9 +145,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {J40_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(
-                  A_ACRONYM,
-                )} Justice40 Initiative highlights`}
+                {`${possessivePlural(A_ACRONYM)} highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.J40_HIGH.includes(DELIMITERS.PARAGRAPH)

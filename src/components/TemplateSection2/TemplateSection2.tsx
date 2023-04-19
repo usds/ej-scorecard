@@ -30,9 +30,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(
-                  agencyData.A_ACRONYM,
-                )} Environmental and Civil Rights Protection highlights`}
+                {`${possessivePlural(agencyData.A_ACRONYM)} highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.ECR_HIGH.includes(DELIMITERS.PARAGRAPH)
@@ -83,9 +81,9 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
               <p>
                 The National Environmental Policy Act (NEPA) requires federal
                 agencies to consider and disclose the environmental, health, and
-                community impacts of a decision or action before taking it.
-                Environmental reviews help ensure the public is informed about
-                potential actions, and give communities an opportunity to
+                community impacts of certain decisions or actions before taking
+                them. Environmental reviews help ensure the public is informed
+                about potential actions, and give communities an opportunity to
                 participate in the government’s decision-making process.
                 Environmental reviews also ensure that federal agencies consider
                 ways to protect and enhance public health and the environment,
@@ -113,7 +111,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
 
                 {agencyData.NEPA_TRAIN && (
                   <li>
-                    <strong>{agencyData.NEPA_TRAIN}</strong> trainings on
+                    <strong>{agencyData.NEPA_TRAIN}</strong> training(s) on
                     environmental justice considerations during NEPA reviews
                   </li>
                 )}
@@ -135,7 +133,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
                 Title VI of the Civil Rights Act of 1964 requires that no person
                 be excluded from participation in, be denied the benefits of, or
                 be subject to discrimination under any program or activity
-                receiving federal financial assistance on account of their race,
+                receiving federal financial assistance on account of race,
                 color, or national origin. Title VI requires federal agencies to
                 ensure that programs or activities receiving federal funding,
                 including those that affect human health or the environment, do
@@ -174,18 +172,29 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </>
           )}
 
-          <h3>Centering Justice in Decision-Making</h3>
-          <p>
-            Federal agencies work to ensure that the voices, perspectives, and
-            lived experiences of communities are heard and reflected in the
-            priorities, policies, and decision-making of the federal government.
-            Agencies also take steps to respect Tribal sovereignty and ensure
-            government-to-government consultation on federal policies. The
-            following information highlights work{` `}
-            <strong>{agencyData.THE_A_NAME}</strong> has done from January 2021
-            to September 2022 to center environmental justice in its
-            decision-making.
-          </p>
+          {/* Centering Justice section will require all fields from Community Input and Tribal Nations */}
+          {(agencyData.A_NAR ||
+            agencyData.TA_N ||
+            agencyData.PP_N ||
+            agencyData.TC_NAR ||
+            agencyData.TC_E1 ||
+            agencyData.TC_E2 ||
+            agencyData.TC_E3) && (
+            <>
+              <h3>Centering Environmental Justice in Decision-Making</h3>
+              <p>
+                Federal agencies work to ensure that the voices, perspectives,
+                and lived experiences of communities are heard and reflected in
+                the priorities, policies, and decision-making of the federal
+                government. Agencies also take steps to respect Tribal
+                sovereignty and ensure government-to-government consultation on
+                federal policies. The following information highlights work{` `}
+                <strong>{agencyData.THE_A_NAME}</strong> has done from January
+                2021 to September 2022 to center environmental justice in its
+                decision-making.
+              </p>
+            </>
+          )}
 
           {/* Community Input requires at least one metric (A_NAR, TA_N or PP_N) */}
           {(agencyData.A_NAR || agencyData.TA_N || agencyData.PP_N) && (
@@ -236,7 +245,8 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {agencyData.TC_N && (
               <li>
                 <strong>{agencyData.TC_N}</strong> Tribal Consultation(s)
-                related to environmental justice
+                related to environmental justice from January 2021 to Septemeber
+                2022
               </li>
             )}
             <ul>

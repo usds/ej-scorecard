@@ -3,13 +3,29 @@
 export const NON_DROPDOWN_NAV_LINK_NAMES = [`Scorecard`, `About`, `Contact`];
 export const NON_DROPDOWN_PAGE_ENDPOINTS = [`/scorecard`, `/about`, `/contact`];
 export const PAGE_ENDPOINTS_ES = [`/es/`, `/es/about`, `/es/contact`];
-export const AGENCY_NAME_GROUPS = [`A - G`, `D`, `H - T`];
 
-// Todo: change to AGENCY_GROUP1_RANGE
-export const AGENCY_NAME_RANGE1 = [`A`, `B`, `C`, `E`, `F`, `G`];
-export const AGENCY_NAME_RANGE2 = [`D`];
-export const AGENCY_NAME_RANGE3 = [`H`, `T`, `N`, `U`, `V`, `S`];
-export const NUMBER_SUB_NAV_LINKS_PER_COLUMN = 4;
+export const NUMBER_SUB_NAV_LINKS_PER_COLUMN = 5;
+
+// nameGroup is the grouping of agency names and how they will display on the main nav
+// the range, are the letters that exist in that range and will be used to filter which agencies to show
+export const AGENCY_GROUPS = [
+  {
+    nameGroup: `A`,
+    range: [`A`],
+  },
+  {
+    nameGroup: `D`,
+    range: [`D`],
+  },
+  {
+    nameGroup: `E - H`,
+    range: [`E`, `F`, `G`, `H`],
+  },
+  {
+    nameGroup: `N - V`,
+    range: [`N`, `S`, `T`, `U`, `V`],
+  },
+];
 
 // USWDS Breakpoints
 export const USWDS_BREAKPOINTS = {

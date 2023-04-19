@@ -131,7 +131,7 @@ exports[`rendering of AppFooter Component > checks if component renders 1`] = `
               >
                 <a
                   className="footer-link-first-child"
-                  href="#"
+                  href="https://www.usa.gov/"
                   target="_blank"
                 >
                   Find a contact at USA.gov
@@ -285,53 +285,31 @@ exports[`rendering of AppFooter Component > checks if component renders 1`] = `
           </div>
         </div>
         <div
-          className="grid-col-11"
+          className="grid-col-8"
           data-testid="grid"
         >
           <div>
             <div>
-              The Council on Environmental Quality (CEQ), Office of Management and Budget (OMB), and the White House Environmental Justice Interagency Council (IAC)
-            </div>
-            <div>
-              CEQ, OMB and the IAC acknowledges and appreciates the support provided by the
-               
-              <a
-                className="usa-link usa-link--alt usa-link--external"
-                href="https://www.usds.gov/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                U.S. Digital Service
-              </a>
-               
-              and the
-               
-              <a
-                className="usa-link usa-link--alt usa-link--external"
-                href="https://www.whitehouse.gov/ostp/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Office of Science, Technology, and Privacy
-              </a>
-               
-              for this website, which is hosted on the
-               
-              <a
-                className="usa-link usa-link--alt usa-link--external"
-                href="https://www.doi.gov/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Department of the Interior's
-              </a>
-               
-              Geoplatform.
+              The Office of Management and Budget and the Council on Environmental Quality
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="grid-container-desktop-lg"
+    data-testid="gridContainer"
+  >
+    <a
+      href="https://www.surveymonkey.com/r/WBNTJNC"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <strong>
+        Share your feedback
+      </strong>
+    </a>
   </div>
 </footer>
 `;

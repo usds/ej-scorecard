@@ -3,7 +3,7 @@
 .footerTextBox{
     @include u-padding-left(3);
     @include u-padding-right(3);
-    @include u-padding-top(1);
+    @include u-padding-top(4);
 
     div:first-child {
         font-weight: bold;

@@ -29,6 +29,24 @@
 Some USWDS components have pseudo elements (::before and ::after) that use the mask CSS property. This property does not always render in Chrome 108 (seems to work in FF  and Safari)
 */
 
+//General styling
+
+.mt-unset {
+  margin-top: unset;
+}
+
+.mb-unset {
+  margin-bottom: unset;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+#main-content {
+  min-height: 60vh;
+}
+
 // This control the icon in the alerts
 .usa-alert--info:before {
     -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=) no-repeat center/contain;
@@ -85,7 +103,6 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
 }
 
 // Allow all navigation items to take up the full content width
-
 li.usa-nav__primary-item {
   width: max-content;
 
@@ -96,6 +113,10 @@ li.usa-nav__primary-item {
   }
 }
 
+// adjust the left value for the dropdown menu position
+.usa-megamenu.usa-nav__submenu{
+  left: -40.7%;
+}
 // This sets the alignment of the items in the scorecard dropdown nav
 .usa-nav__submenu-item {
   padding-left: .5rem;
@@ -157,12 +178,6 @@ li.usa-nav__primary-item a:hover::after{
   align-self: center;
 }
 
-// Scorecard Agency progress header
-.scorecard-header-span {
-  padding-top: 31px;
-  padding-left: 10px;
-}
-
 //Agency progress cards
 .agency-progress-section {
   display: flex;
@@ -190,6 +205,7 @@ li.usa-nav__primary-item a:hover::after{
 
     .agency-name {
       margin-top: 12px;
+      text-align: center;
     }
   }
 }

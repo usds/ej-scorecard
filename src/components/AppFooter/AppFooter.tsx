@@ -6,6 +6,7 @@ import { Address, Grid, NavList } from '@trussworks/react-uswds';
 import { useGatsbyImageData } from '@/hooks/gatsby-image-data';
 
 import * as styles from './AppFooter.module.scss';
+import SurveyButton from '@/components/SurveyButton';
 
 const AppFooter: React.FC = () => {
   const allImageSharp = useGatsbyImageData();
@@ -64,7 +65,7 @@ const AppFooter: React.FC = () => {
       <a
         className={`footer-link-first-child`}
         key={`col1-link1`}
-        href={`#`}
+        href={`https://www.usa.gov/`}
         target={`_blank`}
       >
         Find a contact at USA.gov
@@ -101,14 +102,13 @@ const AppFooter: React.FC = () => {
                 alt="Agency logo"
               />
             </Grid>
-            <Grid col={11}>
+            <Grid col={8}>
               <div className={styles.footerTextBox}>
                 <div>
-                  The Council on Environmental Quality (CEQ), Office of
-                  Management and Budget (OMB), and the White House Environmental
-                  Justice Interagency Council (IAC)
+                  The Office of Management and Budget and the Council on
+                  Environmental Quality
                 </div>
-                <div>
+                {/* <div>
                   CEQ, OMB and the IAC acknowledges and appreciates the support
                   provided by the
                   {` `}
@@ -144,13 +144,13 @@ const AppFooter: React.FC = () => {
                   </a>
                   {` `}
                   Geoplatform.
-                </div>
+                </div> */}
               </div>
             </Grid>
           </Grid>
         </MainGridContainer>
       </div>
-      {/* <SurveyButton /> */}
+      <SurveyButton />
     </footer>
   );
 };

@@ -5,28 +5,24 @@ import { SideNav } from '@trussworks/react-uswds';
 
 import { ScorecardSideNavProps } from '@/types';
 import { groupAgencyLinks } from '../AppHeader/AppHeader';
-import {
-  AGENCY_NAME_RANGE1,
-  AGENCY_NAME_RANGE2,
-  AGENCY_NAME_RANGE3,
-} from '@/data/constants';
+import { AGENCY_GROUPS } from '@/data/constants';
 import { isPathInGroupRange } from '../util';
+
+import * as styles from './ScorecardSideNav.module.scss';
 
 const ScorecardSideNav: React.FC<ScorecardSideNavProps> = ({
   allAgencyNames,
   pathname,
 }) => {
-  if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE1)) {
+  const matchedGroup = AGENCY_GROUPS.find((group) =>
+    isPathInGroupRange(pathname, group.range),
+  );
+
+  if (matchedGroup) {
     return (
-      <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE1)} />
-    );
-  } else if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE2)) {
-    return (
-      <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE2)} />
-    );
-  } else if (isPathInGroupRange(pathname, AGENCY_NAME_RANGE3)) {
-    return (
-      <SideNav items={groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE3)} />
+      <div className={styles.scorecardSideNavContainer}>
+        <SideNav items={groupAgencyLinks(allAgencyNames, matchedGroup.range)} />
+      </div>
     );
   } else {
     return null;

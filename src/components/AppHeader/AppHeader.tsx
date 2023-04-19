@@ -15,10 +15,7 @@ import { useWindowSize } from 'react-use';
 import MainGridContainer from '@/components/MainGridContainer';
 import GovBanner from '@/components/GovBanner';
 import {
-  AGENCY_NAME_GROUPS,
-  AGENCY_NAME_RANGE1,
-  AGENCY_NAME_RANGE2,
-  AGENCY_NAME_RANGE3,
+  AGENCY_GROUPS,
   NON_DROPDOWN_NAV_LINK_NAMES,
   NON_DROPDOWN_PAGE_ENDPOINTS,
   NUMBER_SUB_NAV_LINKS_PER_COLUMN,
@@ -69,6 +66,9 @@ export const groupAgencyLinks = (
  */
 const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   const { width } = useWindowSize();
+  const initialDropDownState: boolean[] = Array(AGENCY_GROUPS.length).fill(
+    false,
+  );
 
   /**
    * State variable to control the toggling of mobile menu button
@@ -81,7 +81,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
   /**
    * State variable to hold the open/close state of each dropdown nav link.
    */
-  const [isOpen, setIsOpen] = useState([false, false, false]);
+  const [isOpen, setIsOpen] = useState(initialDropDownState);
 
   /**
    * The dropdown nav elements don't automatically close when
@@ -92,7 +92,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
    */
   const onNavClick = (event: React.MouseEvent<HTMLElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
-      setIsOpen([false, false, false]);
+      setIsOpen(initialDropDownState);
     }
   };
 
@@ -114,7 +114,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
      * are still open
      */
     if (width > USWDS_BREAKPOINTS.DESKTOP) {
-      const newIsOpen = [false, false, false];
+      const newIsOpen = initialDropDownState.slice();
       newIsOpen[index] = true;
       setIsOpen(newIsOpen);
     }
@@ -184,34 +184,27 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
    * The SubNavLinksArray will be first grouped by Agency link,
    * following by chunking.
    */
-  navLinks.splice(
-    1,
-    0,
-    <DropDownNavGenerator
-      agencyNameGroup={AGENCY_NAME_GROUPS[0]}
-      toggleIndex={0}
-      subNavLinksArray={chunkAgencyLinks(
-        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE1),
-      )}
-      agencyGroupRange={AGENCY_NAME_RANGE1}
-    />,
-    <DropDownNavGenerator
-      agencyNameGroup={AGENCY_NAME_GROUPS[1]}
-      toggleIndex={1}
-      subNavLinksArray={chunkAgencyLinks(
-        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE2),
-      )}
-      agencyGroupRange={AGENCY_NAME_RANGE2}
-    />,
-    <DropDownNavGenerator
-      agencyNameGroup={AGENCY_NAME_GROUPS[2]}
-      toggleIndex={2}
-      subNavLinksArray={chunkAgencyLinks(
-        groupAgencyLinks(allAgencyNames, AGENCY_NAME_RANGE3),
-      )}
-      agencyGroupRange={AGENCY_NAME_RANGE3}
-    />,
+
+  const dropDownNavGenerators = AGENCY_GROUPS.map(
+    (group: { nameGroup: string; range: string[] }, i: number) => {
+      const { nameGroup, range } = group;
+      const toggleIndex = i;
+      const subNavLinksArray = chunkAgencyLinks(
+        groupAgencyLinks(allAgencyNames, range),
+      );
+      return (
+        <DropDownNavGenerator
+          key={nameGroup}
+          agencyNameGroup={nameGroup}
+          toggleIndex={toggleIndex}
+          subNavLinksArray={subNavLinksArray}
+          agencyGroupRange={range}
+        />
+      );
+    },
   );
+
+  navLinks.splice(1, 0, ...dropDownNavGenerators);
 
   return (
     <Header basic={true} role={`banner`}>

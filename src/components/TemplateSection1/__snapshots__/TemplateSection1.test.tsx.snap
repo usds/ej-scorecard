@@ -196,7 +196,7 @@ exports[`rendering of AgencyInfo Component > checks if component renders group 1
         <strong>
           the Test Agency
         </strong>
-         is working to reduce climate and environmental burdens and harms in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
+         is working to advance environmental justice for in communities across America. It is part of Phase One of the Biden-Harris Administration's Environmental Justice Scorecard.
       </p>
     </div>
   </div>
@@ -245,14 +245,14 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
          
         <a
           className="usa-link usa-link--alt usa-link--external"
-          href="https://ceq.sites.eop.gov/ceqej/Shared%20Documents/Scorecard/Template/whitehouse.gov/environmentaljustice/justice40"
+          href="https://www.whitehouse.gov/environmentaljustice/justice40/"
           rel="noreferrer"
           target="_blank"
         >
           Justice40 Initiative
         </a>
          
-        , the federal government is working to ensure that 40 percent of the overall benefits of certain federal investments reach disadvantaged communities that are marginalized and overburdened by pollution and underinvestment. In particular, the President’s Justice40 Initiative applies to federal investments that address climate change, clean energy and energy efficiency, clean transit, affordable and sustainable housing, training and workforce development, remediation and reduction of legacy pollution, and the development of critical clean water and wastewater infrastructure.
+        , the federal government is working toward the goal that 40 percent of the overall benefits of certain federal investments reach disadvantaged communities that are marginalized and overburdened by pollution and underinvestment. In particular, the President’s Justice40 Initiative applies to federal investments that address climate change, clean energy and energy efficiency, clean transit, affordable and sustainable housing, training and workforce development, remediation and reduction of legacy pollution, and the development of critical clean water and wastewater infrastructure.
       </p>
       <p>
         This Phase One Scorecard provides an update on initial progress made by 
@@ -262,7 +262,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
          in implementing the Justice40 Initiative. Future versions of the Environmental Justice Scorecard will provide additional information and updates on the benefits of Justice40 covered programs.
       </p>
       <div>
-        Phase one Scorecard metrics and highlights include:
+        Phase One Scorecard metrics and highlights in Fiscal Year 2022 include:
       </div>
       <ul
         className="bullet1"
@@ -279,15 +279,15 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           </strong>
            
           funding announcement(s) covered under the Justice40 Initiative
-          <sup>
-            1
-          </sup>
         </li>
         <li>
           <strong>
             100
           </strong>
-           of funding made available from covered programs
+           in funding made available from Justice40 covered programs
+          <sup>
+            1
+          </sup>
         </li>
         <ul>
           <li>
@@ -322,7 +322,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            TAG's Justice40 Initiative highlights
+            TAG's highlights
           </h3>
           <div
             className="usa-summary-box__text"

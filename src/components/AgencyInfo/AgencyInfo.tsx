@@ -53,13 +53,6 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
               <span>{agencyData.A_ADD1}</span>
               <span>{agencyData.A_ADD2}</span>
               {agencyData.A_PHONE && getPhoneMarkup(agencyData.A_PHONE)}
-              {agencyData.A_EMAIL !== `` && (
-                <span>
-                  <a href={`mailto:${agencyData.A_EMAIL}`}>
-                    {agencyData.A_EMAIL}
-                  </a>
-                </span>
-              )}
               <span>
                 <a
                   className="usa-link usa-link--alt usa-link--external"
@@ -84,10 +77,10 @@ const AgencyInfo: React.FC<AgencyInfoProps> = ({
         <Grid row gap>
           <p>
             This page provides information on how{` `}
-            <strong>{agencyData.THE_A_NAME}</strong> is working to reduce
-            climate and environmental burdens and harms in communities across
-            America. It is part of Phase One of the Biden-Harris
-            Administration&apos;s Environmental Justice Scorecard.
+            <strong>{agencyData.THE_A_NAME}</strong> is working to advance
+            environmental justice for in communities across America. It is part
+            of Phase One of the Biden-Harris Administration&apos;s Environmental
+            Justice Scorecard.
           </p>
         </Grid>
       </Grid>
