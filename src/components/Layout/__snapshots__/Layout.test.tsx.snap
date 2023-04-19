@@ -502,7 +502,7 @@ exports[`rendering of Layout Component > checks if component renders 1`] = `
       </div>
     </div>
     <div
-      className="nav-row-bg-color"
+      className="nav-row-container"
     >
       <div>
         <button

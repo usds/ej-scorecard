@@ -230,7 +230,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
       </MainGridContainer>
 
       {/* Navigation */}
-      <MainGridContainer fullWidth={true} className="nav-row-bg-color">
+      <MainGridContainer fullWidth={true} className="nav-row-container">
         <div className={styles.navRow}>
           {/* Nav links */}
           <NavMenuButton

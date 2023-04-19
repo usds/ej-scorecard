@@ -98,13 +98,18 @@ body {
   padding: 1rem 0 1rem 0;
 }
 
-.nav-row-bg-color {
+.nav-row-container {
   background-color: white;
+  border-bottom: 2px solid #dfe1e2;
 
   @media screen and (max-width: 1024px) {
     background-color: unset;    
   }
 
+}
+
+.usa-breadcrumb {
+  background-color: #FAFAFA;
 }
 
 // This sets the down arrow in the scorecard dropdown nav

@@ -187,7 +187,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
     </div>
   </div>
   <div
-    className="nav-row-bg-color"
+    className="nav-row-container"
   >
     <div>
       <button
@@ -614,7 +614,7 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
     </div>
   </div>
   <div
-    className="nav-row-bg-color"
+    className="nav-row-container"
   >
     <div>
       <button
