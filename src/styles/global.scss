@@ -30,6 +30,9 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
 */
 
 //General styling
+body {
+  background-color: #FAFAFA;
+}
 
 .mt-unset {
   margin-top: unset;
@@ -90,6 +93,26 @@ Some USWDS components have pseudo elements (::before and ::after) that use the m
 ****************************** 
 */
 
+.logo-container{
+  background-color: #005EA2;
+  padding: 1rem 0 1rem 0;
+}
+
+.nav-row-container {
+  background-color: white;
+  border-bottom: 2px solid #dfe1e2;
+
+  @media screen and (max-width: 1024px) {
+    background-color: unset;    
+    border-bottom: unset;
+  }
+
+}
+
+.usa-breadcrumb {
+  background-color: #FAFAFA;
+}
+
 // This sets the down arrow in the scorecard dropdown nav
 .usa-accordion__button.usa-nav__link span::after{
   -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTE2LjU5IDguNTkgMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNnoiLz48L3N2Zz4=) no-repeat center/contain;
@@ -115,7 +138,13 @@ li.usa-nav__primary-item {
 
 // adjust the left value for the dropdown menu position
 .usa-megamenu.usa-nav__submenu{
-  left: -40.7%;
+  left: -105%;
+  width: 47rem;
+
+  @media screen and (max-width:1200px) {
+    left: -51%;
+    width: 40rem;
+  }
 }
 // This sets the alignment of the items in the scorecard dropdown nav
 .usa-nav__submenu-item {
@@ -184,6 +213,7 @@ li.usa-nav__primary-item a:hover::after{
   flex-wrap: wrap;
 
   div.agency-card {
+    background-color: white;
     display: flex;
     flex-direction: column;
     width: 280px;

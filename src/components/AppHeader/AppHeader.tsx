@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from 'react';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import { LocalizedLink } from 'gatsby-plugin-i18n-l10n';
 
 import {
@@ -23,7 +23,7 @@ import {
 } from '@/data/constants';
 
 // @ts-ignore
-import siteLogo from '@/static/images/usds-logo.png';
+import scorecardLogo from '@/static/images/ejscorecard-logo.png';
 import * as styles from './AppHeader.module.scss';
 import { AppHeaderProps, DropDownNavGeneratorProps } from '@/types';
 import { chunkArray, isPathInGroupRange, toKebabCase } from '../util';
@@ -211,43 +211,41 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
       {/* Banners */}
       <GovBanner />
 
-      {/* Logo and Navigation */}
-      <MainGridContainer>
-        <Grid className={styles.logoNavRow} row>
-          {/* Logo */}
-          <Grid col={1}>
-            <LocalizedLink
-              to={NON_DROPDOWN_PAGE_ENDPOINTS[0]}
-              key={`first-page`}
-              data-cy={`nav-link-first-page`}
-            >
-              <img className={styles.logo} src={siteLogo} alt={`Site logo`} />
-            </LocalizedLink>
-          </Grid>
-
-          {/* Logo Title */}
-          <Grid col={6}>
-            <div className={styles.logoTitle} onClick={() => navigate(`/`)}>
-              {`ENVIRONMENTAL JUSTICE.GOV`}
-            </div>
-          </Grid>
-
-          {/* Nav links */}
-          <Grid col={`fill`} className={styles.navLinks}>
-            <NavMenuButton
-              key={`mobileMenuButton`}
-              onClick={toggleMobileNav}
-              label="Menu"
-            ></NavMenuButton>
-            <PrimaryNav
-              className="primary-nav"
-              items={navLinks}
-              mobileExpanded={mobileNavOpen}
-              onToggleMobileNav={toggleMobileNav}
-              onClick={(e) => onNavClick(e)}
-            ></PrimaryNav>
-          </Grid>
+      {/* Logo  */}
+      <MainGridContainer fullWidth={true} className="logo-container">
+        <Grid className={styles.logoRow} row>
+          <LocalizedLink
+            to={NON_DROPDOWN_PAGE_ENDPOINTS[0]}
+            className={styles.logo}
+            key={`first-page`}
+            data-cy={`nav-link-first-page`}
+          >
+            <img
+              className={styles.logo}
+              src={scorecardLogo}
+              alt={`Site logo`}
+            />
+          </LocalizedLink>
         </Grid>
+      </MainGridContainer>
+
+      {/* Navigation */}
+      <MainGridContainer fullWidth={true} className="nav-row-container">
+        <div className={styles.navRow}>
+          {/* Nav links */}
+          <NavMenuButton
+            key={`mobileMenuButton`}
+            onClick={toggleMobileNav}
+            label="Menu"
+          ></NavMenuButton>
+          <PrimaryNav
+            className="primary-nav"
+            items={navLinks}
+            mobileExpanded={mobileNavOpen}
+            onToggleMobileNav={toggleMobileNav}
+            onClick={(e) => onNavClick(e)}
+          ></PrimaryNav>
+        </div>
       </MainGridContainer>
     </Header>
   );

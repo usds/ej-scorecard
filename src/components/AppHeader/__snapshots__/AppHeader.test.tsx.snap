@@ -168,275 +168,260 @@ exports[`rendering of AppHeader Component > checks if component renders with a n
     </div>
   </div>
   <div
-    className="grid-container-desktop-lg"
-    data-testid="gridContainer"
+    className="logo-container"
   >
     <div
       className="grid-row"
       data-testid="grid"
     >
-      <div
-        className="grid-col-1"
-        data-testid="grid"
+      <a
+        href="/scorecard"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
-        <a
-          href="/scorecard"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          <img
-            alt="Site logo"
-            src="/static/images/usds-logo.png"
-          />
-        </a>
-      </div>
-      <div
-        className="grid-col-6"
-        data-testid="grid"
+        <img
+          alt="Site logo"
+          src="/static/images/ejscorecard-logo.png"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    className="nav-row-container"
+  >
+    <div>
+      <button
+        className="usa-menu-btn"
+        data-testid="navMenuButton"
+        onClick={[Function]}
+        type="button"
       >
-        <div
-          onClick={[Function]}
-        >
-          ENVIRONMENTAL JUSTICE.GOV
-        </div>
-      </div>
-      <div
-        className="grid-col-fill"
-        data-testid="grid"
+        Menu
+      </button>
+      <nav
+        className="usa-nav primary-nav"
+        onClick={[Function]}
       >
         <button
-          className="usa-menu-btn"
-          data-testid="navMenuButton"
+          className="usa-nav__close"
+          data-testid="navCloseButton"
           onClick={[Function]}
           type="button"
         >
-          Menu
+          <img
+            alt="close"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgNi40MSAxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjwvc3ZnPg=="
+          />
         </button>
-        <nav
-          className="usa-nav primary-nav"
-          onClick={[Function]}
+        <ul
+          className="usa-nav__primary usa-accordion"
         >
-          <button
-            className="usa-nav__close"
-            data-testid="navCloseButton"
-            onClick={[Function]}
-            type="button"
+          <li
+            className="usa-nav__primary-item"
           >
-            <img
-              alt="close"
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgNi40MSAxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjwvc3ZnPg=="
-            />
-          </button>
-          <ul
-            className="usa-nav__primary usa-accordion"
+            <a
+              href="/scorecard"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Scorecard
+            </a>
+          </li>
+          <li
+            className="usa-nav__primary-item"
           >
-            <li
-              className="usa-nav__primary-item"
+            <button
+              aria-controls="nav-drop-down-menu-id-a"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-a"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <a
-                href="/scorecard"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-              >
-                Scorecard
-              </a>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+              <span>
+                Agencies A
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-a"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-a"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies A
-                </span>
-              </button>
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-a"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-a"
+                    <li
+                      className="usa-nav__submenu-item"
                     >
-                      <li
-                        className="usa-nav__submenu-item"
+                      <a
+                        activeClassName="usa-current"
+                        data-cy="nav-link-agency-a"
+                        href="/scorecard/agency-a"
                       >
-                        <a
-                          activeClassName="usa-current"
-                          data-cy="nav-link-agency-a"
-                          href="/scorecard/agency-a"
-                        >
-                          Agency A
-                        </a>
-                        <a
-                          activeClassName="usa-current"
-                          data-cy="nav-link-agency-b"
-                          href="/scorecard/agency-b"
-                        >
-                          Agency B
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                        Agency A
+                      </a>
+                      <a
+                        activeClassName="usa-current"
+                        data-cy="nav-link-agency-b"
+                        href="/scorecard/agency-b"
+                      >
+                        Agency B
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <button
+              aria-controls="nav-drop-down-menu-id-d"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-d"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-d"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-d"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies D
-                </span>
-              </button>
+              <span>
+                Agencies D
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
+            >
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-d"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-d"
-                    >
-                      <li
-                        className="usa-nav__submenu-item"
-                      />
-                    </ul>
-                  </div>
+                    <li
+                      className="usa-nav__submenu-item"
+                    />
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <button
+              aria-controls="nav-drop-down-menu-id-e-h"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-e-h"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-e-h"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-e-h"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies E - H
-                </span>
-              </button>
+              <span>
+                Agencies E - H
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
+            >
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-e-h"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-e-h"
-                    >
-                      <li
-                        className="usa-nav__submenu-item"
-                      />
-                    </ul>
-                  </div>
+                    <li
+                      className="usa-nav__submenu-item"
+                    />
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <button
+              aria-controls="nav-drop-down-menu-id-n-v"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-n-v"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-n-v"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-n-v"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies N - V
-                </span>
-              </button>
+              <span>
+                Agencies N - V
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
+            >
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-n-v"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-n-v"
-                    >
-                      <li
-                        className="usa-nav__submenu-item"
-                      />
-                    </ul>
-                  </div>
+                    <li
+                      className="usa-nav__submenu-item"
+                    />
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <a
+              href="/about"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
-              <a
-                href="/about"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-              >
-                About
-              </a>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+              About
+            </a>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <a
+              href="/contact"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
-              <a
-                href="/contact"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
@@ -610,275 +595,260 @@ exports[`rendering of AppHeader Component > checks if component renders with a s
     </div>
   </div>
   <div
-    className="grid-container-desktop-lg"
-    data-testid="gridContainer"
+    className="logo-container"
   >
     <div
       className="grid-row"
       data-testid="grid"
     >
-      <div
-        className="grid-col-1"
-        data-testid="grid"
+      <a
+        href="/scorecard"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
       >
-        <a
-          href="/scorecard"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          <img
-            alt="Site logo"
-            src="/static/images/usds-logo.png"
-          />
-        </a>
-      </div>
-      <div
-        className="grid-col-6"
-        data-testid="grid"
+        <img
+          alt="Site logo"
+          src="/static/images/ejscorecard-logo.png"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    className="nav-row-container"
+  >
+    <div>
+      <button
+        className="usa-menu-btn"
+        data-testid="navMenuButton"
+        onClick={[Function]}
+        type="button"
       >
-        <div
-          onClick={[Function]}
-        >
-          ENVIRONMENTAL JUSTICE.GOV
-        </div>
-      </div>
-      <div
-        className="grid-col-fill"
-        data-testid="grid"
+        Menu
+      </button>
+      <nav
+        className="usa-nav primary-nav"
+        onClick={[Function]}
       >
         <button
-          className="usa-menu-btn"
-          data-testid="navMenuButton"
+          className="usa-nav__close"
+          data-testid="navCloseButton"
           onClick={[Function]}
           type="button"
         >
-          Menu
+          <img
+            alt="close"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgNi40MSAxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjwvc3ZnPg=="
+          />
         </button>
-        <nav
-          className="usa-nav primary-nav"
-          onClick={[Function]}
+        <ul
+          className="usa-nav__primary usa-accordion"
         >
-          <button
-            className="usa-nav__close"
-            data-testid="navCloseButton"
-            onClick={[Function]}
-            type="button"
+          <li
+            className="usa-nav__primary-item"
           >
-            <img
-              alt="close"
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgNi40MSAxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjwvc3ZnPg=="
-            />
-          </button>
-          <ul
-            className="usa-nav__primary usa-accordion"
+            <a
+              href="/scorecard"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Scorecard
+            </a>
+          </li>
+          <li
+            className="usa-nav__primary-item"
           >
-            <li
-              className="usa-nav__primary-item"
+            <button
+              aria-controls="nav-drop-down-menu-id-a"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-a"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <a
-                href="/scorecard"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-              >
-                Scorecard
-              </a>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+              <span>
+                Agencies A
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-a"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-a"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies A
-                </span>
-              </button>
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-a"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-a"
+                    <li
+                      className="usa-nav__submenu-item"
                     >
-                      <li
-                        className="usa-nav__submenu-item"
+                      <a
+                        activeClassName="usa-current"
+                        data-cy="nav-link-agency-a"
+                        href="/scorecard/agency-a"
                       >
-                        <a
-                          activeClassName="usa-current"
-                          data-cy="nav-link-agency-a"
-                          href="/scorecard/agency-a"
-                        >
-                          Agency A
-                        </a>
-                        <a
-                          activeClassName="usa-current"
-                          data-cy="nav-link-agency-b"
-                          href="/scorecard/agency-b"
-                        >
-                          Agency B
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                        Agency A
+                      </a>
+                      <a
+                        activeClassName="usa-current"
+                        data-cy="nav-link-agency-b"
+                        href="/scorecard/agency-b"
+                      >
+                        Agency B
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <button
+              aria-controls="nav-drop-down-menu-id-d"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-d"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-d"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-d"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies D
-                </span>
-              </button>
+              <span>
+                Agencies D
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
+            >
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-d"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-d"
-                    >
-                      <li
-                        className="usa-nav__submenu-item"
-                      />
-                    </ul>
-                  </div>
+                    <li
+                      className="usa-nav__submenu-item"
+                    />
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <button
+              aria-controls="nav-drop-down-menu-id-e-h"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-e-h"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-e-h"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-e-h"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies E - H
-                </span>
-              </button>
+              <span>
+                Agencies E - H
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
+            >
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-e-h"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-e-h"
-                    >
-                      <li
-                        className="usa-nav__submenu-item"
-                      />
-                    </ul>
-                  </div>
+                    <li
+                      className="usa-nav__submenu-item"
+                    />
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <button
+              aria-controls="nav-drop-down-menu-id-n-v"
+              aria-expanded={false}
+              className="usa-accordion__button usa-nav__link"
+              data-cy="nav-dropdown-scorecard-nav-n-v"
+              data-testid="navDropDownButton"
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                aria-controls="nav-drop-down-menu-id-n-v"
-                aria-expanded={false}
-                className="usa-accordion__button usa-nav__link"
-                data-cy="nav-dropdown-scorecard-nav-n-v"
-                data-testid="navDropDownButton"
-                onClick={[Function]}
-                type="button"
-              >
-                <span>
-                  Agencies N - V
-                </span>
-              </button>
+              <span>
+                Agencies N - V
+              </span>
+            </button>
+            <div
+              className="usa-nav__submenu usa-megamenu"
+              data-testid="megamenu"
+              hidden={true}
+            >
               <div
-                className="usa-nav__submenu usa-megamenu"
-                data-testid="megamenu"
-                hidden={true}
+                className="grid-row grid-gap-4"
               >
                 <div
-                  className="grid-row grid-gap-4"
+                  className="usa-col"
                 >
-                  <div
-                    className="usa-col"
+                  <ul
+                    className="usa-nav__submenu-list"
+                    id="mega-menu-id-n-v"
                   >
-                    <ul
-                      className="usa-nav__submenu-list"
-                      id="mega-menu-id-n-v"
-                    >
-                      <li
-                        className="usa-nav__submenu-item"
-                      />
-                    </ul>
-                  </div>
+                    <li
+                      className="usa-nav__submenu-item"
+                    />
+                  </ul>
                 </div>
               </div>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+            </div>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <a
+              href="/about"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
-              <a
-                href="/about"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-              >
-                About
-              </a>
-            </li>
-            <li
-              className="usa-nav__primary-item"
+              About
+            </a>
+          </li>
+          <li
+            className="usa-nav__primary-item"
+          >
+            <a
+              href="/contact"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
             >
-              <a
-                href="/contact"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>

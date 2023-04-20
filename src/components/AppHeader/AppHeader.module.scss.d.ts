@@ -1,9 +1,9 @@
 declare namespace AppHeaderNamespace {
   export interface IAppHeaderScss {
     language: string;
-    logoNavRow: string;
+    logoRow: string;
+    navRow: string;
     logo: string;
-    logoTitle: string;
     navLinks: string;
   }
 }

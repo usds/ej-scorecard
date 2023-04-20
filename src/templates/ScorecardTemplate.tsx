@@ -23,6 +23,7 @@ const ScorecardTemplate: React.FC<ScorecardTemplateProps> = ({
     gatsbyImageData,
   } = pageContext;
 
+  // Todo: remove this prop
   console.log(allAgencyNamesWithAcronym);
 
   return (
