@@ -70,8 +70,8 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </ul>
             {agencyData.EJTOOL_N && (
               <li>
-                <strong>{agencyData.EJTOOL_N}</strong> environmental justice
-                tool(s) or resource(s)
+                <strong>{agencyData.EJTOOL_N}</strong> etool(s) or resources to
+                advance environmental justice
               </li>
             )}
             {agencyData.EJSTAFF_N && (
@@ -95,7 +95,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {agencyData.EJWG_N && (
               <li>
                 <strong>{agencyData.EJWG_N}</strong> new or strengthened
-                internal working group(s)/steering committee(s)/council(s) on
+                internal working group(s), steering committee(s), council(s) on
                 environmental justice{` `}
               </li>
             )}
@@ -106,7 +106,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {agencyData.IEJ_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(agencyData.A_ACRONYM)} highlights`}
+                {`${possessivePlural(agencyData.A_ACRONYM)} Highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.IEJ_HIGH.includes(DELIMITERS.PARAGRAPH)

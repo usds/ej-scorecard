@@ -26,7 +26,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
       allAgencyNames={data.allAgencyInfoCsv.edges.map(
         (edge) => edge.node.A_NAME,
       )}
-      description={`Learn more about the Environmental Justice Scorecard, the first government-wide assessment of progress towards environmental justice goals, and share your feedback on the Scorecard.`}
+      description={`Learn more about the Environmental Justice Scorecard, the first government-wide assessment of progress toward environmental justice goals, and share your feedback on the Scorecard.`}
       keywords={`environmental justice, what is the environmental justice scorecard, what is environmental justice, environmental justice website`}
     >
       <MainGridContainer>
