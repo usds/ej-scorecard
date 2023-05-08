@@ -291,7 +291,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           environmental justice tool(s) or resource(s)
+           etool(s) or resources to advance environmental justice
         </li>
         <li>
           <strong>
@@ -315,7 +315,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           new or strengthened internal working group(s)/steering committee(s)/council(s) on environmental justice
+           new or strengthened internal working group(s), steering committee(s), council(s) on environmental justice
            
         </li>
       </ul>
@@ -334,7 +334,7 @@ exports[`rendering of TemplateSection3 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            TAG's highlights
+            TAG's Highlights
           </h3>
           <div
             className="usa-summary-box__text"

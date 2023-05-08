@@ -252,7 +252,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            TAG's highlights
+            TAG's Highlights
           </h3>
           <div
             className="usa-summary-box__text"
@@ -429,7 +429,7 @@ exports[`rendering of TemplateSection2 Component > checks if component renders 1
           <strong>
             100
           </strong>
-           Tribal Consultation(s) related to environmental justice from January 2021 to Septemeber 2022
+           Tribal Consultation(s) related to environmental justice from January 2021 to September 2022
         </li>
         <ul>
           <li>
