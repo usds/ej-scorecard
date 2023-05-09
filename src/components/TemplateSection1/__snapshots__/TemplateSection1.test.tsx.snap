@@ -322,7 +322,7 @@ exports[`rendering of TemplateSection1 Component > checks if component renders 1
           <h3
             className="usa-summary-box__heading"
           >
-            TAG's highlights
+            TAG's Highlights
           </h3>
           <div
             className="usa-summary-box__text"

@@ -70,7 +70,7 @@ const TemplateSection3: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             </ul>
             {agencyData.EJTOOL_N && (
               <li>
-                <strong>{agencyData.EJTOOL_N}</strong> etool(s) or resources to
+                <strong>{agencyData.EJTOOL_N}</strong> tool(s) or resources to
                 advance environmental justice
               </li>
             )}

@@ -145,7 +145,7 @@ const TemplateSection1: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           {J40_HIGH && (
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(A_ACRONYM)} highlights`}
+                {`${possessivePlural(A_ACRONYM)} Highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.J40_HIGH.includes(DELIMITERS.PARAGRAPH)
