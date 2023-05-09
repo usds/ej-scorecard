@@ -43,7 +43,7 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
       <MainGridContainer>
         <Grid row gap>
           <Grid desktop={{ col: 9 }} tablet={{ col: 10 }} col={12}>
-            <h1>{`Environmental Justice Scorecard`}</h1>
+            <h1>{`The Environmental Justice Scorecard`}</h1>
           </Grid>
           {/* <Grid desktop={{ col: 3 }} tablet={{ col: 10 }} col={12}>
             <Button className={`download-scorecard`} type={`button`}>
@@ -75,7 +75,7 @@ const ScorecardPage: React.FC<PageProps> = ({ data }) => {
               federal agencies.
             </p>
 
-            <h2>Phase One Scorecard</h2>
+            <h2>The Phase One Scorecard</h2>
 
             <p>
               This first version of the Environmental Justice Scorecard, or the

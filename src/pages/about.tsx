@@ -26,7 +26,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
       allAgencyNames={data.allAgencyInfoCsv.edges.map(
         (edge) => edge.node.A_NAME,
       )}
-      description={`Learn more about the Environmental Justice Scorecard, the first government-wide assessment of progress towards environmental justice goals, and share your feedback on the Scorecard.`}
+      description={`Learn more about the Environmental Justice Scorecard, the first government-wide assessment of progress toward environmental justice goals, and share your feedback on the Scorecard.`}
       keywords={`environmental justice, what is the environmental justice scorecard, what is environmental justice, environmental justice website`}
     >
       <MainGridContainer>
@@ -144,7 +144,7 @@ const SecondPage: React.FC<PageProps> = ({ data }) => {
               {` `}
               is a key piece of the Biden-Harris Administration’s environmental
               justice agenda. Under the Justice40 Initiative, the federal
-              government is working towards the goal that 40 percent of the
+              government is working toward the goal that 40 percent of the
               overall benefits of certain federal investments in climate, clean
               energy, and other areas reach disadvantaged communities that are
               marginalized and overburdened by pollution and underinvestment.

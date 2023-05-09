@@ -30,7 +30,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
           <Grid desktop={{ col: 4 }} tablet={{ col: 10 }} col={12}>
             <SummaryBox>
               <SummaryBoxHeading headingLevel="h3">
-                {`${possessivePlural(agencyData.A_ACRONYM)} highlights`}
+                {`${possessivePlural(agencyData.A_ACRONYM)} Highlights`}
               </SummaryBoxHeading>
               <SummaryBoxContent>
                 {agencyData.ECR_HIGH.includes(DELIMITERS.PARAGRAPH)
@@ -245,7 +245,7 @@ const TemplateSection2: React.FC<TemplateSectionProps> = ({ agencyData }) => {
             {agencyData.TC_N && (
               <li>
                 <strong>{agencyData.TC_N}</strong> Tribal Consultation(s)
-                related to environmental justice from January 2021 to Septemeber
+                related to environmental justice from January 2021 to September
                 2022
               </li>
             )}
