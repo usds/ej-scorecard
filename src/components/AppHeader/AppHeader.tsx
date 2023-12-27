@@ -120,10 +120,14 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
     }
   };
 
-  const chunkAgencyLinks = (groupAgencies: ReactNode[]) => {
-    return groupAgencies.length > NUMBER_SUB_NAV_LINKS_PER_COLUMN
-      ? chunkArray(groupAgencies, NUMBER_SUB_NAV_LINKS_PER_COLUMN)
-      : [[groupAgencies]];
+  const chunkAgencyLinks = (groupAgencies: ReactNode[], isMobile: boolean) => {
+    if (!isMobile) {
+      return groupAgencies.length > NUMBER_SUB_NAV_LINKS_PER_COLUMN
+        ? chunkArray(groupAgencies, NUMBER_SUB_NAV_LINKS_PER_COLUMN)
+        : [[groupAgencies]];
+    } else {
+      return [[groupAgencies]];
+    }
   };
 
   /*
@@ -191,6 +195,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ pathname, allAgencyNames }) => {
       const toggleIndex = i;
       const subNavLinksArray = chunkAgencyLinks(
         groupAgencyLinks(allAgencyNames, range),
+        mobileNavOpen,
       );
       return (
         <DropDownNavGenerator
