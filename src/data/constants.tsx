@@ -45,3 +45,9 @@ export const FOOTER_CEQ_ADDRESS = {
 export const DELIMITERS = {
   PARAGRAPH: `%%%%`,
 };
+
+// Survey Links
+export const FEEDBACK_SURVEY_LINKS = {
+  EN: `https://eop.gov1.qualtrics.com/jfe/form/SV_aVPdC5qtPNhCw3s`,
+  ES: ``,
+};
