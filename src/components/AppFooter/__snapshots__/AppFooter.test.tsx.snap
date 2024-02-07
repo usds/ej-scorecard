@@ -316,7 +316,7 @@ exports[`rendering of AppFooter Component > checks if component renders 1`] = `
         </strong>
         <img
           alt="launch icon"
-          src="/node_modules/@uswds/uswds/dist/img/usa-icons/launch.svg"
+          src="/node_modules/.pnpm/@uswds+uswds@3.3.0/node_modules/@uswds/uswds/dist/img/usa-icons/launch.svg"
         />
       </button>
     </a>
