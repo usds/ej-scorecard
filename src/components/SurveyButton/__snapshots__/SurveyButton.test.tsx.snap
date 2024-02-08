@@ -6,13 +6,23 @@ exports[`rendering of SurveyButton Component > checks if component renders 1`] =
   data-testid="gridContainer"
 >
   <a
-    href="https://www.surveymonkey.com/r/WBNTJNC"
+    href="https://eop.gov1.qualtrics.com/jfe/form/SV_aVPdC5qtPNhCw3s"
     rel="noreferrer"
     target="_blank"
   >
-    <strong>
-      Share your feedback
-    </strong>
+    <button
+      className="usa-button"
+      data-testid="button"
+      type="button"
+    >
+      <strong>
+        Share your feedback
+      </strong>
+      <img
+        alt="launch icon"
+        src="/node_modules/.pnpm/@uswds+uswds@3.3.0/node_modules/@uswds/uswds/dist/img/usa-icons/launch.svg"
+      />
+    </button>
   </a>
 </div>
 `;
