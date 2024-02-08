@@ -50,6 +50,7 @@ $ npm list -g --depth=0
 ├── npm@8.19.2
 └── pnpm@7.18.2
 ```
+
 5. run `pnpm install`
 6. run `pnpm clean && pnpm start`
 
@@ -94,12 +95,14 @@ import avatar from '@/static/avatar.png';
 ```
 
 ## USDS Specific
+
 - works with [trusswork](https://trussworks.github.io/react-uswds/) components
 - can use [USWDS tokens](https://designsystem.digital.gov/design-tokens/) as mixins in sass modules (at component level)
 - works with i18n using [format.js (react-intl)](https://formatjs.io/docs/react-intl/api)
 - has a generator script to quickly create components
 
 ### Before each commit run the following:
+
 - `pnmp run type-check`
 - `pnmp run lint`
 - `pnmp run format`
@@ -116,14 +119,17 @@ The steps involved with creating i18n content is as follows:
 4. Translate the `en-US.json` file to an `es-MX.json`. Each key from the `en-US.json` file should have a spanish value in `es-MX.json`.
 
 ### Deployment
+
 Currently this repo is using Github actions (see [.github/workflows](https://github.com/usds/gatsby-uswds-ts-starter/tree/main/.github/workflows) in the root directory) for deployment to AWS with the support of Geoplatform.
 
 These actions will
+
 1. creates a staging link (see [deploy-staging.yml](https://github.com/usds/gatsby-uswds-ts-starter/blob/main/.github/workflows/deploy-staging.yml)) as a comment in every PR made against `main` that passes all checks (type-check, linting, testing, format, commit messages)
 2. update the production folder on AWS
 3. remove any artifacts of the PR when the PR is closed (see [close-pr.yml](https://github.com/usds/gatsby-uswds-ts-starter/blob/main/.github/workflows/close-pr.yml))
 
 In order for these actions to work as is, the following [secrets need to be added](https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/managing-encrypted-secrets-for-your-repository-and-organization-for-github-codespaces) in your repo:
+
 1. AWS_ACCESS_KEY_ID
 2. AWS_SECRET_ACCESS_KEY
 3. STAGE_SITE_URL
@@ -136,10 +142,8 @@ The STAGE_SITE_URL should point to the name of your S3 bucket or CDN.
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
 
-
 ## Credits
 
-
 <div>
-  Original repo created by <a href="https://twitter.com/jpedroschmitz">João Pedro</a> with the help of many <a href="https://github.com/jpedroschmitz/gatsby-starter-ts/graphs/contributors">wonderful contributors</a>. Shout out from USDS!
+  Original repo created by <a href="https://twitter.com/jpedroschmitz">João Pedro</a> with the help of many <a href="https://github.com/jpedroschmitz/gatsby-starter-ts/graphs/contributors">wonderful contributors</a>. Shout out from USDS!!
 </div>
